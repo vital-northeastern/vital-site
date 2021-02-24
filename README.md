@@ -1,46 +1,111 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+    <img alt="Gatsby" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/21/blue-heart_1f499.png" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  ViTal Website
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This site was created using [Gatsby](https://www.gatsbyjs.org/docs/), a React-based static-site generator and the [Contentful CMS](https://www.contentful.com/developers/docs/). To see other project dependencies, check out the project's `package.json` file.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## 📝 Table of Contents:
 
-## 🚀 Quick start
+1. [Getting Started](https://github.com/Scout-NU/vital-site#start)
+   - [Cloning](https://github.com/Scout-NU/vital-site#clone)
+   - [Environment Variables](https://github.com/Scout-NU/vital-site#env)
+   - [npm Modules](https://github.com/Scout-NU/vital-site#npm)
+2. [Deployment](https://github.com/Scout-NU/vital-site#deploy)
+   - [How to Manage Netlify Environment Variables](https://github.com/Scout-NU/vital-site#netlifyenv)
+   - [How to Deploy Project on Netlify](https://github.com/Scout-NU/vital-site#deploy2)
+3. [Contentful](https://github.com/Scout-NU/vital-site#contentful)
+4. [Gatsby](https://github.com/Scout-NU/vital-site#gatsby)
+5. [Config Files](https://github.com/Scout-NU/vital-site#config)
+6. [Scout Developers](https://github.com/Scout-NU/vital-site#devs)
 
-1.  **Create a Gatsby site.**
+## 🚦 <a name="start">Getting Started </a>
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+1.  **<a name="clone">Clone the repository</a>**
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+```shell
+# git clone git@github.com:Scout-NU/vital-site.git
+```
 
-1.  **Start developing.**
+2.  **Change directories**
 
-    Navigate into your new site’s directory and start it up.
+```shell
+cd vital-site
+```
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+3.  **<a name="env">Set up environment variables</a>**
 
-1.  **Open the source code and start editing!**
+In the project directory is a file called `env_example`. This holds all of the necessary environment variables to create this project, including the Contentful access token.
 
-    Your site is now running at `http://localhost:8000`!
+Copy the file twice, name the new files .env.development and .env.production, and add the Contentful API keys to the variables. You can find these API keys in your Contentful space under Settings -> API keys -> HAN-site. You only need to use Space ID and Content Delivery API - access token. Do **not** commit these to the Github repo
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+```shell
+cp env_example .env.development
+```
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+```shell
+# In .env
+CONTENTFUL_SPACE_ID=''
+CONTENTFUL_ACCESS_TOKEN=''
+```
 
-## 🧐 What's inside?
+4. **<a name="npm">Install the npm modules</a>**
+
+```shell
+# Inside the project directory
+npm install
+```
+
+Run server/development environment:
+
+```shell
+npm run dev
+```
+
+5. **View server**
+
+(It will likely run on this specified port unless another one is active). Visit [http://localhost:8000/](http://localhost:8000/) to view your site
+
+## 🚀<a name="deploy">Deployment (on Netlify) </a>
+
+[Netlify](https://www.netlify.com/) is a continuous integration and continuous deployment platform that allows you to run web projects at global scale without servers, devops, or costly infrastructure. We use Netlify to host the ViTAL website. To allow your deployed site have access to all data stored in Contentful, use [these](https://github.com/Scout-NU/vital-site#env) same API keys and follow the directions below.
+
+### <a name="netlifyenv">How to manage Netlify environment variables </a>:
+
+1.  Navigate to the main page of your website on Netlify
+2.  At the top of the screen, click on "Site settings"
+3.  On the left side of your screen, click on "Build & deploy"
+4.  Scroll down to the "Environment" section and click on "Edit variables"
+5.  Paste the environment variables in their appropriate value fields
+
+### <a name="deploy2">How to deploy your site</a>:
+
+1.  Go to [https://app.netlify.com/sites/vital/deploys](https://app.netlify.com/sites/vital/deploys)
+2.  Click on the "Trigger deploy" button on the right side of the screen and then click "Deploy site"
+3.  While your site is being built (around 30 seconds), if any errors come up in the logs, address those and restart this process
+4.  If your build is successful, at the end of the logs you will see "Site is live ✨" and have the ability to press the "Preview" button to view the site
+
+Note that Netlify will automatically deploy to production the master branch on Github. If you want to see how a small change will look on the live site, you can make a pull request on Github and Netlify will automatically deploy to development a viewable site that you can find at [https://app.netlify.com/sites/vital/deploys](https://app.netlify.com/sites/vital/deploys).
+
+## 🖊️<a name="contentful">Contentful</a>
+
+[Contentful](https://www.contentful.com/) is a content management system that allows you to control all content from a single hub. We use Contentful to store all of the images and text copy used on the site through content models and content. In an object-oriented design sense, content models can be compared to classes while content can be compared to objects. For example, one of our content models is "Meet the Team" which has fields for all of the data that should be on the team page such as the member names and the social media links. Meanwhile, in the "What's Happening" section, **finish writing**
+
+Pieces of information regarding Contentful:
+
+1.  In order to have a development environment that integrates with the data in Contentful and allow any of your deploys on Netlify to access data in Contentful, you will have to manage Contentful API keys in both your [codebase](https://github.com/Scout-NU/vutal-site#env) and in [Netlify's settings](https://github.com/Scout-NU/vital-site#netlifyenv).
+2.  You can easily change any content model or content in Contentful by simply clicking on it, making any changes you want, and then pressing the green "Publish Changes" button on the right side. To see these changes on your development environment, you will have to re-run `npm run dev`. To see these changes on your deployed site, you will need to manually [trigger a Netlify deploy](https://github.com/Scout-NU/vital-site#deploy2).
+
+## 💜<a name="gatsby">Gatsby</a>
+
+[Gatsby](https://www.gatsbyjs.com/) is a React-based open source framework for creating websites and apps. We use Gatsby to pre-load resources which makes the site load faster and perform better. On the development side, whenever you run `npm run dev`, Gatsby provides access to a server at [http://localhost:8000/](http://localhost:8000/)
+
+## 🧐 <a name="config">Config Files</a>
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
@@ -82,13 +147,17 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning Gatsby
+## 😄 <a name="devs">Scout Developers</a>
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+Made with love by:
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+### Ryan Soderberg
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+_Email_: [soderberg.r@northeastern.edu](mailto:soderberg.r@northeastern.edu)
+
+### Sreya Katabathuni
+
+_Email_: [katabathuni.sr@northeastern.edu](mailto:katabathuni.sr@northeastern.edu)
 
 ## 💫 Deploy
 
