@@ -51,7 +51,7 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# dotenv environment variable files
+# # dotenv environment variable files
 .env*
 
 # gatsby files
@@ -69,4 +69,4 @@ yarn-error.log
 .yarn-integrity
 
 # environment
-env/.env.development
+!.env.example
