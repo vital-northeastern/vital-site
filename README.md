@@ -29,7 +29,7 @@ This site was created using [Gatsby](https://www.gatsbyjs.org/docs/), a React-ba
 1.  **<a name="clone">Clone the repository</a>**
 
 ```shell
-# git clone git@github.com:Scout-NU/vital-site.git
+git clone git@github.com:Scout-NU/vital-site.git
 ```
 
 2.  **Change directories**
@@ -42,7 +42,7 @@ cd vital-site
 
 In the project directory is a file called `env_example`. This holds all of the necessary environment variables to create this project, including the Contentful access token.
 
-Copy the file twice, name the new files .env.development and .env.production, and add the Contentful API keys to the variables. You can find these API keys in your Contentful space under Settings -> API keys -> HAN-site. You only need to use Space ID and Content Delivery API - access token. Do **not** commit these to the Github repo
+Copy the file twice, name the new files .env.development and .env.production, and add the Contentful API keys to the variables. You can find these API keys in your Contentful space under Settings -> API keys -> vital-site. You only need to use Space ID and Content Delivery API - access token. Do **not** commit these to the Github repo
 
 ```shell
 cp env_example .env.development
@@ -158,11 +158,5 @@ _Email_: [soderberg.r@northeastern.edu](mailto:soderberg.r@northeastern.edu)
 ### Sreya Katabathuni
 
 _Email_: [katabathuni.sr@northeastern.edu](mailto:katabathuni.sr@northeastern.edu)
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
