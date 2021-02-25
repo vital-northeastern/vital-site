@@ -85,12 +85,12 @@ npm run develop
 
 ### <a name="deploy2">How to deploy your site</a>:
 
-1.  Go to [https://app.netlify.com/sites/vital/deploys](https://app.netlify.com/sites/vital-site/deploys)
+1.  Go to [https://app.netlify.com/sites/vital-site/deploys](https://app.netlify.com/sites/vital-site/deploys)
 2.  Click on the "Trigger deploy" button on the right side of the screen and then click "Deploy site"
 3.  While your site is being built (around 30 seconds), if any errors come up in the logs, address those and restart this process
 4.  If your build is successful, at the end of the logs you will see "Site is live ✨" and have the ability to press the "Preview" button to view the site
 
-Note that Netlify will automatically deploy to production the master branch on Github. If you want to see how a small change will look on the live site, you can make a pull request on Github and Netlify will automatically deploy to development a viewable site that you can find at [https://app.netlify.com/sites/vital/deploys](https://app.netlify.com/sites/vital/deploys).
+Note that Netlify will automatically deploy to production the master branch on Github. If you want to see how a small change will look on the live site, you can make a pull request on Github and Netlify will automatically deploy to development a viewable site that you can find at [https://app.netlify.com/sites/vital-site/deploys](https://app.netlify.com/sites/vital-site/deploys).
 
 ## 🖊️<a name="contentful">Contentful</a>
 
@@ -98,7 +98,7 @@ Note that Netlify will automatically deploy to production the master branch on G
 
 Pieces of information regarding Contentful:
 
-1.  In order to have a development environment that integrates with the data in Contentful and allow any of your deploys on Netlify to access data in Contentful, you will have to manage Contentful API keys in both your [codebase](https://github.com/Scout-NU/vutal-site#env) and in [Netlify's settings](https://github.com/Scout-NU/vital-site#netlifyenv).
+1.  In order to have a development environment that integrates with the data in Contentful and allow any of your deploys on Netlify to access data in Contentful, you will have to manage Contentful API keys in both your [codebase](https://github.com/Scout-NU/vital-site#env) and in [Netlify's settings](https://github.com/Scout-NU/vital-site#netlifyenv).
 2.  You can easily change any content model or content in Contentful by simply clicking on it, making any changes you want, and then pressing the green "Publish Changes" button on the right side. To see these changes on your development environment, you will have to re-run `npm run dev`. To see these changes on your deployed site, you will need to manually [trigger a Netlify deploy](https://github.com/Scout-NU/vital-site#deploy2).
 
 ## 💜<a name="gatsby">Gatsby</a>
