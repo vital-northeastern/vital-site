@@ -94,16 +94,16 @@ Note that Netlify will automatically deploy to production the master branch on G
 
 ## 🖊️<a name="contentful">Contentful</a>
 
-[Contentful](https://www.contentful.com/) is a content management system that allows you to control all content from a single hub. We use Contentful to store all of the images and text copy used on the site through content models and content. In an object-oriented design sense, content models can be compared to classes while content can be compared to objects. For example, one of our content models is "Meet the Team" which has fields for all of the data that should be on the team page such as the member names and the social media links. Meanwhile, in the "What's Happening" section, **finish writing**
+[Contentful](https://www.contentful.com/) is a content management system that allows you to control all content from a single hub. We use Contentful to store all of the images and text copy used on the site through content models and content. In an object-oriented design sense, content models can be compared to classes while content can be compared to objects. For example, one of our content models is "Meet the Team" which has fields for all of the data that should be on the team page such as the member names and the social media links. Meanwhile, in the "What's Happening" section, there are field for each programming activity (ie: ventures consulting, coffee chats, etc)
 
 Pieces of information regarding Contentful:
 
 1.  In order to have a development environment that integrates with the data in Contentful and allow any of your deploys on Netlify to access data in Contentful, you will have to manage Contentful API keys in both your [codebase](https://github.com/Scout-NU/vital-site#env) and in [Netlify's settings](https://github.com/Scout-NU/vital-site#netlifyenv).
-2.  You can easily change any content model or content in Contentful by simply clicking on it, making any changes you want, and then pressing the green "Publish Changes" button on the right side. To see these changes on your development environment, you will have to re-run `npm run dev`. To see these changes on your deployed site, you will need to manually [trigger a Netlify deploy](https://github.com/Scout-NU/vital-site#deploy2).
+2.  You can easily change any content model or content in Contentful by simply clicking on it, making any changes you want, and then pressing the green "Publish Changes" button on the right side. To see these changes on your development environment, you will have to re-run `npm run develop`. To see these changes on your deployed site, you will need to manually [trigger a Netlify deploy](https://github.com/Scout-NU/vital-site#deploy2).
 
 ## 💜<a name="gatsby">Gatsby</a>
 
-[Gatsby](https://www.gatsbyjs.com/) is a React-based open source framework for creating websites and apps. We use Gatsby to pre-load resources which makes the site load faster and perform better. On the development side, whenever you run `npm run dev`, Gatsby provides access to a server at [http://localhost:8000/](http://localhost:8000/)
+[Gatsby](https://www.gatsbyjs.com/) is a React-based open source framework for creating websites and apps. We use Gatsby to pre-load resources which makes the site load faster and perform better. On the development side, whenever you run `npm run develop`, Gatsby provides access to a server at [http://localhost:8000/](http://localhost:8000/)
 
 ## 🧐 <a name="config">Config Files</a>
 
