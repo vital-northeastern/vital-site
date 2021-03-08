@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Img from "gatsby-image"
@@ -24,8 +23,6 @@ const IndexPage = (props) => {
       fluid={homePage.featuredImage.fluid} 
       alt={homePage.title}/>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 }
