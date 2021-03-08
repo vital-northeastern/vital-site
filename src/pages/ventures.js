@@ -4,14 +4,13 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const GetInvolved = () => (
+const Ventures = () => (
   <Layout>
-    <SEO title="Get Involved" />
-    <h1>Get Involved</h1>
+    <SEO title="Ventures" />
+    <h1>Ventures Consulting</h1>
     <p>Welcome to page 2</p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 
-export default GetInvolved
-
+export default Ventures
