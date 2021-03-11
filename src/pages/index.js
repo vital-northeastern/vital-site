@@ -18,11 +18,34 @@ const IndexPage = (props) => {
     <h1>{homePage.title}</h1>
     <p>{homePage.subheadingForTitle}</p>
     <p>{homePage.clubBlurb.clubBlurb}</p>
+    <a href={homePage.ctaLink}>
+      <button>{homePage.ctaTitle}</button>
+    </a>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Img className="featured" 
       fluid={homePage.featuredImage.fluid} 
       alt={homePage.title}/>
     </div>
+    {homePage.homepageSections.map((section, index) => {
+      return (
+        <div>
+        <h3>
+          {section.title}
+        </h3>
+        <p className="excerpt">
+          {section.blurbText.blurbText}
+        </p>
+        <a href={section.ctaLink}>
+        <button>{section.ctaTitle}</button>
+        </a>
+        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+        <Img className="featured" 
+        fluid={section.featuredImage.fluid} 
+        alt={section.title}/>
+        </div>
+        </div>
+      )
+    })}
   </Layout>
 )
 }
@@ -37,10 +60,26 @@ query homeQuery {
     clubBlurb {
       clubBlurb
     }
+    ctaTitle
+    ctaLink
     featuredImage {
       fluid(maxWidth: 750) {
-				...GatsbyContentfulFluid
+        ...GatsbyContentfulFluid
       }
+    }
+    homepageSections {
+      title
+      featuredImage {
+        fluid(maxWidth: 400) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      blurbText {
+        blurbText
+      }
+      ctaTitle
+      ctaLink
+      featuredWord
     }
   }
 }
