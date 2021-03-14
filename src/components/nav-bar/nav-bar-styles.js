@@ -46,7 +46,7 @@ const NavLink = styled(Link)`
 
 const NavBrand = styled.span`
   color: #3d3939;
-  font-family: "URW DIN", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 18px;
   letter-spacing: 0.5px;
   font-weight: 700;
