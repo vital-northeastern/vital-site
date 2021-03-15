@@ -1,4 +1,7 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import get from "lodash/get"
+import Img from "gatsby-image"
 
 import {
   FooterDescription,
@@ -13,54 +16,98 @@ import {
   MailtoLink,
   ConnectContactText,
   LoveByScout,
+  FooterLinks,
+  FooterLink,
 } from "./footer-styles"
 
-const Footer = () => (
-  <FooterContainer>
-    <FooterRowContainer>
-      <FooterSubsectionContainer>
-        <FooterDescription>Test</FooterDescription>
-      </FooterSubsectionContainer>
-      <FooterSubsectionContainer>
-        <FooterContactContainer>
-          <ConnectContactText>CONNECT</ConnectContactText>
-          <FooterSocialBlock>
-            <a
-              target="_blank"
-              href="https://www.instagram.com/vitalnortheastern/"
-            ></a>
-            <a
-              target="_blank"
-              href="https://www.facebook.com/vitalnortheastern"
-            ></a>
-            <a target="_blank" href="https://medium.com/vital-northeastern"></a>
-          </FooterSocialBlock>
-        </FooterContactContainer>
-        <FooterContactContainerEmail>
-          <ConnectContactText>CONTACT</ConnectContactText>
-          <EmailContainer>
-            <MailtoLink href={"mailto:" + "vital.northeastern@gmail.com"}>
-              vital.northeastern@gmail.com
-            </MailtoLink>
-          </EmailContainer>
-        </FooterContactContainerEmail>
-      </FooterSubsectionContainer>
-    </FooterRowContainer>
-    <hr />
-    <FooterRowContainer>
-      <FooterSubsectionContainer>
-        <FooterSmallCaption>
-          Northeastern University | HAN &copy; {new Date().getFullYear()}{" "}
-        </FooterSmallCaption>
-      </FooterSubsectionContainer>
-      <LoveByScout>
-        Made with ♥ by{" "}
-        <a target="_blank" href="https://scout.camd.northeastern.edu/">
-          Scout
-        </a>
-      </LoveByScout>
-    </FooterRowContainer>
-  </FooterContainer>
-)
+const Footer = props => {
+  const footer = get(props, "data.contentfulFooter")
+  const data = useStaticQuery(graphql`
+    query footerQuery {
+      contentfulFooter {
+        headline
+        email
+        socialMedia {
+          platform
+          link
+          logo {
+            fluid(maxWidth: 750) {
+              ...GatsbyContentfulFluid
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <FooterContainer>
+      <FooterRowContainer>
+        <FooterSubsectionContainer>
+          <FooterDescription>
+            {data.contentfulFooter.headline}
+          </FooterDescription>
+          <FooterLinks>
+            <p>
+              <FooterLink href="/">Home</FooterLink>
+            </p>
+            <p>
+              <FooterLink href="/what-we-do">What We Do</FooterLink>
+            </p>
+            <p>
+              <FooterLink href="/whats-happening">What's Happening</FooterLink>
+            </p>
+            <p>
+              <FooterLink href="/get-involved">Get Involved</FooterLink>
+            </p>
+            <p>
+              <FooterLink href="/our-team">Meet the Team</FooterLink>
+            </p>
+          </FooterLinks>
+        </FooterSubsectionContainer>
+        <FooterSubsectionContainer>
+          <FooterContactContainer>
+            <FooterSocialBlock>
+              {data.contentfulFooter.socialMedia.map((social, index) => {
+                return (
+                  <a href={social.link}>
+                    {social.platform}
+                    <div style={{ width: `50px`, marginBottom: `1.45rem` }}>
+                      <Img
+                        className="featured"
+                        fluid={social.logo.fluid}
+                        alt={social.platform}
+                      />
+                    </div>
+                  </a>
+                )
+              })}
+            </FooterSocialBlock>
+          </FooterContactContainer>
+          <FooterContactContainerEmail>
+            <ConnectContactText>contact</ConnectContactText>
+            <EmailContainer>
+              <MailtoLink href={"mailto:" + data.contentfulFooter.email}>
+                {data.contentfulFooter.email}
+              </MailtoLink>
+            </EmailContainer>
+          </FooterContactContainerEmail>
+        </FooterSubsectionContainer>
+      </FooterRowContainer>
+      <hr />
+      <FooterRowContainer>
+        <FooterSubsectionContainer>
+          <FooterSmallCaption>
+            Northeastern University | ViTAL &copy; {new Date().getFullYear()}{" "}
+          </FooterSmallCaption>
+        </FooterSubsectionContainer>
+        <LoveByScout>
+          Made with ♥ by{" "}
+          <a href="https://scout.camd.northeastern.edu/">Scout</a>
+        </LoveByScout>
+      </FooterRowContainer>
+    </FooterContainer>
+  )
+}
 
 export default Footer
