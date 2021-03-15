@@ -41,20 +41,23 @@ export const FooterSubsectionContainer = styled.div`
 export const FooterDescription = styled.h3`
   width: 66%;
   font-family: "Work Sans", sans-serif;
-  margin-top: 20px;
+  margin-top: 10px;
 `
 
 export const FooterContactContainer = styled.div`
   display: flex;
-  width: 70%;
+  width: 100%;
+  float: right
   align-items: baseline;
   flex-wrap: nowrap;
 `
 
-export const FooterContactContainerEmail = styled(FooterContactContainer)`
-  width: 70%;
-  justify-content: flex-start;
-  display: flex;
+export const FooterContactContainerEmail = styled.div`
+display: flex;
+width: 100%;
+float: right
+align-items: baseline;
+flex-wrap: nowrap;
 `
 
 export const FooterSocialBlock = styled.div`
@@ -62,22 +65,22 @@ export const FooterSocialBlock = styled.div`
   float: right;
   justify-content: space-between;
   align-items: baseline;
-  padding: 30px 0 30px 0;
-  width: 70%;
+  padding: 0;
+  padding-left: 250px;
+  padding-top: 180px;
+  width: 100%;
 `
 
-export const ConnectContactText = styled.p`
+export const ConnectContactText = styled.span`
   font-family: "Work Sans", sans-serif;
   color: white;
   padding-right: 5vw;
   font-size: 13px;
 `
 
-export const EmailContainer = styled.div`
+export const EmailContainer = styled.span`
   flex: 1 1 70%;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
   color: white;
 `
 

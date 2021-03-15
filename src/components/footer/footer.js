@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import get from "lodash/get"
 import Img from "gatsby-image"
 
 import {
@@ -21,7 +20,6 @@ import {
 } from "./footer-styles"
 
 const Footer = props => {
-  const footer = get(props, "data.contentfulFooter")
   const data = useStaticQuery(graphql`
     query footerQuery {
       contentfulFooter {
@@ -68,10 +66,9 @@ const Footer = props => {
         <FooterSubsectionContainer>
           <FooterContactContainer>
             <FooterSocialBlock>
-              {data.contentfulFooter.socialMedia.map((social, index) => {
+              {data.contentfulFooter.socialMedia.map(social => {
                 return (
                   <a href={social.link}>
-                    {social.platform}
                     <div style={{ width: `50px`, marginBottom: `1.45rem` }}>
                       <Img
                         className="featured"
