@@ -52,29 +52,28 @@ export const FooterContactContainer = styled.div`
   flex-wrap: nowrap;
 `
 
-export const FooterContactContainerEmail = styled.div`
+export const FooterContactContainerEmail = styled(FooterContactContainer)`
 display: flex;
 width: 100%;
 float: right
 align-items: baseline;
-flex-wrap: nowrap;
+padding-left: 290px;
 `
 
 export const FooterSocialBlock = styled.div`
   display: flex;
   float: right;
-  justify-content: space-between;
   align-items: baseline;
   padding: 0;
-  padding-left: 250px;
-  padding-top: 180px;
+  padding-left: 380px;
+  padding-top: 100px;
   width: 100%;
 `
 
 export const ConnectContactText = styled.span`
   font-family: "Work Sans", sans-serif;
   color: white;
-  padding-right: 5vw;
+  padding-right: 3vw;
   font-size: 13px;
 `
 
@@ -87,7 +86,6 @@ export const EmailContainer = styled.span`
 export const MailtoLink = styled.a`
   font-family: "Work Sans", sans-serif;
   font-size: 13px;
-  line-height: 27px;
   min-width: 1%;
   color: white;
   &:hover {

@@ -69,7 +69,12 @@ const Footer = props => {
               {data.contentfulFooter.socialMedia.map(social => {
                 return (
                   <a href={social.link}>
-                    <div style={{ width: `50px`, marginBottom: `1.45rem` }}>
+                    <div
+                      style={{
+                        width: `50px`,
+                        marginBottom: `1.45rem`,
+                      }}
+                    >
                       <Img
                         className="featured"
                         fluid={social.logo.fluid}
@@ -82,12 +87,10 @@ const Footer = props => {
             </FooterSocialBlock>
           </FooterContactContainer>
           <FooterContactContainerEmail>
-            <ConnectContactText>contact</ConnectContactText>
-            <EmailContainer>
-              <MailtoLink href={"mailto:" + data.contentfulFooter.email}>
-                {data.contentfulFooter.email}
-              </MailtoLink>
-            </EmailContainer>
+            <ConnectContactText>contact:</ConnectContactText>
+            <MailtoLink href={"mailto:" + data.contentfulFooter.email}>
+              {data.contentfulFooter.email}
+            </MailtoLink>
           </FooterContactContainerEmail>
         </FooterSubsectionContainer>
       </FooterRowContainer>
