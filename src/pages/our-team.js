@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import get from "lodash/get"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
+import TeamMember from "../components/teampage/team-member"
 
 const TeamPage = props => {
   const teamPage = get(props, "data.contentfulTeamPage")
@@ -15,17 +15,15 @@ const TeamPage = props => {
       <ul className="members">
         {teamPage.teamMembers.map((member, index) => {
           return (
-            <li className="member">
-              <h2>{member.name}</h2>
-              <p className="excerpt">{member.email}</p>
-              <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-                <Img
-                  className="featured"
-                  fluid={member.photo.fluid}
-                  alt={member.name}
-                />
-              </div>
-            </li>
+            <TeamMember
+              name={member.name}
+              photo={member.photo}
+              email={member.email}
+              major={member.major}
+              position={member.position}
+              linkedinUrl={member.linkedinUrl}
+              team={member.team}
+            />
           )
         })}
       </ul>
