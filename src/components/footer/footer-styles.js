@@ -2,27 +2,30 @@ import styled from "styled-components"
 
 export const FooterContainer = styled.div`
   background-color: #133e6c;
-  padding: 20px 100px 20px 100px;
+  padding: 40px 100px 20px 100px;
   font-family: "Work Sans", sans-serif;
   color: white;
 `
 export const FooterRowContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-bottom: 24px;
 `
 
 export const FooterLinks = styled.div`
   color: white;
-  line-height: 8px;
+  display: flex;
+  flex-direction: column;
 `
 
 export const FooterLink = styled.a`
   font-family: "Work Sans", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   color: white;
+  display: inline-block;
+  margin-top: 12px;
   &:hover {
     color: blue;
   }
@@ -34,60 +37,50 @@ export const FooterLink = styled.a`
 export const FooterSubsectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
-  flex-wrap: nowrap;
 `
 
 export const FooterDescription = styled.h3`
   width: 66%;
   font-family: "Work Sans", sans-serif;
-  margin-top: 10px;
 `
 
 export const FooterContactContainer = styled.div`
   display: flex;
   width: 100%;
-  float: right
-  align-items: baseline;
-  flex-wrap: nowrap;
+`
+export const FooterScroll = styled.div`
+  margin-bottom: auto;
+  cursor: pointer;
+  align-self: flex-end;
 `
 
 export const FooterContactContainerEmail = styled(FooterContactContainer)`
-display: flex;
-width: 100%;
-float: right
-align-items: baseline;
-padding-left: 290px;
+  display: flex;
+  width: 100%;
+  align-items: baseline;
 `
 
 export const FooterSocialBlock = styled.div`
   display: flex;
-  float: right;
-  align-items: baseline;
-  padding: 0;
-  padding-left: 380px;
-  padding-top: 100px;
-  width: 100%;
+  margin: 0 0 28px auto;
 `
 
 export const ConnectContactText = styled.span`
   font-family: "Work Sans", sans-serif;
   color: white;
-  padding-right: 3vw;
-  font-size: 13px;
 `
 
 export const EmailContainer = styled.span`
-  flex: 1 1 70%;
-  width: 100%;
   color: white;
 `
 
 export const MailtoLink = styled.a`
+  line-height: 20px;
+  margin-left: 16px;
+  text-decoration: none;
   font-family: "Work Sans", sans-serif;
-  font-size: 13px;
-  min-width: 1%;
   color: white;
+  border-bottom: 2px solid white;
   &:hover {
     color: blue;
   }

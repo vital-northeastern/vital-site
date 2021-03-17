@@ -17,6 +17,7 @@ import {
   LoveByScout,
   FooterLinks,
   FooterLink,
+  FooterScroll,
 } from "./footer-styles"
 
 const Footer = props => {
@@ -46,24 +47,19 @@ const Footer = props => {
             {data.contentfulFooter.headline}
           </FooterDescription>
           <FooterLinks>
-            <p>
-              <FooterLink href="/">Home</FooterLink>
-            </p>
-            <p>
-              <FooterLink href="/what-we-do">What We Do</FooterLink>
-            </p>
-            <p>
-              <FooterLink href="/whats-happening">What's Happening</FooterLink>
-            </p>
-            <p>
-              <FooterLink href="/get-involved">Get Involved</FooterLink>
-            </p>
-            <p>
-              <FooterLink href="/our-team">Meet the Team</FooterLink>
-            </p>
+            <FooterLink href="/">Home</FooterLink>
+
+            <FooterLink href="/what-we-do">What We Do</FooterLink>
+
+            <FooterLink href="/whats-happening">What's Happening</FooterLink>
+
+            <FooterLink href="/get-involved">Get Involved</FooterLink>
+
+            <FooterLink href="/our-team">Meet the Team</FooterLink>
           </FooterLinks>
         </FooterSubsectionContainer>
         <FooterSubsectionContainer>
+          <FooterScroll>Back To Top ↑</FooterScroll>
           <FooterContactContainer>
             <FooterSocialBlock>
               {data.contentfulFooter.socialMedia.map(social => {
@@ -72,7 +68,6 @@ const Footer = props => {
                     <div
                       style={{
                         width: `50px`,
-                        marginBottom: `1.45rem`,
                       }}
                     >
                       <Img
