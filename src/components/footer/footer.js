@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+import scrollTo from "gatsby-plugin-smoothscroll"
+
 import {
   FooterDescription,
   FooterSubsectionContainer,
@@ -59,7 +61,9 @@ const Footer = props => {
           </FooterLinks>
         </FooterSubsectionContainer>
         <FooterSubsectionContainer>
-          <FooterScroll>Back To Top ↑</FooterScroll>
+          <FooterScroll onClick={() => scrollTo("#scrollToHere")}>
+            Back To Top ↑
+          </FooterScroll>
           <FooterContactContainer>
             <FooterSocialBlock>
               {data.contentfulFooter.socialMedia.map(social => {
