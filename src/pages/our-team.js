@@ -4,6 +4,7 @@ import get from "lodash/get"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import TeamMember from "../components/teampage/team-member"
+import Advisor from "../components/teampage/advisor"
 
 const TeamPage = props => {
   const teamPage = get(props, "data.contentfulTeamPage")
@@ -23,6 +24,18 @@ const TeamPage = props => {
               position={member.position}
               linkedinUrl={member.linkedinUrl}
               team={member.team}
+            />
+          )
+        })}
+      </ul>
+      <ul className="advisors">
+        {teamPage.advisors.map((advisor, index) => {
+          return (
+            <Advisor
+              name={advisor.name}
+              photo={advisor.photo}
+              position={advisor.position}
+              linkedinUrl={advisor.linkedinUrl}
             />
           )
         })}
@@ -49,6 +62,16 @@ export const pageQuery = graphql`
         position
         linkedinUrl
         team
+      }
+      advisors {
+        name
+        photo {
+          fluid(maxWidth: 750) {
+            ...GatsbyContentfulFluid
+          }
+        }
+        position
+        linkedinUrl
       }
     }
   }
