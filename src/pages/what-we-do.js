@@ -1,48 +1,83 @@
 import React from "react"
-import { graphql } from 'gatsby'
-import get from 'lodash/get'
-
+import { graphql } from "gatsby"
+import get from "lodash/get"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import History from "../components/what-we-do/history"
+import IndustryBG from "../components/what-we-do/industry-bg"
+import ProgrammingCard from "../components/what-we-do/programming-card"
 
-const WhatWeDo = (props) => {
-
-  const whatWeDo = get(props, 'data.contentfulWhatWeDo')
+const WhatWeDo = props => {
+  const whatWeDo = get(props, "data.contentfulWhatWeDo")
 
   return (
-  <Layout>
-    <SEO title="What We Do" />
-    <h1>{whatWeDo.title}</h1>
-    <ul className="posts">
-    {whatWeDo.programmingCards.map((card, index) => {
-      return (
-        <li className="post">
-        <h2>
-          {card.title}
-        </h2>
-        <p className="excerpt">
-          {card.shortDescription.shortDescription}
-        </p>
-      </li>
-      )
-    })}
-    </ul>
-  </Layout>
-)
+    <Layout>
+      <SEO title="What We Do" />
+      <h1>{whatWeDo.title}</h1>
+      <History
+        title={whatWeDo.history.title}
+        historyMilestones={whatWeDo.history.historyMilestones}
+      />
+      <IndustryBG
+        title={whatWeDo.industryBackgroundTitle}
+        blurb={whatWeDo.industryBackgroundBlurb}
+        image={whatWeDo.industryBackgroundImage}
+      />
+      {whatWeDo.programmingCards.map((card, index) => {
+        return (
+          <ProgrammingCard
+            title={card.title}
+            description={card.shortDescription}
+            photo={card.photo}
+          />
+        )
+      })}
+    </Layout>
+  )
 }
 
 export default WhatWeDo
 
 export const pageQuery = graphql`
-query whatWeDoQuery {
-  contentfulWhatWeDo {
-    title
-    programmingCards {
+  query whatWeDoQuery {
+    contentfulWhatWeDo {
       title
-      shortDescription {
-        shortDescription
+      subheadingForTitle
+      history {
+        title
+        historyMilestones {
+          title
+          milestoneDescription {
+            milestoneDescription
+          }
+        }
+      }
+      industryBackgroundTitle
+      industryBackgroundBlurb {
+        industryBackgroundBlurb
+      }
+      industryBackgroundImage {
+        fluid(maxWidth: 750) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      programmingCards {
+        title
+        shortDescription {
+          shortDescription
+        }
+        photo {
+          fluid(maxWidth: 750) {
+            ...GatsbyContentfulFluid
+          }
+        }
+      }
+      platforms {
+        platformTitle
+        blurb
+        ctaTitle
+        ctaLink
       }
     }
   }
-}
 `
