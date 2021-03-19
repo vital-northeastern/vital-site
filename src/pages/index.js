@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
-import Img from "gatsby-image"
 import Hero from "../components/homepage/hero/hero"
 import HomepageSection from "../components/homepage/sections/sections"
 import Layout from "../components/layout"
