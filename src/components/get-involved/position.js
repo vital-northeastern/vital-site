@@ -1,12 +1,24 @@
 import React from "react"
-import Img from "gatsby-image"
+import {
+  ContactCardContainer,
+  FlexContainer,
+  MemberImg,
+  InfoContainer,
+  TextContainer,
+  MemberName,
+  MemberPosition,
+} from "../get-involved/position-styles.js"
 
 export default ({ title, description, featuredImage }) => (
-  <div>
-    <h3>{title}</h3>
-    <p className="excerpt">{description.description}</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Img className="featured" fluid={featuredImage.fluid} alt={title} />
-    </div>
-  </div>
+  <ContactCardContainer>
+    <FlexContainer>
+      <MemberImg alt={title} fluid={featuredImage.fluid} />
+    </FlexContainer>
+    <InfoContainer>
+      <TextContainer>
+        <MemberName>{title}</MemberName>
+        <MemberPosition>{description.description}</MemberPosition>
+      </TextContainer>
+    </InfoContainer>
+  </ContactCardContainer>
 )
