@@ -12,31 +12,33 @@ const fonts = {
 const fontSizes = {
   name: `calc(16px + (38 - 16) * ((100vw - 375px) / (1920 - 375)))`,
   position: `calc(12px + (20 - 12) * ((100vw - 375px) / (1920 - 375)))`,
-  text: `calc(10px + (20 - 10) * ((100vw - 375px) / (1920 - 375)))`,
+  text: `calc(8px + (20 - 10) * ((100vw - 375px) / (1920 - 375)))`,
 }
 
 const ContactCardContainer = styled.div`
   margin-right: 50px;
   z-index: 1;
   display: inline-block;
+  overflow: hidden;
   @media ${devices.mobile} {
     height: 23rem;
     width: 30rem;
   }
   @media ${devices.tablet} {
-    height: 30rem;
-    width: 20rem;
+    height: 16rem;
+    width: 22rem;
   }
   @media ${devices.desktop} {
-    height: 30rem;
-    width: 20rem;
+    height: 20rem;
+    width: 22rem;
   }
 `
 
 const FlexContainer = styled.div`
   display: flex;
   position: relative;
-  width: auto;
+  float: left;
+  width: 50%;
 `
 
 const MemberImg = styled(Img)`
@@ -58,11 +60,11 @@ const TextOverlay = styled.div`
     line-height: 15px;
   }
   @media ${devices.tablet} {
-    padding: 3rem;
+    padding: 1rem;
     line-height: 20px;
   }
   @media ${devices.desktop} {
-    padding: 3rem;
+    padding: 1rem;
     line-height: 25px;
   }
 `
@@ -130,12 +132,11 @@ const InfoContainer = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
+  float: left;
+  padding-left: 20px;
+  width: 50%;
   @media ${devices.mobile} {
     justify-content: normal;
-  }
-  @media ${devices.desktop} {
-    width: auto;
-    height: auto;
   }
 `
 
