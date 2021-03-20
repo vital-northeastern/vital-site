@@ -141,9 +141,10 @@ const InfoContainer = styled.div`
   }
 `
 
-const LeftContainer = styled.div`
-  position: absolute;
-  max-width: 70%;
+const TextContainer = styled.div`
+  position: relative;
+  max-width: 80%;
+  padding-bottom: 0px;
 `
 
 const MemberName = styled.h2`
@@ -161,15 +162,6 @@ const MemberPosition = styled.p`
   margin: auto;
 `
 
-const RightContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 0;
-  right: 0;
-  padding-top: 1rem;
-  position: absolute;
-`
-
 export {
   ContactCardContainer,
   FlexContainer,
@@ -181,8 +173,7 @@ export {
   EmailText,
   Overlay,
   InfoContainer,
-  LeftContainer,
+  TextContainer,
   MemberName,
   MemberPosition,
-  RightContainer,
 }

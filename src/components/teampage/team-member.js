@@ -10,10 +10,9 @@ import {
   Email,
   Overlay,
   InfoContainer,
-  LeftContainer,
+  TextContainer,
   MemberName,
   MemberPosition,
-  RightContainer,
 } from "../teampage/team-member-styles"
 
 export default ({ name, photo, email, major, position, linkedinUrl, team }) => (
@@ -34,14 +33,13 @@ export default ({ name, photo, email, major, position, linkedinUrl, team }) => (
       </Overlay>
     </FlexContainer>
     <InfoContainer>
-      <LeftContainer>
+      <TextContainer>
         <MemberName>{name}</MemberName>
         <MemberPosition>{position}</MemberPosition>
         <a href={linkedinUrl}>
           <button type="button">CONNECT</button>
         </a>
-      </LeftContainer>
-      <RightContainer></RightContainer>
+      </TextContainer>
     </InfoContainer>
   </ContactCardContainer>
 )
