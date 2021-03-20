@@ -16,7 +16,7 @@ const fontSizes = {
 }
 
 const ContactCardContainer = styled.div`
-  margin-right: 50px;
+  margin-left: 150px;
   z-index: 1;
   display: inline-block;
   overflow: hidden;
@@ -57,19 +57,20 @@ const TextOverlay = styled.div`
   @media ${devices.mobile} {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    line-height: 15px;
+    line-height: 10px;
   }
   @media ${devices.tablet} {
     padding: 1rem;
-    line-height: 20px;
+    line-height: 15px;
   }
   @media ${devices.desktop} {
     padding: 1rem;
-    line-height: 25px;
+    line-height: 20px;
   }
 `
 
 const PositionContainer = styled.div`
+  word-wrap: break-word;
   @media ${devices.mobile} {
     padding-bottom: 1rem;
   }

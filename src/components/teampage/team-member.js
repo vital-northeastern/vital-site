@@ -37,6 +37,9 @@ export default ({ name, photo, email, major, position, linkedinUrl, team }) => (
       <LeftContainer>
         <MemberName>{name}</MemberName>
         <MemberPosition>{position}</MemberPosition>
+        <a href={linkedinUrl}>
+          <button type="button">CONNECT</button>
+        </a>
       </LeftContainer>
       <RightContainer></RightContainer>
     </InfoContainer>
