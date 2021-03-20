@@ -1,12 +1,44 @@
 import React from "react"
-import Img from "gatsby-image"
+import {
+  ContactCardContainer,
+  FlexContainer,
+  MemberImg,
+  TextOverlay,
+  PositionContainer,
+  EmailText,
+  Text,
+  Email,
+  Overlay,
+  InfoContainer,
+  LeftContainer,
+  MemberName,
+  MemberPosition,
+  RightContainer,
+} from "../teampage/team-member-styles"
 
 export default ({ name, photo, email, major, position, linkedinUrl, team }) => (
-  <div>
-    <h2>{name}</h2>
-    <p className="excerpt">{email}</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Img className="featured" fluid={photo.fluid} alt={name} />
-    </div>
-  </div>
+  <ContactCardContainer>
+    <FlexContainer>
+      <MemberImg alt={name} fluid={photo.fluid} />
+      <Overlay>
+        <TextOverlay>
+          <PositionContainer>{position}</PositionContainer>
+          {major}
+          <EmailText>
+            <Text>Reach me at </Text>
+            <Email href={`mailto:${email}`} target="_blank">
+              {email}
+            </Email>
+          </EmailText>
+        </TextOverlay>
+      </Overlay>
+    </FlexContainer>
+    <InfoContainer>
+      <LeftContainer>
+        <MemberName>{name}</MemberName>
+        <MemberPosition>{position}</MemberPosition>
+      </LeftContainer>
+      <RightContainer></RightContainer>
+    </InfoContainer>
+  </ContactCardContainer>
 )
