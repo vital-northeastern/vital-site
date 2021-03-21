@@ -22,6 +22,7 @@ const WhatWeDo = props => {
         title={whatWeDo.industryBackgroundTitle}
         blurb={whatWeDo.industryBackgroundBlurb}
         image={whatWeDo.industryBackgroundImage}
+        imageAlt={whatWeDo.industryBackgroundImage.description}
       />
       {whatWeDo.programmingCards.map((card, index) => {
         return (
@@ -29,6 +30,7 @@ const WhatWeDo = props => {
             title={card.title}
             description={card.shortDescription}
             photo={card.photo}
+            photoAlt={card.photo.description}
           />
         )
       })}
@@ -60,6 +62,7 @@ export const pageQuery = graphql`
         fluid(maxWidth: 750) {
           ...GatsbyContentfulFluid
         }
+        description
       }
       programmingCards {
         title
@@ -70,6 +73,7 @@ export const pageQuery = graphql`
           fluid(maxWidth: 750) {
             ...GatsbyContentfulFluid
           }
+          description
         }
       }
       platforms {
