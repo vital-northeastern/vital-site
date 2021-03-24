@@ -28,6 +28,7 @@ const TeamPage = props => {
           )
         })}
       </ul>
+      <h3>ADVISORS</h3>
       <ul className="advisors">
         {teamPage.advisors.map((advisor, index) => {
           return (
