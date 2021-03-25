@@ -10,7 +10,7 @@ const fonts = {
 }
 
 const fontSizes = {
-  name: `calc(16px + (38 - 16) * ((100vw - 375px) / (1920 - 375)))`,
+  name: `calc(12px + (38 - 16) * ((100vw - 375px) / (1920 - 375)))`,
   position: `calc(9px + (20 - 12) * ((100vw - 375px) / (1920 - 375)))`,
   text: `calc(6px + (20 - 10) * ((100vw - 375px) / (1920 - 375)))`,
 }
@@ -26,7 +26,7 @@ const ContactCardContainer = styled.div`
   }
   @media ${devices.tablet} {
     height: 16rem;
-    width: 25rem;
+    width: 26rem;
   }
   @media ${devices.desktop} {
     height: 20rem;
@@ -77,6 +77,7 @@ const MemberName = styled.h2`
 const MemberPosition = styled.p`
   font-family: ${fonts.poppins};
   font-size: ${fontSizes.position};
+  line-height: 20px;
   color: black;
   margin: auto;
 `

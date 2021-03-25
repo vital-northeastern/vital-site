@@ -36,9 +36,14 @@ export const pageQuery = graphql`
   query involvedQuery {
     contentfulGetInvolvedPage {
       title
+      subheadingForTitle
       involvementIntroTitle
       involvementBlurb
       disclaimer
+      eboardTitle
+      eboardDescription
+      ctaTitle
+      ctaLink
       positions {
         positionTitle
         description {
@@ -50,6 +55,8 @@ export const pageQuery = graphql`
           }
         }
       }
+      applicationEmail
+      deadlineForApplication
     }
   }
 `
