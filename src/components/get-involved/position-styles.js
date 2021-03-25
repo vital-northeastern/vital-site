@@ -5,14 +5,12 @@ import { devices } from "../../constants/devices"
 const fonts = {
   manrope: `'Manrope Extra Bold', 'Manrope', 'Arial',
     Arial, sans-serif`,
-  poppinsRegular: `'Poppins Regular', sans-serif`,
-  poppinsBold: `'Poppins Bold', sans-serif`,
+  workSans: `'Work Sans', sans-serif`,
 }
 
 const fontSizes = {
   name: `calc(12px + (38 - 16) * ((100vw - 375px) / (1920 - 375)))`,
-  position: `calc(9px + (20 - 12) * ((100vw - 375px) / (1920 - 375)))`,
-  text: `calc(6px + (20 - 10) * ((100vw - 375px) / (1920 - 375)))`,
+  text: `calc(9px + (20 - 12) * ((100vw - 375px) / (1920 - 375)))`,
 }
 
 const ContactCardContainer = styled.div`
@@ -75,8 +73,8 @@ const MemberName = styled.h2`
 `
 
 const MemberPosition = styled.p`
-  font-family: ${fonts.poppins};
-  font-size: ${fontSizes.position};
+  font-family: ${fonts.workSans};
+  font-size: ${fontSizes.text};
   line-height: 20px;
   color: black;
   margin: auto;
