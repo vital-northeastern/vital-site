@@ -4,7 +4,7 @@ import get from "lodash/get"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { H1, P } from "../constants/typography"
+import { H1, H2, H3, P } from "../constants/typography"
 
 const IndexPage = props => {
   // WILL MAKE COMPONENTS LATER
@@ -15,9 +15,10 @@ const IndexPage = props => {
     <Layout>
       <SEO title="Home" />
       <H1>H1 styled with Futura</H1>
-      <h1>{homePage.title}</h1>
-      <p>{homePage.subheadingForTitle}</p>
-      <p>{homePage.clubBlurb.clubBlurb}</p>
+      <H2>H2: Mission Statement</H2>
+      <H3>{homePage.title}</H3>
+      <P>{homePage.subheadingForTitle}</P>
+      <P>{homePage.clubBlurb.clubBlurb}</P>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Img
           className="featured"

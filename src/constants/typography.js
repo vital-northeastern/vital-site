@@ -11,12 +11,12 @@ const fonts = {
 const fontSizes = {
   h1: `calc(40px + (90 - 40) * ((100vw - 320px) / (1440 - 320)))`,
   h2: `calc(30px + (50 - 30) * ((100vw - 320px) / (1440 - 320)))`,
-  h3: `calc(22px + (20 - 22) * ((100vw - 320px) / (1440 - 320)))`,
-  p: `calc(14px + (22 - 14) * ((100vw - 320px) / (1440 - 320)))`,
+  h3: `calc(25px + (28 - 22) * ((100vw - 320px) / (1440 - 320)))`,
+  p: `calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)))`,
 }
 
-const fontStyles = {
-  italic: "italic",
+const textStyles = {
+  uppercase: "uppercase",
 }
 
 const fontWeights = {
@@ -28,27 +28,33 @@ const fontWeights = {
 const H1 = styled.h1`
   font-size: ${fontSizes.h1};
   font-family: ${fonts.futuraBold};
-  font-weight: ${fontWeights.medium};
+  font-weight: ${fontWeights.bold};
+  text-transform: ${textStyles.uppercase};
+  line-height: 60px;
 `
 
 const H2 = styled.h2`
   font-size: ${fontSizes.h2};
-  font-family: ${fonts.cormorant};
-  font-style: ${fontStyles.italic};
+  font-family: ${fonts.futuraHeavy};
   font-weight: ${fontWeights.bold};
+  text-transform: ${textStyles.uppercase};
+  letter-spacing: 0.1em;
+  line-height: 58px;
 `
 
 const H3 = styled.h3`
   font-size: ${fontSizes.h3};
-  font-family: ${fonts.aktiv};
-  font-style: ${fontStyles.italic};
-  font-weight: ${fontWeights.medium};
+  font-family: ${fonts.futuraHeavy};
+  font-weight: ${fontWeights.bold};
+  text-transform: ${textStyles.uppercase};
+  line-height: 26px;
 `
 
 const P = styled.p`
   font-size: ${fontSizes.p};
   font-family: ${fonts.workSans};
   font-weight: ${fontWeights.normal};
+  line-height: 22px;
 `
 
 export { H1, H2, H3, P }
