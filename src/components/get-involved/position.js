@@ -1,24 +1,24 @@
 import React from "react"
 import {
-  ContactCardContainer,
+  PositionContainer,
   FlexContainer,
-  MemberImg,
+  PositionImg,
   InfoContainer,
   TextContainer,
-  MemberName,
-  MemberPosition,
+  PositionName,
+  PositionDescription,
 } from "../get-involved/position-styles.js"
 
-export default ({ title, description, featuredImage }) => (
-  <ContactCardContainer>
+export default ({ title, description, featuredImage, featuredImageAlt }) => (
+  <PositionContainer>
     <FlexContainer>
-      <MemberImg alt={title} fluid={featuredImage.fluid} />
+      <PositionImg alt={featuredImageAlt} fluid={featuredImage.fluid} />
     </FlexContainer>
     <InfoContainer>
       <TextContainer>
-        <MemberName>{title}</MemberName>
-        <MemberPosition>{description.description}</MemberPosition>
+        <PositionName>{title}</PositionName>
+        <PositionDescription>{description.description}</PositionDescription>
       </TextContainer>
     </InfoContainer>
-  </ContactCardContainer>
+  </PositionContainer>
 )

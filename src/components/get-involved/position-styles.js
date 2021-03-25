@@ -13,7 +13,7 @@ const fontSizes = {
   text: `calc(9px + (20 - 12) * ((100vw - 375px) / (1920 - 375)))`,
 }
 
-const ContactCardContainer = styled.div`
+const PositionContainer = styled.div`
   margin-left: 100px;
   z-index: 1;
   display: inline-block;
@@ -39,7 +39,7 @@ const FlexContainer = styled.div`
   width: 30%;
 `
 
-const MemberImg = styled(Img)`
+const PositionImg = styled(Img)`
   display: inline-block;
   width: 100%;
   height: auto;
@@ -64,7 +64,7 @@ const TextContainer = styled.div`
   padding-bottom: 0px;
 `
 
-const MemberName = styled.h2`
+const PositionName = styled.h2`
   font-family: ${fonts.manrope};
   font-size: ${fontSizes.name};
   color: black;
@@ -72,7 +72,7 @@ const MemberName = styled.h2`
   padding-top: 1rem;
 `
 
-const MemberPosition = styled.p`
+const PositionDescription = styled.p`
   font-family: ${fonts.workSans};
   font-size: ${fontSizes.text};
   line-height: 20px;
@@ -81,11 +81,11 @@ const MemberPosition = styled.p`
 `
 
 export {
-  ContactCardContainer,
+  PositionContainer,
   FlexContainer,
-  MemberImg,
+  PositionImg,
   InfoContainer,
   TextContainer,
-  MemberName,
-  MemberPosition,
+  PositionName,
+  PositionDescription,
 }

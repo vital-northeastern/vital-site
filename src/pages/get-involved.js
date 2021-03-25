@@ -3,7 +3,10 @@ import { graphql } from "gatsby"
 import get from "lodash/get"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Introduction from "../components/get-involved/introduction"
+import Eboard from "../components/get-involved/eboard"
 import Position from "../components/get-involved/position"
+import ApplicationInfo from "../components/get-involved/application-info"
 
 const GetInvolved = props => {
   const involvedPage = get(props, "data.contentfulGetInvolvedPage")
@@ -11,29 +14,35 @@ const GetInvolved = props => {
   return (
     <Layout>
       <SEO title="Get Involved" />
-      <h1>{involvedPage.title}</h1>
-      <p>{involvedPage.subheadingForTitle}</p>
-      <h4>{involvedPage.involvementIntroTitle}</h4>
-      <p>{involvedPage.involvementBlurb}</p>
-      <p>{involvedPage.disclaimer}</p>
-      <h4>{involvedPage.eboardTitle}</h4>
-      <p>{involvedPage.eboardDescription}</p>
-      <a href={involvedPage.ctaLink}>
-        <button type="button">{involvedPage.ctaTitle}</button>
-      </a>
+      <Introduction
+        title={involvedPage.title}
+        subheadingForTitle={involvedPage.subheadingForTitle}
+        involvementIntroTitle={involvedPage.involvementIntroTitle}
+        involvementBlurb={involvedPage.involvementBlurb}
+        disclaimer={involvedPage.disclaimer}
+      />
+      <Eboard
+        title={involvedPage.eboardTitle}
+        description={involvedPage.eboardDescription}
+        ctaLink={involvedPage.ctaLink}
+        ctaTitle={involvedPage.ctaTitle}
+      />
       <div>
-        {involvedPage.positions.map((position, index) => {
+        {involvedPage.positions.map(position => {
           return (
             <Position
               title={position.positionTitle}
               description={position.description}
               featuredImage={position.featuredImage}
+              featuredImageAlt={position.featuredImage.description}
             />
           )
         })}
       </div>
-      <h4>{involvedPage.applicationEmail}</h4>
-      <p>{involvedPage.deadlineForApplication}</p>
+      <ApplicationInfo
+        applicationEmail={involvedPage.applicationEmail}
+        deadlineForApplication={involvedPage.deadlineForApplication}
+      />
     </Layout>
   )
 }
