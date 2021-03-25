@@ -3,12 +3,19 @@ import {
   TeamContainer,
   TeamTitle,
   TeamMembersContainer,
+  BackgroundHex,
+  TitleHolder,
 } from "../teampage/teams-styles"
 import TeamMember from "../teampage/team-member"
+import hex from "../../images/gatsby-icon.png"
 
 export default ({ teamName, members, index }) => (
   <TeamContainer>
-    <TeamTitle index={index}>{teamName}</TeamTitle>
+    {/* <img src={hex} /> */}
+    <TitleHolder>
+      <TeamTitle index={index}>{teamName}</TeamTitle>
+      <BackgroundHex index={index}></BackgroundHex>
+    </TitleHolder>
     <TeamMembersContainer>
       {members.map((member, index) => {
         return (

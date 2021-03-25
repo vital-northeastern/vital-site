@@ -26,7 +26,7 @@ const TeamPage = props => {
 
     members.forEach(member => {
       if (!member.team) return
-      listOfTeamsTypes.add(member.team)
+      listOfTeamsTypes.add(member.team.toLowerCase())
     })
 
     listOfTeamsTypes = Array.from(listOfTeamsTypes)
@@ -40,7 +40,7 @@ const TeamPage = props => {
 
       {listOfTeamsTypes.map((teamType, index) => {
         const filteredByTeam = teamPage.teamMembers.filter(member => {
-          return member.team === teamType
+          return member.team.toLowerCase() === teamType
         })
 
         return (
