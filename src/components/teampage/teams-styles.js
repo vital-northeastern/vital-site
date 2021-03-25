@@ -1,17 +1,21 @@
 import styled from "styled-components"
 
-const TeamContainer = styled.div``
-
-const TeamTitle = styled.h3`
-  color: #001049;
-  font-size: 45px;
-  text-align: right;
-  margin-bottom: 60px;
-`
-
-const TeamMembersContainer = styled.div`
+const TeamContainer = styled.div`
   width: 86%;
   margin: 0 auto;
+  padding-bottom: 200px;
 `
+
+// background-image: url(${props => "https://" + props.photoUrl});
+
+const TeamTitle = styled.h2`
+  color: #001049;
+  text-align: ${props => (props.index % 2 === 0 ? "left" : "right")};
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+`
+
+const TeamMembersContainer = styled.div``
 
 export { TeamContainer, TeamTitle, TeamMembersContainer }

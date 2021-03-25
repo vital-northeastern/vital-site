@@ -36,8 +36,23 @@ const TeamPage = props => {
   return (
     <Layout>
       <SEO title="Team Page" />
-      <h1>{teamPage.title}</h1>
-      <Team teamName="Marketing Team" members={teamPage.teamMembers}></Team>
+      {/* <h1>{teamPage.title}</h1> */}
+
+      {listOfTeamsTypes.map((teamType, index) => {
+        const filteredByTeam = teamPage.teamMembers.filter(member => {
+          return member.team === teamType
+        })
+
+        return (
+          <Team
+            teamName={teamType}
+            members={filteredByTeam}
+            index={index}
+          ></Team>
+        )
+      })}
+
+      {/* <Team teamName="Marketing Team" members={teamPage.teamMembers}></Team> */}
       {/* <ul className="members">
         {teamPage.teamMembers.map((member, index) => {
           return (

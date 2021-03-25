@@ -13,7 +13,10 @@ import {
   InfoContainer,
   MemberName,
   MemberPosition,
+  MemberMajor,
   ConnectButton,
+  MemberInfoSpacer,
+  ConnectLink,
 } from "../teampage/team-member-styles"
 
 export default ({
@@ -25,8 +28,9 @@ export default ({
   linkedinUrl,
   team,
   index,
+  isLast,
 }) => (
-  <CardPosition>
+  <CardPosition index={index} isLast={isLast}>
     <ContactCardContainer index={index}>
       <MemberImg photoUrl={photo.fluid.src}></MemberImg>
       {/* <Overlay>
@@ -42,12 +46,19 @@ export default ({
         </TextOverlay>
       </Overlay> */}
       <InfoContainer>
-        <MemberName>{name}</MemberName>
-        <MemberPosition>{position}</MemberPosition>
-        <a href={linkedinUrl}>
-          <ConnectButton>CONNECT</ConnectButton>
-          {/* <button type="button">CONNECT</button> */}
-        </a>
+        <MemberInfoSpacer></MemberInfoSpacer>
+        <div>
+          <MemberName>{name}</MemberName>
+          <MemberPosition>{position}</MemberPosition>
+          <MemberMajor></MemberMajor>
+        </div>
+        {linkedinUrl ? (
+          <ConnectLink href={linkedinUrl}>
+            <ConnectButton>CONNECT</ConnectButton>
+          </ConnectLink>
+        ) : (
+          <MemberInfoSpacer></MemberInfoSpacer>
+        )}
       </InfoContainer>
     </ContactCardContainer>
   </CardPosition>

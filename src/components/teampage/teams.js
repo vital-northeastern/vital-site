@@ -6,16 +6,9 @@ import {
 } from "../teampage/teams-styles"
 import TeamMember from "../teampage/team-member"
 
-function isTopRight(numMembers, index) {
-  const topRightIndex =
-    Math.ceil(numMembers / 2) - (numMembers % 2 === 0 ? 1 : 0)
-
-  return index === topRightIndex
-}
-
-export default ({ teamName, members }) => (
+export default ({ teamName, members, index }) => (
   <TeamContainer>
-    <TeamTitle>{teamName}</TeamTitle>
+    <TeamTitle index={index}>{teamName}</TeamTitle>
     <TeamMembersContainer>
       {members.map((member, index) => {
         return (
@@ -28,7 +21,7 @@ export default ({ teamName, members }) => (
             linkedinUrl={member.linkedinUrl}
             team={member.team}
             index={index}
-            isTopRight={isTopRight(members.length, index)}
+            isLast={members.length - 1 === index}
           />
         )
       })}

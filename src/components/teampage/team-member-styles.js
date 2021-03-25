@@ -16,10 +16,11 @@ const fontSizes = {
 }
 
 const CardPosition = styled.div`
-  min-width: calc(50% - 60px);
+  min-width: calc(50% - 30px);
   height: 200px;
   display: inline-flex;
-  margin-bottom: 160px;
+  margin-bottom: ${props =>
+    props.isLast && props.index % 2 === 0 ? "0" : "160px"};
   margin-left: ${props => (props.index % 2 === 0 ? "0" : "60px")};
 
   position: relative;
@@ -31,16 +32,9 @@ const ContactCardContainer = styled.div`
   top: ${props => (props.index % 2 === 0 ? "0" : "180px")};
 `
 
-// const FlexContainer = styled.div`
-//   display: flex;
-//   position: relative;
-//   float: left;
-//   width: 50%;
-// `
-
 const MemberImg = styled.div`
-  min-width: 50%;
-  padding-top: 50%;
+  min-width: 45%;
+  padding-top: 45%;
 
   background-image: url(${props => "https://" + props.photoUrl});
   background-size: cover;
@@ -131,14 +125,14 @@ const Overlay = styled.div`
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 
-  padding: 4%;
+  padding: 0 4%;
   min-width: 50%;
 `
 
-const TextContainer = styled.div`
-  padding-bottom: 0px;
+const MemberInfoSpacer = styled.div`
+  min-height: 10%;
 `
 
 const MemberName = styled.h2`
@@ -152,12 +146,26 @@ const MemberPosition = styled.p`
   margin: 0;
 `
 
+const MemberMajor = styled.p`
+  color: #001049;
+  margin: 0;
+`
+
+const ConnectLink = styled.a`
+  z-index: 2;
+  display: inline-block;
+  align-self: flex-start;
+`
+
 const ConnectButton = styled.button`
   background-color: #001049;
   color: white;
   border-radius: 50px;
   border: none;
   padding: 6px 30px;
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 export {
@@ -172,8 +180,10 @@ export {
   EmailText,
   Overlay,
   InfoContainer,
-  TextContainer,
   MemberName,
   MemberPosition,
+  MemberMajor,
   ConnectButton,
+  MemberInfoSpacer,
+  ConnectLink,
 }
