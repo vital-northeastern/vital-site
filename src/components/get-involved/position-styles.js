@@ -14,13 +14,13 @@ const fontSizes = {
 }
 
 const PositionContainer = styled.div`
-  margin-left: 100px;
+  margin-left: 80px;
   z-index: 1;
   display: inline-block;
   overflow: hidden;
   @media ${devices.tablet} {
     height: 16rem;
-    width: 26rem;
+    width: 29rem;
   }
 `
 
