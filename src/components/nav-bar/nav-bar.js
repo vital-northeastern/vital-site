@@ -3,28 +3,37 @@ import { navigate } from "gatsby"
 import {
   NavWrapper,
   NavBrandWrapper,
-  NavLinkGroup,
   NavLink,
   NavBrand,
   NavButton,
+  FlexColumn,
 } from "./nav-bar-styles.js"
 
-const NavBar = () => {
+// possible varaints are 'blue' and 'white', referring to text color etc
+export default ({ variant = "blue" }) => {
   return (
     <NavWrapper>
-      <NavBrandWrapper to="/">
-        <NavBrand>ViTAL</NavBrand>
-      </NavBrandWrapper>
-      <NavLinkGroup>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/what-we-do">About</NavLink>
-        <NavLink to="/whats-happening">Events</NavLink>
-        <NavButton onClick={() => navigate("/get-involved")}>
+      <FlexColumn>
+        <NavBrandWrapper to="/">
+          <NavBrand>ViTAL</NavBrand>
+        </NavBrandWrapper>
+      </FlexColumn>
+      <FlexColumn>
+        <NavLink variant={variant} to="/">
+          Home
+        </NavLink>
+        <NavLink variant={variant} to="/what-we-do">
+          About
+        </NavLink>
+        <NavLink variant={variant} to="/whats-happening">
+          Events
+        </NavLink>
+      </FlexColumn>
+      <FlexColumn>
+        <NavButton variant={variant} onClick={() => navigate("/get-involved")}>
           Get Involved
         </NavButton>
-      </NavLinkGroup>
+      </FlexColumn>
     </NavWrapper>
   )
 }
-
-export default NavBar
