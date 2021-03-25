@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import { devices } from "../../constants/devices"
 
 const fonts = {
-  manrope: `'Manrope Extra Bold', 'Manrope', 'Arial',
+  sourceSans: `'source sans pro', 'Arial',
     Arial, sans-serif`,
   workSans: `'Work Sans', sans-serif`,
 }
@@ -18,17 +18,9 @@ const PositionContainer = styled.div`
   z-index: 1;
   display: inline-block;
   overflow: hidden;
-  @media ${devices.mobile} {
-    height: 23rem;
-    width: 30rem;
-  }
   @media ${devices.tablet} {
     height: 16rem;
     width: 26rem;
-  }
-  @media ${devices.desktop} {
-    height: 20rem;
-    width: 25rem;
   }
 `
 
@@ -65,7 +57,7 @@ const TextContainer = styled.div`
 `
 
 const PositionName = styled.h2`
-  font-family: ${fonts.manrope};
+  font-family: ${fonts.sourceSans};
   font-size: ${fontSizes.name};
   color: black;
   margin: auto;
