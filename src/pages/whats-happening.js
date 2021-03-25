@@ -1,10 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import get from "lodash/get"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Carousel from "../components/whats-happening/carousel"
+import Calendar from "../components/whats-happening/calendar"
+import Slack from "../components/whats-happening/slack"
 
 const WhatsHappening = props => {
   const whatsHappening = get(props, "data.contentfulWhatsHappeningPage")
@@ -13,30 +15,16 @@ const WhatsHappening = props => {
     <Layout>
       <SEO title="What's Happening" />
       <h1>{whatsHappening.title}</h1>
-      <p>{whatsHappening.carouselTitle}</p>
-      {whatsHappening.carouselItems.map((item, index) => {
-        return (
-          <div>
-            <h4>{item.title}</h4>
-            <p>{item.subTitle}</p>
-            <a href={item.link}>Learn More</a>
-            <Img
-              className="featured"
-              fluid={item.featuredImage.fluid}
-              alt={item.featuredImage.description}
-            />
-          </div>
-        )
-      })}
-      <h3>{whatsHappening.calendarTitle}</h3>
+      <Carousel
+        title={whatsHappening.carouselTitle}
+        carouselItems={whatsHappening.carouselItems}
+      />
+      <Calendar title={whatsHappening.calendarTitle} />
       <h3>{whatsHappening.socialMediaTitle}</h3>
-      <a href={whatsHappening.joinSlackLink}>
-        <button type="button">{whatsHappening.joinSlackTitle}</button>
-      </a>
-      <Img
-        className="featured"
-        fluid={whatsHappening.slackLogo.fluid}
-        alt={whatsHappening.slackLogo.description}
+      <Slack
+        title={whatsHappening.joinSlackTitle}
+        link={whatsHappening.joinSlackLink}
+        logo={whatsHappening.slackLogo}
       />
       <a href={whatsHappening.newsletterCtaLink}>
         <button type="button">{whatsHappening.newsletterCtaTitle}</button>
