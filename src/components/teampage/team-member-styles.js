@@ -15,38 +15,37 @@ const fontSizes = {
   text: `calc(8px + (20 - 10) * ((100vw - 375px) / (1920 - 375)))`,
 }
 
-const ContactCardContainer = styled.div`
-  margin-left: 150px;
-  z-index: 1;
-  display: inline-block;
-  overflow: hidden;
-  @media ${devices.mobile} {
-    height: 23rem;
-    width: 30rem;
-  }
-  @media ${devices.tablet} {
-    height: 16rem;
-    width: 22rem;
-  }
-  @media ${devices.desktop} {
-    height: 20rem;
-    width: 22rem;
-  }
-`
+const CardPosition = styled.div`
+  min-width: calc(50% - 60px);
+  height: 200px;
+  display: inline-flex;
+  margin-bottom: 160px;
+  margin-left: ${props => (props.index % 2 === 0 ? "0" : "60px")};
 
-const FlexContainer = styled.div`
-  display: flex;
   position: relative;
-  float: left;
-  width: 50%;
+`
+const ContactCardContainer = styled.div`
+  display: inline-flex;
+  min-width: 100%;
+  position: absolute;
+  top: ${props => (props.index % 2 === 0 ? "0" : "180px")};
 `
 
-const MemberImg = styled(Img)`
-  display: inline-block;
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 3px 3px 12px grey;
+// const FlexContainer = styled.div`
+//   display: flex;
+//   position: relative;
+//   float: left;
+//   width: 50%;
+// `
+
+const MemberImg = styled.div`
+  min-width: 50%;
+  padding-top: 50%;
+
+  background-image: url(${props => "https://" + props.photoUrl});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `
 
 const TextOverlay = styled.div`
@@ -131,40 +130,40 @@ const Overlay = styled.div`
 
 const InfoContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  position: relative;
-  float: left;
-  padding-left: 20px;
-  width: 50%;
-  @media ${devices.mobile} {
-    justify-content: normal;
-  }
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 4%;
+  min-width: 50%;
 `
 
 const TextContainer = styled.div`
-  position: relative;
-  max-width: 80%;
   padding-bottom: 0px;
 `
 
 const MemberName = styled.h2`
-  font-family: ${fonts.manrope};
-  font-size: ${fontSizes.name};
-  color: black;
-  margin: auto;
-  padding-top: 1rem;
+  font-weight: 400;
+  color: #001049;
+  margin: 0;
 `
 
 const MemberPosition = styled.p`
-  font-family: ${fonts.poppins};
-  font-size: ${fontSizes.position};
-  color: black;
-  margin: auto;
+  color: #001049;
+  margin: 0;
+`
+
+const ConnectButton = styled.button`
+  background-color: #001049;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  padding: 6px 30px;
 `
 
 export {
   ContactCardContainer,
-  FlexContainer,
+  CardPosition,
+  // FlexContainer,
   MemberImg,
   TextOverlay,
   PositionContainer,
@@ -176,4 +175,5 @@ export {
   TextContainer,
   MemberName,
   MemberPosition,
+  ConnectButton,
 }

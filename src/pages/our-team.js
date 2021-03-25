@@ -4,16 +4,41 @@ import get from "lodash/get"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import TeamMember from "../components/teampage/team-member"
+import Team from "../components/teampage/teams"
 import Advisor from "../components/teampage/advisor"
 
 const TeamPage = props => {
   const teamPage = get(props, "data.contentfulTeamPage")
 
+  console.log(teamPage)
+
+  const listOfTeamsTypes = getTeamTypes(teamPage.teamMembers)
+  console.log(listOfTeamsTypes)
+
+  /**
+   * creates a list/array of all the team types
+   * @param {Object[]} members - Array of members
+   * @param {string} members[].type - the team the member is on
+   * @returns {string[]} - Array/list of string member types ie ['board', 'marketing']
+   */
+  function getTeamTypes(members) {
+    let listOfTeamsTypes = new Set()
+
+    members.forEach(member => {
+      if (!member.team) return
+      listOfTeamsTypes.add(member.team)
+    })
+
+    listOfTeamsTypes = Array.from(listOfTeamsTypes)
+    return listOfTeamsTypes
+  }
+
   return (
     <Layout>
       <SEO title="Team Page" />
       <h1>{teamPage.title}</h1>
-      <ul className="members">
+      <Team teamName="Marketing Team" members={teamPage.teamMembers}></Team>
+      {/* <ul className="members">
         {teamPage.teamMembers.map((member, index) => {
           return (
             <TeamMember
@@ -27,7 +52,7 @@ const TeamPage = props => {
             />
           )
         })}
-      </ul>
+      </ul> */}
       <h3>ADVISORS</h3>
       <ul className="advisors">
         {teamPage.advisors.map((advisor, index) => {

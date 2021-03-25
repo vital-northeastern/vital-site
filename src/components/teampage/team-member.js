@@ -1,7 +1,8 @@
 import React from "react"
 import {
   ContactCardContainer,
-  FlexContainer,
+  CardPosition,
+  // FlexContainer,
   MemberImg,
   TextOverlay,
   PositionContainer,
@@ -10,16 +11,25 @@ import {
   Email,
   Overlay,
   InfoContainer,
-  TextContainer,
   MemberName,
   MemberPosition,
+  ConnectButton,
 } from "../teampage/team-member-styles"
 
-export default ({ name, photo, email, major, position, linkedinUrl, team }) => (
-  <ContactCardContainer>
-    <FlexContainer>
-      <MemberImg alt={name} fluid={photo.fluid} />
-      <Overlay>
+export default ({
+  name,
+  photo,
+  email,
+  major,
+  position,
+  linkedinUrl,
+  team,
+  index,
+}) => (
+  <CardPosition>
+    <ContactCardContainer index={index}>
+      <MemberImg photoUrl={photo.fluid.src}></MemberImg>
+      {/* <Overlay>
         <TextOverlay>
           <PositionContainer>{position}</PositionContainer>
           {major}
@@ -30,16 +40,15 @@ export default ({ name, photo, email, major, position, linkedinUrl, team }) => (
             </Email>
           </EmailText>
         </TextOverlay>
-      </Overlay>
-    </FlexContainer>
-    <InfoContainer>
-      <TextContainer>
+      </Overlay> */}
+      <InfoContainer>
         <MemberName>{name}</MemberName>
         <MemberPosition>{position}</MemberPosition>
         <a href={linkedinUrl}>
-          <button type="button">CONNECT</button>
+          <ConnectButton>CONNECT</ConnectButton>
+          {/* <button type="button">CONNECT</button> */}
         </a>
-      </TextContainer>
-    </InfoContainer>
-  </ContactCardContainer>
+      </InfoContainer>
+    </ContactCardContainer>
+  </CardPosition>
 )
