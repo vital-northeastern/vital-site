@@ -3,41 +3,44 @@ import styled from "styled-components"
 
 const NavWrapper = styled.nav`
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding-top: 15px;
-  padding-bottom: 15px;
+
+  padding: 15px 0;
   align-items: center;
   height: 90px;
-  background-color: #b2d1de;
   width: 100%;
-  top: 0;
 `
 
 const NavBrandWrapper = styled(Link)`
-  margin-left: 80px;
   text-decoration: none;
   :hover {
     text-decoration: none;
   }
 `
 
-const NavLinkGroup = styled.div`
+const FlexColumn = styled.div`
+  flex: 1;
   display: flex;
-  align-items: center;
-  width: 38%;
-  justify-content: space-between;
-  margin-right: 80px;
+  &:nth-child(1) {
+    justify-content: flex-start;
+  }
+  &:nth-child(2) {
+    justify-content: center;
+  }
+  &:nth-child(3) {
+    justify-content: flex-end;
+  }
 `
+//   margin-left: ${props => (props.index % 2 === 0 ? "0" : "60px")};
 
 const NavLink = styled(Link)`
-  color: #3d3939;
+  color: ${props => (props.variant === "blue" ? "#001049" : "white")};
   font-family: "Work Sans", sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  margin-right: 22px;
   :hover {
     transition: all 0.2s;
     color: black;
@@ -54,32 +57,27 @@ const NavBrand = styled.span`
   text-decoration: none
   margin-left: 20px;
   vertical-align: middle;
+
+
 `
 
 const NavButton = styled.button`
+  justify-self: flex-end;
+
   background-color: transparent;
   font-family: "Work Sans", sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #3d3939;
+  color: ${props => (props.variant === "blue" ? "#001049" : "white")};
+
   font-weight: 600;
-  border: 1px solid black;
+  border: 1px solid;
+  border-color: ${props => (props.variant === "blue" ? "#001049" : "white")};
+
   padding: 5px 20px;
   cursor: pointer;
   border-radius: 20px;
-  :hover {
-    transition: all 0.2s;
-    color: black;
-    background-color: white;
-  }
 `
 
-export {
-  NavWrapper,
-  NavBrandWrapper,
-  NavLinkGroup,
-  NavLink,
-  NavBrand,
-  NavButton,
-}
+export { NavWrapper, NavBrandWrapper, NavLink, NavBrand, NavButton, FlexColumn }
