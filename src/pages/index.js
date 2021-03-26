@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
 import Img from "gatsby-image"
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import { H1, H2, H3, P } from "../constants/typography"
 

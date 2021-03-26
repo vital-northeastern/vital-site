@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import History from "../components/what-we-do/history"
 import IndustryBG from "../components/what-we-do/industry-bg"
