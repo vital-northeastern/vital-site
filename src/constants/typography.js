@@ -2,10 +2,10 @@ import styled from "styled-components"
 import "./typefaces.css"
 
 const fonts = {
-  workSans: `'Work Sans', sans-serif`,
+  body: `'Work Sans', sans-serif`,
   futura: `'Futura', sans-serif`,
-  futuraBold: `'Futura Bold', sans-serif`,
-  futuraHeavy: `'Futura Heavy', sans-serif`,
+  header: `'Futura Bold', sans-serif`,
+  subheader: `'Futura Heavy', sans-serif`,
 }
 
 const fontSizes = {
@@ -27,7 +27,7 @@ const fontWeights = {
 
 const H1 = styled.h1`
   font-size: ${fontSizes.h1};
-  font-family: ${fonts.futuraBold};
+  font-family: ${fonts.header};
   font-weight: ${fontWeights.bold};
   text-transform: ${textStyles.uppercase};
   line-height: 60px;
@@ -35,7 +35,7 @@ const H1 = styled.h1`
 
 const H2 = styled.h2`
   font-size: ${fontSizes.h2};
-  font-family: ${fonts.futuraHeavy};
+  font-family: ${fonts.subheader};
   font-weight: ${fontWeights.bold};
   text-transform: ${textStyles.uppercase};
   letter-spacing: 0.1em;
@@ -44,7 +44,7 @@ const H2 = styled.h2`
 
 const H3 = styled.h3`
   font-size: ${fontSizes.h3};
-  font-family: ${fonts.futuraHeavy};
+  font-family: ${fonts.subheader};
   font-weight: ${fontWeights.bold};
   text-transform: ${textStyles.uppercase};
   line-height: 26px;
@@ -52,7 +52,7 @@ const H3 = styled.h3`
 
 const P = styled.p`
   font-size: ${fontSizes.p};
-  font-family: ${fonts.workSans};
+  font-family: ${fonts.body};
   font-weight: ${fontWeights.normal};
   line-height: 22px;
 `
