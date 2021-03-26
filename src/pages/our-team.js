@@ -52,22 +52,6 @@ const TeamPage = props => {
         )
       })}
 
-      {/* <Team teamName="Marketing Team" members={teamPage.teamMembers}></Team> */}
-      {/* <ul className="members">
-        {teamPage.teamMembers.map((member, index) => {
-          return (
-            <TeamMember
-              name={member.name}
-              photo={member.photo}
-              email={member.email}
-              major={member.major}
-              position={member.position}
-              linkedinUrl={member.linkedinUrl}
-              team={member.team}
-            />
-          )
-        })}
-      </ul> */}
       <h3>ADVISORS</h3>
       <ul className="advisors">
         {teamPage.advisors.map((advisor, index) => {

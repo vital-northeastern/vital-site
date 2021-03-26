@@ -7,11 +7,9 @@ import {
   TitleHolder,
 } from "../teampage/teams-styles"
 import TeamMember from "../teampage/team-member"
-import hex from "../../images/gatsby-icon.png"
 
 export default ({ teamName, members, index }) => (
   <TeamContainer>
-    {/* <img src={hex} /> */}
     <TitleHolder>
       <TeamTitle index={index}>{teamName}</TeamTitle>
       <BackgroundHex index={index}></BackgroundHex>
@@ -33,7 +31,6 @@ export default ({ teamName, members, index }) => (
         )
       })}
     </TeamMembersContainer>
-    {/* <TeamMember name="dog"></TeamMember> */}
     <div></div>
   </TeamContainer>
 )
