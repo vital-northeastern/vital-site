@@ -5,7 +5,8 @@ import Hero from "../components/homepage/hero/hero"
 import Mission from "../components/homepage/mission/mission"
 import Inclusivity from "../components/homepage/inclusivity/inclusivity"
 import StayInTheKnow from "../components/homepage/stay-in-the-know/stay-in-the-know"
-import Layout from "../components/layout"
+import Carousel from "../components/homepage/carousel/carousel"
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 
 const IndexPage = props => {
@@ -41,6 +42,10 @@ const IndexPage = props => {
         ctaTitle={stayInTheKnow.ctaTitle}
         ctaLink={stayInTheKnow.ctaLink}
         upcomingEvent={homePage.upcomingEvent}
+      />
+      <Carousel
+        title={homePage.carouselTitle}
+        carouselItems={homePage.carouselItems}
       />
     </Layout>
   )
