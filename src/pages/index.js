@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import get from "lodash/get"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import { H1, H2, H3, P } from "../constants/typography"
 
 const IndexPage = props => {
   const homePage = get(props, "data.contentfulHome")
@@ -11,11 +10,10 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      <H1>H1 styled with Futura</H1>
-      <H2>H2: Mission Statement</H2>
-      <H3>{homePage.smallTitle}</H3>
-      <P>{homePage.subheadingForTitle}</P>
-      <P>{homePage.homepageSections[0].blurbText.blurbText}</P>
+      <h3>{homePage.smallTitle}</h3>
+      <h1>{homePage.bigTitle}</h1>
+      <p>{homePage.subheadingForTitle}</p>
+      <p>{homePage.homepageSections[0].blurbText.blurbText}</p>
     </Layout>
   )
 }

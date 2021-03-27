@@ -1,11 +1,12 @@
 import React from "react"
+import { H3, P } from "../../../constants/typography"
 
 const History = ({ title, historyMilestones }) => {
   return (
     <>
-      <h3>{title}</h3>
+      <H3>{title}</H3>
       {historyMilestones.map((milestone, index) => (
-        <li>{milestone.milestoneDescription.milestoneDescription}</li>
+        <P>{milestone.milestoneDescription.milestoneDescription}</P>
       ))}
     </>
   )

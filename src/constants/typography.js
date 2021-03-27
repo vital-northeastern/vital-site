@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import "./typefaces.css"
-import { size } from "./devices"
+import { size, devices } from "./devices"
 
 const fonts = {
   body: `'Work Sans', sans-serif`,
@@ -20,7 +20,7 @@ const fontSizes = {
   h1: `calc(${minSize.h1}px + (72 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
   h2: `calc(${minSize.h2}px + (45 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
   h3: `calc(${minSize.h3}px + (30 - ${minSize.h3}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
-  p: `calc(${minSize.p}px + (17 - ${minSize.hp}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
+  p: `calc(${minSize.p}px + (17 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
 }
 
 const textStyles = {
@@ -63,6 +63,10 @@ const P = styled.p`
   font-family: ${fonts.body};
   font-weight: ${fontWeights.normal};
   line-height: 24px;
+
+  @media ${devices.mobile} {
+    line-height: 26px;
+  }
 `
 
 export { H1, H2, H3, P }
