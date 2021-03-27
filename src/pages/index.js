@@ -2,36 +2,31 @@ import React from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
 import Hero from "../components/homepage/hero/hero"
-import HomepageSection from "../components/homepage/sections/sections"
+import Mission from "../components/homepage/mission/mission"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from "gatsby-image"
 
 const IndexPage = props => {
   const homePage = get(props, "data.contentfulHome")
+  const mission = homePage.homepageSections[0]
+  const everyoneWelcome = homePage.homepageSections[1]
+  const upToDate = homePage.homepageSections[2]
 
   return (
     <Layout>
       <SEO title="Home" />
       <Hero
-        title={homePage.title}
-        tagline={homePage.subheadingForTitle}
-        clubBlurb={homePage.clubBlurb.clubBlurb}
-        ctaTitle={homePage.ctaTitle}
-        ctaLink={homePage.ctaLink}
-        heroImage={homePage.featuredImage}
+        smallTitle={homePage.smallTitle}
+        bigTitle={homePage.bigTitle}
+        subheading={homePage.subheadingForTitle}
       />
-      {homePage.homepageSections.map((section, index) => {
-        return (
-          <HomepageSection
-            title={section.title}
-            blurbText={section.blurbText}
-            ctaTitle={section.ctaTitle}
-            ctaLink={section.ctaLink}
-            featuredImage={section.featuredImage}
-            featuredWord={section.featuredWord}
-          />
-        )
-      })}
+      <Mission
+        title={mission.title}
+        blurbText={mission.blurbText}
+        ctaTitle={mission.ctaTitle}
+        ctaLink={mission.ctaLink}
+      />
     </Layout>
   )
 }
@@ -41,31 +36,37 @@ export default IndexPage
 export const pageQuery = graphql`
   query homeQuery {
     contentfulHome {
-      title
+      smallTitle
+      bigTitle
       subheadingForTitle
-      clubBlurb {
-        clubBlurb
-      }
-      ctaTitle
-      ctaLink
-      featuredImage {
-        fluid(maxWidth: 750) {
-          ...GatsbyContentfulFluid
-        }
-      }
       homepageSections {
         title
-        featuredImage {
-          fluid(maxWidth: 400) {
-            ...GatsbyContentfulFluid
-          }
-        }
         blurbText {
           blurbText
         }
         ctaTitle
         ctaLink
-        featuredWord
+      }
+      upcomingEvent {
+        title
+        featuredImage {
+          fluid(maxWidth: 750) {
+            ...GatsbyContentfulFluid
+          }
+          description
+        }
+      }
+      carouselTitle
+      carouselItems {
+        title
+        featuredImage {
+          fluid(maxWidth: 750) {
+            ...GatsbyContentfulFluid
+          }
+          description
+        }
+        subTitle
+        link
       }
     }
   }
