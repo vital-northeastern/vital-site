@@ -9,10 +9,10 @@ const fonts = {
 }
 
 const fontSizes = {
-  h1: `calc(40px + (90 - 40) * ((100vw - 320px) / (1440 - 320)))`,
+  h1: `calc(52px + (72 - 52) * ((100vw - 320px) / (1440 - 320)))`,
   h2: `calc(30px + (50 - 30) * ((100vw - 320px) / (1440 - 320)))`,
-  h3: `calc(25px + (28 - 22) * ((100vw - 320px) / (1440 - 320)))`,
-  p: `calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)))`,
+  h3: `calc(25px + (30 - 25) * ((100vw - 320px) / (1440 - 320)))`,
+  p: `calc(14px + (17 - 14) * ((100vw - 320px) / (1440 - 320)))`,
 }
 
 const textStyles = {
@@ -54,7 +54,7 @@ const P = styled.p`
   font-size: ${fontSizes.p};
   font-family: ${fonts.body};
   font-weight: ${fontWeights.normal};
-  line-height: 22px;
+  line-height: 24px;
 `
 
 export { H1, H2, H3, P }
