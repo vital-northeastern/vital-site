@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
-import { PrimaryButton } from "../constants/buttons"
+import { PrimaryButton, SecondaryButton } from "../constants/buttons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -16,6 +16,7 @@ const IndexPage = props => {
       <h1>{homePage.smallTitle}</h1>
       <p>{homePage.subheadingForTitle}</p>
       <PrimaryButton>what we do</PrimaryButton>
+      <SecondaryButton>what we do</SecondaryButton>
     </Layout>
   )
 }
