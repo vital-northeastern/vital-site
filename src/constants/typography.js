@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import "./typefaces.css"
+import { size } from "./devices"
 
 const fonts = {
   body: `'Work Sans', sans-serif`,
@@ -8,11 +9,18 @@ const fonts = {
   subheader: `'Futura Heavy', sans-serif`,
 }
 
+const minSize = {
+  h1: 52,
+  h2: 35,
+  h3: 25,
+  p: 14,
+}
+
 const fontSizes = {
-  h1: `calc(52px + (72 - 52) * ((100vw - 320px) / (1440 - 320)))`,
-  h2: `calc(30px + (50 - 30) * ((100vw - 320px) / (1440 - 320)))`,
-  h3: `calc(25px + (30 - 25) * ((100vw - 320px) / (1440 - 320)))`,
-  p: `calc(14px + (17 - 14) * ((100vw - 320px) / (1440 - 320)))`,
+  h1: `calc(${minSize.h1}px + (72 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
+  h2: `calc(${minSize.h2}px + (45 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
+  h3: `calc(${minSize.h3}px + (30 - ${minSize.h3}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
+  p: `calc(${minSize.p}px + (17 - ${minSize.hp}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
 }
 
 const textStyles = {
