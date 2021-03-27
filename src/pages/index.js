@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
-import Img from "gatsby-image"
 import { PrimaryButton } from "../constants/buttons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,17 +13,9 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>{homePage.title}</h1>
+      <h1>{homePage.smallTitle}</h1>
       <p>{homePage.subheadingForTitle}</p>
-      <p>{homePage.clubBlurb.clubBlurb}</p>
-      <PrimaryButton>sign up</PrimaryButton>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Img
-          className="featured"
-          fluid={homePage.featuredImage.fluid}
-          alt={homePage.title}
-        />
-      </div>
+      <PrimaryButton>what we do</PrimaryButton>
     </Layout>
   )
 }
@@ -34,14 +25,46 @@ export default IndexPage
 export const pageQuery = graphql`
   query homeQuery {
     contentfulHome {
-      title
+      smallTitle
+      bigTitle
       subheadingForTitle
-      clubBlurb {
-        clubBlurb
+      homepageSections {
+        title
+        blurbText {
+          blurbText
+        }
+        ctaTitle
+        ctaLink
       }
-      featuredImage {
-        fluid(maxWidth: 750) {
-          ...GatsbyContentfulFluid
+      everyoneWelcomeCarousel {
+        title
+        carouselItems {
+          title
+          featuredImage {
+            fluid(maxWidth: 450) {
+              ...GatsbyContentfulFluid
+            }
+            description
+          }
+        }
+      }
+      upcomingEvent {
+        title
+        featuredImage {
+          fluid(maxWidth: 750) {
+            ...GatsbyContentfulFluid
+          }
+          description
+        }
+      }
+      carouselTitle
+      carouselItems {
+        title
+        featuredImage {
+          fluid(maxWidth: 750) {
+            ...GatsbyContentfulFluid
+          }
+          description
         }
       }
     }
