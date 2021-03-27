@@ -12,8 +12,10 @@ const StayInTheKnow = ({
     <>
       <h2>{title}</h2>
       <p>{blurbText.blurbText}</p>
-      <a href={ctaLink}>
-        <button type="button">{ctaTitle}</button>
+      <a href={ctaLink} target="_blank" rel="noreferrer">
+        <button type="button">
+          {ctaTitle} aria-label={ctaTitle}
+        </button>
       </a>
       <h2>{upcomingEvent.title}</h2>
       <Img

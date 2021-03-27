@@ -5,8 +5,10 @@ const Mission = ({ title, blurbText, ctaTitle, ctaLink }) => {
     <>
       <h2>{title}</h2>
       <p>{blurbText.blurbText}</p>
-      <a href={ctaLink}>
-        <button type="button">{ctaTitle}</button>
+      <a href={ctaLink} target="_blank" rel="noreferrer">
+        <button type="button" aria-label={ctaTitle}>
+          {ctaTitle}
+        </button>
       </a>
     </>
   )

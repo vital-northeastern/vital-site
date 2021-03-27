@@ -1,22 +1,20 @@
 import React from "react"
 import Img from "gatsby-image"
+import CarouselItem from "./carousel-item"
 
 const Carousel = ({ title, carouselItems }) => {
   return (
     <>
       <p>{title}</p>
-      {carouselItems.map(item => {
+      {carouselItems.map((item, index) => {
         return (
-          <div>
-            <h4>{item.title}</h4>
-            <p>{item.subTitle}</p>
-            <a href={item.link}>Learn More</a>
-            <Img
-              className="featured"
-              fluid={item.featuredImage.fluid}
-              alt={item.featuredImage.description}
-            />
-          </div>
+          <CarouselItem
+            key={index}
+            title={item.title}
+            subTitle={item.subTitle}
+            link={item.link}
+            featuredImage={item.featuredImage}
+          />
         )
       })}
     </>
