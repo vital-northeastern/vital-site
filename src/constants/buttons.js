@@ -6,7 +6,7 @@ const PrimaryButton = styled.button`
   color: ${white};
   border-radius: 50px;
   border: none;
-  padding: 20px 40px;
+  padding: 20px 38px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 14px;
@@ -25,7 +25,7 @@ const SecondaryButton = styled.button`
   border-radius: 50px;
   border: 1px solid ${navyBlue};
   background: transparent;
-  padding: 20px 40px;
+  padding: 20px 38px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 14px;
