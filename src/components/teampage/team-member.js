@@ -2,7 +2,6 @@ import React from "react"
 import {
   ContactCardContainer,
   CardPosition,
-  // FlexContainer,
   MemberImg,
   TextOverlay,
   PositionContainer,
@@ -33,18 +32,7 @@ export default ({
   <CardPosition index={index} isLast={isLast}>
     <ContactCardContainer index={index}>
       <MemberImg photoUrl={photo.fluid.src}></MemberImg>
-      {/* <Overlay>
-        <TextOverlay>
-          <PositionContainer>{position}</PositionContainer>
-          {major}
-          <EmailText>
-            <Text>Reach me at </Text>
-            <Email href={`mailto:${email}`} target="_blank">
-              {email}
-            </Email>
-          </EmailText>
-        </TextOverlay>
-      </Overlay> */}
+
       <InfoContainer>
         <MemberInfoSpacer></MemberInfoSpacer>
         <div>

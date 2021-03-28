@@ -171,7 +171,6 @@ const ConnectButton = styled.button`
 export {
   ContactCardContainer,
   CardPosition,
-  // FlexContainer,
   MemberImg,
   TextOverlay,
   PositionContainer,

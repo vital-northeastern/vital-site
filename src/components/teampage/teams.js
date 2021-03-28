@@ -31,6 +31,5 @@ export default ({ teamName, members, index }) => (
         )
       })}
     </TeamMembersContainer>
-    <div></div>
   </TeamContainer>
 )
