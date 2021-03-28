@@ -60,6 +60,10 @@ const HLower = styled.h3`
   font-weight: ${fontWeights.medium};
   text-transform: ${textStyles.lowercase};
   line-height: 26px;
+
+  @media ${devices.mobileMax} {
+    line-height: 28px;
+  }
 `
 
 const H3 = styled.h3`
@@ -68,6 +72,10 @@ const H3 = styled.h3`
   font-weight: ${fontWeights.bold};
   text-transform: ${textStyles.uppercase};
   line-height: 26px;
+
+  @media ${devices.mobileMax} {
+    line-height: 28px;
+  }
 `
 
 const P = styled.p`
@@ -76,7 +84,7 @@ const P = styled.p`
   font-weight: ${fontWeights.normal};
   line-height: 24px;
 
-  @media ${devices.mobile} {
+  @media ${devices.mobileMax} {
     line-height: 26px;
   }
 `
