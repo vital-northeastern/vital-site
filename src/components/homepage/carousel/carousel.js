@@ -1,5 +1,4 @@
 import React from "react"
-import Img from "gatsby-image"
 import CarouselItem from "./carousel-item"
 
 const Carousel = ({ title, carouselItems }) => {
