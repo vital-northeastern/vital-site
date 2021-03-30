@@ -1,16 +1,28 @@
 import React from "react"
+import {
+  MissionContainer,
+  MissionHeader,
+  MissionText,
+  MissionButton,
+  MissionLowerHalf,
+} from "../mission/mission-styled"
 
 const Mission = ({ title, blurbText, ctaTitle, ctaLink }) => {
   return (
-    <>
-      <h2>{title}</h2>
-      <p>{blurbText.blurbText}</p>
-      <a href={ctaLink} target="_blank" rel="noreferrer">
-        <button type="button" aria-label={ctaTitle}>
-          {ctaTitle}
-        </button>
-      </a>
-    </>
+    <MissionContainer>
+      <div>
+        <MissionHeader>{title}</MissionHeader>
+        <MissionLowerHalf>
+          <MissionText>{blurbText.blurbText}</MissionText>
+          <a href={ctaLink} target="_blank" rel="noreferrer">
+            <MissionButton type="button" aria-label={ctaTitle}>
+              {" "}
+              {ctaTitle}
+            </MissionButton>
+          </a>
+        </MissionLowerHalf>
+      </div>
+    </MissionContainer>
   )
 }
 
