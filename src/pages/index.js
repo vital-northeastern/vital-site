@@ -1,22 +1,52 @@
 import React from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
-import { PrimaryButton, SecondaryButton } from "../constants/buttons"
-import Layout from "../components/layout"
+import Hero from "../components/homepage/hero/hero"
+import Mission from "../components/homepage/mission/mission"
+import Inclusivity from "../components/homepage/inclusivity/inclusivity"
+import StayInTheKnow from "../components/homepage/stay-in-the-know/stay-in-the-know"
+import Carousel from "../components/homepage/carousel/carousel"
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 
 const IndexPage = props => {
-  // WILL MAKE COMPONENTS LATER
-  // TESTING OUT GRAPHQL FOR NOW
   const homePage = get(props, "data.contentfulHome")
+  const mission = homePage.homepageSections[0]
+  const inclusivity = homePage.homepageSections[1]
+  const stayInTheKnow = homePage.homepageSections[2]
 
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>{homePage.smallTitle}</h1>
-      <p>{homePage.subheadingForTitle}</p>
-      <PrimaryButton>what we do</PrimaryButton>
-      <SecondaryButton>what we do</SecondaryButton>
+      <Hero
+        smallTitle={homePage.smallTitle}
+        bigTitle={homePage.bigTitle}
+        subheading={homePage.subheadingForTitle}
+      />
+      <Mission
+        title={mission.title}
+        blurbText={mission.blurbText}
+        ctaTitle={mission.ctaTitle}
+        ctaLink={mission.ctaLink}
+      />
+      <Inclusivity
+        title={inclusivity.title}
+        blurbText={inclusivity.blurbText}
+        ctaTitle={inclusivity.ctaTitle}
+        ctaLink={inclusivity.ctaLink}
+        carousel={homePage.everyoneWelcomeCarousel}
+      />
+      <StayInTheKnow
+        title={stayInTheKnow.title}
+        blurbText={stayInTheKnow.blurbText}
+        ctaTitle={stayInTheKnow.ctaTitle}
+        ctaLink={stayInTheKnow.ctaLink}
+        upcomingEvent={homePage.upcomingEvent}
+      />
+      <Carousel
+        title={homePage.carouselTitle}
+        carouselItems={homePage.carouselItems}
+      />
     </Layout>
   )
 }
@@ -67,6 +97,8 @@ export const pageQuery = graphql`
           }
           description
         }
+        subTitle
+        link
       }
     }
   }
