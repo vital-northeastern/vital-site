@@ -21,7 +21,7 @@ const ImageContainer = styled.div`
 
 const CardContentContainer = styled.div`
   background-color: #5269e1;
-  height: 330px;
+  height: 390px;
 `
 
 const CardContent = styled.div`
@@ -32,6 +32,7 @@ const CardTitle = styled(HLower)`
   text-transform: capitalize;
   text-align: center;
   padding-top: 30px;
+  padding-bottom: 25px;
   font-size: ${fontSizes.title};
   font-weight: 300px;
 `
@@ -41,11 +42,16 @@ const CardTitleContainer = styled.div`
 `
 
 const TextContainer = styled.div`
-  margin: auto;
   padding-bottom: 10px;
   padding-left: 30px;
   padding-right: 30px;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  height: 250px;
 `
+
+const Text = styled(P)``
 
 export {
   CardContainer,
@@ -55,4 +61,5 @@ export {
   CardTitle,
   CardTitleContainer,
   TextContainer,
+  Text,
 }

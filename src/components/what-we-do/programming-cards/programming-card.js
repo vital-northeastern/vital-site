@@ -9,6 +9,7 @@ import {
   CardTitleContainer,
   CardContentContainer,
   TextContainer,
+  Text,
 } from "./programming-card-styles"
 
 const ProgrammingCard = ({ key, title, description, photo, photoAlt }) => {
@@ -23,7 +24,7 @@ const ProgrammingCard = ({ key, title, description, photo, photoAlt }) => {
             <CardTitle>{title}</CardTitle>
           </CardTitleContainer>
           <TextContainer>
-            <P>{description}</P>
+            <Text>{description}</Text>
           </TextContainer>
         </CardContent>
       </CardContentContainer>
