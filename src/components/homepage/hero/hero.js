@@ -1,12 +1,31 @@
 import React from "react"
+import union from "../../../images/Union.svg"
+
+import {
+  HeroContainer,
+  InnerHeroContainer,
+  SmallTitle,
+  BigTitle,
+  SubHeading,
+  ScrollCont,
+  ScrollText,
+} from "../hero/hero-styles"
 
 const Hero = ({ smallTitle, bigTitle, subheading }) => {
   return (
-    <>
-      <h3>{smallTitle}</h3>
-      <h1>{bigTitle}</h1>
-      <h5>{subheading}</h5>
-    </>
+    <HeroContainer>
+      <InnerHeroContainer>
+        <SmallTitle>{smallTitle}</SmallTitle>
+        <BigTitle>{bigTitle}</BigTitle>
+
+        <SubHeading>{subheading}</SubHeading>
+
+        <ScrollCont>
+          <ScrollText>scroll for more</ScrollText>
+          <img src={union} alt="Down Arrow" />
+        </ScrollCont>
+      </InnerHeroContainer>
+    </HeroContainer>
   )
 }
 
