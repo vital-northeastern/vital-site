@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { HLower, P } from "../../../constants/typography"
+import { HLower } from "../../../constants/typography"
 import { size, devices } from "../../../constants/devices"
 
 const fontSizes = {
@@ -9,7 +9,7 @@ const fontSizes = {
 }
 
 const CardContainer = styled.div`
-  width: 385px;
+  width: 405px;
   overflow: hidden;
   padding: 50px 10px 50px;
 `
@@ -51,8 +51,6 @@ const TextContainer = styled.div`
   height: 250px;
 `
 
-const Text = styled(P)``
-
 export {
   CardContainer,
   ImageContainer,
@@ -61,5 +59,4 @@ export {
   CardTitle,
   CardTitleContainer,
   TextContainer,
-  Text,
 }
