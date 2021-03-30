@@ -8,6 +8,7 @@ const colors = {
 const MissionContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 200px;
 `
 
 const MissionInnerCont = styled.div``
@@ -21,7 +22,6 @@ const MissionText = styled.p`
 `
 
 const MissionLowerHalf = styled.div`
-
 margin-left 90px;
 `
 

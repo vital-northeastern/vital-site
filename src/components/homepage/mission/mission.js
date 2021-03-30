@@ -5,7 +5,7 @@ import {
   MissionText,
   MissionButton,
   MissionLowerHalf,
-} from "../mission/mission-styled"
+} from "./mission-styles"
 
 const Mission = ({ title, blurbText, ctaTitle, ctaLink }) => {
   return (
