@@ -14,10 +14,7 @@ const WhatWeDo = props => {
     <Layout>
       <SEO title="What We Do" />
       <h1>{whatWeDo.title}</h1>
-      <History
-        title={whatWeDo.history.title}
-        historyMilestones={whatWeDo.history.historyMilestones}
-      />
+      <History title={whatWeDo.history.title} timeline={whatWeDo.timeline} />
       <IndustryBG
         title={whatWeDo.industryBackgroundTitle}
         blurb={whatWeDo.industryBackgroundBlurb}
@@ -27,6 +24,7 @@ const WhatWeDo = props => {
       {whatWeDo.programmingCards.map((card, index) => {
         return (
           <ProgrammingCard
+            key={index}
             title={card.title}
             description={card.shortDescription}
             photo={card.photo}
@@ -53,6 +51,12 @@ export const pageQuery = graphql`
             milestoneDescription
           }
         }
+      }
+      timeline {
+        fluid(maxWidth: 750) {
+          ...GatsbyContentfulFluid
+        }
+        description
       }
       industryBackgroundTitle
       industryBackgroundBlurb {

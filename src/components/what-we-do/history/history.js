@@ -1,12 +1,16 @@
 import React from "react"
+import { H3 } from "../../../constants/typography"
+import Img from "gatsby-image"
 
-const History = ({ title, historyMilestones }) => {
+const History = ({ title, timeline }) => {
   return (
     <>
-      <h3>{title}</h3>
-      {historyMilestones.map((milestone, index) => (
-        <li>{milestone.milestoneDescription.milestoneDescription}</li>
-      ))}
+      <H3>{title}</H3>
+      <Img
+        className="featured"
+        fluid={timeline.fluid}
+        alt={timeline.description}
+      />
     </>
   )
 }
