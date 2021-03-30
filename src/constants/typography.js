@@ -74,7 +74,7 @@ const H3 = styled.h3`
   line-height: 26px;
 
   @media ${devices.mobileMax} {
-    line-height: 28px;
+    line-height: 24px;
   }
 `
 
