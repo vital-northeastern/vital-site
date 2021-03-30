@@ -13,8 +13,8 @@ const StayInTheKnow = ({
       <h2>{title}</h2>
       <p>{blurbText.blurbText}</p>
       <a href={ctaLink} target="_blank" rel="noreferrer">
-        <button type="button">
-          {ctaTitle} aria-label={ctaTitle}
+        <button type="button" aria-label={ctaTitle}>
+          {ctaTitle}
         </button>
       </a>
       <h2>{upcomingEvent.title}</h2>
