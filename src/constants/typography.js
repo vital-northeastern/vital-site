@@ -5,6 +5,7 @@ import { size, devices } from "./devices"
 const fonts = {
   body: `'Work Sans', sans-serif`,
   futura: `'Futura', sans-serif`,
+  futuraBook: `'Futura Book', sans-serif`,
   header: `'Futura Bold', sans-serif`,
   subheader: `'Futura Heavy', sans-serif`,
 }
@@ -28,6 +29,7 @@ const fontSizes = {
 const textStyles = {
   uppercase: "uppercase",
   lowercase: "lowercase",
+  capitalize: "capitalize",
 }
 
 const fontWeights = {
@@ -62,7 +64,18 @@ const HLower = styled.h3`
   line-height: 26px;
 
   @media ${devices.mobileMax} {
-    line-height: 28px;
+    line-height: 24px;
+  }
+`
+
+const HCapitalize = styled.h3`
+  font-size: ${fontSizes.h3};
+  font-family: ${fonts.futuraBook};
+  text-transform: ${textStyles.capitalize};
+  line-height: 26px;
+
+  @media ${devices.mobileMax} {
+    line-height: 24px;
   }
 `
 
@@ -89,4 +102,4 @@ const P = styled.p`
   }
 `
 
-export { H1, H2, HLower, H3, P }
+export { H1, H2, HLower, HCapitalize, H3, P }

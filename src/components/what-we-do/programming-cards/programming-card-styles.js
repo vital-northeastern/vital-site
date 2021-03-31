@@ -1,12 +1,5 @@
 import styled from "styled-components"
-import { HLower } from "../../../constants/typography"
-import { size, devices } from "../../../constants/devices"
-
-const fontSizes = {
-  title: `calc(
-    25px + (30 - 25) *
-      ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
-}
+import { HCapitalize } from "../../../constants/typography"
 
 const CardContainer = styled.div`
   width: 405px;
@@ -28,13 +21,10 @@ const CardContent = styled.div`
   color: white;
 `
 
-const CardTitle = styled(HLower)`
-  text-transform: capitalize;
+const CardTitle = styled(HCapitalize)`
   text-align: center;
   padding-top: 30px;
   padding-bottom: 25px;
-  font-size: ${fontSizes.title};
-  font-weight: 300px;
 `
 
 const CardTitleContainer = styled.div`
