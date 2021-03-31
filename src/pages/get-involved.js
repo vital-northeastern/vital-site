@@ -1,4 +1,6 @@
 import React from "react"
+import get from "lodash/get"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
@@ -6,6 +8,7 @@ import Introduction from "../components/get-involved/introduction"
 import Eboard from "../components/get-involved/eboard"
 import Position from "../components/get-involved/position"
 import ApplicationInfo from "../components/get-involved/application-info"
+import { PositionCardsContainer } from "../page-styles/get-involved-styles"
 
 const GetInvolved = props => {
   const involvedPage = get(props, "data.contentfulGetInvolvedPage")
@@ -26,10 +29,11 @@ const GetInvolved = props => {
         ctaLink={involvedPage.ctaLink}
         ctaTitle={involvedPage.ctaTitle}
       />
-      <div>
-        {involvedPage.positions.map(position => {
+      <PositionCardsContainer>
+        {involvedPage.positions.map((position, index) => {
           return (
             <Position
+              index={index}
               title={position.positionTitle}
               description={position.description}
               featuredImage={position.featuredImage}
@@ -37,7 +41,7 @@ const GetInvolved = props => {
             />
           )
         })}
-      </div>
+      </PositionCardsContainer>
       <ApplicationInfo
         applicationEmail={involvedPage.applicationEmail}
         deadlineForApplication={involvedPage.deadlineForApplication}

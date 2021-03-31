@@ -9,8 +9,14 @@ import {
   PositionDescription,
 } from "../get-involved/position-styles.js"
 
-export default ({ title, description, featuredImage, featuredImageAlt }) => (
-  <PositionContainer>
+export default ({
+  index,
+  title,
+  description,
+  featuredImage,
+  featuredImageAlt,
+}) => (
+  <PositionContainer index={index}>
     <FlexContainer>
       <PositionImg alt={featuredImageAlt} fluid={featuredImage.fluid} />
     </FlexContainer>

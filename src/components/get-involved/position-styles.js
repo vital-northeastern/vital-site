@@ -1,32 +1,27 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { devices } from "../../constants/devices"
-
-const fonts = {
-  sourceSans: `'source sans pro', 'Arial',
-    Arial, sans-serif`,
-  workSans: `'Work Sans', sans-serif`,
-}
+import { size, devices } from "../../constants/devices"
+import { P, HLower } from "../../constants/typography"
 
 const fontSizes = {
-  name: `calc(12px + (38 - 16) * ((100vw - 375px) / (1920 - 375)))`,
-  text: `calc(9px + (20 - 12) * ((100vw - 375px) / (1920 - 375)))`,
+  title: `calc(
+    20px + (25 - 20) *
+      ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
 }
 
 const PositionContainer = styled.div`
-  margin-left: 80px;
+  @media ${devices.laptop} {
+    margin-left: ${props => (props.index % 2 == 0 ? "5rem" : "50px")};
+  }
   z-index: 1;
   display: inline-block;
   overflow: hidden;
-  @media ${devices.tablet} {
-    height: 16rem;
-    width: 29rem;
-  }
+  height: 16rem;
+  width: 29rem;
 `
 
 const FlexContainer = styled.div`
   display: flex;
-  position: relative;
   float: left;
   width: 30%;
 `
@@ -35,14 +30,12 @@ const PositionImg = styled(Img)`
   display: inline-block;
   width: 100%;
   height: auto;
-  box-shadow: 3px 3px 12px grey;
 `
 
 const InfoContainer = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  float: left;
   padding-left: 20px;
   width: 70%;
   @media ${devices.mobile} {
@@ -56,20 +49,17 @@ const TextContainer = styled.div`
   padding-bottom: 0px;
 `
 
-const PositionName = styled.h2`
-  font-family: ${fonts.sourceSans};
-  font-size: ${fontSizes.name};
-  color: black;
+const PositionName = styled(HLower)`
+  text-transform: capitalize;
+  color: #133e6c;
   margin: auto;
   padding-top: 1rem;
+  font-size: ${fontSizes.title};
 `
 
-const PositionDescription = styled.p`
-  font-family: ${fonts.workSans};
-  font-size: ${fontSizes.text};
-  line-height: 20px;
-  color: black;
-  margin: auto;
+const PositionDescription = styled(P)`
+  line-height: 21px;
+  padding-top: 15px;
 `
 
 export {

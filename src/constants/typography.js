@@ -14,7 +14,7 @@ const minSize = {
   h2: 35,
   hLower: 30,
   h3: 25,
-  p: 14,
+  p: 12,
 }
 
 const fontSizes = {
@@ -22,7 +22,7 @@ const fontSizes = {
   h2: `calc(${minSize.h2}px + (45 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
   hLower: `calc(${minSize.hLower}px + (34 - ${minSize.hLower}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
   h3: `calc(${minSize.h3}px + (30 - ${minSize.h3}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
-  p: `calc(${minSize.p}px + (17 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
+  p: `calc(${minSize.p}px + (14 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
 }
 
 const textStyles = {
@@ -82,7 +82,7 @@ const P = styled.p`
   font-size: ${fontSizes.p};
   font-family: ${fonts.body};
   font-weight: ${fontWeights.normal};
-  line-height: 24px;
+  line-height: 23px;
 
   @media ${devices.mobileMax} {
     line-height: 26px;
