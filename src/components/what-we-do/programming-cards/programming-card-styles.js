@@ -1,8 +1,17 @@
 import styled from "styled-components"
 import { HCapitalize } from "../../../constants/typography"
+import { devices } from "../../../constants/devices"
 
 const CardContainer = styled.div`
-  width: 405px;
+  @media ${devices.mobile} {
+    width: 80vw;
+  }
+  @media ${devices.tablet} {
+    width: 50vw;
+  }
+  @media ${devices.laptop} {
+    width: 30vw;
+  }
   overflow: hidden;
   padding: 50px 10px 50px;
 `

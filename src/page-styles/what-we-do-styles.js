@@ -9,6 +9,7 @@ const CardsContainer = styled.div`
 
   @media ${devices.tabletMax} {
     display: block;
+    justify-content: center;
     align-content: center;
   }
 `

@@ -71,7 +71,9 @@ const HLower = styled.h3`
 const HCapitalize = styled.h3`
   font-size: ${fontSizes.h3};
   font-family: ${fonts.futuraBook};
+  font-weight: ${fontWeights.normal};
   text-transform: ${textStyles.capitalize};
+  letter-spacing: 1px;
   line-height: 26px;
 
   @media ${devices.mobileMax} {
