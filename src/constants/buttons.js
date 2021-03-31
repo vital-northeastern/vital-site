@@ -1,18 +1,22 @@
 import styled from "styled-components"
-import { white, navyBlue, periwinkle } from "./colors"
+import { white, navyBlue, royalBlue } from "./colors"
+import "./typefaces.css"
 
-const PrimaryButton = styled.button`
-  background-color: ${navyBlue};
-  color: ${white};
+const Button = styled.button`
+  background-color: ${props => (props.primary ? navyBlue : "transparent")};
+  color: ${props => (props.primary ? white : navyBlue)};
   border-radius: 50px;
-  border: none;
+  border: ${props => (props.primary ? "none" : `1px solid ${navyBlue}`)};
   padding: 20px 38px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: "Futura Book", sans-serif;
   font-size: 14px;
   transition: all 0.2s;
   &:hover {
-    background-color: ${periwinkle};
+    background-color: ${props => (props.primary ? royalBlue : "transparent")};
+    border: ${props => (props.primary ? "none" : `1px solid ${royalBlue}`)};
+    color: ${props => (props.primary ? white : royalBlue)};
     cursor: pointer;
   }
   &:focus {
@@ -20,23 +24,4 @@ const PrimaryButton = styled.button`
   }
 `
 
-const SecondaryButton = styled.button`
-  color: ${navyBlue};
-  border-radius: 50px;
-  border: 1px solid ${navyBlue};
-  background: transparent;
-  padding: 20px 38px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 14px;
-  transition: all 0.2s;
-  &:hover {
-    background-color: ${periwinkle};
-    cursor: pointer;
-  }
-  &:focus {
-    outline: 0;
-  }
-`
-
-export { PrimaryButton, SecondaryButton }
+export { Button }

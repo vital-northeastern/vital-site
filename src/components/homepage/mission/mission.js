@@ -1,4 +1,5 @@
 import React from "react"
+import { Button } from "../../../constants/buttons"
 
 const Mission = ({ title, blurbText, ctaTitle, ctaLink }) => {
   return (
@@ -6,9 +7,12 @@ const Mission = ({ title, blurbText, ctaTitle, ctaLink }) => {
       <h2>{title}</h2>
       <p>{blurbText.blurbText}</p>
       <a href={ctaLink} target="_blank" rel="noreferrer">
-        <button type="button" aria-label={ctaTitle}>
+        <Button primary={true} aria-label={ctaTitle}>
           {ctaTitle}
-        </button>
+        </Button>
+        <Button primary={false} aria-label={ctaTitle}>
+          {ctaTitle}
+        </Button>
       </a>
     </>
   )
