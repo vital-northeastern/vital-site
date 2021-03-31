@@ -26,7 +26,7 @@ module.exports = {
       options: {
         fonts: [
           `source sans pro\:300,400,400i,700`,
-          `Work Sans\:300, 400i, 500, 700`, // you can also specify font weights and styles
+          `Work Sans\:300, 400i, 500, 700`,
         ],
         display: "swap",
       },

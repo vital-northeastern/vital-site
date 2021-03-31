@@ -1,7 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
-import get from "lodash/get"
-import Layout from "../components/layout"
+
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Introduction from "../components/get-involved/introduction"
 import Eboard from "../components/get-involved/eboard"
