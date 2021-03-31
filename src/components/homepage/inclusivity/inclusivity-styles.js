@@ -19,8 +19,8 @@ const InfoContainer = styled.div`
   justify-content: center;
 `
 
-const IncHeader = styled.h2`
-  color: ${colors.primary};
+const IncHeader = styled.h3`
+  letter-spacing: 2px;
 `
 
 const IncButton = styled.button`
