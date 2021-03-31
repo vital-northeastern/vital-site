@@ -7,7 +7,7 @@ import {
   TextContainer,
   PositionName,
   PositionDescription,
-} from "../get-involved/position-styles.js"
+} from "./position-styles.js"
 
 export default ({
   index,

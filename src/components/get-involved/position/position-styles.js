@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { size, devices } from "../../constants/devices"
-import { P, HLower } from "../../constants/typography"
+import { size, devices } from "../../../constants/devices"
+import { P, HLower } from "../../../constants/typography"
 
 const fontSizes = {
   title: `calc(

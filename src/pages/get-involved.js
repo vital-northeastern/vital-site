@@ -6,8 +6,8 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Introduction from "../components/get-involved/introduction"
 import Eboard from "../components/get-involved/eboard"
-import Position from "../components/get-involved/position"
-import ApplicationInfo from "../components/get-involved/application-info"
+import Position from "../components/get-involved/position/position"
+import ApplicationInfo from "../components/get-involved/application-info/application-info"
 import { PositionCardsContainer } from "../page-styles/get-involved-styles"
 
 const GetInvolved = props => {
