@@ -11,7 +11,7 @@ const fontSizes = {
 
 const PositionContainer = styled.div`
   @media ${devices.laptop} {
-    margin-left: ${props => (props.index % 2 == 0 ? "5rem" : "50px")};
+    margin-left: ${props => (props.index % 2 === 0 ? "5rem" : "50px")};
   }
   z-index: 1;
   display: inline-block;
