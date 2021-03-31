@@ -1,6 +1,5 @@
 import React from "react"
 import { H3, P } from "../../../constants/typography"
-import Img from "gatsby-image"
 import {
   Container,
   TextContainer,

@@ -1,10 +1,12 @@
 import styled from "styled-components"
-import { size, devices } from "../../../constants/devices"
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   padding: 10px 80px;
+  @media screen and (max-width: 600px) {
+    display: block;
+  }
 `
 
 const TextContainer = styled.div`
@@ -24,7 +26,7 @@ const ImageContainer = styled.div`
 `
 
 const Image = styled.img`
-  height: 270px;
+  max-height: 100%;
 `
 
 export { Container, TextContainer, ImageContainer, Image }
