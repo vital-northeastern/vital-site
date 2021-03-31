@@ -1,5 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
+import { P } from "../../../constants/typography"
 
 import {
   KnowContainer,
@@ -29,7 +30,7 @@ const StayInTheKnow = ({
       <KnowInfo>
         <KnowHeader>{title}</KnowHeader>
 
-        <p>{blurbText.blurbText}</p>
+        <P>{blurbText.blurbText}</P>
         <a href={ctaLink} target="_blank" rel="noreferrer">
           <KnowButton type="button" aria-label={ctaTitle}>
             {ctaTitle}

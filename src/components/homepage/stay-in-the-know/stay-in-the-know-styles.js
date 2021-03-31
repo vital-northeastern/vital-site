@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { HLower } from "../../../constants/typography"
 
 const colors = {
   primary: "#001049", // dark blue
@@ -17,7 +18,7 @@ const KnowInfo = styled.div`
   padding-left: calc(6% + 40px);
 `
 
-const KnowHeader = styled.h3`
+const KnowHeader = styled(HLower)`
   letter-spacing: 2px;
 `
 
@@ -42,7 +43,7 @@ const KnowImageSection = styled.div`
 `
 
 const KnowImageHolder = styled.div`
-  width: 80%;
+  min-width: 85%;
   height: 360px;
   position: absolute;
   top: -40px;
@@ -57,7 +58,7 @@ const KnowImageHolder = styled.div`
 
 const KnowImageHeader = styled.h3`
   letter-spacing: 2px;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
   position: absolute;
   top: -20px;
   left: -40px;
