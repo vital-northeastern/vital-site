@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { white, navyBlue, royalBlue } from "./colors"
-import "./typefaces.css"
+import { fonts } from "./typography"
 
 const Button = styled.button`
   background-color: ${props => (props.primary ? navyBlue : "transparent")};
@@ -10,7 +10,7 @@ const Button = styled.button`
   padding: 20px 38px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: "Futura Book", sans-serif;
+  font-family: ${fonts.button};
   font-size: 14px;
   transition: all 0.2s;
   &:hover {
