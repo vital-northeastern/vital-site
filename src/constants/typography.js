@@ -16,6 +16,7 @@ const minSize = {
   h2: 35,
   hLower: 30,
   h3: 25,
+  pMain: 13,
   p: 12,
 }
 
@@ -24,6 +25,7 @@ const fontSizes = {
   h2: `calc(${minSize.h2}px + (45 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   hLower: `calc(${minSize.hLower}px + (34 - ${minSize.hLower}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   h3: `calc(${minSize.h3}px + (30 - ${minSize.h3}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  pMain: `calc(${minSize.pMain}px + (16 - ${minSize.pMain}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   p: `calc(${minSize.p}px + (15 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
 }
 
@@ -94,6 +96,17 @@ const H3 = styled.h3`
   }
 `
 
+const PMain = styled.p`
+  font-size: ${fontSizes.pMain};
+  font-family: ${fonts.body};
+  font-weight: ${fontWeights.normal};
+  line-height: 22px;
+
+  @media ${devices.mobileMax} {
+    line-height: 24px;
+  }
+`
+
 const P = styled.p`
   font-size: ${fontSizes.p};
   font-family: ${fonts.body};
@@ -105,4 +118,4 @@ const P = styled.p`
   }
 `
 
-export { fonts, H1, H2, HLower, HCapitalize, H3, P }
+export { fonts, H1, H2, HLower, HCapitalize, H3, PMain, P }

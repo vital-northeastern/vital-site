@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { size } from "../../../constants/devices"
+import { size, devices } from "../../../constants/devices"
 
 const Container = styled.div`
   display: flex;
@@ -21,8 +21,8 @@ const TextContainer = styled.div`
 
 const ImageContainer = styled.div`
   width: 55%;
-  @media (max-width: ${size.laptop}px) {
-    padding-top: 20px;
+  @media ${devices.tabletMax} and ${devices.tablet} {
+    padding-top: 50px;
   }
   @media (max-width: ${size.tablet}px) {
     width: 100%;

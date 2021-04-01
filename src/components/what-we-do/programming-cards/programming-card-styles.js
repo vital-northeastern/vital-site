@@ -10,6 +10,9 @@ const CardContainer = styled.div`
   @media ${devices.tablet} {
     width: 60%;
   }
+  @media ${devices.tabletMax} {
+    margin: 0 auto;
+  }
   @media ${devices.laptop} {
     width: 30vw;
   }
@@ -32,7 +35,7 @@ const CardContentContainer = styled.div`
   @media ${devices.tablet} {
     height: 330px;
   }
-  @media (min-width: 1000px) {
+  @media ${devices.laptop} {
     height: 450px;
   }
   @media (min-width: 1220px) {
@@ -71,7 +74,7 @@ const TextContainer = styled.div`
   @media ${devices.tablet} {
     height: 250px;
   }
-  @media (min-width: 1000px) {
+  @media ${devices.laptop} {
     height: 320px;
   }
   @media (min-width: 1220px) {
