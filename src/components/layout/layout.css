@@ -160,7 +160,7 @@ input,
 optgroup,
 select,
 textarea {
-  font: inherit;
+  font: Arial, sans-serif;
   margin: 0;
 }
 optgroup {

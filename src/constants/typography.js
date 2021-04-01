@@ -7,6 +7,7 @@ const fonts = {
   futura: `'Futura', sans-serif`,
   header: `'Futura Bold', sans-serif`,
   subheader: `'Futura Heavy', sans-serif`,
+  button: `'Futura Book', sans-serif`,
 }
 
 const minSize = {
@@ -14,7 +15,7 @@ const minSize = {
   h2: 35,
   hLower: 30,
   h3: 25,
-  p: 14,
+  p: 12,
 }
 
 const fontSizes = {
@@ -22,7 +23,7 @@ const fontSizes = {
   h2: `calc(${minSize.h2}px + (45 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
   hLower: `calc(${minSize.hLower}px + (34 - ${minSize.hLower}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
   h3: `calc(${minSize.h3}px + (30 - ${minSize.h3}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
-  p: `calc(${minSize.p}px + (17 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
+  p: `calc(${minSize.p}px + (14 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
 }
 
 const textStyles = {
@@ -89,4 +90,4 @@ const P = styled.p`
   }
 `
 
-export { H1, H2, HLower, H3, P }
+export { fonts, H1, H2, HLower, H3, P }
