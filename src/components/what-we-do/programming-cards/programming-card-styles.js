@@ -1,9 +1,12 @@
 import styled from "styled-components"
 import { HCapitalize } from "../../../constants/typography"
 import { devices } from "../../../constants/devices"
-import { royalBlue } from "../../../constants/colors"
+import { white, royalBlue } from "../../../constants/colors"
 
 const CardContainer = styled.div`
+  @media ${devices.mobile} {
+    width: 100%;
+  }
   @media ${devices.tablet} {
     width: 60%;
   }
@@ -15,12 +18,17 @@ const CardContainer = styled.div`
 `
 
 const ImageContainer = styled.div`
-  height: auto;
+  @media ${devices.mobile} {
+    height: 50%;
+  }
+  @media (min-width: 1000px) {
+    height: auto;
+  }
   overflow: hidden;
 `
 
 const CardContentContainer = styled.div`
-  background-color: #5269e1;
+  background-color: ${royalBlue};
   @media ${devices.tablet} {
     height: 330px;
   }
@@ -33,7 +41,7 @@ const CardContentContainer = styled.div`
 `
 
 const CardContent = styled.div`
-  color: white;
+  color: ${white};
 `
 
 const CardTitle = styled(HCapitalize)`
