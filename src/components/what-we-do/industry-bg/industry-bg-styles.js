@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { size, devices } from "../../../constants/devices"
+import { darkGray } from "../../../constants/colors"
 
 const Container = styled.div`
   display: flex;
@@ -14,6 +15,7 @@ const TextContainer = styled.div`
   width: 45%;
   padding-top: 50px;
   padding-right: 30px;
+  color: ${darkGray};
   @media (max-width: ${size.tablet}px) {
     width: 100%;
   }
