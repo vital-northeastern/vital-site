@@ -1,13 +1,11 @@
 import styled from "styled-components"
 import { HCapitalize } from "../../../constants/typography"
 import { devices } from "../../../constants/devices"
+import { royalBlue } from "../../../constants/colors"
 
 const CardContainer = styled.div`
-  @media ${devices.mobile} {
-    width: 80vw;
-  }
   @media ${devices.tablet} {
-    width: 60vw;
+    width: 60%;
   }
   @media ${devices.laptop} {
     width: 30vw;
@@ -23,7 +21,15 @@ const ImageContainer = styled.div`
 
 const CardContentContainer = styled.div`
   background-color: #5269e1;
-  height: 390px;
+  @media ${devices.tablet} {
+    height: 330px;
+  }
+  @media (min-width: 1000px) {
+    height: 450px;
+  }
+  @media (min-width: 1220px) {
+    height: 390px;
+  }
 `
 
 const CardContent = styled.div`
@@ -33,7 +39,13 @@ const CardContent = styled.div`
 const CardTitle = styled(HCapitalize)`
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 25px;
+
+  @media ${devices.tablet} {
+    padding-bottom: 15px;
+  }
+  @media ${devices.laptop} {
+    padding-bottom: 25px;
+  }
 `
 
 const CardTitleContainer = styled.div`
@@ -47,7 +59,16 @@ const TextContainer = styled.div`
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  height: 250px;
+
+  @media ${devices.tablet} {
+    height: 250px;
+  }
+  @media (min-width: 1000px) {
+    height: 320px;
+  }
+  @media (min-width: 1220px) {
+    height: 250px;
+  }
 `
 
 export {
