@@ -7,3 +7,5 @@ export const royalBlue = "#546BDF"
 export const periwinkle = "#879CE6"
 export const navyBlue = "#001049"
 export const beauBlue = "#C4D7E9"
+export const headerGradient =
+  "linear-gradient(339.02deg, #a8d2ff -57.77%, #5269e1 51.38%)"
