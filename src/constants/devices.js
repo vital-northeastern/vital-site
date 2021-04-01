@@ -4,6 +4,7 @@ export const size = {
   tablet: "768",
   laptop: "1024",
   desktop: "1440",
+  desktopMax: "1600",
 }
 
 export const devices = {
