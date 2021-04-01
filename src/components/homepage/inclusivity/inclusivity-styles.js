@@ -19,10 +19,6 @@ const InfoContainer = styled.div`
   justify-content: center;
 `
 
-const IncHeader = styled.h3`
-  letter-spacing: 2px;
-`
-
 const IncButton = styled.button`
   padding: 10px 20px;
   border-radius: 35px;
@@ -91,7 +87,6 @@ export {
   IncContainer,
   InfoContainer,
   ImageSection,
-  IncHeader,
   IncButton,
   Selectors,
   ImageHeader,

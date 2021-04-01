@@ -1,11 +1,12 @@
 import React, { useState } from "react"
 import Img from "gatsby-image"
 
+import { SmallerHeading } from "../shared-styles/homepage-shared-styles"
+
 import {
   IncContainer,
   InfoContainer,
   ImageSection,
-  IncHeader,
   IncButton,
   Selectors,
   ImageHeader,
@@ -36,7 +37,7 @@ const Inclusivity = ({ title, blurbText, ctaTitle, ctaLink, carousel }) => {
   return (
     <IncContainer>
       <InfoContainer>
-        <IncHeader>{title}</IncHeader>
+        <SmallerHeading>{title}</SmallerHeading>
         <p>{blurbText.blurbText}</p>
         <div>
           <a href={ctaLink} target="_blank" rel="noreferrer">

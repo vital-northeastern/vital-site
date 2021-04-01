@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { HLower } from "../../../constants/typography"
 
 const colors = {
   primary: "#001049", // dark blue
@@ -16,10 +15,6 @@ const KnowInfo = styled.div`
   padding-right: 6%;
   // 40px for overlap from image
   padding-left: calc(6% + 40px);
-`
-
-const KnowHeader = styled(HLower)`
-  letter-spacing: 2px;
 `
 
 const KnowButton = styled.button`
@@ -68,7 +63,6 @@ export {
   KnowContainer,
   KnowInfo,
   KnowImageSection,
-  KnowHeader,
   KnowButton,
   KnowImageHolder,
   KnowImageHeader,

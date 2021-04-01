@@ -1,6 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import { P } from "../../../constants/typography"
+import { SmallerHeading } from "../shared-styles/homepage-shared-styles"
 
 import {
   KnowContainer,
@@ -28,7 +29,7 @@ const StayInTheKnow = ({
         ></KnowImageHolder>
       </KnowImageSection>
       <KnowInfo>
-        <KnowHeader>{title}</KnowHeader>
+        <SmallerHeading>{title}</SmallerHeading>
 
         <P>{blurbText.blurbText}</P>
         <a href={ctaLink} target="_blank" rel="noreferrer">
