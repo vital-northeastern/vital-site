@@ -7,7 +7,7 @@ const CardContainer = styled.div`
     width: 80vw;
   }
   @media ${devices.tablet} {
-    width: 50vw;
+    width: 60vw;
   }
   @media ${devices.laptop} {
     width: 30vw;

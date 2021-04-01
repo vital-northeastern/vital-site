@@ -20,11 +20,11 @@ const minSize = {
 }
 
 const fontSizes = {
-  h1: `calc(${minSize.h1}px + (72 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
-  h2: `calc(${minSize.h2}px + (45 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
-  hLower: `calc(${minSize.hLower}px + (34 - ${minSize.hLower}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
-  h3: `calc(${minSize.h3}px + (30 - ${minSize.h3}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
-  p: `calc(${minSize.p}px + (14 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
+  h1: `calc(${minSize.h1}px + (72 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  h2: `calc(${minSize.h2}px + (45 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  hLower: `calc(${minSize.hLower}px + (34 - ${minSize.hLower}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  h3: `calc(${minSize.h3}px + (30 - ${minSize.h3}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  p: `calc(${minSize.p}px + (15 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
 }
 
 const textStyles = {

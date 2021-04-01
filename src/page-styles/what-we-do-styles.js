@@ -8,7 +8,7 @@ const CardsContainer = styled.div`
   padding-bottom: 50px;
 
   @media ${devices.tabletMax} {
-    display: block;
+    display: inline-block;
     justify-content: center;
     margin: 0 auto;
   }
