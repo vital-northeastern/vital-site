@@ -11,7 +11,7 @@ const WhatWeDo = props => {
   const whatWeDo = get(props, "data.contentfulWhatWeDo")
 
   return (
-    <Layout>
+    <Layout navbarStyle="gradient">
       <SEO title="What We Do" />
       <h1>{whatWeDo.title}</h1>
       <History title={whatWeDo.history.title} timeline={whatWeDo.timeline} />

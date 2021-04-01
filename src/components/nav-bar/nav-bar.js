@@ -9,31 +9,35 @@ import {
   FlexColumn,
 } from "./nav-bar-styles.js"
 
-// possible varaints are 'blue' and 'white', referring to text color etc
-export default ({ variant = "blue" }) => {
+const NavBar = ({ navbarStyle }) => {
   return (
-    <NavWrapper>
+    <NavWrapper navbarStyle={navbarStyle}>
       <FlexColumn>
         <NavBrandWrapper to="/">
           <NavBrand>ViTAL</NavBrand>
         </NavBrandWrapper>
       </FlexColumn>
       <FlexColumn>
-        <NavLink variant={variant} to="/">
+        <NavLink navbarStyle={navbarStyle} to="/">
           Home
         </NavLink>
-        <NavLink variant={variant} to="/what-we-do">
+        <NavLink navbarStyle={navbarStyle} to="/what-we-do">
           About
         </NavLink>
-        <NavLink variant={variant} to="/whats-happening">
+        <NavLink navbarStyle={navbarStyle} to="/whats-happening">
           Events
         </NavLink>
       </FlexColumn>
       <FlexColumn>
-        <NavButton variant={variant} onClick={() => navigate("/get-involved")}>
+        <NavButton
+          navbarStyle={navbarStyle}
+          onClick={() => navigate("/get-involved")}
+        >
           Get Involved
         </NavButton>
       </FlexColumn>
     </NavWrapper>
   )
 }
+
+export default NavBar
