@@ -8,6 +8,7 @@ const fonts = {
   futuraBook: `'Futura Book', sans-serif`,
   header: `'Futura Bold', sans-serif`,
   subheader: `'Futura Heavy', sans-serif`,
+  button: `'Futura Book', sans-serif`,
 }
 
 const minSize = {
@@ -104,4 +105,4 @@ const P = styled.p`
   }
 `
 
-export { H1, H2, HLower, HCapitalize, H3, P }
+export { fonts, H1, H2, HLower, HCapitalize, H3, P }
