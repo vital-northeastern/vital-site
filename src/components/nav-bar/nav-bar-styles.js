@@ -1,12 +1,16 @@
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { fonts } from "../../constants/typography"
+import { white, navyBlue, darkGray } from "../../constants/colors"
 
 const NavWrapper = styled.nav`
   display: flex;
-  background-color: ${props =>
-    props.navbarStyle === "gradient" ? "red" : "transparent"};
+  position: absolute;
+  top: 0;
+  background-color: transparent;
   padding: 15px 0;
   align-items: center;
+  font-family: ${fonts.body};
   height: 90px;
   width: 100%;
 `
@@ -16,6 +20,7 @@ const NavBrandWrapper = styled(Link)`
   :hover {
     text-decoration: none;
   }
+  margin-left: 50px;
 `
 
 const FlexColumn = styled.div`
@@ -31,11 +36,9 @@ const FlexColumn = styled.div`
     justify-content: flex-end;
   }
 `
-//   margin-left: ${props => (props.index % 2 === 0 ? "0" : "60px")};
 
 const NavLink = styled(Link)`
-  color: ${props => (props.navbarStyle === "gradient" ? "white" : "#001049")};
-  font-family: "Work Sans", sans-serif;
+  color: ${props => (props.navbarStyle === "gradient" ? white : navyBlue)};
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 700;
@@ -49,8 +52,7 @@ const NavLink = styled(Link)`
 `
 
 const NavBrand = styled.span`
-  color: #3d3939;
-  font-family: "Work Sans", sans-serif;
+  color: ${darkGray};
   font-size: 18px;
   letter-spacing: 0.5px;
   font-weight: 700;
@@ -65,18 +67,19 @@ const NavBrand = styled.span`
 const NavButton = styled.button`
   justify-self: flex-end;
   background-color: transparent;
-  font-family: "Work Sans", sans-serif;
+  font-family: ${fonts.body};
   font-size: 14px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  color: ${props => (props.navbarStyle === "gradient" ? "white" : "001049")};
-  font-weight: 600;
+  color: ${props => (props.navbarStyle === "gradient" ? white : navyBlue)};
+  font-weight: 400;
   border: 1px solid;
   border-color: ${props =>
-    props.navbarStyle === "gradient" ? "white" : "001049"};
-  padding: 5px 20px;
+    props.navbarStyle === "gradient" ? white : navyBlue};
+  padding: 10px 27px;
   cursor: pointer;
   border-radius: 20px;
+  margin-right: 50px;
 `
 
 export { NavWrapper, NavBrandWrapper, NavLink, NavBrand, NavButton, FlexColumn }

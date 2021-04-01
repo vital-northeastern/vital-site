@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import get from "lodash/get"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
+import Header from "../components/what-we-do/header/header"
 import History from "../components/what-we-do/history/history"
 import IndustryBG from "../components/what-we-do/industry-bg/industry-bg"
 import ProgrammingCard from "../components/what-we-do/programming-cards/programming-card"
@@ -13,6 +14,7 @@ const WhatWeDo = props => {
   return (
     <Layout navbarStyle="gradient">
       <SEO title="What We Do" />
+      <Header title={whatWeDo.title} subheading={whatWeDo.subheadingForTitle} />
       <h1>{whatWeDo.title}</h1>
       <History title={whatWeDo.history.title} timeline={whatWeDo.timeline} />
       <IndustryBG
