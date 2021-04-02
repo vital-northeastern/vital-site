@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { white, headerGradient } from "../../../constants/colors"
-import { size } from "../../../constants/devices"
+import { white, headerGradient } from "../../constants/colors"
+import { size } from "../../constants/devices"
 
 const HeaderContainer = styled.div`
   background: ${headerGradient};
@@ -18,9 +18,7 @@ const ImageContainer = styled.div`
   top: 0px;
   right: 0px;
   width: auto;
-  @media (max-width: ${size.laptop}px) {
-    opacity: 0;
-  }
+  opacity: ${props => (props.imageBool ? "1" : "0")};
 `
 
 const BackgroundShape = styled.img`
