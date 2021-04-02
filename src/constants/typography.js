@@ -32,10 +32,10 @@ const textStyles = {
 }
 
 const fontWeights = {
-  normal: `400px`,
-  medium: `500px`,
-  bold: `700px`,
-  heavy: `900px`,
+  normal: `400`,
+  medium: `500`,
+  bold: `700`,
+  heavy: `900`,
 }
 
 const H1 = styled.h1`
