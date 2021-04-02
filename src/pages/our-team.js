@@ -12,7 +12,6 @@ const TeamPage = props => {
   const teamPage = get(props, "data.contentfulTeamPage")
 
   const listOfTeamsTypes = getTeamTypes(teamPage.teamMembers)
-  console.log(listOfTeamsTypes)
 
   /**
    * creates a list/array of all the team types

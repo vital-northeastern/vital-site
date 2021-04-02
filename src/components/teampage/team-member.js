@@ -3,19 +3,14 @@ import {
   ContactCardContainer,
   CardPosition,
   MemberImg,
-  TextOverlay,
-  PositionContainer,
-  EmailText,
-  Text,
-  Email,
-  Overlay,
   InfoContainer,
   MemberName,
   MemberPosition,
   MemberMajor,
-  ConnectButton,
   MemberInfoSpacer,
   ConnectLink,
+  Overlay,
+  OverlayText,
 } from "../teampage/team-member-styles"
 
 export default ({
@@ -31,7 +26,16 @@ export default ({
 }) => (
   <CardPosition index={index} isLast={isLast}>
     <ContactCardContainer index={index}>
-      <MemberImg photoUrl={photo.fluid.src}></MemberImg>
+      <MemberImg photoUrl={photo.fluid.src}>
+        <Overlay>
+          <OverlayText>
+            hello this is a test to just eep uhdhsajk dhsd jshdjk h jdkh
+            jkhdjkshd jkdshjk hdsjkhjshd jshdjsh djkshd jkshdjks hdjksh djksh
+            djksh djksh djksh jkd sjkdhs jkdhsjkdhsjkd kjhdsjkhsdjkhsdjkkidu
+            iowduiowdu iowudiowu diowudiow iwudioud iowudiwo
+          </OverlayText>
+        </Overlay>
+      </MemberImg>
 
       <InfoContainer>
         <MemberInfoSpacer></MemberInfoSpacer>
@@ -41,9 +45,7 @@ export default ({
           <MemberMajor></MemberMajor>
         </div>
         {linkedinUrl ? (
-          <ConnectLink href={linkedinUrl}>
-            <ConnectButton>CONNECT</ConnectButton>
-          </ConnectLink>
+          <ConnectLink href={linkedinUrl}>CONNECT</ConnectLink>
         ) : (
           <MemberInfoSpacer></MemberInfoSpacer>
         )}
