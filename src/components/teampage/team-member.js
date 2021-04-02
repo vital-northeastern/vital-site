@@ -2,16 +2,19 @@ import React from "react"
 import {
   ContactCardContainer,
   CardPosition,
-  MemberImg,
   InfoContainer,
-  MemberName,
-  MemberPosition,
   MemberMajor,
   MemberInfoSpacer,
   ConnectLink,
+} from "../teampage/team-member-styles"
+
+import {
+  MemberName,
+  MemberPosition,
   Overlay,
   OverlayText,
-} from "../teampage/team-member-styles"
+  MemberImg,
+} from "./team-shared-styles"
 
 export default ({
   name,
@@ -28,12 +31,7 @@ export default ({
     <ContactCardContainer index={index}>
       <MemberImg photoUrl={photo.fluid.src}>
         <Overlay>
-          <OverlayText>
-            hello this is a test to just eep uhdhsajk dhsd jshdjk h jdkh
-            jkhdjkshd jkdshjk hdsjkhjshd jshdjsh djkshd jkshdjks hdjksh djksh
-            djksh djksh djksh jkd sjkdhs jkdhsjkdhsjkd kjhdsjkhsdjkhsdjkkidu
-            iowduiowdu iowudiowu diowudiow iwudioud iowudiwo
-          </OverlayText>
+          <OverlayText>This is a placeholder. Lorem Ipsum baby.</OverlayText>
         </Overlay>
       </MemberImg>
 

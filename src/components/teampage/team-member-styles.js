@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { devices } from "../../constants/devices"
-import { royalBlue } from "../../constants/colors"
+import { royalBlue, navyBlue } from "../../constants/colors"
 
 const CardPosition = styled.div`
   min-width: calc(50% - 30px);
@@ -70,19 +70,8 @@ const MemberInfoSpacer = styled.div`
   min-height: 10%;
 `
 
-const MemberName = styled.h2`
-  font-weight: 400;
-  color: #001049;
-  margin: 0;
-`
-
-const MemberPosition = styled.p`
-  color: #001049;
-  margin: 0;
-`
-
 const MemberMajor = styled.p`
-  color: #001049;
+  color: ${navyBlue};
   margin: 0;
 `
 
@@ -98,8 +87,6 @@ export {
   CardPosition,
   MemberImg,
   InfoContainer,
-  MemberName,
-  MemberPosition,
   MemberMajor,
   MemberInfoSpacer,
   ConnectLink,

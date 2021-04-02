@@ -4,9 +4,8 @@ import get from "lodash/get"
 import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import TeamMember from "../components/teampage/team-member"
 import Team from "../components/teampage/teams"
-import Advisor from "../components/teampage/advisor"
+import Advisor from "../components/teampage/advisors"
 
 const TeamPage = props => {
   const teamPage = get(props, "data.contentfulTeamPage")
@@ -50,19 +49,7 @@ const TeamPage = props => {
         )
       })}
 
-      <h3>ADVISORS</h3>
-      <ul className="advisors">
-        {teamPage.advisors.map((advisor, index) => {
-          return (
-            <Advisor
-              name={advisor.name}
-              photo={advisor.photo}
-              position={advisor.position}
-              linkedinUrl={advisor.linkedinUrl}
-            />
-          )
-        })}
-      </ul>
+      <Advisor advisors={teamPage.advisors}></Advisor>
     </Layout>
   )
 }

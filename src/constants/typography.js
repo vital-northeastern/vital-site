@@ -90,4 +90,4 @@ const P = styled.p`
   }
 `
 
-export { fonts, H1, H2, HLower, H3, P }
+export { fonts, H1, H2, HLower, H3, P, fontSizes, fontWeights }
