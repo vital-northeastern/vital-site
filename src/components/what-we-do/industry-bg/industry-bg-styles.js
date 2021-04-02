@@ -13,12 +13,17 @@ const Container = styled.div`
 
 const TextContainer = styled.div`
   width: 45%;
-  padding-top: 50px;
-  padding-right: 30px;
   color: ${darkGray};
   @media (max-width: ${size.tablet}px) {
     width: 100%;
   }
+`
+
+const Text = styled.div`
+  padding-right: 40px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-60%);
 `
 
 const ImageContainer = styled.div`
@@ -35,4 +40,4 @@ const Image = styled.img`
   max-height: 100%;
 `
 
-export { Container, TextContainer, ImageContainer, Image }
+export { Container, TextContainer, Text, ImageContainer, Image }
