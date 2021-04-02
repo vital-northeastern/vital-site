@@ -20,15 +20,17 @@ const TextContainer = styled.div`
 `
 
 const Text = styled.div`
-  padding-right: 40px;
-  position: relative;
-  top: 50%;
-  transform: translateY(-60%);
+  @media ${devices.tablet} {
+    padding-right: 40px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-60%);
+  }
 `
 
 const ImageContainer = styled.div`
   width: 55%;
-  @media ${devices.tabletMax} and ${devices.tablet} {
+  @media ${devices.tablet} {
     padding-top: 50px;
   }
   @media (max-width: ${size.tablet}px) {
