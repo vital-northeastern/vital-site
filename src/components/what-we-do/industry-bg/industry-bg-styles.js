@@ -19,6 +19,7 @@ const TextContainer = styled.div`
   color: ${darkGray};
   @media ${devices.tabletMax} {
     width: 100%;
+    margin: 0 auto;
   }
 `
 
@@ -31,15 +32,13 @@ const Text = styled.div`
   }
 `
 
-const ImageContainer = styled.div`
+const Image = styled.img`
+  max-height: 100%;
   width: 55%;
   @media ${devices.tabletMax} {
+    margin: 0 auto;
     width: 100%;
   }
 `
 
-const Image = styled.img`
-  max-height: 100%;
-`
-
-export { Container, TextContainer, Text, ImageContainer, Image }
+export { Container, TextContainer, Text, Image }
