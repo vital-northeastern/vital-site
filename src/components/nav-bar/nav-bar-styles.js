@@ -60,8 +60,6 @@ const NavBrand = styled.span`
   text-decoration: none
   margin-left: 20px;
   vertical-align: middle;
-
-
 `
 
 const NavButton = styled.button`
@@ -77,9 +75,14 @@ const NavButton = styled.button`
   border-color: ${props =>
     props.navbarStyle === "gradient" ? white : navyBlue};
   padding: 10px 27px;
-  cursor: pointer;
   border-radius: 20px;
   margin-right: 50px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: 0;
+  }
 `
 
 export { NavWrapper, NavBrandWrapper, NavLink, NavBrand, NavButton, FlexColumn }
