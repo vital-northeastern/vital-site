@@ -7,6 +7,10 @@ const CardsContainer = styled.div`
     justify-content: center;
     margin: 0 auto;
   }
+  @media ${devices.tabletMax} {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   @media ${devices.laptop} {
     display: flex;
     justify-content: center;

@@ -24,13 +24,13 @@ const Text = styled.div`
     padding-right: 40px;
     position: relative;
     top: 50%;
-    transform: translateY(-60%);
+    transform: translateY(-55%);
   }
 `
 
 const ImageContainer = styled.div`
   width: 55%;
-  @media ${devices.tablet} {
+  @media ${devices.tablet} and ${devices.tabletMax} {
     padding-top: 50px;
   }
   @media (max-width: ${size.tablet}px) {
