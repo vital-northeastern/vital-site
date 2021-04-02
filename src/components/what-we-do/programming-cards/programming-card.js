@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import { P } from "../../../constants/typography"
+import { PCard } from "../../../constants/typography"
 import {
   CardContainer,
   ImageContainer,
@@ -23,7 +23,7 @@ const ProgrammingCard = ({ key, title, description, photo, photoAlt }) => {
             <CardTitle>{title}</CardTitle>
           </CardTitleContainer>
           <TextContainer>
-            <P>{description}</P>
+            <PCard>{description}</PCard>
           </TextContainer>
         </CardContent>
       </CardContentContainer>

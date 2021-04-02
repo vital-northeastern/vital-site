@@ -16,8 +16,8 @@ const minSize = {
   h2: 35,
   hLower: 30,
   h3: 25,
-  pMain: 13,
-  p: 12,
+  p: 13,
+  pCard: 12,
 }
 
 const fontSizes = {
@@ -25,8 +25,8 @@ const fontSizes = {
   h2: `calc(${minSize.h2}px + (45 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   hLower: `calc(${minSize.hLower}px + (34 - ${minSize.hLower}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   h3: `calc(${minSize.h3}px + (30 - ${minSize.h3}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
-  pMain: `calc(${minSize.pMain}px + (16 - ${minSize.pMain}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
-  p: `calc(${minSize.p}px + (15 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  p: `calc(${minSize.p}px + (16 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  pCard: `calc(${minSize.pCard}px + (15 - ${minSize.pCard}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
 }
 
 const textStyles = {
@@ -96,19 +96,19 @@ const H3 = styled.h3`
   }
 `
 
-const PMain = styled.p`
-  font-size: ${fontSizes.pMain};
+const P = styled.p`
+  font-size: ${fontSizes.p};
   font-family: ${fonts.body};
   font-weight: ${fontWeights.normal};
-  line-height: 22px;
+  line-height: 24px;
 
   @media ${devices.mobileMax} {
-    line-height: 24px;
+    line-height: 22px;
   }
 `
 
-const P = styled.p`
-  font-size: ${fontSizes.p};
+const PCard = styled.p`
+  font-size: ${fontSizes.pCard};
   font-family: ${fonts.body};
   font-weight: ${fontWeights.normal};
   line-height: 24px;
@@ -118,4 +118,4 @@ const P = styled.p`
   }
 `
 
-export { fonts, H1, H2, HLower, HCapitalize, H3, PMain, P }
+export { fonts, H1, H2, HLower, HCapitalize, H3, P, PCard }
