@@ -1,14 +1,33 @@
 import React from "react"
 import Img from "gatsby-image"
-import { P } from "../../../constants/typography"
+import { PCard } from "../../../constants/typography"
+import {
+  CardContainer,
+  ImageContainer,
+  CardContent,
+  CardTitle,
+  CardTitleContainer,
+  CardContentContainer,
+  TextContainer,
+} from "./programming-card-styles"
 
 const ProgrammingCard = ({ key, title, description, photo, photoAlt }) => {
   return (
-    <>
-      <h4>{title}</h4>
-      <P>{description.shortDescription}</P>
-      <Img className="featured" fluid={photo.fluid} alt={photoAlt} />
-    </>
+    <CardContainer>
+      <ImageContainer>
+        <Img className="featured" fluid={photo.fluid} alt={photoAlt} />
+      </ImageContainer>
+      <CardContentContainer>
+        <CardContent>
+          <CardTitleContainer>
+            <CardTitle>{title}</CardTitle>
+          </CardTitleContainer>
+          <TextContainer>
+            <PCard>{description}</PCard>
+          </TextContainer>
+        </CardContent>
+      </CardContentContainer>
+    </CardContainer>
   )
 }
 
