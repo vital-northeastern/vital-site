@@ -8,8 +8,8 @@ const CardsContainer = styled.div`
     margin: 0 auto;
   }
   @media ${devices.tabletMax} {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   @media ${devices.laptop} {
     display: flex;

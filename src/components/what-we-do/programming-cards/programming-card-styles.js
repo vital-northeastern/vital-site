@@ -12,12 +12,13 @@ const CardContainer = styled.div`
   }
   @media ${devices.tabletMax} {
     margin: 0 auto;
+    padding: 20px 10px 20px;
   }
   @media ${devices.laptop} {
     width: 30vw;
+    padding: 50px 10px 50px;
   }
   overflow: hidden;
-  padding: 50px 10px 50px;
 `
 
 const ImageContainer = styled.div`
