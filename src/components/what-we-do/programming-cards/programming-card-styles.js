@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { H2 } from "../../../constants/typography"
+import { H2, PCard } from "../../../constants/typography"
 import { devices } from "../../../constants/devices"
 import { white, royalBlue } from "../../../constants/colors"
 
@@ -37,7 +37,7 @@ const CardContentContainer = styled.div`
     height: auto;
   }
   @media ${devices.tablet} {
-    height: 50vh;
+    height: 50%;
   }
   @media ${devices.laptop} {
     height: 75vh;
@@ -59,7 +59,6 @@ const CardTitle = styled(H2)`
   padding-top: 24px;
   color: ${white};
   margin: 0 auto;
-  padding-bottom: 20px;
   @media ${devices.mobileMax} {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -76,25 +75,27 @@ const TextContainer = styled.div`
   padding-bottom: 5px;
   padding-left: 30px;
   padding-right: 30px;
+  display: flex;
+  align-items: center;
+  @media ${devices.mobileMax} {
+    padding-top: 5px;
+  }
   @media ${devices.mobile} {
     height: auto;
     padding-bottom: 20px;
-    padding-top: 5px;
   }
   @media ${devices.tablet} {
     height: 250px;
   }
   @media ${devices.laptop} {
-    height: 70vh;
+    height: 60vh;
   }
   @media (min-width: 1220px) {
     height: 55vh;
   }
 `
 
-const PCardText = styled(PCard)`
-  margin: 0 auto;
-`
+const PCardText = styled(PCard)``
 
 export {
   CardContainer,
