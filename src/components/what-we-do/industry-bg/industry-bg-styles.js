@@ -5,22 +5,26 @@ import { darkGray } from "../../../constants/colors"
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  padding: 10px 80px;
-  @media (max-width: ${size.tablet}px) {
+  @media ${devices.tablet} {
+    padding: 10px 80px;
+  }
+  @media (max-width: ${size.laptop}px) {
     display: block;
+    padding: 10px 30px;
   }
 `
 
 const TextContainer = styled.div`
   width: 45%;
   color: ${darkGray};
-  @media (max-width: ${size.tablet}px) {
+  @media ${devices.tabletMax} {
     width: 100%;
+    margin: 0 auto;
   }
 `
 
 const Text = styled.div`
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     padding-right: 40px;
     position: relative;
     top: 50%;
@@ -28,18 +32,13 @@ const Text = styled.div`
   }
 `
 
-const ImageContainer = styled.div`
+const Image = styled.img`
+  max-height: 100%;
   width: 55%;
-  @media ${devices.tablet} and ${devices.tabletMax} {
-    padding-top: 50px;
-  }
-  @media (max-width: ${size.tablet}px) {
+  @media ${devices.tabletMax} {
+    margin: 0 auto;
     width: 100%;
   }
 `
 
-const Image = styled.img`
-  max-height: 100%;
-`
-
-export { Container, TextContainer, Text, ImageContainer, Image }
+export { Container, TextContainer, Text, Image }

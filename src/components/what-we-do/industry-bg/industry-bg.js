@@ -1,12 +1,6 @@
 import React from "react"
 import { H2, P } from "../../../constants/typography"
-import {
-  Container,
-  TextContainer,
-  Text,
-  ImageContainer,
-  Image,
-} from "./industry-bg-styles"
+import { Container, TextContainer, Text, Image } from "./industry-bg-styles"
 
 const IndustryBG = ({ title, blurb, image, imageAlt }) => {
   return (
@@ -17,9 +11,7 @@ const IndustryBG = ({ title, blurb, image, imageAlt }) => {
           <P>{blurb.industryBackgroundBlurb}</P>
         </Text>
       </TextContainer>
-      <ImageContainer>
-        <Image src={image.fluid.src} alt={imageAlt} />
-      </ImageContainer>
+      <Image src={image.fluid.src} alt={imageAlt} />
     </Container>
   )
 }
