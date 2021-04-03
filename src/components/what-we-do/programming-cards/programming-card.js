@@ -1,6 +1,5 @@
 import React from "react"
 import Img from "gatsby-image"
-import { PCard } from "../../../constants/typography"
 import {
   CardContainer,
   ImageContainer,
@@ -9,6 +8,7 @@ import {
   CardTitleContainer,
   CardContentContainer,
   TextContainer,
+  PCardText,
 } from "./programming-card-styles"
 
 const ProgrammingCard = ({ key, title, description, photo, photoAlt }) => {
@@ -23,7 +23,7 @@ const ProgrammingCard = ({ key, title, description, photo, photoAlt }) => {
             <CardTitle>{title}</CardTitle>
           </CardTitleContainer>
           <TextContainer>
-            <PCard>{description}</PCard>
+            <PCardText>{description}</PCardText>
           </TextContainer>
         </CardContent>
       </CardContentContainer>

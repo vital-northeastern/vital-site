@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { HCapitalize } from "../../../constants/typography"
+import { HCapitalize, PCard } from "../../../constants/typography"
 import { devices } from "../../../constants/devices"
 import { white, royalBlue } from "../../../constants/colors"
 
@@ -25,7 +25,7 @@ const ImageContainer = styled.div`
   @media ${devices.mobile} {
     height: 50%;
   }
-  @media (min-width: 1000px) {
+  @media ${devices.laptop} {
     height: auto;
   }
   overflow: hidden;
@@ -33,14 +33,20 @@ const ImageContainer = styled.div`
 
 const CardContentContainer = styled.div`
   background-color: ${royalBlue};
+  @media ${devices.mobile} {
+    height: auto;
+  }
   @media ${devices.tablet} {
-    height: 330px;
+    height: 50vh;
   }
   @media ${devices.laptop} {
-    height: 450px;
+    height: 75vh;
   }
-  @media (min-width: 1220px) {
-    height: 390px;
+  @media (min-width: 1150px) {
+    height: 69vh;
+  }
+  @media (min-width: 1290px) {
+    height: 61vh;
   }
 `
 
@@ -50,37 +56,44 @@ const CardContent = styled.div`
 
 const CardTitle = styled(HCapitalize)`
   text-align: center;
-  padding-top: 30px;
-
-  @media ${devices.tablet} {
-    padding-bottom: 15px;
-  }
-  @media ${devices.laptop} {
-    padding-bottom: 25px;
+  padding-top: 24px;
+  color: ${white};
+  margin: 0 auto;
+  padding-bottom: 20px;
+  @media ${devices.mobileMax} {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 `
 
 const CardTitleContainer = styled.div`
   padding-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
 `
 
 const TextContainer = styled.div`
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   padding-left: 30px;
   padding-right: 30px;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-
+  @media ${devices.mobile} {
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 5px;
+  }
   @media ${devices.tablet} {
     height: 250px;
   }
   @media ${devices.laptop} {
-    height: 320px;
+    height: 70vh;
   }
   @media (min-width: 1220px) {
-    height: 250px;
+    height: 55vh;
   }
+`
+
+const PCardText = styled(PCard)`
+  margin: 0 auto;
 `
 
 export {
@@ -91,4 +104,5 @@ export {
   CardTitle,
   CardTitleContainer,
   TextContainer,
+  PCardText,
 }
