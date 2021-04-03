@@ -1,11 +1,11 @@
 import React from "react"
 import { Button } from "../../../constants/buttons"
-import { HLower, P } from "../../../constants/typography"
+import { H2, P } from "../../../constants/typography"
 
 const Mission = ({ title, blurbText, ctaTitle, ctaLink }) => {
   return (
     <>
-      <HLower>{title}</HLower>
+      <H2>Our Mission</H2>
       <P>{blurbText.blurbText}</P>
       <a href={ctaLink} target="_blank" rel="noreferrer">
         <Button primary={true} aria-label={ctaTitle}>

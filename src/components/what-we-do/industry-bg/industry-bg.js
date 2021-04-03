@@ -1,5 +1,5 @@
 import React from "react"
-import { H3, P } from "../../../constants/typography"
+import { H2, P } from "../../../constants/typography"
 import {
   Container,
   TextContainer,
@@ -13,7 +13,7 @@ const IndustryBG = ({ title, blurb, image, imageAlt }) => {
     <Container>
       <TextContainer>
         <Text>
-          <H3>{title}</H3>
+          <H2>{title}</H2>
           <P>{blurb.industryBackgroundBlurb}</P>
         </Text>
       </TextContainer>

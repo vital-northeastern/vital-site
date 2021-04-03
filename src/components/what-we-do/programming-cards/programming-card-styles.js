@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { HCapitalize } from "../../../constants/typography"
+import { H2 } from "../../../constants/typography"
 import { devices } from "../../../constants/devices"
 import { white, royalBlue } from "../../../constants/colors"
 
@@ -47,10 +47,10 @@ const CardContent = styled.div`
   color: ${white};
 `
 
-const CardTitle = styled(HCapitalize)`
+const CardTitle = styled(H2)`
   text-align: center;
   padding-top: 30px;
-
+  color: ${white};
   @media ${devices.tablet} {
     padding-bottom: 15px;
   }
