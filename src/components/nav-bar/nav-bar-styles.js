@@ -42,9 +42,10 @@ const NavLink = styled(Link)`
   font-size: 14px;
   letter-spacing: 0.1em;
   font-family: ${fonts.nav};
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  transition: all 0.2s;
   margin-right: 22px;
   :hover {
     transition: all 0.2s;
@@ -66,19 +67,20 @@ const NavBrand = styled.span`
 const NavButton = styled.button`
   justify-self: flex-end;
   background-color: transparent;
-  font-family: ${fonts.navButton};
+  font-family: ${fonts.button};
   font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: ${props => (props.navbarStyle === "gradient" ? white : navyBlue)};
-  font-weight: 500;
+  font-weight: 300;
   border: 1px solid;
   border-color: ${props =>
     props.navbarStyle === "gradient" ? white : navyBlue};
-  padding: 10px 27px;
+  padding: 9px 28px;
   border-radius: 20px;
   margin-right: 50px;
   z-index: 10;
+  transition: all 0.2s;
   &:hover {
     cursor: pointer;
   }
