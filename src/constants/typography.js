@@ -8,7 +8,8 @@ const fonts = {
   header: `'Work Sans', sans-serif`,
   subheader: `'Work Sans', sans-serif`,
   button: `'Futura Book', sans-serif`,
-  nav: `'Futura', sans-serif`,
+  nav: `'Futura Bold', sans-serif`,
+  navButton: `'Futura', sans-serif`,
   connect: `'Futura Book', sans-serif`,
 }
 

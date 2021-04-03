@@ -10,7 +10,7 @@ const NavWrapper = styled.nav`
   background-color: transparent;
   padding: 15px 0;
   align-items: center;
-  font-family: ${fonts.body};
+  font-family: ${fonts.nav};
   height: 90px;
   width: 100%;
 `
@@ -40,8 +40,9 @@ const FlexColumn = styled.div`
 const NavLink = styled(Link)`
   color: ${props => (props.navbarStyle === "gradient" ? white : navyBlue)};
   font-size: 14px;
-  letter-spacing: 2px;
-  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-family: ${fonts.nav};
+  font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
   margin-right: 22px;
@@ -65,12 +66,12 @@ const NavBrand = styled.span`
 const NavButton = styled.button`
   justify-self: flex-end;
   background-color: transparent;
-  font-family: ${fonts.body};
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-family: ${fonts.navButton};
+  font-size: 13px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: ${props => (props.navbarStyle === "gradient" ? white : navyBlue)};
-  font-weight: 400;
+  font-weight: 500;
   border: 1px solid;
   border-color: ${props =>
     props.navbarStyle === "gradient" ? white : navyBlue};
