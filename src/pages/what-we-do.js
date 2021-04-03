@@ -7,6 +7,7 @@ import Header from "../components/header/header"
 import History from "../components/what-we-do/history/history"
 import IndustryBG from "../components/what-we-do/industry-bg/industry-bg"
 import ProgrammingCard from "../components/what-we-do/programming-cards/programming-card"
+import { CardsContainer } from "../page-styles/what-we-do-styles"
 
 const WhatWeDo = props => {
   const whatWeDo = get(props, "data.contentfulWhatWeDo")
@@ -27,17 +28,19 @@ const WhatWeDo = props => {
         image={whatWeDo.industryBackgroundImage}
         imageAlt={whatWeDo.industryBackgroundImage.description}
       />
-      {whatWeDo.programmingCards.map((card, index) => {
-        return (
-          <ProgrammingCard
-            key={index}
-            title={card.title}
-            description={card.shortDescription}
-            photo={card.photo}
-            photoAlt={card.photo.description}
-          />
-        )
-      })}
+      <CardsContainer>
+        {whatWeDo.programmingCards.map((card, index) => {
+          return (
+            <ProgrammingCard
+              key={index}
+              title={card.title}
+              description={card.shortDescription.shortDescription}
+              photo={card.photo}
+              photoAlt={card.photo.description}
+            />
+          )
+        })}
+      </CardsContainer>
     </Layout>
   )
 }
