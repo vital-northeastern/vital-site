@@ -8,7 +8,7 @@ const NavWrapper = styled.nav`
   position: absolute;
   top: 0;
   background-color: transparent;
-  padding: 15px 0;
+  padding: 15px 75px;
   align-items: center;
   font-family: ${fonts.nav};
   height: 90px;
@@ -20,7 +20,6 @@ const NavBrandWrapper = styled(Link)`
   :hover {
     text-decoration: none;
   }
-  margin-left: 50px;
 `
 
 const FlexColumn = styled.div`
@@ -46,7 +45,8 @@ const NavLink = styled(Link)`
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.2s;
-  margin-right: 22px;
+  margin-left: 25px;
+  margin-right: 25px;
   :hover {
     transition: all 0.2s;
     color: black;
@@ -78,7 +78,6 @@ const NavButton = styled.button`
     props.navbarStyle === "gradient" ? white : navyBlue};
   padding: 9px 28px;
   border-radius: 20px;
-  margin-right: 50px;
   z-index: 10;
   transition: all 0.2s;
   &:hover {

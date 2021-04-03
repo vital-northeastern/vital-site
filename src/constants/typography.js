@@ -14,7 +14,7 @@ const fonts = {
 }
 
 const minSize = {
-  h1: 48,
+  h1: 42,
   h2: 28,
   hName: 21,
   hUpper: 34,
@@ -23,7 +23,7 @@ const minSize = {
 }
 
 const fontSizes = {
-  h1: `calc(${minSize.h1}px + (68 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  h1: `calc(${minSize.h1}px + (62 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   h2: `calc(${minSize.h2}px + (34 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   hName: `calc(${minSize.hName}px + (29 - ${minSize.hName}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   hUpper: `calc(${minSize.hUpper}px + (40 - ${minSize.hUpper}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
@@ -52,7 +52,7 @@ const H1 = styled.h1`
   font-weight: ${fontWeights.bold};
   text-transform: ${textStyles.uppercase};
   letter-spacing: 1px;
-  line-height: 60px;
+  line-height: 43px;
 `
 
 const H2 = styled.h2`
