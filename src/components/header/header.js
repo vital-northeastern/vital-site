@@ -16,7 +16,7 @@ const Header = ({ title, subheading, imageBool }) => {
         <P>{subheading}</P>
       </TextContainer>
       <ImageContainer imageBool={imageBool}>
-        <BackgroundShape src={shape} alt="geometric shape" />
+        <BackgroundShape src={shape} alt="geometric shape" title={title} />
       </ImageContainer>
     </HeaderContainer>
   )
