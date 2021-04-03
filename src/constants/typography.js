@@ -114,7 +114,7 @@ const PCard = styled.p`
   line-height: 24px;
 
   @media ${devices.mobileMax} {
-    line-height: 26px;
+    line-height: 23px;
   }
 `
 
