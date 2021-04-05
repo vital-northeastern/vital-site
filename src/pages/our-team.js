@@ -17,7 +17,6 @@ const TeamPage = props => {
         subheading={teamPage.subheadingForTitle}
         imageBool={false}
       />
-      <h1>Our Team</h1>
       <p>Welcome to page 2</p>
       <Link to="/">Go back to the homepage</Link>
     </Layout>

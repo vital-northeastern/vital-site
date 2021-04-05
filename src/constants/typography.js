@@ -57,7 +57,7 @@ const H1 = styled.h1`
   font-weight: ${fontWeights.bold};
   text-transform: ${textStyles.uppercase};
   letter-spacing: 1px;
-  line-height: 43px;
+  line-height: 41px;
 `
 
 const H2 = styled.h2`

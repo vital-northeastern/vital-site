@@ -20,7 +20,6 @@ const WhatWeDo = props => {
         subheading={whatWeDo.subheadingForTitle}
         imageBool={true}
       />
-      <h1>{whatWeDo.title}</h1>
       <History title={whatWeDo.history.title} timeline={whatWeDo.timeline} />
       <IndustryBG
         title={whatWeDo.industryBackgroundTitle}
