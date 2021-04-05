@@ -4,22 +4,28 @@ import { Button } from "../../../constants/buttons"
 import { size } from "../../../constants/devices"
 import { royalBlue } from "../../../constants/colors"
 
+const PlatformsContainer = styled.div`
+  padding-top: 10px;
+  padding-bottom: 40px;
+`
+
 const Title = styled.div`
   padding-left: 75px;
 `
 
-const PlatformOne = styled.div`
+const Platform = styled.div`
   display: flex;
-  width: 50vw;
+  width: ${props => (props.num === 1 ? "50vw" : "78vw")};
+  padding-top: ${props => (props.num === 1 ? "0px" : "22px")};
 `
 
-const PlatformOneContent = styled.div`
-  width: 60%;
+const PlatformContent = styled.div`
+  width: ${props => (props.num === 1 ? "60%" : "35%")};
 `
 
-const LineContainerOne = styled.div`
-  width: 40%;
-  padding-right: 18px;
+const LineContainer = styled.div`
+  width: ${props => (props.num === 1 ? "40%" : "65%")};
+  padding-right: ${props => (props.num === 1 ? "18px" : "0px")};
   display: flex;
 `
 
@@ -38,21 +44,6 @@ const Dot = styled.span`
   border-radius: 50%;
 `
 
-const PlatformTwo = styled.div`
-  display: flex;
-  width: 78vw;
-  padding-top: 22px;
-`
-
-const LineContainerTwo = styled.div`
-  width: 65%;
-  display: flex;
-`
-
-const PlatformTwoContent = styled.div`
-  width: 35%;
-`
-
 const PlatformTitle = styled(H2)`
   font-size: calc(
     16px + (26 - 16) *
@@ -66,15 +57,13 @@ const PlatformButton = styled(Button)`
 `
 
 export {
+  PlatformsContainer,
   Title,
-  PlatformOne,
-  LineContainerOne,
-  PlatformOneContent,
+  Platform,
+  LineContainer,
+  PlatformContent,
   Line,
   Dot,
-  PlatformTwo,
-  LineContainerTwo,
-  PlatformTwoContent,
   PlatformTitle,
   PlatformButton,
 }

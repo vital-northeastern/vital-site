@@ -1,31 +1,29 @@
 import React from "react"
 import { H2, P } from "../../../constants/typography"
 import {
+  PlatformsContainer,
   Title,
-  PlatformOne,
-  LineContainerOne,
+  Platform,
+  LineContainer,
   Line,
   Dot,
-  PlatformOneContent,
-  PlatformTwo,
-  LineContainerTwo,
-  PlatformTwoContent,
+  PlatformContent,
   PlatformTitle,
   PlatformButton,
 } from "./platforms-styles"
 
 const Platforms = ({ title, platformOne, platformTwo }) => {
   return (
-    <>
+    <PlatformsContainer>
       <Title>
         <H2>{title}</H2>
       </Title>
-      <PlatformOne>
-        <LineContainerOne>
+      <Platform num={1}>
+        <LineContainer num={1}>
           <Line />
           <Dot />
-        </LineContainerOne>
-        <PlatformOneContent>
+        </LineContainer>
+        <PlatformContent num={1}>
           <PlatformTitle>{platformOne.platformTitle}</PlatformTitle>
           <P>{platformOne.blurb}</P>
           <a href={platformOne.ctaLink}>
@@ -33,14 +31,14 @@ const Platforms = ({ title, platformOne, platformTwo }) => {
               {platformOne.ctaTitle}
             </PlatformButton>
           </a>
-        </PlatformOneContent>
-      </PlatformOne>
-      <PlatformTwo>
-        <LineContainerTwo>
+        </PlatformContent>
+      </Platform>
+      <Platform num={2}>
+        <LineContainer num={2}>
           <Line />
           <Dot />
-        </LineContainerTwo>
-        <PlatformTwoContent>
+        </LineContainer>
+        <PlatformContent num={2}>
           <PlatformTitle>{platformTwo.platformTitle}</PlatformTitle>
           <P>{platformTwo.blurb}</P>
           <a href={platformTwo.ctaLink}>
@@ -48,9 +46,9 @@ const Platforms = ({ title, platformOne, platformTwo }) => {
               {platformTwo.ctaTitle}
             </PlatformButton>
           </a>
-        </PlatformTwoContent>
-      </PlatformTwo>
-    </>
+        </PlatformContent>
+      </Platform>
+    </PlatformsContainer>
   )
 }
 
