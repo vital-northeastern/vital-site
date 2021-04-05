@@ -15,7 +15,11 @@ const WhatWeDo = props => {
     <Layout>
       <SEO title="What We Do" />
       <h1>{whatWeDo.title}</h1>
-      <History title={whatWeDo.history.title} timeline={whatWeDo.timeline} />
+      <History
+        title={whatWeDo.history.title}
+        timeline={whatWeDo.timeline}
+        mobileTimeline={whatWeDo.mobileTimeline}
+      />
       <IndustryBG
         title={whatWeDo.industryBackgroundTitle}
         blurb={whatWeDo.industryBackgroundBlurb}
@@ -48,15 +52,15 @@ export const pageQuery = graphql`
       subheadingForTitle
       history {
         title
-        historyMilestones {
-          title
-          milestoneDescription {
-            milestoneDescription
-          }
-        }
       }
       timeline {
-        fluid(maxWidth: 750) {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+        description
+      }
+      mobileTimeline {
+        fluid {
           ...GatsbyContentfulFluid
         }
         description
