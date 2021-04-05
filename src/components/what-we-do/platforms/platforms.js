@@ -8,9 +8,9 @@ import {
   PlatformOneContent,
   PlatformTwo,
   LineContainerTwo,
+  PlatformTwoContent,
   PlatformTitle,
   PlatformButton,
-  Content,
 } from "./platforms-styles"
 
 const Platforms = ({ title, platformOne, platformTwo }) => {
@@ -34,7 +34,10 @@ const Platforms = ({ title, platformOne, platformTwo }) => {
         </PlatformOneContent>
       </PlatformOne>
       <PlatformTwo>
-        <Content>
+        <LineContainerTwo>
+          <LineOne />
+        </LineContainerTwo>
+        <PlatformTwoContent>
           <PlatformTitle>{platformTwo.platformTitle}</PlatformTitle>
           <P>{platformTwo.blurb}</P>
           <a href={platformTwo.ctaLink}>
@@ -42,7 +45,7 @@ const Platforms = ({ title, platformOne, platformTwo }) => {
               {platformTwo.ctaTitle}
             </PlatformButton>
           </a>
-        </Content>
+        </PlatformTwoContent>
       </PlatformTwo>
     </>
   )

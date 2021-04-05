@@ -28,9 +28,20 @@ const LineOne = styled.div`
   background: ${royalBlue};
 `
 
-const PlatformTwo = styled.div``
+const PlatformTwo = styled.div`
+  display: flex;
+  width: 78vw;
+`
 
-const LineContainerTwo = styled.div``
+const LineContainerTwo = styled.div`
+  width: 65%;
+  padding-top: 18px;
+  padding-right: 5px;
+`
+
+const PlatformTwoContent = styled.div`
+  width: 35%;
+`
 
 const PlatformTitle = styled(H2)`
   font-size: calc(
@@ -44,8 +55,6 @@ const PlatformButton = styled(Button)`
   padding: 16px 48px;
 `
 
-const Content = styled.div``
-
 export {
   Title,
   PlatformOne,
@@ -54,7 +63,7 @@ export {
   LineOne,
   PlatformTwo,
   LineContainerTwo,
+  PlatformTwoContent,
   PlatformTitle,
   PlatformButton,
-  Content,
 }
