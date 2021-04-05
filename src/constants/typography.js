@@ -46,6 +46,11 @@ const fontWeights = {
   heavy: `900`,
 }
 
+const borders = {
+  connect: `1px solid ${royalBlue}`,
+  connectHover: `1px solid ${navyBlue}`,
+}
+
 const H1 = styled.h1`
   font-size: ${fontSizes.h1};
   font-family: ${fonts.header};
@@ -109,7 +114,8 @@ const Connect = styled.a`
   font-size: ${fontSizes.p};
   font-family: ${fonts.connect};
   font-weight: ${fontWeights.medium};
-  text-decoration: ${textStyles.underline};
+  text-decoration: none;
+  border-bottom: ${borders.connect};
   letter-spacing: 0.1em;
   color: ${royalBlue};
   line-height: 22px;
@@ -119,6 +125,7 @@ const Connect = styled.a`
   }
   &:hover {
     color: ${navyBlue};
+    border-bottom: ${borders.connectHover};
   }
 `
 
