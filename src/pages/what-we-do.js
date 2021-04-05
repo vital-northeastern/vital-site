@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import History from "../components/what-we-do/history/history"
 import IndustryBG from "../components/what-we-do/industry-bg/industry-bg"
 import ProgrammingCard from "../components/what-we-do/programming-cards/programming-card"
+import Platforms from "../components/what-we-do/platforms/platforms"
 import { CardsContainer } from "../page-styles/what-we-do-styles"
 
 const WhatWeDo = props => {
@@ -39,6 +40,11 @@ const WhatWeDo = props => {
           )
         })}
       </CardsContainer>
+      <Platforms
+        title={whatWeDo.platforms.title}
+        platformOne={whatWeDo.platforms.platforms[0]}
+        platformTwo={whatWeDo.platforms.platforms[1]}
+      />
     </Layout>
   )
 }
@@ -88,10 +94,13 @@ export const pageQuery = graphql`
         }
       }
       platforms {
-        platformTitle
-        blurb
-        ctaTitle
-        ctaLink
+        title
+        platforms {
+          platformTitle
+          blurb
+          ctaTitle
+          ctaLink
+        }
       }
     }
   }
