@@ -3,6 +3,7 @@ import { H2 } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
 import { size } from "../../../constants/devices"
 import { royalBlue } from "../../../constants/colors"
+import { devices } from "../../../constants/devices"
 
 const PlatformsContainer = styled.div`
   padding-top: 10px;
@@ -18,17 +19,33 @@ const Title = styled.div`
 
 const Platform = styled.div`
   display: flex;
-  width: ${props => (props.num === 1 ? "50vw" : "78vw")};
+  @media ${devices.mobile} {
+    width: 100vw;
+  }
+  @media ${devices.tablet} {
+    width: ${props => (props.num === 1 ? "50vw" : "78vw")};
+  }
   padding-top: ${props => (props.num === 1 ? "0px" : "22px")};
 `
 
 const PlatformContent = styled.div`
-  width: ${props => (props.num === 1 ? "60%" : "35%")};
+  @media ${devices.mobile} {
+    width: 75%;
+  }
+  @media ${devices.tablet} {
+    width: ${props => (props.num === 1 ? "60%" : "35%")};
+  }
 `
 
 const LineContainer = styled.div`
-  width: ${props => (props.num === 1 ? "40%" : "65%")};
-  padding-right: ${props => (props.num === 1 ? "18px" : "0px")};
+  @media ${devices.mobile} {
+    width: 25%;
+    padding-right: 18px;
+  }
+  @media ${devices.tablet} {
+    width: ${props => (props.num === 1 ? "40%" : "65%")};
+    padding-right: ${props => (props.num === 1 ? "18px" : "0px")};
+  }
   display: flex;
 `
 
