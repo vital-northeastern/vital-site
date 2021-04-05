@@ -4,7 +4,8 @@ import {
   Title,
   PlatformOne,
   LineContainerOne,
-  LineOne,
+  Line,
+  Dot,
   PlatformOneContent,
   PlatformTwo,
   LineContainerTwo,
@@ -21,7 +22,8 @@ const Platforms = ({ title, platformOne, platformTwo }) => {
       </Title>
       <PlatformOne>
         <LineContainerOne>
-          <LineOne />
+          <Line />
+          <Dot />
         </LineContainerOne>
         <PlatformOneContent>
           <PlatformTitle>{platformOne.platformTitle}</PlatformTitle>
@@ -35,7 +37,8 @@ const Platforms = ({ title, platformOne, platformTwo }) => {
       </PlatformOne>
       <PlatformTwo>
         <LineContainerTwo>
-          <LineOne />
+          <Line />
+          <Dot />
         </LineContainerTwo>
         <PlatformTwoContent>
           <PlatformTitle>{platformTwo.platformTitle}</PlatformTitle>

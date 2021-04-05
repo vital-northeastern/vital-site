@@ -19,24 +19,34 @@ const PlatformOneContent = styled.div`
 
 const LineContainerOne = styled.div`
   width: 40%;
-  padding-top: 18px;
-  padding-right: 5px;
+  padding-right: 18px;
+  display: flex;
 `
 
-const LineOne = styled.div`
-  height: 3px;
+const Line = styled.span`
+  height: 2px;
+  margin-top: 18px;
   background: ${royalBlue};
+  width: 95%;
+`
+
+const Dot = styled.span`
+  height: 13px;
+  width: 13px;
+  margin-top: 13px;
+  background-color: ${royalBlue};
+  border-radius: 50%;
 `
 
 const PlatformTwo = styled.div`
   display: flex;
   width: 78vw;
+  padding-top: 22px;
 `
 
 const LineContainerTwo = styled.div`
   width: 65%;
-  padding-top: 18px;
-  padding-right: 5px;
+  display: flex;
 `
 
 const PlatformTwoContent = styled.div`
@@ -60,7 +70,8 @@ export {
   PlatformOne,
   LineContainerOne,
   PlatformOneContent,
-  LineOne,
+  Line,
+  Dot,
   PlatformTwo,
   LineContainerTwo,
   PlatformTwoContent,
