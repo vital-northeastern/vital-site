@@ -7,6 +7,9 @@ import { royalBlue } from "../../../constants/colors"
 const PlatformsContainer = styled.div`
   padding-top: 10px;
   padding-bottom: 40px;
+  positon: relative;
+  width: auto;
+  height: auto;
 `
 
 const Title = styled.div`
@@ -56,6 +59,11 @@ const PlatformButton = styled(Button)`
   padding: 16px 48px;
 `
 
+const ImageContainer = styled.div`
+  position: absolute;
+  right: 0;
+`
+
 export {
   PlatformsContainer,
   Title,
@@ -66,4 +74,5 @@ export {
   Dot,
   PlatformTitle,
   PlatformButton,
+  ImageContainer,
 }

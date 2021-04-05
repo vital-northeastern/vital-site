@@ -10,7 +10,9 @@ import {
   PlatformContent,
   PlatformTitle,
   PlatformButton,
+  ImageContainer,
 } from "./platforms-styles"
+import shape from "../../../images/platforms_shape.png"
 
 const Platforms = ({ title, platformOne, platformTwo }) => {
   return (
@@ -48,6 +50,9 @@ const Platforms = ({ title, platformOne, platformTwo }) => {
           </a>
         </PlatformContent>
       </Platform>
+      <ImageContainer>
+        <img src={shape} alt="blue and white geometric shape" />
+      </ImageContainer>
     </PlatformsContainer>
   )
 }

@@ -15,7 +15,7 @@ const ProgrammingCard = ({ key, title, description, photo, photoAlt }) => {
   return (
     <CardContainer>
       <ImageContainer>
-        <Img className="featured" fluid={photo.fluid} alt={photoAlt} />
+        <Img fluid={photo.fluid} alt={photoAlt} />
       </ImageContainer>
       <CardContentContainer>
         <CardContent>
