@@ -64,7 +64,7 @@ const H2 = styled.h2`
   font-family: ${fonts.subheader};
   font-weight: ${fontWeights.semiBold};
   text-transform: ${textStyles.capitalize};
-  line-height: 38px;
+  line-height: 30px;
   color: ${navyBlue};
   @media ${devices.mobileMax} {
     font-size: 27px;
@@ -92,7 +92,7 @@ const HUpper = styled.h2`
 const P = styled.p`
   font-size: ${fontSizes.p};
   font-family: ${fonts.body};
-  font-weight: ${fontWeights.normal};
+  font-weight: ${fontWeights.medium};
   line-height: 24px;
   @media ${devices.mobileMax} {
     line-height: 22px;

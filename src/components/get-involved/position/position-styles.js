@@ -15,7 +15,7 @@ const PositionContainer = styled.div`
     margin-left: 35px;
   }
   @media ${devices.laptop} {
-    margin-left: ${props => (props.index % 2 === 0 ? "75px" : "50px")};
+    margin-left: ${props => (props.index % 2 === 0 ? "75px" : "60px")};
   }
   z-index: 1;
   display: inline-block;
