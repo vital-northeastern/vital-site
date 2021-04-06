@@ -9,7 +9,7 @@ import {
   NavBrand,
   NavButton,
   FlexColumn,
-  NavigationLinks,
+  RegularLinks,
   SmallNavLinkContainer,
   SmallMenuContainer,
   SmallLinksContainer,
@@ -32,32 +32,30 @@ const NavBar = ({ navbarStyle }) => {
 
   return (
     <NavWrapper navbarStyle={navbarStyle}>
-      <NavigationLinks>
-        <FlexColumn>
-          <NavBrandWrapper to="/">
-            <NavBrand>ViTAL</NavBrand>
-          </NavBrandWrapper>
-        </FlexColumn>
-        <FlexColumn>
-          <NavLink navbarStyle={navbarStyle} to="/">
-            Home
-          </NavLink>
-          <NavLink navbarStyle={navbarStyle} to="/what-we-do">
-            About
-          </NavLink>
-          <NavLink navbarStyle={navbarStyle} to="/whats-happening">
-            Events
-          </NavLink>
-        </FlexColumn>
-        <FlexColumn>
-          <NavButton
-            navbarStyle={navbarStyle}
-            onClick={() => navigate("/get-involved")}
-          >
-            Get Involved
-          </NavButton>
-        </FlexColumn>
-      </NavigationLinks>
+      <FlexColumn>
+        <NavBrandWrapper to="/">
+          <NavBrand>ViTAL</NavBrand>
+        </NavBrandWrapper>
+      </FlexColumn>
+      <FlexColumn>
+        <NavLink navbarStyle={navbarStyle} to="/">
+          Home
+        </NavLink>
+        <NavLink navbarStyle={navbarStyle} to="/what-we-do">
+          About
+        </NavLink>
+        <NavLink navbarStyle={navbarStyle} to="/whats-happening">
+          Events
+        </NavLink>
+      </FlexColumn>
+      <FlexColumn>
+        <NavButton
+          navbarStyle={navbarStyle}
+          onClick={() => navigate("/get-involved")}
+        >
+          Get Involved
+        </NavButton>
+      </FlexColumn>
       <SmallNavLinkContainer onClick={() => setSmallLinks(true)}>
         <Hamburger />
       </SmallNavLinkContainer>

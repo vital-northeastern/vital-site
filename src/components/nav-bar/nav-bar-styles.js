@@ -96,16 +96,14 @@ const NavButton = styled.button`
   }
 `
 
-const NavigationLinks = styled.div`
-  @media ${devices.mobile} {
+const RegularLinks = styled.div`
+  @media ${devices.tabletMax} {
     display: none;
-  }
-  @media ${devices.tablet} {
-    display: flex;
   }
 `
 
 const SmallNavLinkContainer = styled.div`
+  overflow: hidden;
   &:hover {
     cursor: pointer;
   }
@@ -176,7 +174,7 @@ export {
   NavBrand,
   NavButton,
   FlexColumn,
-  NavigationLinks,
+  RegularLinks,
   SmallNavLinkContainer,
   SmallMenuContainer,
   SmallLinksContainer,
