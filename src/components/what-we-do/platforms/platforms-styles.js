@@ -77,8 +77,15 @@ const PlatformButton = styled(Button)`
 `
 
 const ImageContainer = styled.div`
+  position: relative;
+  z-index: -9999;
+`
+
+const Image = styled.img`
   position: absolute;
   right: 0;
+  top: 290px;
+  width: 35vw;
 `
 
 export {
@@ -92,4 +99,5 @@ export {
   PlatformTitle,
   PlatformButton,
   ImageContainer,
+  Image,
 }
