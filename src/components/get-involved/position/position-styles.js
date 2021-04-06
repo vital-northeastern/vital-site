@@ -1,17 +1,21 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { size, devices } from "../../../constants/devices"
-import { P, HLower } from "../../../constants/typography"
+import { PCard, H2 } from "../../../constants/typography"
 
 const fontSizes = {
   title: `calc(
-    20px + (25 - 20) *
-      ((100vw - ${size.mobile}px) / (${size.desktop} - ${size.mobile})))`,
+    13px + (23 - 13) *
+      ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
+  )`,
 }
 
 const PositionContainer = styled.div`
+  @media ${devices.mobile} {
+    margin-left: 35px;
+  }
   @media ${devices.laptop} {
-    margin-left: ${props => (props.index % 2 === 0 ? "5rem" : "50px")};
+    margin-left: ${props => (props.index % 2 === 0 ? "75px" : "50px")};
   }
   z-index: 1;
   display: inline-block;
@@ -34,7 +38,6 @@ const PositionImg = styled(Img)`
 
 const InfoContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   position: relative;
   padding-left: 20px;
   width: 70%;
@@ -49,17 +52,15 @@ const TextContainer = styled.div`
   padding-bottom: 0px;
 `
 
-const PositionName = styled(HLower)`
-  text-transform: capitalize;
-  color: #133e6c;
-  margin: auto;
-  padding-top: 1rem;
+const PositionName = styled(H2)`
   font-size: ${fontSizes.title};
+  color: #133e6c;
+  padding-top: 1rem;
+  line-height: 30px;
 `
 
-const PositionDescription = styled(P)`
+const PositionDescription = styled(PCard)`
   line-height: 21px;
-  padding-top: 15px;
 `
 
 export {
