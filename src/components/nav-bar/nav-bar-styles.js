@@ -1,13 +1,21 @@
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { fonts } from "../../constants/typography"
 import { white, navyBlue, darkGray } from "../../constants/colors"
+import { animations } from "../../constants/animations"
+import { size, devices } from "../../constants/devices"
 
 const NavWrapper = styled.nav`
   display: flex;
   position: absolute;
   top: 0;
   background-color: transparent;
+  @media ${devices.mobile} {
+    padding: 10px 35px;
+  }
+  @media ${devices.tablet} {
+    padding: 15px 75px;
+  }
   padding: 15px 75px;
   align-items: center;
   font-family: ${fonts.nav};
@@ -88,4 +96,88 @@ const NavButton = styled.button`
   }
 `
 
-export { NavWrapper, NavBrandWrapper, NavLink, NavBrand, NavButton, FlexColumn }
+const NavigationLinks = styled.div`
+  @media ${devices.mobile} {
+    display: none;
+  }
+  @media ${devices.tablet} {
+    display: flex;
+  }
+`
+
+const SmallNavLinkContainer = styled.div`
+  &:hover {
+    cursor: pointer;
+  }
+  @media ${devices.mobile} {
+    position: relative;
+    display: inline-flex;
+    float: right;
+    margin: 3.25rem 1.5rem 0rem 0rem;
+    z-index: 1;
+  }
+  @media ${devices.tablet} {
+    display: none;
+  }
+`
+
+const fadeIn = keyframes`
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
+`
+
+const fadeOut = keyframes`
+  0% { opacity: 100%; }
+  100% { opacity: 0%; }
+`
+
+const SmallMenuContainer = styled.div`
+  position: absolute;
+  z-index: 2;
+  background: red;
+  top: 1rem;
+  right: 1rem;
+  border: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: blue;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  animation: ${props => (props.out ? fadeOut : fadeIn)}
+    ${animations.navBarFadeLength}s 1;
+  @media ${devices.laptop} {
+    display: none;
+  }
+`
+
+const SmallLinksContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 1rem 0;
+  > * {
+    margin: 1rem;
+  }
+`
+
+const CrossContainer = styled.div`
+  position: relative;
+  margin: 0.4rem auto auto 85%;
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+export {
+  NavWrapper,
+  NavBrandWrapper,
+  NavLink,
+  NavBrand,
+  NavButton,
+  FlexColumn,
+  NavigationLinks,
+  SmallNavLinkContainer,
+  SmallMenuContainer,
+  SmallLinksContainer,
+  CrossContainer,
+}
