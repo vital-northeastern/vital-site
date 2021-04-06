@@ -14,7 +14,12 @@ const PlatformsContainer = styled.div`
 `
 
 const Title = styled.div`
-  padding-left: 75px;
+  @media ${devices.mobile} {
+    padding-left: 35px;
+  }
+  @media ${devices.tablet} {
+    padding-left: 75px;
+  }
 `
 
 const Platform = styled.div`
@@ -25,15 +30,17 @@ const Platform = styled.div`
   @media ${devices.tablet} {
     width: ${props => (props.num === 1 ? "50vw" : "78vw")};
   }
-  padding-top: ${props => (props.num === 1 ? "0px" : "22px")};
+  padding-top: ${props => (props.num === 1 ? "0px" : "24px")};
 `
 
 const PlatformContent = styled.div`
   @media ${devices.mobile} {
     width: 75%;
+    padding-right: 20px;
   }
   @media ${devices.tablet} {
     width: ${props => (props.num === 1 ? "60%" : "35%")};
+    padding-right: 0px;
   }
 `
 
@@ -79,12 +86,15 @@ const PlatformButton = styled(Button)`
 const ImageContainer = styled.div`
   position: relative;
   z-index: -9999;
+  @media ${devices.tabletMax} {
+    display: none;
+  }
 `
 
 const Image = styled.img`
   position: absolute;
   right: 0;
-  top: 290px;
+  top: 295px;
   width: 35vw;
 `
 
