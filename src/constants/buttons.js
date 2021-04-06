@@ -12,6 +12,7 @@ const Button = styled.button`
   letter-spacing: 1px;
   font-family: ${fonts.button};
   font-size: 14px;
+  font-weight: 400;
   transition: all 0.2s;
   &:hover {
     background-color: ${props => (props.primary ? royalBlue : "transparent")};
