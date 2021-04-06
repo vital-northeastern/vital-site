@@ -10,12 +10,15 @@ const HeaderContainer = styled.div`
 const TextContainer = styled.div`
   @media ${devices.mobile} {
     padding-left: 35px;
+    padding-bottom: 30px;
   }
   @media ${devices.tablet} {
     padding-left: 75px;
   }
+  @media ${devices.laptop} {
+    padding-bottom: 45px;
+  }
   padding-top: 170px;
-  padding-bottom: 45px;
 `
 
 const ImageContainer = styled.div`

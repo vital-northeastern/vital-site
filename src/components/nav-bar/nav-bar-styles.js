@@ -120,7 +120,7 @@ const SmallNavLinkContainer = styled.div`
     position: relative;
     display: inline-flex;
     float: right;
-    margin: 3.25rem 1.5rem 0rem 0rem;
+    margin: 0.7rem 0.1rem 0rem 0rem;
     z-index: 1;
   }
   @media ${devices.laptop} {

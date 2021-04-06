@@ -1,4 +1,6 @@
 import React from "react"
+import { white } from "./colors"
+
 const Hamburger = () => {
   return (
     <svg
@@ -8,9 +10,9 @@ const Hamburger = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="38.08" height="2.72" fill="#083D44" />
-      <rect y="9.52002" width="38.08" height="2.72" fill="#083D44" />
-      <rect y="19.04" width="38.08" height="2.72" fill="#083D44" />
+      <rect width="32" height="3" fill={white} />
+      <rect y="9.52002" width="32" height="3" fill={white} />
+      <rect y="19.04" width="32" height="3" fill={white} />
     </svg>
   )
 }
