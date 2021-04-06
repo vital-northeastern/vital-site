@@ -6,7 +6,7 @@ import {
   ImageContainer,
   BackgroundShape,
 } from "./header-styles"
-import shape from "../../images/header_shape.png"
+import header_shape from "../../images/header_svg.svg"
 
 const Header = ({ title, subheading, imageBool }) => {
   return (
@@ -16,7 +16,11 @@ const Header = ({ title, subheading, imageBool }) => {
         <P>{subheading}</P>
       </TextContainer>
       <ImageContainer imageBool={imageBool}>
-        <BackgroundShape src={shape} alt="geometric shape" title={title} />
+        <BackgroundShape
+          src={header_shape}
+          alt="geometric shape"
+          title={title}
+        />
       </ImageContainer>
     </HeaderContainer>
   )
