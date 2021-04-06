@@ -20,13 +20,15 @@ const TextContainer = styled.div`
 
 const ImageContainer = styled.div`
   position: absolute;
-  top: 0px;
-  right: 0px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
   width: auto;
   opacity: ${props => (props.imageBool ? "1" : "0")};
 `
 
 const BackgroundShape = styled.img`
+  padding-bottom: 490px;
   transform: rotate(11deg);
   @media (max-width: 1200px) {
     opacity: ${props => (props.title.length > 15 ? "0" : "1")};
