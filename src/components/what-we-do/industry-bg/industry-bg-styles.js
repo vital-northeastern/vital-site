@@ -5,7 +5,7 @@ import { darkGray } from "../../../constants/colors"
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  padding: 10px 80px;
+  padding: 10px 75px;
   @media (max-width: ${size.tablet}px) {
     display: block;
   }
