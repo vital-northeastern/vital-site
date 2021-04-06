@@ -39,8 +39,23 @@ const FlexColumn = styled.div`
   &:nth-child(2) {
     justify-content: center;
   }
+  @media ${devices.tabletMax} {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
   &:nth-child(3) {
     justify-content: flex-end;
+  }
+  @media ${devices.tabletMax} {
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+  @media ${devices.tabletMax} {
+    &:nth-child(4) {
+      justify-content: flex-end;
+    }
   }
 `
 
@@ -96,12 +111,6 @@ const NavButton = styled.button`
   }
 `
 
-const RegularLinks = styled.div`
-  @media ${devices.tabletMax} {
-    display: none;
-  }
-`
-
 const SmallNavLinkContainer = styled.div`
   overflow: hidden;
   &:hover {
@@ -114,7 +123,7 @@ const SmallNavLinkContainer = styled.div`
     margin: 3.25rem 1.5rem 0rem 0rem;
     z-index: 1;
   }
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     display: none;
   }
 `
@@ -174,7 +183,6 @@ export {
   NavBrand,
   NavButton,
   FlexColumn,
-  RegularLinks,
   SmallNavLinkContainer,
   SmallMenuContainer,
   SmallLinksContainer,

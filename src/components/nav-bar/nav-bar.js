@@ -9,7 +9,6 @@ import {
   NavBrand,
   NavButton,
   FlexColumn,
-  RegularLinks,
   SmallNavLinkContainer,
   SmallMenuContainer,
   SmallLinksContainer,
@@ -57,7 +56,9 @@ const NavBar = ({ navbarStyle }) => {
         </NavButton>
       </FlexColumn>
       <SmallNavLinkContainer onClick={() => setSmallLinks(true)}>
-        <Hamburger />
+        <FlexColumn>
+          <Hamburger />
+        </FlexColumn>
       </SmallNavLinkContainer>
       {smallLinks && (
         <SmallMenuContainer out={delay}>
