@@ -1,9 +1,9 @@
 import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
 import { fonts } from "../../constants/typography"
-import { white, navyBlue, darkGray } from "../../constants/colors"
+import { white, navyBlue, darkGray, periwinkle } from "../../constants/colors"
 import { animations } from "../../constants/animations"
-import { size, devices } from "../../constants/devices"
+import { devices } from "../../constants/devices"
 
 const NavWrapper = styled.nav`
   display: flex;
@@ -134,7 +134,7 @@ const fadeOut = keyframes`
 const SmallMenuContainer = styled.div`
   position: absolute;
   z-index: 2;
-  background: red;
+  background: ${periwinkle};
   top: 1rem;
   right: 1rem;
   border: solid;
@@ -146,6 +146,7 @@ const SmallMenuContainer = styled.div`
   flex-direction: column;
   animation: ${props => (props.out ? fadeOut : fadeIn)}
     ${animations.navBarFadeLength}s 1;
+
   @media ${devices.laptop} {
     display: none;
   }
@@ -154,7 +155,7 @@ const SmallMenuContainer = styled.div`
 const SmallLinksContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 1rem 0 1rem 0;
+  margin: 0rem 0 1rem 0;
   > * {
     margin: 1rem;
   }

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { white, headerGradient } from "../../constants/colors"
-import { size } from "../../constants/devices"
+import { size, devices } from "../../constants/devices"
 
 const HeaderContainer = styled.div`
   background: ${headerGradient};
@@ -8,7 +8,12 @@ const HeaderContainer = styled.div`
 `
 
 const TextContainer = styled.div`
-  padding-left: 75px;
+  @media ${devices.mobile} {
+    padding-left: 35px;
+  }
+  @media ${devices.tablet} {
+    padding-left: 75px;
+  }
   padding-top: 170px;
   padding-bottom: 45px;
 `
