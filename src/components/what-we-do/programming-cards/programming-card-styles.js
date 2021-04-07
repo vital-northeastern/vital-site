@@ -20,7 +20,6 @@ const CardContainer = styled.div`
   }
   @media ${devices.desktop} {
     width: 430px;
-    padding: 50px 10px 50px;
   }
   overflow: hidden;
 `
@@ -44,13 +43,16 @@ const CardContentContainer = styled.div`
     height: 50%;
   }
   @media ${devices.laptop} {
-    height: 75vh;
+    height: 500px;
   }
   @media (min-width: 1150px) {
-    height: 69vh;
+    height: 420px;
   }
   @media (min-width: 1290px) {
-    height: 61vh;
+    height: 400px;
+  }
+  @media ${devices.desktop} {
+    height: 380px;
   }
 `
 
@@ -82,19 +84,8 @@ const TextContainer = styled.div`
   padding-top: 20px;
   @media ${devices.mobileMax} {
     padding-top: 5px;
-  }
-  @media ${devices.mobile} {
     height: auto;
     padding-bottom: 20px;
-  }
-  @media ${devices.tablet} {
-    height: 250px;
-  }
-  @media ${devices.laptop} {
-    height: 90%;
-  }
-  @media (min-width: 1220px) {
-    height: 90%;
   }
 `
 

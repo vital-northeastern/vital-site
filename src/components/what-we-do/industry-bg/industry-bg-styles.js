@@ -1,16 +1,18 @@
 import styled from "styled-components"
-import { size, devices } from "../../../constants/devices"
+import { devices } from "../../../constants/devices"
 import { darkGray } from "../../../constants/colors"
 
 const Container = styled.div`
-  display: flex;
   justify-content: center;
-  @media ${devices.laptop} {
-    padding: 8px 80px;
-  }
-  @media (max-width: ${size.laptop}px) {
+  @media ${devices.mobile} {
     display: block;
     padding: 8px 30px;
+    margin-bottom: 20px;
+  }
+  @media ${devices.laptop} {
+    padding: 8px 80px;
+    display: flex;
+    margin-bottom: -15px;
   }
 `
 
@@ -33,7 +35,7 @@ const Text = styled.div`
 `
 
 const Image = styled.img`
-  max-height: 100%;
+  height: 100%;
   width: 55%;
   @media ${devices.tabletMax} {
     margin: 0 auto;
