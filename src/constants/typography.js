@@ -92,7 +92,7 @@ const HUpper = styled.h2`
 const P = styled.p`
   font-size: ${fontSizes.p};
   font-family: ${fonts.body};
-  font-weight: ${fontWeights.medium};
+  font-weight: ${fontWeights.normal};
   line-height: 24px;
   @media ${devices.mobileMax} {
     line-height: 22px;
