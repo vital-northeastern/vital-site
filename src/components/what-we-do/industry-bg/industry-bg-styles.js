@@ -10,7 +10,7 @@ const Container = styled.div`
     margin-bottom: 50px;
   }
   @media ${devices.laptop} {
-    padding: 8px 80px;
+    padding: 8px 75px;
     display: flex;
     margin-bottom: -20px;
   }
