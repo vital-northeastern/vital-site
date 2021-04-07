@@ -18,9 +18,6 @@ const CardContainer = styled.div`
     width: 30vw;
     padding: 50px 10px 50px;
   }
-  @media ${devices.desktop} {
-    width: 430px;
-  }
   overflow: hidden;
 `
 
