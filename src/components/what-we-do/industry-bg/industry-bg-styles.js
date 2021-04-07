@@ -5,12 +5,12 @@ import { darkGray } from "../../../constants/colors"
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  @media ${devices.tablet} {
-    padding: 10px 80px;
+  @media ${devices.laptop} {
+    padding: 8px 80px;
   }
   @media (max-width: ${size.laptop}px) {
     display: block;
-    padding: 10px 30px;
+    padding: 8px 30px;
   }
 `
 
@@ -25,10 +25,10 @@ const TextContainer = styled.div`
 
 const Text = styled.div`
   @media ${devices.laptop} {
-    padding-right: 40px;
+    padding-right: 50px;
     position: relative;
     top: 50%;
-    transform: translateY(-55%);
+    transform: translateY(-60%);
   }
 `
 

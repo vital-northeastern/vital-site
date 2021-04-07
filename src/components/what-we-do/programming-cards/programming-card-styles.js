@@ -18,6 +18,10 @@ const CardContainer = styled.div`
     width: 30vw;
     padding: 50px 10px 50px;
   }
+  @media ${devices.desktop} {
+    width: 430px;
+    padding: 50px 10px 50px;
+  }
   overflow: hidden;
 `
 
@@ -75,8 +79,7 @@ const TextContainer = styled.div`
   padding-bottom: 5px;
   padding-left: 30px;
   padding-right: 30px;
-  display: flex;
-  align-items: center;
+  padding-top: 20px;
   @media ${devices.mobileMax} {
     padding-top: 5px;
   }
@@ -88,10 +91,10 @@ const TextContainer = styled.div`
     height: 250px;
   }
   @media ${devices.laptop} {
-    height: 60vh;
+    height: 90%;
   }
   @media (min-width: 1220px) {
-    height: 55vh;
+    height: 90%;
   }
 `
 

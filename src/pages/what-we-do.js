@@ -83,12 +83,6 @@ export const pageQuery = graphql`
           description
         }
       }
-      platforms {
-        platformTitle
-        blurb
-        ctaTitle
-        ctaLink
-      }
     }
   }
 `
