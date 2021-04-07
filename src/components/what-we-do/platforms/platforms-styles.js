@@ -15,7 +15,7 @@ const PlatformsContainer = styled.div`
 
 const Title = styled.div`
   @media ${devices.mobile} {
-    padding-left: 35px;
+    padding-left: 30px;
   }
   @media ${devices.tablet} {
     padding-left: 75px;
@@ -85,7 +85,7 @@ const PlatformButton = styled(Button)`
 
 const ImageContainer = styled.div`
   position: relative;
-  z-index: -9999;
+  z-index: -10;
   @media ${devices.tabletMax} {
     display: none;
   }
@@ -94,7 +94,10 @@ const ImageContainer = styled.div`
 const Image = styled.img`
   position: absolute;
   right: 0;
-  top: 295px;
+  top: 300px;
+  @media (max-width: 1200px) {
+    top: 400px;
+  }
   width: 35vw;
 `
 

@@ -16,6 +16,8 @@ const CardsContainer = styled.div`
     justify-content: center;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-left: 65px;
+    margin-right: 65px;
   }
 `
 

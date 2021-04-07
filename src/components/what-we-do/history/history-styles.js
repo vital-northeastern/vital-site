@@ -3,7 +3,12 @@ import Img from "gatsby-image"
 import { size, devices } from "../../../constants/devices"
 
 const Title = styled.div`
-  padding-left: 75px;
+  @media ${devices.mobile} {
+    padding-left: 30px;
+  }
+  @media ${devices.tablet} {
+    padding-left: 75px;
+  }
 `
 
 const RegularImage = styled(Img)`
