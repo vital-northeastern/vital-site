@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { H2, PCard } from "../../../constants/typography"
+import { H2 } from "../../../constants/typography"
 import { devices } from "../../../constants/devices"
 import { white, royalBlue } from "../../../constants/colors"
 
@@ -98,8 +98,6 @@ const TextContainer = styled.div`
   }
 `
 
-const PCardText = styled(PCard)``
-
 export {
   CardContainer,
   ImageContainer,
@@ -108,5 +106,4 @@ export {
   CardTitle,
   CardTitleContainer,
   TextContainer,
-  PCardText,
 }
