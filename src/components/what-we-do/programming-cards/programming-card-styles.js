@@ -11,7 +11,7 @@ const CardContainer = styled.div`
     width: 60%;
   }
   @media ${devices.tabletMax} {
-    margin: 0 auto 20px auto;
+    margin: 0 auto 50px auto;
   }
   @media ${devices.laptop} {
     width: 30vw;
@@ -30,8 +30,6 @@ const ImageContainer = styled.div`
   }
   overflow: hidden;
 `
-
-const CardContentContainer = styled.div``
 
 const CardContent = styled.div`
   color: ${white};
@@ -69,7 +67,6 @@ const TextContainer = styled.div`
 export {
   CardContainer,
   ImageContainer,
-  CardContentContainer,
   CardContent,
   CardTitle,
   CardTitleContainer,

@@ -7,12 +7,12 @@ const Container = styled.div`
   @media ${devices.mobile} {
     display: block;
     padding: 8px 30px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
   @media ${devices.laptop} {
     padding: 8px 80px;
     display: flex;
-    margin-bottom: -15px;
+    margin-bottom: -20px;
   }
 `
 
