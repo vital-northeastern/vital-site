@@ -11,13 +11,13 @@ const CardContainer = styled.div`
     width: 60%;
   }
   @media ${devices.tabletMax} {
-    margin: 0 auto;
-    padding: 20px 10px 20px;
+    margin: 0 auto 20px auto;
   }
   @media ${devices.laptop} {
     width: 30vw;
-    padding: 50px 10px 50px;
+    margin: 50px 10px 50px;
   }
+  background-color: ${royalBlue};
   overflow: hidden;
 `
 
@@ -31,27 +31,7 @@ const ImageContainer = styled.div`
   overflow: hidden;
 `
 
-const CardContentContainer = styled.div`
-  background-color: ${royalBlue};
-  @media ${devices.mobile} {
-    height: auto;
-  }
-  @media ${devices.tablet} {
-    height: 50%;
-  }
-  @media ${devices.laptop} {
-    height: 500px;
-  }
-  @media (min-width: 1150px) {
-    height: 420px;
-  }
-  @media (min-width: 1290px) {
-    height: 400px;
-  }
-  @media ${devices.desktop} {
-    height: 380px;
-  }
-`
+const CardContentContainer = styled.div``
 
 const CardContent = styled.div`
   color: ${white};
