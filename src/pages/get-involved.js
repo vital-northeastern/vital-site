@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import Introduction from "../components/get-involved/introduction"
+import Header from "../components/get-involved/header/header"
 import Eboard from "../components/get-involved/eboard/eboard"
 import Position from "../components/get-involved/position/position"
 import ApplicationInfo from "../components/get-involved/application-info/application-info"
@@ -16,9 +16,9 @@ const GetInvolved = props => {
   return (
     <Layout>
       <SEO title="Get Involved" />
-      <Introduction
+      <Header
         title={involvedPage.title}
-        subheadingForTitle={involvedPage.subheadingForTitle}
+        subheading={involvedPage.subheadingForTitle}
         involvementIntroTitle={involvedPage.involvementIntroTitle}
         involvementBlurb={involvedPage.involvementBlurb}
         disclaimer={involvedPage.disclaimer}

@@ -5,7 +5,7 @@ import { PCard, H2 } from "../../../constants/typography"
 
 const fontSizes = {
   title: `calc(
-    13px + (23 - 13) *
+    17px + (23 - 17) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   )`,
 }
@@ -21,7 +21,15 @@ const PositionContainer = styled.div`
   display: inline-block;
   overflow: hidden;
   height: 16rem;
-  width: 29rem;
+  @media ${devices.mobile} {
+    width: 27rem;
+  }
+  @media ${devices.tablet} {
+    width: 35rem;
+  }
+  @media ${devices.laptop} {
+    width: 30rem;
+  }
 `
 
 const FlexContainer = styled.div`
@@ -50,17 +58,27 @@ const TextContainer = styled.div`
   position: relative;
   max-width: 100%;
   padding-bottom: 0px;
+  word-wrap: break-word;
 `
 
 const PositionName = styled(H2)`
   font-size: ${fontSizes.title};
   color: #133e6c;
-  padding-top: 1rem;
+  @media ${devices.tablet} {
+    padding-top: 1rem;
+  }
   line-height: 30px;
+  margin-bottom: 12px;
 `
 
 const PositionDescription = styled(PCard)`
   line-height: 21px;
+  @media ${devices.mobile} {
+    margin-right: 100px;
+  }
+  @media ${devices.tablet} {
+    margin-right: 0px;
+  }
 `
 
 export {
