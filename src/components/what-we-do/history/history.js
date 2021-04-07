@@ -1,11 +1,11 @@
 import React from "react"
-import { H3 } from "../../../constants/typography"
+import { H2 } from "../../../constants/typography"
 import Img from "gatsby-image"
 
 const History = ({ title, timeline }) => {
   return (
     <>
-      <H3>{title}</H3>
+      <H2>{title}</H2>
       <Img
         className="featured"
         fluid={timeline.fluid}

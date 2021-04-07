@@ -1,11 +1,16 @@
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { fonts } from "../../constants/typography"
+import { white, navyBlue, darkGray } from "../../constants/colors"
 
 const NavWrapper = styled.nav`
   display: flex;
-
-  padding: 15px 0;
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  padding: 15px 75px;
   align-items: center;
+  font-family: ${fonts.nav};
   height: 90px;
   width: 100%;
 `
@@ -30,17 +35,18 @@ const FlexColumn = styled.div`
     justify-content: flex-end;
   }
 `
-//   margin-left: ${props => (props.index % 2 === 0 ? "0" : "60px")};
 
 const NavLink = styled(Link)`
-  color: ${props => (props.variant === "blue" ? "#001049" : "white")};
-  font-family: "Work Sans", sans-serif;
+  color: ${props => (props.navbarStyle === "gradient" ? white : navyBlue)};
   font-size: 14px;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
+  font-family: ${fonts.nav};
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  margin-right: 22px;
+  transition: all 0.2s;
+  margin-left: 25px;
+  margin-right: 25px;
   :hover {
     transition: all 0.2s;
     color: black;
@@ -48,8 +54,7 @@ const NavLink = styled(Link)`
 `
 
 const NavBrand = styled.span`
-  color: #3d3939;
-  font-family: "URW DIN", sans-serif;
+  color: ${darkGray};
   font-size: 18px;
   letter-spacing: 0.5px;
   font-weight: 700;
@@ -57,27 +62,30 @@ const NavBrand = styled.span`
   text-decoration: none
   margin-left: 20px;
   vertical-align: middle;
-
-
 `
 
 const NavButton = styled.button`
   justify-self: flex-end;
-
   background-color: transparent;
-  font-family: "Work Sans", sans-serif;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-family: ${fonts.button};
+  font-size: 13px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: ${props => (props.variant === "blue" ? "#001049" : "white")};
-
-  font-weight: 600;
+  color: ${props => (props.navbarStyle === "gradient" ? white : navyBlue)};
+  font-weight: 300;
   border: 1px solid;
-  border-color: ${props => (props.variant === "blue" ? "#001049" : "white")};
-
-  padding: 5px 20px;
-  cursor: pointer;
+  border-color: ${props =>
+    props.navbarStyle === "gradient" ? white : navyBlue};
+  padding: 9px 28px;
   border-radius: 20px;
+  z-index: 10;
+  transition: all 0.2s;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: 0;
+  }
 `
 
 export { NavWrapper, NavBrandWrapper, NavLink, NavBrand, NavButton, FlexColumn }

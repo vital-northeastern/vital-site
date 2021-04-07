@@ -1,14 +1,21 @@
 import React from "react"
+import { Button } from "../../../constants/buttons"
+import { H2, HName, P, Connect } from "../../../constants/typography"
 
 const Mission = ({ title, blurbText, ctaTitle, ctaLink }) => {
   return (
     <>
-      <h2>{title}</h2>
-      <p>{blurbText.blurbText}</p>
+      <H2>Our Mission</H2>
+      <Connect href="https://scout.camd.northeastern.edu/">CONNECT</Connect>
+      <HName>Heenal Marfatia</HName>
+      <P>{blurbText.blurbText}</P>
       <a href={ctaLink} target="_blank" rel="noreferrer">
-        <button type="button" aria-label={ctaTitle}>
+        <Button primary={true} aria-label={ctaTitle}>
           {ctaTitle}
-        </button>
+        </Button>
+        <Button primary={false} aria-label={ctaTitle}>
+          {ctaTitle}
+        </Button>
       </a>
     </>
   )
