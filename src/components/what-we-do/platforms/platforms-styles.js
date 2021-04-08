@@ -28,9 +28,9 @@ const Platform = styled.div`
     width: 100vw;
   }
   @media ${devices.tablet} {
-    width: ${props => (props.num === 1 ? "50vw" : "78vw")};
+    width: ${props => (props.num === 0 ? "50vw" : "78vw")};
   }
-  padding-top: ${props => (props.num === 1 ? "0px" : "24px")};
+  padding-top: ${props => (props.num === 0 ? "0px" : "24px")};
 `
 
 const PlatformContent = styled.div`
@@ -39,7 +39,7 @@ const PlatformContent = styled.div`
     padding-right: 20px;
   }
   @media ${devices.tablet} {
-    width: ${props => (props.num === 1 ? "60%" : "35%")};
+    width: ${props => (props.num === 0 ? "60%" : "35%")};
     padding-right: 0px;
   }
 `
@@ -50,8 +50,8 @@ const LineContainer = styled.div`
     padding-right: 18px;
   }
   @media ${devices.tablet} {
-    width: ${props => (props.num === 1 ? "40%" : "65%")};
-    padding-right: ${props => (props.num === 1 ? "18px" : "0px")};
+    width: ${props => (props.num === 0 ? "40%" : "65%")};
+    padding-right: ${props => (props.num === 0 ? "18px" : "0px")};
   }
   display: flex;
 `
@@ -85,6 +85,7 @@ const PlatformButton = styled(Button)`
 
 const ImageContainer = styled.div`
   position: relative;
+  width: 100%;
   z-index: -10;
   @media ${devices.tabletMax} {
     display: none;
@@ -93,12 +94,8 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   position: absolute;
-  right: 0;
-  top: 300px;
-  @media (max-width: 1200px) {
-    top: 400px;
-  }
-  width: 35vw;
+  left: 67%;
+  width: 60vw;
 `
 
 export {

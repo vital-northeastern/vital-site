@@ -42,8 +42,7 @@ const WhatWeDo = props => {
       </CardsContainer>
       <Platforms
         title={whatWeDo.platforms.title}
-        platformOne={whatWeDo.platforms.platforms[0]}
-        platformTwo={whatWeDo.platforms.platforms[1]}
+        platforms={whatWeDo.platforms.platforms}
       />
     </Layout>
   )

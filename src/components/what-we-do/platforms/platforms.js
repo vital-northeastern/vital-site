@@ -13,47 +13,36 @@ import {
   ImageContainer,
   Image,
 } from "./platforms-styles"
-import shape from "../../../images/platforms_shape.png"
+import svg from "../../../images/platform.svg"
 
-const Platforms = ({ title, platformOne, platformTwo }) => {
+const Platforms = ({ title, platforms }) => {
   return (
     <PlatformsContainer>
       <Title>
         <H2>{title}</H2>
       </Title>
       <ImageContainer>
-        <Image src={shape} alt="blue and white geometric shape" />
+        <Image src={svg} alt="blue and white geometric shape" />
       </ImageContainer>
-      <Platform num={1}>
-        <LineContainer num={1}>
-          <Line />
-          <Dot />
-        </LineContainer>
-        <PlatformContent num={1}>
-          <PlatformTitle>{platformOne.platformTitle}</PlatformTitle>
-          <P>{platformOne.blurb}</P>
-          <a href={platformOne.ctaLink}>
-            <PlatformButton primary={true}>
-              {platformOne.ctaTitle}
-            </PlatformButton>
-          </a>
-        </PlatformContent>
-      </Platform>
-      <Platform num={2}>
-        <LineContainer num={2}>
-          <Line />
-          <Dot />
-        </LineContainer>
-        <PlatformContent num={2}>
-          <PlatformTitle>{platformTwo.platformTitle}</PlatformTitle>
-          <P>{platformTwo.blurb}</P>
-          <a href={platformTwo.ctaLink}>
-            <PlatformButton primary={true}>
-              {platformTwo.ctaTitle}
-            </PlatformButton>
-          </a>
-        </PlatformContent>
-      </Platform>
+      {platforms.map((platform, index) => {
+        return (
+          <Platform num={index}>
+            <LineContainer num={index}>
+              <Line />
+              <Dot />
+            </LineContainer>
+            <PlatformContent num={index}>
+              <PlatformTitle>{platform.platformTitle}</PlatformTitle>
+              <P>{platform.blurb}</P>
+              <a href={platform.ctaLink}>
+                <PlatformButton primary={true}>
+                  {platform.ctaTitle}
+                </PlatformButton>
+              </a>
+            </PlatformContent>
+          </Platform>
+        )
+      })}
     </PlatformsContainer>
   )
 }
