@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { devices } from "../../../constants/devices"
 import { darkGray } from "../../../constants/colors"
+import Img from "gatsby-image"
 
 const Container = styled.div`
   justify-content: center;
@@ -30,17 +31,22 @@ const Text = styled.div`
     padding-right: 50px;
     position: relative;
     top: 50%;
-    transform: translateY(-60%);
+    transform: translateY(-58%);
   }
 `
 
-const Image = styled.img`
+const Image = styled(Img)`
   height: 100%;
   width: 55%;
   @media ${devices.tabletMax} {
-    margin: 0 auto;
-    width: 100%;
+    display: none;
   }
 `
 
-export { Container, TextContainer, Text, Image }
+const MobileImage = styled(Img)`
+  @media ${devices.laptop} {
+    display: none;
+  }
+`
+
+export { Container, TextContainer, Text, Image, MobileImage }
