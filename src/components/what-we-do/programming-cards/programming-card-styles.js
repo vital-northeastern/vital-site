@@ -17,7 +17,8 @@ const CardContainer = styled.div`
     width: 30vw;
     margin: 50px 10px 50px;
   }
-  background-color: ${royalBlue};
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 `
 
@@ -33,6 +34,8 @@ const ImageContainer = styled.div`
 
 const CardContent = styled.div`
   color: ${white};
+  background-color: ${royalBlue};
+  flex: 1;
 `
 
 const CardTitle = styled(H2)`
