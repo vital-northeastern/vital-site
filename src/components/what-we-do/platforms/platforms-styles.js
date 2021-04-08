@@ -35,8 +35,8 @@ const Platform = styled.div`
 
 const PlatformContent = styled.div`
   @media ${devices.mobile} {
-    width: 75%;
-    padding-right: 20px;
+    width: 77%;
+    padding-right: 30px;
   }
   @media ${devices.tablet} {
     width: ${props => (props.num === 0 ? "60%" : "35%")};
@@ -46,7 +46,7 @@ const PlatformContent = styled.div`
 
 const LineContainer = styled.div`
   @media ${devices.mobile} {
-    width: 25%;
+    width: 23%;
     padding-right: 18px;
   }
   @media ${devices.tablet} {
@@ -76,6 +76,12 @@ const PlatformTitle = styled(H2)`
     16px + (26 - 16) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   );
+  @media ${devices.mobile} {
+    margin-bottom: 10px;
+  }
+  @media ${devices.tablet} {
+    margin-bottom: 20px;
+  }
 `
 
 const PlatformButton = styled(Button)`
