@@ -41,7 +41,7 @@ const CardTitle = styled(H2)`
   color: ${white};
   margin: 0 auto;
   @media ${devices.mobileMax} {
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 10px;
   }
 `
@@ -58,7 +58,7 @@ const TextContainer = styled.div`
   padding-right: 30px;
   padding-top: 20px;
   @media ${devices.mobileMax} {
-    padding-top: 5px;
+    padding-top: 0px;
     height: auto;
     padding-bottom: 20px;
   }
