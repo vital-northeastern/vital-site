@@ -10,6 +10,9 @@ const Container = styled.div`
     padding: 8px 30px;
     margin-bottom: 50px;
   }
+  @media ${devices.tablet} {
+    padding: 8px 40px;
+  }
   @media ${devices.laptop} {
     padding: 8px 75px;
     display: flex;
