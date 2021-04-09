@@ -20,7 +20,10 @@ const Title = styled.div`
   @media ${devices.mobile} {
     padding-left: 30px;
   }
-  @media ${devices.tablet} {
+  @media ${devices.mobile} {
+    padding-left: 40px;
+  }
+  @media ${devices.laptop} {
     padding-left: 75px;
   }
 `

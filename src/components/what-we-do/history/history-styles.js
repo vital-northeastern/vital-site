@@ -11,13 +11,19 @@ const Title = styled.div`
     padding-left: 30px;
   }
   @media ${devices.tablet} {
+    padding-left: 40px;
+  }
+  @media ${devices.laptop} {
     padding-left: 75px;
   }
 `
 
 const RegularImage = styled(Img)`
-  @media (max-width: ${size.tablet}px) {
+  @media ${devices.mobile} {
     display: none;
+  }
+  @media ${devices.tablet} {
+    display: block;
   }
 `
 
