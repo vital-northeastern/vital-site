@@ -8,21 +8,22 @@ const fonts = {
   header: `'Work Sans', sans-serif`,
   subheader: `'Work Sans', sans-serif`,
   button: `'Futura Book', sans-serif`,
-  nav: `'Futura', sans-serif`,
+  nav: `'Futura Bold', sans-serif`,
+  navButton: `'Futura', sans-serif`,
   connect: `'Futura Book', sans-serif`,
 }
 
 const minSize = {
-  h1: 48,
-  h2: 28,
-  hName: 21,
+  h1: 40,
+  h2: 24,
+  hName: 20,
   hUpper: 34,
   p: 13,
   pCard: 12,
 }
 
 const fontSizes = {
-  h1: `calc(${minSize.h1}px + (68 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  h1: `calc(${minSize.h1}px + (62 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   h2: `calc(${minSize.h2}px + (34 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   hName: `calc(${minSize.hName}px + (29 - ${minSize.hName}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   hUpper: `calc(${minSize.hUpper}px + (40 - ${minSize.hUpper}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
@@ -56,7 +57,7 @@ const H1 = styled.h1`
   font-weight: ${fontWeights.bold};
   text-transform: ${textStyles.uppercase};
   letter-spacing: 1px;
-  line-height: 60px;
+  line-height: 41px;
 `
 
 const H2 = styled.h2`
