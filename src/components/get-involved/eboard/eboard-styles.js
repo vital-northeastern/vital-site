@@ -1,38 +1,55 @@
 import styled from "styled-components"
-import { size } from "../../../constants/devices"
 import { Button } from "../../../constants/buttons"
+import { devices } from "../../../constants/devices"
 
 const EboardContainer = styled.div`
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  padding: 10px 75px;
-  @media (max-width: ${size.tablet}px) {
+  @media ${devices.mobile} {
     display: block;
-    padding: 10px 35px;
+    padding: 10px 30px;
+  }
+  @media ${devices.tablet} {
+    padding: 10px 40px;
+  }
+  @media ${devices.laptop} {
+    margin-top: 25px;
+    padding: 10px 75px;
+    display: flex;
+    align-items: center;
   }
 `
 
 const TextContainer = styled.div`
   width: 50%;
   padding-right: 40px;
-  @media (max-width: ${size.tablet}px) {
+  @media ${devices.tabletMax} {
     width: 100%;
+    padding-right: 0px;
+    margin: 0 auto;
   }
 `
 
 const ButtonContainer = styled.div`
-  width: 50%;
+  @media ${devices.tabletMax} {
+    width: 100%;
+  }
+  @media ${devices.laptop} {
+    width: 50%;
+  }
 `
 
 const ButtonPosition = styled.div`
-  position: relative;
+  @media ${devices.tabletMax} {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  @media ${devices.laptop} {
+    position: absolute;
+    right: 10%;
+  }
 `
 
 const EboardButton = styled(Button)`
-  position: absolute;
-  transform: translateY(85%);
-  right: 18%;
   padding: 16px 42px;
 `
 

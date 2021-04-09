@@ -1,10 +1,11 @@
 import React from "react"
-import { H2, P, PCard } from "../../../constants/typography"
+import { H2, P } from "../../../constants/typography"
 import {
   Container,
   TextContainer,
   Text,
   DisclaimerContainer,
+  PDisclaimer,
 } from "./involvement-styles"
 
 const Involvement = ({ title, blurb, disclaimer }) => {
@@ -17,7 +18,7 @@ const Involvement = ({ title, blurb, disclaimer }) => {
         </Text>
       </TextContainer>
       <DisclaimerContainer>
-        <PCard>{disclaimer}</PCard>
+        <PDisclaimer>{disclaimer}</PDisclaimer>
       </DisclaimerContainer>
     </Container>
   )

@@ -6,6 +6,9 @@ const Container = styled.div`
   @media ${devices.mobile} {
     padding: 35px 30px 8px;
   }
+  @media ${devices.tablet} {
+    padding: 35px 40px 8px;
+  }
   @media ${devices.laptop} {
     padding: 35px 75px 8px;
   }
