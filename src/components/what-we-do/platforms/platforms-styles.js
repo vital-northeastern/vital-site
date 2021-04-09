@@ -6,7 +6,12 @@ import { royalBlue } from "../../../constants/colors"
 import { devices } from "../../../constants/devices"
 
 const PlatformsContainer = styled.div`
-  padding-top: 10px;
+  @media ${devices.mobile} {
+    padding-top: 30px;
+  }
+  @media ${devices.tablet} {
+    padding-top: 14px;
+  }
   padding-bottom: 40px;
   positon: relative;
   width: auto;
@@ -35,7 +40,7 @@ const Platform = styled.div`
 
 const PlatformContent = styled.div`
   @media ${devices.mobile} {
-    width: 77%;
+    width: 80%;
     padding-right: 30px;
   }
   @media ${devices.tablet} {
@@ -46,7 +51,7 @@ const PlatformContent = styled.div`
 
 const LineContainer = styled.div`
   @media ${devices.mobile} {
-    width: 23%;
+    width: 20%;
     padding-right: 18px;
   }
   @media ${devices.tablet} {
@@ -64,9 +69,16 @@ const Line = styled.span`
 `
 
 const Dot = styled.span`
-  height: 13px;
-  width: 13px;
-  margin-top: 13px;
+  @media ${devices.mobile} {
+    height: 11px;
+    width: 11px;
+    margin-top: 14px;
+  }
+  @media ${devices.tablet} {
+    height: 13px;
+    width: 13px;
+    margin-top: 13px;
+  }
   background-color: ${royalBlue};
   border-radius: 50%;
 `
@@ -90,8 +102,6 @@ const PlatformButton = styled(Button)`
 `
 
 const ImageContainer = styled.div`
-  position: relative;
-  width: 100%;
   z-index: -10;
   @media ${devices.tabletMax} {
     display: none;
@@ -100,8 +110,17 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   position: absolute;
-  left: 67%;
-  width: 60vw;
+  margin-top: -50px;
+  left: 63%;
+  width: 67vw;
+  @media (max-width: 1220px) {
+    margin-top: 30px;
+  }
+  @media (max-width: 1100px) {
+    width: 60vw;
+    margin-top: 150px;
+  }
+  height: auto;
 `
 
 export {

@@ -2,6 +2,10 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { size, devices } from "../../../constants/devices"
 
+const HistoryContainer = styled.div`
+  margin: 50px 0px;
+`
+
 const Title = styled.div`
   @media ${devices.mobile} {
     padding-left: 30px;
@@ -23,4 +27,4 @@ const MobileImage = styled(Img)`
   }
 `
 
-export { Title, RegularImage, MobileImage }
+export { HistoryContainer, Title, RegularImage, MobileImage }
