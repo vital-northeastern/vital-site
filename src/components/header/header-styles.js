@@ -20,6 +20,7 @@ const ImageContainer = styled.div`
   right: 0;
   width: auto;
   opacity: ${props => (props.imageBool ? "1" : "0")};
+  display: ${props => (props.imageBool ? "inline" : "none")};
 `
 
 const BackgroundShape = styled.img`
