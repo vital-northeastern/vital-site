@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { size, devices } from "../../../constants/devices"
+import { devices } from "../../../constants/devices"
 
 const HistoryContainer = styled.div`
   margin: 50px 0px;
