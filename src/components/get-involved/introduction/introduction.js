@@ -1,24 +1,13 @@
 import React from "react"
-import { H2, P } from "../../../constants/typography"
-import {
-  Container,
-  TextContainer,
-  Text,
-  DisclaimerContainer,
-} from "./introduction-styles"
+import { P } from "../../../constants/typography"
+import { Container, TextContainer } from "./introduction-styles"
 
-const Introduction = ({ title, blurb, disclaimer }) => {
+const Introduction = ({ blurb }) => {
   return (
     <Container>
       <TextContainer>
-        <Text>
-          <H2>{title}</H2>
-          <P>{blurb}</P>
-        </Text>
+        <P>{blurb}</P>
       </TextContainer>
-      <DisclaimerContainer>
-        <P>{disclaimer}</P>
-      </DisclaimerContainer>
     </Container>
   )
 }

@@ -5,8 +5,9 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Header from "../components/header/header"
-import Eboard from "../components/get-involved/eboard/eboard"
 import Introduction from "../components/get-involved/introduction/introduction"
+import Eboard from "../components/get-involved/eboard/eboard"
+import Involvement from "../components/get-involved/involvement/involvement"
 import Position from "../components/get-involved/position/position"
 import ApplicationInfo from "../components/get-involved/application-info/application-info"
 import { PositionCardsContainer } from "../page-styles/get-involved-styles"
@@ -22,13 +23,14 @@ const GetInvolved = props => {
         subheading={involvedPage.subheadingForTitle}
         imageBool={false}
       />
+      <Introduction blurb={involvedPage.introductionBlurb.introductionBlurb} />
       <Eboard
         title={involvedPage.eboardTitle}
         description={involvedPage.eboardDescription}
         ctaLink={involvedPage.ctaLink}
         ctaTitle={involvedPage.ctaTitle}
       />
-      <Introduction
+      <Involvement
         title={involvedPage.involvementIntroTitle}
         blurb={involvedPage.involvementBlurb}
         disclaimer={involvedPage.disclaimer}
@@ -61,6 +63,9 @@ export const pageQuery = graphql`
     contentfulGetInvolvedPage {
       title
       subheadingForTitle
+      introductionBlurb {
+        introductionBlurb
+      }
       involvementIntroTitle
       involvementBlurb
       disclaimer
@@ -81,7 +86,8 @@ export const pageQuery = graphql`
         }
       }
       applicationEmail
-      deadlineForApplication
+      emailCtaLink
+      emailCtaText
     }
   }
 `

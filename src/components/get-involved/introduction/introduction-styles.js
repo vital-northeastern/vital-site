@@ -1,32 +1,19 @@
 import styled from "styled-components"
-import { size } from "../../../constants/devices"
 import { darkGray } from "../../../constants/colors"
+import { devices } from "../../../constants/devices"
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 10px 75px;
-  @media (max-width: ${size.tablet}px) {
-    display: block;
+  @media ${devices.mobile} {
+    padding: 35px 30px 8px;
+  }
+  @media ${devices.laptop} {
+    padding: 35px 75px 8px;
   }
 `
 
 const TextContainer = styled.div`
   width: 60%;
   color: ${darkGray};
-  @media (max-width: ${size.tablet}px) {
-    width: 100%;
-  }
 `
 
-const Text = styled.div`
-  padding-right: 100px;
-`
-
-const DisclaimerContainer = styled.div`
-  width: 40%;
-  padding-left: 75px;
-  padding-right: 5px;
-`
-
-export { Container, TextContainer, Text, DisclaimerContainer }
+export { Container, TextContainer }

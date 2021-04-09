@@ -10,7 +10,7 @@ const HeaderContainer = styled.div`
 const TextContainer = styled.div`
   padding-left: 75px;
   padding-top: 170px;
-  padding-bottom: 45px;
+  padding-bottom: 40px;
 `
 
 const ImageContainer = styled.div`
