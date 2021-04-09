@@ -12,8 +12,6 @@ const PlatformsContainer = styled.div`
   @media ${devices.tablet} {
     padding-top: 14px;
   }
-  padding-bottom: 40px;
-  positon: relative;
   width: auto;
   height: auto;
 `
