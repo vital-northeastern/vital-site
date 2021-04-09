@@ -11,12 +11,11 @@ const NavWrapper = styled.nav`
   top: 0;
   background-color: transparent;
   @media ${devices.mobile} {
-    padding: 10px 35px;
+    padding: 10px 30px;
   }
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     padding: 15px 75px;
   }
-  padding: 15px 75px;
   align-items: center;
   font-family: ${fonts.nav};
   height: 90px;
