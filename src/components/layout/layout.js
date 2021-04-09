@@ -3,6 +3,9 @@ import PropTypes from "prop-types"
 import NavBar from "../nav-bar/nav-bar"
 import "./layout.css"
 
+// import Footer from "./footer/footer"
+import Footer from "../footer/footer"
+
 const Layout = ({ children, navbarStyle }) => {
   return (
     <>
@@ -10,6 +13,7 @@ const Layout = ({ children, navbarStyle }) => {
       <div>
         <main>{children}</main>
       </div>
+      <Footer />
     </>
   )
 }
