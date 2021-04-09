@@ -12,7 +12,7 @@ const fontSizes = {
 
 const PositionContainer = styled.div`
   @media ${devices.mobile} {
-    margin-left: 35px;
+    margin-left: 30px;
   }
   @media ${devices.laptop} {
     margin-left: ${props => (props.index % 2 === 0 ? "75px" : "60px")};

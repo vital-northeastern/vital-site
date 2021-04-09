@@ -4,8 +4,9 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import Header from "../components/get-involved/header/header"
+import Header from "../components/header/header"
 import Eboard from "../components/get-involved/eboard/eboard"
+import Introduction from "../components/get-involved/introduction/introduction"
 import Position from "../components/get-involved/position/position"
 import ApplicationInfo from "../components/get-involved/application-info/application-info"
 import { PositionCardsContainer } from "../page-styles/get-involved-styles"
@@ -14,20 +15,23 @@ const GetInvolved = props => {
   const involvedPage = get(props, "data.contentfulGetInvolvedPage")
 
   return (
-    <Layout>
+    <Layout navbarStyle="gradient">
       <SEO title="Get Involved" />
       <Header
         title={involvedPage.title}
         subheading={involvedPage.subheadingForTitle}
-        involvementIntroTitle={involvedPage.involvementIntroTitle}
-        involvementBlurb={involvedPage.involvementBlurb}
-        disclaimer={involvedPage.disclaimer}
+        imageBool={false}
       />
       <Eboard
         title={involvedPage.eboardTitle}
         description={involvedPage.eboardDescription}
         ctaLink={involvedPage.ctaLink}
         ctaTitle={involvedPage.ctaTitle}
+      />
+      <Introduction
+        title={involvedPage.involvementIntroTitle}
+        blurb={involvedPage.involvementBlurb}
+        disclaimer={involvedPage.disclaimer}
       />
       <PositionCardsContainer>
         {involvedPage.positions.map((position, index) => {
