@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { size, devices } from "../../../constants/devices"
+import { size } from "../../../constants/devices"
 import { darkGray } from "../../../constants/colors"
 
 const Container = styled.div`
