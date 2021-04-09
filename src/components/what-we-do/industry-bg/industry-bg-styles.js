@@ -4,7 +4,6 @@ import { darkGray } from "../../../constants/colors"
 import Img from "gatsby-image"
 
 const Container = styled.div`
-  justify-content: center;
   @media ${devices.mobile} {
     display: block;
     padding: 8px 30px;
@@ -16,6 +15,7 @@ const Container = styled.div`
   @media ${devices.laptop} {
     padding: 8px 75px;
     display: flex;
+    align-items: center;
     margin-bottom: -20px;
   }
 `
@@ -32,9 +32,6 @@ const TextContainer = styled.div`
 const Text = styled.div`
   @media ${devices.laptop} {
     padding-right: 50px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-58%);
   }
 `
 
