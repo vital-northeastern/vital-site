@@ -8,7 +8,8 @@ const fonts = {
   header: `'Work Sans', sans-serif`,
   subheader: `'Work Sans', sans-serif`,
   button: `'Futura Book', sans-serif`,
-  nav: `'Futura', sans-serif`,
+  nav: `'Futura Bold', sans-serif`,
+  navButton: `'Futura', sans-serif`,
   connect: `'Futura Book', sans-serif`,
 }
 
@@ -56,7 +57,7 @@ const H1 = styled.h1`
   font-weight: ${fontWeights.bold};
   text-transform: ${textStyles.uppercase};
   letter-spacing: 1px;
-  line-height: 60px;
+  line-height: 41px;
 `
 
 const H2 = styled.h2`

@@ -243,6 +243,8 @@ textarea {
 }
 * {
   box-sizing: inherit;
+  /* This min-height fixes a safari bug related to text sizing */
+  min-height: 0vw;
 }
 *:before {
   box-sizing: inherit;
