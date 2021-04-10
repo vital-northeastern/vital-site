@@ -14,6 +14,9 @@ const PositionContainer = styled.div`
   @media ${devices.mobile} {
     margin-left: 30px;
   }
+  @media ${devices.tablet} {
+    margin-left: 40px;
+  }
   @media ${devices.laptop} {
     margin-left: ${props => (props.index % 2 === 0 ? "75px" : "60px")};
   }
@@ -28,7 +31,7 @@ const PositionContainer = styled.div`
     width: 35rem;
   }
   @media ${devices.laptop} {
-    width: 30rem;
+    width: 28rem;
   }
 `
 

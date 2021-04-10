@@ -49,8 +49,10 @@ const GetInvolved = props => {
         })}
       </PositionCardsContainer>
       <ApplicationInfo
+        subheading={involvedPage.applySubheading}
         applicationEmail={involvedPage.applicationEmail}
-        deadlineForApplication={involvedPage.deadlineForApplication}
+        ctaLink={involvedPage.emailCtaLink}
+        ctaTitle={involvedPage.emailCtaText}
       />
     </Layout>
   )
@@ -85,6 +87,7 @@ export const pageQuery = graphql`
           description
         }
       }
+      applySubheading
       applicationEmail
       emailCtaLink
       emailCtaText
