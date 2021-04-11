@@ -47,16 +47,11 @@ const CardTitle = styled(H2)`
 `
 
 const CardTitleContainer = styled.div`
-  padding-top: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 10px 25px 0px 25px;
 `
 
 const TextContainer = styled.div`
-  padding-bottom: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 20px;
+  padding: 20px 30px 5px 30px;
   @media ${devices.mobileMax} {
     padding-top: 5px;
     height: auto;
