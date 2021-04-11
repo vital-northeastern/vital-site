@@ -12,7 +12,7 @@ const ApplicationInfo = ({
     <Container>
       <H2Header>{subheading}</H2Header>
       <P>{applicationEmail}</P>
-      <a href={ctaLink} target="_blank" rel="noreferrer">
+      <a href={ctaLink}>
         <ButtonEmail primary={true}>{ctaTitle}</ButtonEmail>
       </a>
     </Container>
