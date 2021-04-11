@@ -5,14 +5,14 @@ import { devices } from "../../../constants/devices"
 const EboardContainer = styled.div`
   @media ${devices.mobile} {
     display: block;
-    padding: 10px 30px;
+    padding: 1rem 1.5rem;
   }
   @media ${devices.tablet} {
-    padding: 10px 40px;
+    padding: 1rem 2rem;
   }
   @media ${devices.laptop} {
     margin-top: 25px;
-    padding: 10px 75px;
+    padding: 1rem 4rem;
     display: flex;
     align-items: center;
   }
