@@ -62,6 +62,7 @@ const NavLink = styled(Link)`
   color: ${props => (props.navbarStyle === "gradient" ? white : navyBlue)};
   font-size: 14px;
   letter-spacing: 0.1em;
+  line-height: 16px;
   font-family: ${fonts.nav};
   font-weight: 700;
   text-transform: uppercase;
@@ -72,6 +73,9 @@ const NavLink = styled(Link)`
   :hover {
     transition: all 0.2s;
     color: black;
+  }
+  @media ${devices.tabletMax} {
+    line-height: 16px;
   }
 `
 
@@ -146,7 +150,7 @@ const SmallMenuContainer = styled.div`
   border: solid;
   border-width: 2px;
   border-radius: 10px;
-  border-color: blue;
+  border-color: ${navyBlue};
   padding: 0.5rem 0.5rem 0 0.5rem;
   display: flex;
   flex-direction: column;
@@ -161,9 +165,9 @@ const SmallMenuContainer = styled.div`
 const SmallLinksContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0rem 0 1rem 0;
+  margin: 0rem 0 0.9rem 0;
   > * {
-    margin: 1rem;
+    margin: 0.9rem;
   }
 `
 

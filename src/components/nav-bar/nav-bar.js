@@ -57,7 +57,7 @@ const NavBar = ({ navbarStyle }) => {
       </FlexColumn>
       <SmallNavLinkContainer onClick={() => setSmallLinks(true)}>
         <FlexColumn>
-          <Hamburger />
+          <Hamburger navbarStyle={navbarStyle} />
         </FlexColumn>
       </SmallNavLinkContainer>
       {smallLinks && (
@@ -66,6 +66,7 @@ const NavBar = ({ navbarStyle }) => {
             <Cross />
           </CrossContainer>
           <SmallLinksContainer>
+            <NavLink to="/">Home</NavLink>
             <NavLink to="/what-we-do">About</NavLink>
             <NavLink to="/whats-happening">Events</NavLink>
             <NavLink to="/get-involved">Get Involved</NavLink>
