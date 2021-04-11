@@ -18,20 +18,20 @@ const PositionContainer = styled.div`
     margin-left: 40px;
   }
   @media ${devices.laptop} {
-    margin-left: ${props => (props.index % 2 === 0 ? "75px" : "60px")};
+    margin-left: ${props => (props.index % 2 === 0 ? "75px" : "50px")};
   }
   z-index: 1;
   display: inline-block;
   overflow: hidden;
-  height: 16rem;
+  height: 17rem;
   @media ${devices.mobile} {
-    width: 27rem;
+    width: 100vw;
   }
   @media ${devices.tablet} {
-    width: 35rem;
+    width: 75vw;
   }
   @media ${devices.laptop} {
-    width: 28rem;
+    width: 40vw;
   }
 `
 
@@ -77,7 +77,7 @@ const PositionName = styled(H2)`
 const PositionDescription = styled(PCard)`
   line-height: 21px;
   @media ${devices.mobile} {
-    margin-right: 100px;
+    margin-right: 60px;
   }
   @media ${devices.tablet} {
     margin-right: 0px;

@@ -5,7 +5,7 @@ import { Button } from "../../../constants/buttons"
 const Container = styled.div`
   margin: 0 auto;
   text-align: center;
-  width: 50%;
+  width: 100%;
 `
 
 const H2Header = styled(H2)`
