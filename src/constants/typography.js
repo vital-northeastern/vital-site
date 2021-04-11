@@ -108,6 +108,9 @@ const PCard = styled.p`
   @media ${devices.mobileMax} {
     line-height: 23px;
   }
+  @media ${devices.desktop} {
+    line-height: 25px;
+  }
 `
 
 const Connect = styled.a`

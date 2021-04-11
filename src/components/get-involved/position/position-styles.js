@@ -25,20 +25,23 @@ const PositionContainer = styled.div`
   z-index: 1;
   display: inline-block;
   overflow: hidden;
+  overflow-x: hidden;
   @media ${devices.mobile} {
     width: 100vw;
-    height: 16rem;
-    margin-left: 30px;
+    height: auto;
+    padding-left: 30px;
   }
   @media ${devices.tablet} {
     width: 75vw;
-    height: 18rem;
-    margin-left: 40px;
+    margin-bottom: 0.5rem;
+    padding-left: 40px;
   }
   @media ${devices.laptop} {
     width: 40vw;
     height: 15rem;
+    padding-left: 0px;
     margin-left: ${props => (props.index % 2 === 0 ? "75px" : "50px")};
+    margin-bottom: 0rem;
   }
   @media ${devices.desktop} {
     height: auto;
@@ -75,9 +78,7 @@ const InfoContainer = styled.div`
 
 const TextContainer = styled.div`
   position: relative;
-  max-width: 100%;
   padding-bottom: 0px;
-  word-wrap: break-word;
 `
 
 const PositionName = styled(H2)`
@@ -93,7 +94,7 @@ const PositionName = styled(H2)`
 const PositionDescription = styled(PCard)`
   line-height: 21px;
   @media ${devices.mobile} {
-    padding-right: 40px;
+    padding-right: 55px;
   }
   @media ${devices.tablet} {
     padding-right: 0px;
