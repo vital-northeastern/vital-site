@@ -94,7 +94,7 @@ const PositionName = styled(H2)`
 const PositionDescription = styled(PCard)`
   line-height: 21px;
   @media ${devices.mobile} {
-    padding-right: 55px;
+    padding-right: 40px;
   }
   @media ${devices.tablet} {
     padding-right: 0px;
