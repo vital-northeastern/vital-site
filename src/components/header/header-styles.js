@@ -9,14 +9,14 @@ const HeaderContainer = styled.div`
 
 const TextContainer = styled.div`
   @media ${devices.mobile} {
-    padding-left: 30px;
-    padding-bottom: 30px;
+    padding: 130px 0px 15px 30px;
+  }
+  @media ${devices.tablet} {
+    padding-left: 40px;
   }
   @media ${devices.laptop} {
-    padding-left: 75px;
-    padding-bottom: 40px;
+    padding: 170px 0px 40px 75px;
   }
-  padding-top: 170px;
 `
 
 const ImageContainer = styled.div`
@@ -26,6 +26,7 @@ const ImageContainer = styled.div`
   right: 0;
   width: auto;
   opacity: ${props => (props.imageBool ? "1" : "0")};
+  display: ${props => (props.imageBool ? "inline" : "none")};
 `
 
 const BackgroundShape = styled.img`

@@ -58,6 +58,12 @@ const H1 = styled.h1`
   text-transform: ${textStyles.uppercase};
   letter-spacing: 1px;
   line-height: 41px;
+  @media ${devices.mobile} {
+    margin-bottom: 1rem;
+  }
+  @media ${devices.laptop} {
+    margin-bottom: 1.5rem;
+  }
 `
 
 const H2 = styled.h2`
