@@ -3,6 +3,7 @@ import {
   PositionContainer,
   FlexContainer,
   PositionImg,
+  BackgroundColor,
   InfoContainer,
   TextContainer,
   PositionName,
@@ -19,6 +20,7 @@ export default ({
   <PositionContainer index={index}>
     <FlexContainer>
       <PositionImg alt={featuredImageAlt} fluid={featuredImage.fluid} />
+      <BackgroundColor index={index}></BackgroundColor>
     </FlexContainer>
     <InfoContainer>
       <TextContainer>

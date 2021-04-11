@@ -6,6 +6,7 @@ import { white, navyBlue, darkGray } from "../../constants/colors"
 const NavWrapper = styled.nav`
   display: flex;
   position: absolute;
+  overflow-x: hidden;
   top: 0;
   background-color: transparent;
   padding: 15px 75px;
