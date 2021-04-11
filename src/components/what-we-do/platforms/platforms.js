@@ -34,7 +34,7 @@ const Platforms = ({ title, platforms }) => {
             <PlatformContent num={index}>
               <PlatformTitle>{platform.platformTitle}</PlatformTitle>
               <P>{platform.blurb}</P>
-              <a href={platform.ctaLink}>
+              <a href={platform.ctaLink} target="_blank" rel="noreferrer">
                 <PlatformButton primary={true}>
                   {platform.ctaTitle}
                 </PlatformButton>
