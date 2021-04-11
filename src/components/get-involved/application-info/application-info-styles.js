@@ -3,7 +3,7 @@ import { H2 } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
 
 const Container = styled.div`
-  margin: 0 auto;
+  margin: 0 auto 5rem auto;
   text-align: center;
   width: 100%;
 `

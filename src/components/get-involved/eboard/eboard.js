@@ -3,6 +3,7 @@ import { H2, P } from "../../../constants/typography"
 import {
   EboardContainer,
   TextContainer,
+  H2Header,
   ButtonContainer,
   ButtonPosition,
   EboardButton,
@@ -12,12 +13,12 @@ const Eboard = ({ title, description, ctaLink, ctaTitle }) => {
   return (
     <EboardContainer>
       <TextContainer>
-        <H2>{title}</H2>
+        <H2Header>{title}</H2Header>
         <P>{description}</P>
       </TextContainer>
       <ButtonContainer>
         <ButtonPosition>
-          <a href={ctaLink} target="_blank" rel="noreferrer">
+          <a href={ctaLink}>
             <EboardButton primary={true}>{ctaTitle}</EboardButton>
           </a>
         </ButtonPosition>

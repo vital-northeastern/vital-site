@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { size, devices } from "../../../constants/devices"
 import { darkGray } from "../../../constants/colors"
-import { PCard } from "../../../constants/typography"
+import { H2, PCard } from "../../../constants/typography"
 
 const Container = styled.div`
   @media ${devices.mobile} {
@@ -14,7 +14,6 @@ const Container = styled.div`
   @media ${devices.laptop} {
     padding: 10px 75px;
     display: flex;
-    justify-content: center;
   }
 `
 
@@ -35,6 +34,10 @@ const Text = styled.div`
   }
 `
 
+const H2Header = styled(H2)`
+  margin-bottom: 0.7rem;
+`
+
 const DisclaimerContainer = styled.div`
   @media ${devices.mobile} {
     width: 100%;
@@ -53,4 +56,11 @@ const PDisclaimer = styled(PCard)`
   );
 `
 
-export { Container, TextContainer, Text, DisclaimerContainer, PDisclaimer }
+export {
+  Container,
+  TextContainer,
+  Text,
+  H2Header,
+  DisclaimerContainer,
+  PDisclaimer,
+}

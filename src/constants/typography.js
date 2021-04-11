@@ -14,7 +14,7 @@ const fonts = {
 }
 
 const minSize = {
-  h1: 40,
+  h1: 41,
   h2: 24,
   hName: 20,
   hUpper: 34,

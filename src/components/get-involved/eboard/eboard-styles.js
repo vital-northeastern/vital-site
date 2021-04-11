@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { Button } from "../../../constants/buttons"
 import { devices } from "../../../constants/devices"
+import { H2 } from "../../../constants/typography"
 
 const EboardContainer = styled.div`
   @media ${devices.mobile} {
@@ -11,7 +12,7 @@ const EboardContainer = styled.div`
     padding: 1rem 2rem;
   }
   @media ${devices.laptop} {
-    margin-top: 25px;
+    margin-top: 12px;
     padding: 1rem 4rem;
     display: flex;
     align-items: center;
@@ -26,6 +27,10 @@ const TextContainer = styled.div`
     padding-right: 0px;
     margin: 0 auto;
   }
+`
+
+const H2Header = styled(H2)`
+  margin-bottom: 0.7rem;
 `
 
 const ButtonContainer = styled.div`
@@ -44,8 +49,13 @@ const ButtonPosition = styled.div`
     margin-bottom: 15px;
   }
   @media ${devices.laptop} {
-    position: absolute;
-    right: 10%;
+    margin-left: 45%;
+  }
+  @media (min-width: 1028px) {
+    margin-left: 60%;
+  }
+  @media (min-width: 1160px) {
+    margin-left: 70%;
   }
 `
 
@@ -56,6 +66,7 @@ const EboardButton = styled(Button)`
 export {
   EboardContainer,
   TextContainer,
+  H2Header,
   ButtonContainer,
   ButtonPosition,
   EboardButton,
