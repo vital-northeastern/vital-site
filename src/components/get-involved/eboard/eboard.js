@@ -17,7 +17,7 @@ const Eboard = ({ title, description, ctaLink, ctaTitle }) => {
       </TextContainer>
       <ButtonContainer>
         <ButtonPosition>
-          <a href={ctaLink}>
+          <a href={ctaLink} target="_blank" rel="noreferrer">
             <EboardButton primary={true}>{ctaTitle}</EboardButton>
           </a>
         </ButtonPosition>
