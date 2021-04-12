@@ -2,8 +2,8 @@ import styled from "styled-components"
 import { H2 } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
 import { size } from "../../../constants/devices"
-import { royalBlue } from "../../../constants/colors"
-import { devices } from "../../../constants/devices"
+import { royalBlue, shadowGray } from "../../../constants/colors"
+import { devices, padding } from "../../../constants/devices"
 
 const PlatformsContainer = styled.div`
   @media ${devices.mobile} {
@@ -18,13 +18,13 @@ const PlatformsContainer = styled.div`
 
 const Title = styled.div`
   @media ${devices.mobile} {
-    padding-left: 30px;
+    padding-left: ${padding.mobile};
   }
   @media ${devices.mobile} {
-    padding-left: 40px;
+    padding-left: ${padding.tablet};
   }
   @media ${devices.laptop} {
-    padding-left: 75px;
+    padding-left: ${padding.laptop};
   }
 `
 
@@ -99,7 +99,11 @@ const PlatformTitle = styled(H2)`
 
 const PlatformButton = styled(Button)`
   font-size: 12px;
-  padding: 16px 48px;
+  @media ${devices.desktop} {
+    font-size: 13px;
+  }
+  padding: 19px 52px;
+  box-shadow: 1.5px 1.5px 2px ${shadowGray};
 `
 
 const ImageContainer = styled.div`

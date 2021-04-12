@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { devices } from "../../../constants/devices"
+import { devices, padding } from "../../../constants/devices"
 
 const HistoryContainer = styled.div`
   margin: 50px 0px;
@@ -8,13 +8,13 @@ const HistoryContainer = styled.div`
 
 const Title = styled.div`
   @media ${devices.mobile} {
-    padding-left: 30px;
+    padding-left: ${padding.mobile};
   }
   @media ${devices.tablet} {
-    padding-left: 40px;
+    padding-left: ${padding.tablet};
   }
   @media ${devices.laptop} {
-    padding-left: 75px;
+    padding-left: ${padding.laptop};
   }
 `
 
