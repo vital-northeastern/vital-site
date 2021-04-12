@@ -1,19 +1,19 @@
 import styled from "styled-components"
-import { devices } from "../../../constants/devices"
+import { devices, padding } from "../../../constants/devices"
 import { darkGray } from "../../../constants/colors"
 import Img from "gatsby-image"
 
 const Container = styled.div`
   @media ${devices.mobile} {
     display: block;
-    padding: 8px 30px;
+    padding: 8px ${padding.mobile};
     margin-bottom: 50px;
   }
   @media ${devices.tablet} {
-    padding: 8px 40px;
+    padding: 8px ${padding.tablet};
   }
   @media ${devices.laptop} {
-    padding: 8px 75px;
+    padding: 8px ${padding.laptop};
     display: flex;
     align-items: center;
     margin-bottom: -20px;
