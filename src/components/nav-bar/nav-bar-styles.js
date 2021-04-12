@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components"
 import { fonts } from "../../constants/typography"
 import { white, navyBlue, darkGray, periwinkle } from "../../constants/colors"
 import { animations } from "../../constants/animations"
-import { devices } from "../../constants/devices"
+import { devices, padding } from "../../constants/devices"
 
 const NavWrapper = styled.nav`
   display: flex;
@@ -11,10 +11,13 @@ const NavWrapper = styled.nav`
   top: 0;
   background-color: transparent;
   @media ${devices.mobile} {
-    padding: 10px 30px;
+    padding: 10px ${padding.mobile};
+  }
+  @media ${devices.tablet} {
+    padding: 10px ${padding.tablet};
   }
   @media ${devices.laptop} {
-    padding: 15px 75px;
+    padding: 15px ${padding.laptop};
   }
   align-items: center;
   font-family: ${fonts.nav};

@@ -15,3 +15,10 @@ export const devices = {
   laptop: `(min-width: ${size.laptop}px)`,
   desktop: `(min-width: ${size.desktop}px)`,
 }
+
+export const padding = {
+  mobile: "28px",
+  tablet: "45px",
+  laptop: "80px",
+  desktop: "100px",
+}
