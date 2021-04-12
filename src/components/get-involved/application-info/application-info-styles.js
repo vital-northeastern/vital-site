@@ -14,7 +14,7 @@ const H2Header = styled(H2)`
 
 const ButtonEmail = styled(Button)`
   margin-top: -4px;
-  padding: 18px 40px;
+  padding: 18px 45px;
 `
 
 export { Container, H2Header, ButtonEmail }
