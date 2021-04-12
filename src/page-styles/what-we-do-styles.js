@@ -1,16 +1,16 @@
 import styled from "styled-components"
-import { devices } from "../constants/devices"
+import { devices, padding } from "../constants/devices"
 
 const CardsContainer = styled.div`
   @media ${devices.mobile} {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: ${padding.mobile};
+    padding-right: ${padding.mobile};
     display: inline-block;
     justify-content: center;
   }
   @media ${devices.tablet} {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: ${padding.tablet};
+    padding-right: ${padding.tablet};
   }
   @media ${devices.laptop} {
     display: flex;
@@ -18,6 +18,10 @@ const CardsContainer = styled.div`
     padding: 50px 0px 50px 0px;
     margin-left: 70px;
     margin-right: 70px;
+  }
+  @media ${devices.desktop} {
+    margin-left: 90px;
+    margin-right: 90px;
   }
 `
 
