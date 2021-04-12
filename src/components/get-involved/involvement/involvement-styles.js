@@ -1,18 +1,18 @@
 import styled from "styled-components"
-import { size, devices } from "../../../constants/devices"
+import { size, devices, padding } from "../../../constants/devices"
 import { darkGray } from "../../../constants/colors"
 import { H2, PCard } from "../../../constants/typography"
 
 const Container = styled.div`
   @media ${devices.mobile} {
     display: block;
-    padding: 10px 30px;
+    padding: 10px ${padding.mobile};
   }
   @media ${devices.tablet} {
-    padding: 10px 40px;
+    padding: 10px ${padding.tablet};
   }
   @media ${devices.laptop} {
-    padding: 10px 75px;
+    padding: 10px ${padding.laptop};
     display: flex;
   }
 `

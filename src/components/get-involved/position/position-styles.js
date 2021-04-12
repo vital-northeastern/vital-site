@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { size, devices } from "../../../constants/devices"
+import { size, devices, padding } from "../../../constants/devices"
 import { PCard, H2 } from "../../../constants/typography"
 import { beauBlue, periwinkle, royalBlue } from "../../../constants/colors"
 
@@ -29,18 +29,19 @@ const PositionContainer = styled.div`
   @media ${devices.mobile} {
     width: 100vw;
     height: auto;
-    padding-left: 30px;
+    padding-left: ${padding.mobile};
   }
   @media ${devices.tablet} {
     width: 75vw;
     margin-bottom: 0.5rem;
-    padding-left: 40px;
+    padding-left: ${padding.tablet};
   }
   @media ${devices.laptop} {
     width: 40vw;
     height: 15rem;
     padding-left: 0px;
-    margin-left: ${props => (props.index % 2 === 0 ? "75px" : "50px")};
+    margin-left: ${props =>
+      props.index % 2 === 0 ? `${padding.laptop}` : "50px"};
     margin-bottom: 0rem;
   }
   @media ${devices.desktop} {
