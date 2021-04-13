@@ -9,6 +9,8 @@ import Footer from "../footer/footer"
 const Layout = ({ children, navbarStyle }) => {
   return (
     <>
+      {/* The div scrollTop is for the smooth scroll plugin, which required an element ID */}
+      <div id="scrollTop"></div>
       <NavBar navbarStyle={navbarStyle} />
       <div>
         <main>{children}</main>

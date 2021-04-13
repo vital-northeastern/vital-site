@@ -129,4 +129,4 @@ const Connect = styled.a`
   }
 `
 
-export { fonts, H1, H2, HName, HUpper, P, PCard, Connect }
+export { fonts, H1, H2, HName, HUpper, P, PCard, Connect, fontWeights }

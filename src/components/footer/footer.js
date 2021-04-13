@@ -11,15 +11,19 @@ import {
   FooterSocialBlock,
   FooterContactContainer,
   FooterContactContainerEmail,
+  FooterContactContainerEmailSmall,
   FooterRowContainer,
-  FooterSmallCaption,
-  EmailContainer,
   MailtoLink,
   ConnectContactText,
-  LoveByScout,
   FooterLinks,
   FooterLink,
   FooterScroll,
+  FooterSocialIcon,
+  MailingListBlock,
+  MailingListSmall,
+  MailingListLabel,
+  MailingListInput,
+  MailingListButton,
 } from "./footer-styles"
 
 const Footer = props => {
@@ -41,6 +45,8 @@ const Footer = props => {
     }
   `)
 
+  console.log(data.contentfulFooter.socialMedia)
+
   return (
     <FooterContainer>
       <FooterRowContainer>
@@ -61,7 +67,7 @@ const Footer = props => {
           </FooterLinks>
         </FooterSubsectionContainer>
         <FooterSubsectionContainer>
-          <FooterScroll onClick={() => scrollTo("#scrollToHere")}>
+          <FooterScroll onClick={() => scrollTo("#scrollTop")}>
             Back To Top ↑
           </FooterScroll>
           <FooterContactContainer>
@@ -69,17 +75,13 @@ const Footer = props => {
               {data.contentfulFooter.socialMedia.map(social => {
                 return (
                   <a href={social.link}>
-                    <div
-                      style={{
-                        width: `50px`,
-                      }}
-                    >
+                    <FooterSocialIcon>
                       <Img
                         className="featured"
                         fluid={social.logo.fluid}
                         alt={social.platform}
                       />
-                    </div>
+                    </FooterSocialIcon>
                   </a>
                 )
               })}
@@ -93,18 +95,38 @@ const Footer = props => {
           </FooterContactContainerEmail>
         </FooterSubsectionContainer>
       </FooterRowContainer>
-      <hr />
-      <FooterRowContainer>
-        <FooterSubsectionContainer>
-          <FooterSmallCaption>
-            Northeastern University | ViTAL &copy; {new Date().getFullYear()}{" "}
-          </FooterSmallCaption>
-        </FooterSubsectionContainer>
-        <LoveByScout>
-          Made with ♥ by{" "}
-          <a href="https://scout.camd.northeastern.edu/">Scout</a>
-        </LoveByScout>
-      </FooterRowContainer>
+
+      <FooterContactContainerEmailSmall>
+        <ConnectContactText>contact:</ConnectContactText>
+        <MailtoLink href={"mailto:" + data.contentfulFooter.email}>
+          {data.contentfulFooter.email}
+        </MailtoLink>
+      </FooterContactContainerEmailSmall>
+      {/*
+       * If you want to get away with not using the Mailchimp API you can customize thier default
+       * form. https://mailchimp.com/help/advanced-form-customization/
+       *
+       * Do not change any of the Id, name, or already set value fields in MailingListBlock
+       */}
+      <MailingListBlock
+        action="https://facebook.us19.list-manage.com/subscribe/post"
+        method="POST"
+      >
+        <input type="hidden" name="u" value="c45ced259329ec3d3e89ebe55" />
+        <input type="hidden" name="id" value="8afc898548" />
+        <MailingListLabel for="MERGE0">Join mailing list:</MailingListLabel>
+        <MailingListSmall>
+          <MailingListInput
+            type="email"
+            autocapitalize="off"
+            autocorrect="off"
+            name="MERGE0"
+            id="MERGE0"
+            placeholder="email address here"
+          />
+          <MailingListButton type="submit">SUBMIT</MailingListButton>
+        </MailingListSmall>
+      </MailingListBlock>
     </FooterContainer>
   )
 }
