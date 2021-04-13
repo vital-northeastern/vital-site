@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { white, navyBlue, royalBlue } from "../../constants/colors"
 import footerHex from "../../images/footer-hex.svg"
 import { fonts, fontWeights } from "../../constants/typography"
-import { devices, size } from "../../constants/devices"
+import { size } from "../../constants/devices"
 
 export const FooterContainer = styled.div`
   background-color: ${navyBlue};

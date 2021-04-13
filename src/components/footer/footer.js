@@ -45,8 +45,6 @@ const Footer = props => {
     }
   `)
 
-  console.log(data.contentfulFooter.socialMedia)
-
   return (
     <FooterContainer>
       <FooterRowContainer>
@@ -56,13 +54,9 @@ const Footer = props => {
           </FooterDescription>
           <FooterLinks>
             <FooterLink href="/">Home</FooterLink>
-
             <FooterLink href="/what-we-do">What We Do</FooterLink>
-
             <FooterLink href="/whats-happening">What's Happening</FooterLink>
-
             <FooterLink href="/get-involved">Get Involved</FooterLink>
-
             <FooterLink href="/our-team">Meet the Team</FooterLink>
           </FooterLinks>
         </FooterSubsectionContainer>
