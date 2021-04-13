@@ -23,8 +23,8 @@ const WhatWeDo = props => {
       />
       <History
         title={whatWeDo.history.title}
-        timeline={whatWeDo.timeline}
-        mobileTimeline={whatWeDo.mobileTimeline}
+        timeline={whatWeDo.timelineSvg}
+        mobileTimeline={whatWeDo.mobileTimelineSvg}
       />
       <IndustryBG
         title={whatWeDo.industryBackgroundTitle}
@@ -63,15 +63,15 @@ export const pageQuery = graphql`
       history {
         title
       }
-      timeline {
-        fluid {
-          ...GatsbyContentfulFluid
+      timelineSvg {
+        file {
+          url
         }
         description
       }
-      mobileTimeline {
-        fluid {
-          ...GatsbyContentfulFluid
+      mobileTimelineSvg {
+        file {
+          url
         }
         description
       }

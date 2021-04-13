@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import Img from "gatsby-image"
 import { devices, padding } from "../../../constants/devices"
 
 const HistoryContainer = styled.div`
@@ -18,7 +17,11 @@ const Title = styled.div`
   }
 `
 
-const RegularImage = styled(Img)`
+const ImageContainer = styled.div`
+  overflow: hidden;
+`
+
+const RegularImage = styled.img`
   @media ${devices.mobile} {
     display: none;
   }
@@ -27,10 +30,11 @@ const RegularImage = styled(Img)`
   }
 `
 
-const MobileImage = styled(Img)`
+const MobileImage = styled.img`
+  margin: -20px;
   @media ${devices.tablet} {
     display: none;
   }
 `
 
-export { HistoryContainer, Title, RegularImage, MobileImage }
+export { HistoryContainer, Title, ImageContainer, RegularImage, MobileImage }
