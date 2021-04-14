@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { Button } from "../../../constants/buttons"
 import { devices, padding } from "../../../constants/devices"
 import { H2 } from "../../../constants/typography"
+import { shadowGray } from "../../../constants/colors"
 
 const EboardContainer = styled.div`
   @media ${devices.mobile} {
@@ -61,6 +62,7 @@ const ButtonPosition = styled.div`
 
 const EboardButton = styled(Button)`
   padding: 18px 51px;
+  box-shadow: 1px 1px 2px ${shadowGray};
 `
 
 export {

@@ -36,6 +36,10 @@ const Text = styled.div`
 
 const H2Header = styled(H2)`
   margin-bottom: 0.7rem;
+  @media ${devices.mobileMax} {
+    line-height: 33px;
+    margin-bottom: 1rem;
+  }
 `
 
 const DisclaimerContainer = styled.div`

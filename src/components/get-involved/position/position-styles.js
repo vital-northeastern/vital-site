@@ -28,7 +28,7 @@ const PositionContainer = styled.div`
   @media ${devices.mobile} {
     width: 100vw;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     padding-left: ${padding.mobile};
   }
   @media ${devices.tablet} {
@@ -46,14 +46,18 @@ const PositionContainer = styled.div`
   }
   @media ${devices.desktop} {
     height: auto;
-    margin-bottom: 0.5rem;
   }
 `
 
 const FlexContainer = styled.div`
   display: flex;
   float: left;
-  width: 30%;
+  @media ${devices.mobile} {
+    width: 27%;
+  }
+  @media ${devices.tablet} {
+    width: 30%;
+  }
 `
 
 const PositionImg = styled(Img)`
@@ -70,8 +74,14 @@ const BackgroundColor = styled.div`
 const InfoContainer = styled.div`
   display: flex;
   position: relative;
-  padding-left: 25px;
-  width: 70%;
+  @media ${devices.mobile} {
+    width: 73%;
+    padding-left: 22px;
+  }
+  @media ${devices.tablet} {
+    width: 70%;
+    padding-left: 25px;
+  }
   justify-content: normal;
 `
 
@@ -85,6 +95,7 @@ const PositionName = styled(H2)`
   color: #133e6c;
   @media ${devices.mobileMax} {
     line-height: 20px;
+    padding-right: ${padding.mobile};
   }
   @media ${devices.tablet} {
     padding-top: 10px;
@@ -96,7 +107,7 @@ const PositionName = styled(H2)`
 const PositionDescription = styled(PCard)`
   line-height: 21px;
   @media ${devices.mobile} {
-    padding-right: 40px;
+    padding-right: ${padding.mobile};
   }
   @media ${devices.tablet} {
     padding-right: 0px;
