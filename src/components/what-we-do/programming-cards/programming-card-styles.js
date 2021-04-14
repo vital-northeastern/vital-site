@@ -44,28 +44,13 @@ const CardTitle = styled(H2)`
   color: ${white};
   margin: 0 auto;
   @media ${devices.mobileMax} {
-<<<<<<< HEAD
-    padding-top: 10px;
-=======
     padding-top: 15px;
->>>>>>> 22f20a93910bbfa476dbb000a72d936dbf06492b
     padding-bottom: 10px;
   }
 `
 
 const CardTitleContainer = styled.div`
-<<<<<<< HEAD
   padding: 10px 25px 0px 25px;
-`
-
-const TextContainer = styled.div`
-  padding: 20px 30px 5px 30px;
-  @media ${devices.mobileMax} {
-    padding-top: 5px;
-=======
-  padding-top: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
 `
 
 const TextContainer = styled.div`
@@ -75,7 +60,6 @@ const TextContainer = styled.div`
   padding-top: 20px;
   @media ${devices.mobileMax} {
     padding-top: 0px;
->>>>>>> 22f20a93910bbfa476dbb000a72d936dbf06492b
     height: auto;
     padding-bottom: 20px;
   }
