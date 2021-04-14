@@ -23,20 +23,21 @@ const fontSizes = {
 
 const PositionContainer = styled.div`
   z-index: 1;
-  display: inline-block;
   overflow: hidden;
   overflow-x: hidden;
   @media ${devices.mobile} {
+    display: flex;
     width: 100vw;
     height: auto;
     padding-left: ${padding.mobile};
   }
   @media ${devices.tablet} {
-    width: 75vw;
-    margin-bottom: 0.5rem;
-    padding-left: ${padding.tablet};
+    width: 70vw;
+    margin: 0 auto 1rem auto;
+    padding-left: 0px;
   }
   @media ${devices.laptop} {
+    display: inline-block;
     width: 40vw;
     height: 15rem;
     padding-left: 0px;
