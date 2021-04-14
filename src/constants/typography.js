@@ -106,7 +106,7 @@ const PCard = styled.p`
   font-weight: ${fontWeights.normal};
   line-height: 24px;
   @media ${devices.mobileMax} {
-    line-height: 23px;
+    line-height: 22px;
   }
 `
 

@@ -11,13 +11,14 @@ const CardContainer = styled.div`
     width: 60%;
   }
   @media ${devices.tabletMax} {
-    margin: 0 auto 20px auto;
+    margin: 0 auto 50px auto;
   }
   @media ${devices.laptop} {
-    width: 28.5vw;
+    width: 30vw;
     margin: 50px 10px 50px;
   }
-  background-color: ${royalBlue};
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 `
 
@@ -33,6 +34,8 @@ const ImageContainer = styled.div`
 
 const CardContent = styled.div`
   color: ${white};
+  background-color: ${royalBlue};
+  flex: 1;
 `
 
 const CardTitle = styled(H2)`
@@ -41,12 +44,17 @@ const CardTitle = styled(H2)`
   color: ${white};
   margin: 0 auto;
   @media ${devices.mobileMax} {
+<<<<<<< HEAD
     padding-top: 10px;
+=======
+    padding-top: 15px;
+>>>>>>> 22f20a93910bbfa476dbb000a72d936dbf06492b
     padding-bottom: 10px;
   }
 `
 
 const CardTitleContainer = styled.div`
+<<<<<<< HEAD
   padding: 10px 25px 0px 25px;
 `
 
@@ -54,6 +62,20 @@ const TextContainer = styled.div`
   padding: 20px 30px 5px 30px;
   @media ${devices.mobileMax} {
     padding-top: 5px;
+=======
+  padding-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+`
+
+const TextContainer = styled.div`
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  @media ${devices.mobileMax} {
+    padding-top: 0px;
+>>>>>>> 22f20a93910bbfa476dbb000a72d936dbf06492b
     height: auto;
     padding-bottom: 20px;
   }

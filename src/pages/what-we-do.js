@@ -30,6 +30,7 @@ const WhatWeDo = props => {
         title={whatWeDo.industryBackgroundTitle}
         blurb={whatWeDo.industryBackgroundBlurb}
         image={whatWeDo.industryBackgroundImage}
+        mobileImage={whatWeDo.mobileIndustryBackgroundImage}
         imageAlt={whatWeDo.industryBackgroundImage.description}
       />
       <CardsContainer>
@@ -80,7 +81,13 @@ export const pageQuery = graphql`
         industryBackgroundBlurb
       }
       industryBackgroundImage {
-        fluid(maxWidth: 750) {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+        description
+      }
+      mobileIndustryBackgroundImage {
+        fluid {
           ...GatsbyContentfulFluid
         }
         description
