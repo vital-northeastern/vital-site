@@ -24,6 +24,9 @@ const ImageContainer = styled.div`
   @media ${devices.tablet} {
     margin-left: -100px;
   }
+  @media ${devices.tabletMax} {
+    overflow: hidden;
+  }
   @media ${devices.laptop} {
     margin-left: 0px;
   }
@@ -43,15 +46,15 @@ const RegularImage = styled.img`
 const MobileImage = styled.img`
   @media ${devices.mobile} {
     transform: scale(1.25, 1.25);
-    margin-top: 90px;
+    padding-top: 90px;
     margin-bottom: 100px;
   }
   @media ${devices.tablet} {
-    margin-top: 150px;
+    padding-top: 150px;
   }
   @media ${devices.laptop} {
     display: none;
-    margin-top: 0px;
+    padding-top: 0px;
     margin-bottom: 0px;
   }
 `
