@@ -23,7 +23,6 @@ const NavWrapper = styled.nav`
   font-family: ${fonts.nav};
   height: 90px;
   width: 100%;
-  overflow-x: hidden;
 `
 
 const NavBrandWrapper = styled(Link)`
@@ -79,7 +78,10 @@ const NavLink = styled(Link)`
     color: black;
   }
   @media ${devices.tabletMax} {
-    line-height: 16px;
+    line-height: 12px;
+  }
+  @media ${devices.mobileMax} {
+    line-height: 14px;
   }
 `
 
