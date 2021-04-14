@@ -72,7 +72,7 @@ const Line = styled.span`
 const Dot = styled.span`
   @media ${devices.mobile} {
     height: 11px;
-    width: 11px;
+    width: 12px;
     margin-top: 14px;
   }
   @media ${devices.tablet} {
