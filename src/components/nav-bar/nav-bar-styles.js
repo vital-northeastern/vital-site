@@ -13,6 +13,7 @@ const NavWrapper = styled.nav`
   font-family: ${fonts.nav};
   height: 90px;
   width: 100%;
+  overflow-x: hidden;
 `
 
 const NavBrandWrapper = styled(Link)`
