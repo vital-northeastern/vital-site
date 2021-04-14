@@ -15,7 +15,7 @@ const fonts = {
 
 const minSize = {
   h1: 41,
-  h2: 24,
+  h2: 22,
   hName: 20,
   hUpper: 34,
   p: 13,
@@ -106,7 +106,7 @@ const PCard = styled.p`
   font-weight: ${fontWeights.normal};
   line-height: 24px;
   @media ${devices.mobileMax} {
-    line-height: 23px;
+    line-height: 22px;
   }
   @media ${devices.desktop} {
     line-height: 25px;

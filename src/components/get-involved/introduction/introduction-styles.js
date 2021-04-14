@@ -27,7 +27,7 @@ const TextContainer = styled.div`
 
 const ImageContainer = styled.div`
   position: absolute;
-  right: 0%;
+  right: 0;
   z-index: -10;
   @media ${devices.mobile} {
     width: 35%;
