@@ -8,9 +8,11 @@ import { devices, padding } from "../../../constants/devices"
 const PlatformsContainer = styled.div`
   @media ${devices.mobile} {
     padding-top: 30px;
+    margin-bottom: 2rem;
   }
   @media ${devices.tablet} {
     padding-top: 14px;
+    margin-bottom: 0rem;
   }
   width: auto;
   height: auto;
