@@ -37,14 +37,14 @@ const NavBar = ({ navbarStyle }) => {
         </NavBrandWrapper>
       </FlexColumn>
       <FlexColumn>
-        <NavLink navbarStyle={navbarStyle} to="/">
-          Home
-        </NavLink>
         <NavLink navbarStyle={navbarStyle} to="/what-we-do">
           About
         </NavLink>
         <NavLink navbarStyle={navbarStyle} to="/whats-happening">
           Events
+        </NavLink>
+        <NavLink navbarStyle={navbarStyle} to="/our-team">
+          Team
         </NavLink>
       </FlexColumn>
       <FlexColumn>
@@ -66,9 +66,9 @@ const NavBar = ({ navbarStyle }) => {
             <Cross />
           </CrossContainer>
           <SmallLinksContainer>
-            <NavLink to="/">Home</NavLink>
             <NavLink to="/what-we-do">About</NavLink>
             <NavLink to="/whats-happening">Events</NavLink>
+            <NavLink to="/our-team">Team</NavLink>
             <NavLink to="/get-involved">Get Involved</NavLink>
           </SmallLinksContainer>
         </SmallMenuContainer>
