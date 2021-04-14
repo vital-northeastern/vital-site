@@ -26,12 +26,13 @@ const PositionContainer = styled.div`
   overflow: hidden;
   overflow-x: hidden;
   @media ${devices.mobile} {
-    display: flex;
     width: 100vw;
     height: auto;
+    margin-bottom: 1rem;
     padding-left: ${padding.mobile};
   }
   @media ${devices.tablet} {
+    display: flex;
     width: 70vw;
     margin: 0 auto 1rem auto;
     padding-left: 0px;
@@ -73,9 +74,7 @@ const InfoContainer = styled.div`
   position: relative;
   padding-left: 25px;
   width: 70%;
-  @media ${devices.mobile} {
-    justify-content: normal;
-  }
+  justify-content: normal;
 `
 
 const TextContainer = styled.div`
@@ -86,10 +85,13 @@ const TextContainer = styled.div`
 const PositionName = styled(H2)`
   font-size: ${fontSizes.title};
   color: #133e6c;
+  @media ${devices.mobileMax} {
+    line-height: 20px;
+  }
   @media ${devices.tablet} {
     padding-top: 10px;
+    line-height: 30px;
   }
-  line-height: 30px;
   margin-bottom: 12px;
 `
 
