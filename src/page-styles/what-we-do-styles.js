@@ -1,21 +1,27 @@
 import styled from "styled-components"
-import { devices } from "../constants/devices"
+import { devices, padding } from "../constants/devices"
 
 const CardsContainer = styled.div`
-  @media ${devices.tablet} {
+  @media ${devices.mobile} {
+    padding-left: ${padding.mobile};
+    padding-right: ${padding.mobile};
     display: inline-block;
     justify-content: center;
-    margin: 0 auto;
   }
-  @media ${devices.tabletMax} {
-    padding-left: 30px;
-    padding-right: 30px;
+  @media ${devices.tablet} {
+    padding-left: ${padding.tablet};
+    padding-right: ${padding.tablet};
   }
   @media ${devices.laptop} {
     display: flex;
     justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0px 50px 0px;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  @media ${devices.desktop} {
+    margin-left: 90px;
+    margin-right: 90px;
   }
 `
 
