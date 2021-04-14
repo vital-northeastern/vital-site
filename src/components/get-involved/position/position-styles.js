@@ -38,13 +38,11 @@ const PositionContainer = styled.div`
     padding-left: 0px;
   }
   @media ${devices.laptop} {
-    display: inline-block;
     width: 40vw;
     height: 15rem;
-    padding-left: 0px;
     margin-left: ${props =>
-      props.index % 2 === 0 ? `${padding.laptop}` : "50px"};
-    margin-bottom: 0rem;
+      props.index % 2 === 0 ? `${padding.laptop}` : "0px"};
+    margin-bottom: 1rem;
   }
   @media ${devices.desktop} {
     height: auto;
