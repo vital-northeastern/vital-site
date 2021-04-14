@@ -42,7 +42,7 @@ const Platform = styled.div`
 const PlatformContent = styled.div`
   @media ${devices.mobile} {
     width: 80%;
-    padding-right: 30px;
+    padding-right: ${padding.mobile};
   }
   @media ${devices.tablet} {
     width: ${props => (props.num === 0 ? "60%" : "35%")};
@@ -115,11 +115,11 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   position: absolute;
-  margin-top: -50px;
+  margin-top: -1.7rem;
   left: 63%;
   width: 67vw;
   @media (max-width: 1220px) {
-    margin-top: 30px;
+    margin-top: 1.2rem;
   }
   @media (max-width: 1100px) {
     width: 60vw;

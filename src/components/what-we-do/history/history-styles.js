@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
 
 const HistoryContainer = styled.div`
-  margin: 50px 0px;
+  margin: 50px 0px 70px;
 `
 
 const Title = styled.div`
@@ -19,9 +19,12 @@ const Title = styled.div`
 
 const ImageContainer = styled.div`
   @media ${devices.mobile} {
-    margin-left: -100px;
+    margin-left: -130px;
   }
   @media ${devices.tablet} {
+    margin-left: -100px;
+  }
+  @media ${devices.laptop} {
     margin-left: 0px;
   }
 `
@@ -30,7 +33,7 @@ const RegularImage = styled.img`
   @media ${devices.mobile} {
     display: none;
   }
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     display: block;
     transform: scale(1.06, 1.06);
     padding-right: 10px;
@@ -39,11 +42,14 @@ const RegularImage = styled.img`
 
 const MobileImage = styled.img`
   @media ${devices.mobile} {
-    transform: scale(1.15, 1.15);
-    margin-top: 50px;
+    transform: scale(1.25, 1.25);
+    margin-top: 90px;
     margin-bottom: 100px;
   }
   @media ${devices.tablet} {
+    margin-top: 150px;
+  }
+  @media ${devices.laptop} {
     display: none;
     margin-top: 0px;
     margin-bottom: 0px;
