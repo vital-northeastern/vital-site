@@ -5,13 +5,13 @@ import { devices, padding } from "../../../constants/devices"
 const Container = styled.div`
   display: flex;
   @media ${devices.mobile} {
-    padding: 40px ${padding.mobile} 8px;
+    padding: 40px 0px 8px ${padding.mobile};
   }
   @media ${devices.tablet} {
-    padding: 35px ${padding.tablet} 8px;
+    padding: 35px ${padding.tablet} 8px ${padding.tablet};
   }
   @media ${devices.laptop} {
-    padding: 35px ${padding.laptop} 8px;
+    padding: 35px ${padding.laptop} 8px ${padding.laptop};
   }
 `
 
@@ -27,10 +27,11 @@ const TextContainer = styled.div`
 
 const ImageContainer = styled.div`
   position: absolute;
-  right: 30px;
+  right: 0%;
   z-index: -10;
   @media ${devices.mobile} {
     width: 35%;
+    overflow-x: hidden;
   }
   @media ${devices.tablet} {
     display: none;
@@ -38,8 +39,7 @@ const ImageContainer = styled.div`
 `
 
 const MobileImage = styled.img`
-  margin-top: 3rem;
-  transform: scale(1.8, 1.8);
+  transform: scale(1.5, 1.5);
 `
 
 export { Container, TextContainer, ImageContainer, MobileImage }
