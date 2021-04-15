@@ -22,7 +22,7 @@ const Title = styled.div`
   @media ${devices.mobile} {
     padding-left: ${padding.mobile};
   }
-  @media ${devices.mobile} {
+  @media ${devices.tablet} {
     padding-left: ${padding.tablet};
   }
   @media ${devices.laptop} {
