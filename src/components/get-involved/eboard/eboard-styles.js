@@ -53,9 +53,9 @@ const ButtonPosition = styled.div`
     margin-left: 43%;
   }
   @media (min-width: 1028px) {
-    margin-left: 68%;
+    margin-left: 60%;
   }
-  @media (min-width: 1160px) {
+  @media (min-width: 1220px) {
     margin-left: 68%;
   }
 `
