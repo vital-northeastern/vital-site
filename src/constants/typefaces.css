@@ -1,14 +1,4 @@
 @font-face {
-  font-family: "Futura Bold";
-  src: url("./fonts/FuturaPTBold.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Futura Heavy";
-  src: url("./fonts/FuturaPTHeavy.otf") format("opentype");
-}
-
-@font-face {
   font-family: "Futura";
   src: url("./fonts/FuturaPTMedium.otf") format("opentype");
 }
@@ -16,4 +6,9 @@
 @font-face {
   font-family: "Futura Book";
   src: url("./fonts/FuturaPTBook.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Futura Bold";
+  src: url("./fonts/FuturaPTBold.otf") format("opentype");
 }

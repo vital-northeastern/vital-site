@@ -3,35 +3,44 @@ import { graphql } from "gatsby"
 import get from "lodash/get"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
+import Header from "../components/header/header"
 import History from "../components/what-we-do/history/history"
 import IndustryBG from "../components/what-we-do/industry-bg/industry-bg"
 import ProgrammingCard from "../components/what-we-do/programming-cards/programming-card"
+import { CardsContainer } from "../page-styles/what-we-do-styles"
 
 const WhatWeDo = props => {
   const whatWeDo = get(props, "data.contentfulWhatWeDo")
 
   return (
-    <Layout>
+    <Layout navbarStyle="gradient">
       <SEO title="What We Do" />
-      <h1>{whatWeDo.title}</h1>
+      <Header
+        title={whatWeDo.title}
+        subheading={whatWeDo.subheadingForTitle}
+        imageBool={true}
+      />
       <History title={whatWeDo.history.title} timeline={whatWeDo.timeline} />
       <IndustryBG
         title={whatWeDo.industryBackgroundTitle}
         blurb={whatWeDo.industryBackgroundBlurb}
         image={whatWeDo.industryBackgroundImage}
+        mobileImage={whatWeDo.mobileIndustryBackgroundImage}
         imageAlt={whatWeDo.industryBackgroundImage.description}
       />
-      {whatWeDo.programmingCards.map((card, index) => {
-        return (
-          <ProgrammingCard
-            key={index}
-            title={card.title}
-            description={card.shortDescription}
-            photo={card.photo}
-            photoAlt={card.photo.description}
-          />
-        )
-      })}
+      <CardsContainer>
+        {whatWeDo.programmingCards.map((card, index) => {
+          return (
+            <ProgrammingCard
+              key={index}
+              title={card.title}
+              description={card.shortDescription.shortDescription}
+              photo={card.photo}
+              photoAlt={card.photo.description}
+            />
+          )
+        })}
+      </CardsContainer>
     </Layout>
   )
 }
@@ -63,7 +72,13 @@ export const pageQuery = graphql`
         industryBackgroundBlurb
       }
       industryBackgroundImage {
-        fluid(maxWidth: 750) {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+        description
+      }
+      mobileIndustryBackgroundImage {
+        fluid {
           ...GatsbyContentfulFluid
         }
         description
@@ -79,12 +94,6 @@ export const pageQuery = graphql`
           }
           description
         }
-      }
-      platforms {
-        platformTitle
-        blurb
-        ctaTitle
-        ctaLink
       }
     }
   }

@@ -2,19 +2,26 @@ import React from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
 import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import get from "lodash/get"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Carousel from "../components/whats-happening/carousel"
 import Calendar from "../components/whats-happening/calendar"
 import Slack from "../components/whats-happening/slack"
+import Header from "../components/header/header"
 
 const WhatsHappening = props => {
   const whatsHappening = get(props, "data.contentfulWhatsHappeningPage")
 
   return (
-    <Layout>
+    <Layout navbarStyle="gradient">
       <SEO title="What's Happening" />
-      <h1>{whatsHappening.title}</h1>
+      <Header
+        title={whatsHappening.title}
+        subheading={whatsHappening.subheadingForTitle}
+        imageBool={true}
+      />
       <Carousel
         title={whatsHappening.carouselTitle}
         carouselItems={whatsHappening.carouselItems}
@@ -39,6 +46,7 @@ export const pageQuery = graphql`
   query whatsHappeningQuery {
     contentfulWhatsHappeningPage {
       title
+      subheadingForTitle
       carouselTitle
       carouselItems {
         title
