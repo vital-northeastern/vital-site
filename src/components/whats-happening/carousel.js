@@ -1,7 +1,14 @@
 import React from "react"
 import Img from "gatsby-image"
+import { tns } from "../../../node_modules/tiny-slider"
 
 const Carousel = ({ title, carouselItems }) => {
+  var slider = tns({
+    container: ".my-slider",
+    items: 3,
+    slideBy: "page",
+    autoplay: true,
+  })
   return (
     <>
       <p>{title}</p>
