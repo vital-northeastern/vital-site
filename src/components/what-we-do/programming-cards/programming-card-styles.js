@@ -50,9 +50,7 @@ const CardTitle = styled(H2)`
 `
 
 const CardTitleContainer = styled.div`
-  padding-top: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 10px 25px 0px 25px;
 `
 
 const TextContainer = styled.div`

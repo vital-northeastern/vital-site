@@ -8,6 +8,7 @@ const NavWrapper = styled.nav`
   position: absolute;
   overflow-x: hidden;
   top: 0;
+  overflow-x: hidden;
   background-color: transparent;
   padding: 15px 75px;
   align-items: center;
