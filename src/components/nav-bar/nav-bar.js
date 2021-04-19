@@ -43,7 +43,7 @@ const NavBar = ({ navbarstyle }) => {
         <NavLink navbarstyle={navbarstyle} to="/whats-happening">
           Events
         </NavLink>
-        <NavLink navbarStyle={navbarStyle} to="/our-team">
+        <NavLink navbarstyle={navbarstyle} to="/our-team">
           Team
         </NavLink>
       </FlexColumn>
