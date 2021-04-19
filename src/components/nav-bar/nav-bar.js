@@ -30,17 +30,17 @@ const NavBar = ({ navbarStyle }) => {
   }, [delay])
 
   return (
-    <NavWrapper navbarStyle={navbarStyle}>
+    <NavWrapper navbarstyle={navbarstyle}>
       <FlexColumn>
         <NavBrandWrapper to="/">
           <NavBrand>ViTAL</NavBrand>
         </NavBrandWrapper>
       </FlexColumn>
       <FlexColumn>
-        <NavLink navbarStyle={navbarStyle} to="/what-we-do">
+        <NavLink navbarstyle={navbarstyle} to="/what-we-do">
           About
         </NavLink>
-        <NavLink navbarStyle={navbarStyle} to="/whats-happening">
+        <NavLink navbarstyle={navbarstyle} to="/whats-happening">
           Events
         </NavLink>
         <NavLink navbarStyle={navbarStyle} to="/our-team">
@@ -49,7 +49,7 @@ const NavBar = ({ navbarStyle }) => {
       </FlexColumn>
       <FlexColumn>
         <NavButton
-          navbarStyle={navbarStyle}
+          navbarstyle={navbarstyle}
           onClick={() => navigate("/get-involved")}
         >
           Get Involved

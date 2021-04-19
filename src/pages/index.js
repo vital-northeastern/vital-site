@@ -16,7 +16,7 @@ const IndexPage = props => {
   const stayInTheKnow = homePage.homepageSections[2]
 
   return (
-    <Layout navbarStyle="home">
+    <Layout navbarstyle="home">
       <SEO title="Home" />
       <Hero
         smallTitle={homePage.smallTitle}
