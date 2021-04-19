@@ -37,7 +37,7 @@ const WhatWeDo = props => {
         {whatWeDo.programmingCards.map((card, index) => {
           return (
             <ProgrammingCard
-              key={index}
+              key={card.title}
               title={card.title}
               description={card.shortDescription.shortDescription}
               photo={card.photo}

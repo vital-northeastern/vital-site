@@ -10,7 +10,7 @@ import {
   TextContainer,
 } from "./programming-card-styles"
 
-const ProgrammingCard = ({ key, title, description, photo, photoAlt }) => {
+const ProgrammingCard = ({ title, description, photo, photoAlt }) => {
   return (
     <CardContainer>
       <ImageContainer>

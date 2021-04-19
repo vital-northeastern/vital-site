@@ -26,7 +26,7 @@ const Platforms = ({ title, platforms }) => {
       </ImageContainer>
       {platforms.map((platform, index) => {
         return (
-          <Platform num={index}>
+          <Platform num={index} key={platform.platformTitle}>
             <LineContainer num={index}>
               <Line />
               <Dot />
@@ -35,7 +35,7 @@ const Platforms = ({ title, platforms }) => {
               <PlatformTitle>{platform.platformTitle}</PlatformTitle>
               <P>{platform.blurb}</P>
               <a href={platform.ctaLink} target="_blank" rel="noreferrer">
-                <PlatformButton primary={true}>
+                <PlatformButton primary={true} aria-label={platform.ctaTitle}>
                   {platform.ctaTitle}
                 </PlatformButton>
               </a>
