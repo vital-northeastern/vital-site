@@ -8,7 +8,7 @@ const Carousel = ({ title, carouselItems }) => {
       {carouselItems.map((item, index) => {
         return (
           <CarouselItem
-            key={index}
+            key={item.title}
             title={item.title}
             subTitle={item.subTitle}
             link={item.link}

@@ -9,28 +9,28 @@ import {
   FlexColumn,
 } from "./nav-bar-styles.js"
 
-const NavBar = ({ navbarStyle }) => {
+const NavBar = ({ navbarstyle }) => {
   return (
-    <NavWrapper navbarStyle={navbarStyle}>
+    <NavWrapper navbarstyle={navbarstyle}>
       <FlexColumn>
         <NavBrandWrapper to="/">
           <NavBrand>ViTAL</NavBrand>
         </NavBrandWrapper>
       </FlexColumn>
       <FlexColumn>
-        <NavLink navbarStyle={navbarStyle} to="/">
+        <NavLink navbarstyle={navbarstyle} to="/">
           Home
         </NavLink>
-        <NavLink navbarStyle={navbarStyle} to="/what-we-do">
+        <NavLink navbarstyle={navbarstyle} to="/what-we-do">
           About
         </NavLink>
-        <NavLink navbarStyle={navbarStyle} to="/whats-happening">
+        <NavLink navbarstyle={navbarstyle} to="/whats-happening">
           Events
         </NavLink>
       </FlexColumn>
       <FlexColumn>
         <NavButton
-          navbarStyle={navbarStyle}
+          navbarstyle={navbarstyle}
           onClick={() => navigate("/get-involved")}
         >
           Get Involved

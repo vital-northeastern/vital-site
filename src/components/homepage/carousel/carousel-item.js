@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 
-const CarouselItem = ({ key, title, subTitle, link, featuredImage }) => {
+const CarouselItem = ({ title, subTitle, link, featuredImage }) => {
   return (
     <>
       <h4>{title}</h4>

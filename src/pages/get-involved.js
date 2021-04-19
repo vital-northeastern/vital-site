@@ -16,7 +16,7 @@ const GetInvolved = props => {
   const involvedPage = get(props, "data.contentfulGetInvolvedPage")
 
   return (
-    <Layout navbarStyle="gradient">
+    <Layout navbarstyle="gradient">
       <SEO title="Get Involved" />
       <Header
         title={involvedPage.title}
@@ -39,6 +39,7 @@ const GetInvolved = props => {
         {involvedPage.positions.map((position, index) => {
           return (
             <Position
+              key={position.positionTitle}
               index={index}
               title={position.positionTitle}
               description={position.description}
