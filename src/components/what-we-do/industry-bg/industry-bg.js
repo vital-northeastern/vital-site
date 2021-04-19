@@ -1,14 +1,25 @@
 import React from "react"
-import { H3, P } from "../../../constants/typography"
-import Img from "gatsby-image"
+import { H2, P } from "../../../constants/typography"
+import {
+  Container,
+  TextContainer,
+  Text,
+  Image,
+  MobileImage,
+} from "./industry-bg-styles"
 
-const IndustryBG = ({ title, blurb, image, imageAlt }) => {
+const IndustryBG = ({ title, blurb, image, mobileImage, imageAlt }) => {
   return (
-    <>
-      <H3>{title}</H3>
-      <P>{blurb.industryBackgroundBlurb}</P>
-      <Img className="featured" fluid={image.fluid} alt={imageAlt} />
-    </>
+    <Container>
+      <TextContainer>
+        <Text>
+          <H2>{title}</H2>
+          <P>{blurb.industryBackgroundBlurb}</P>
+        </Text>
+      </TextContainer>
+      <Image fluid={image.fluid} alt={imageAlt} />
+      <MobileImage fluid={mobileImage.fluid} alt={imageAlt} />
+    </Container>
   )
 }
 

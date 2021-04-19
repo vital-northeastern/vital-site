@@ -1,17 +1,24 @@
 import React from "react"
-import { H3 } from "../../../constants/typography"
-import Img from "gatsby-image"
+import { H2 } from "../../../constants/typography"
+import {
+  HistoryContainer,
+  Title,
+  ImageContainer,
+  RegularImage,
+  MobileImage,
+} from "./history-styles"
 
-const History = ({ title, timeline }) => {
+const History = ({ title, timeline, mobileTimeline }) => {
   return (
-    <>
-      <H3>{title}</H3>
-      <Img
-        className="featured"
-        fluid={timeline.fluid}
-        alt={timeline.description}
-      />
-    </>
+    <HistoryContainer>
+      <Title>
+        <H2>{title}</H2>
+      </Title>
+      <ImageContainer>
+        <RegularImage src={timeline.file.url} alt={timeline.description} />
+        <MobileImage src={mobileTimeline.file.url} alt={timeline.description} />
+      </ImageContainer>
+    </HistoryContainer>
   )
 }
 

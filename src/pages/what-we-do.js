@@ -3,35 +3,53 @@ import { graphql } from "gatsby"
 import get from "lodash/get"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
+import Header from "../components/header/header"
 import History from "../components/what-we-do/history/history"
 import IndustryBG from "../components/what-we-do/industry-bg/industry-bg"
 import ProgrammingCard from "../components/what-we-do/programming-cards/programming-card"
+import Platforms from "../components/what-we-do/platforms/platforms"
+import { CardsContainer } from "../page-styles/what-we-do-styles"
 
 const WhatWeDo = props => {
   const whatWeDo = get(props, "data.contentfulWhatWeDo")
 
   return (
-    <Layout>
+    <Layout navbarstyle="gradient">
       <SEO title="What We Do" />
-      <h1>{whatWeDo.title}</h1>
-      <History title={whatWeDo.history.title} timeline={whatWeDo.timeline} />
+      <Header
+        title={whatWeDo.title}
+        subheading={whatWeDo.subheadingForTitle}
+        imageBool={true}
+      />
+      <History
+        title={whatWeDo.history.title}
+        timeline={whatWeDo.timelineSvg}
+        mobileTimeline={whatWeDo.mobileTimelineSvg}
+      />
       <IndustryBG
         title={whatWeDo.industryBackgroundTitle}
         blurb={whatWeDo.industryBackgroundBlurb}
         image={whatWeDo.industryBackgroundImage}
+        mobileImage={whatWeDo.mobileIndustryBackgroundImage}
         imageAlt={whatWeDo.industryBackgroundImage.description}
       />
-      {whatWeDo.programmingCards.map((card, index) => {
-        return (
-          <ProgrammingCard
-            key={index}
-            title={card.title}
-            description={card.shortDescription}
-            photo={card.photo}
-            photoAlt={card.photo.description}
-          />
-        )
-      })}
+      <CardsContainer>
+        {whatWeDo.programmingCards.map((card, index) => {
+          return (
+            <ProgrammingCard
+              key={card.title}
+              title={card.title}
+              description={card.shortDescription.shortDescription}
+              photo={card.photo}
+              photoAlt={card.photo.description}
+            />
+          )
+        })}
+      </CardsContainer>
+      <Platforms
+        title={whatWeDo.platforms.title}
+        platforms={whatWeDo.platforms.platforms}
+      />
     </Layout>
   )
 }
@@ -45,16 +63,16 @@ export const pageQuery = graphql`
       subheadingForTitle
       history {
         title
-        historyMilestones {
-          title
-          milestoneDescription {
-            milestoneDescription
-          }
-        }
       }
-      timeline {
-        fluid(maxWidth: 750) {
-          ...GatsbyContentfulFluid
+      timelineSvg {
+        file {
+          url
+        }
+        description
+      }
+      mobileTimelineSvg {
+        file {
+          url
         }
         description
       }
@@ -63,7 +81,13 @@ export const pageQuery = graphql`
         industryBackgroundBlurb
       }
       industryBackgroundImage {
-        fluid(maxWidth: 750) {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+        description
+      }
+      mobileIndustryBackgroundImage {
+        fluid {
           ...GatsbyContentfulFluid
         }
         description
@@ -81,10 +105,13 @@ export const pageQuery = graphql`
         }
       }
       platforms {
-        platformTitle
-        blurb
-        ctaTitle
-        ctaLink
+        title
+        platforms {
+          platformTitle
+          blurb
+          ctaTitle
+          ctaLink
+        }
       }
     }
   }
