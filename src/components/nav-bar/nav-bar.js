@@ -15,7 +15,7 @@ import {
   CrossContainer,
 } from "./nav-bar-styles.js"
 
-const NavBar = ({ navbarStyle }) => {
+const NavBar = ({ navbarstyle }) => {
   const [smallLinks, setSmallLinks] = useState(false)
   const [delay, setDelay] = useState(false)
 
@@ -57,7 +57,7 @@ const NavBar = ({ navbarStyle }) => {
       </FlexColumn>
       <SmallNavLinkContainer onClick={() => setSmallLinks(true)}>
         <FlexColumn>
-          <Hamburger navbarStyle={navbarStyle} />
+          <Hamburger navbarstyle={navbarstyle} />
         </FlexColumn>
       </SmallNavLinkContainer>
       {smallLinks && (

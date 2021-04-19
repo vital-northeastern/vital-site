@@ -1,7 +1,7 @@
 import React from "react"
 import { white, navyBlue } from "./colors"
 
-const Hamburger = ({ navbarStyle }) => {
+const Hamburger = ({ navbarstyle }) => {
   return (
     <svg
       width="39"
@@ -13,19 +13,19 @@ const Hamburger = ({ navbarStyle }) => {
       <rect
         width="32"
         height="2.72"
-        fill={navbarStyle === "gradient" ? white : navyBlue}
+        fill={navbarstyle === "gradient" ? white : navyBlue}
       />
       <rect
         y="9.52002"
         width="32"
         height="2.72"
-        fill={navbarStyle === "gradient" ? white : navyBlue}
+        fill={navbarstyle === "gradient" ? white : navyBlue}
       />
       <rect
         y="19.04"
         width="32"
         height="2.72"
-        fill={navbarStyle === "gradient" ? white : navyBlue}
+        fill={navbarstyle === "gradient" ? white : navyBlue}
       />
     </svg>
   )
