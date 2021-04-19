@@ -10,7 +10,7 @@ const HeaderContainer = styled.div`
 const TextContainer = styled.div`
   padding-left: 75px;
   padding-top: 170px;
-  padding-bottom: 45px;
+  padding-bottom: 40px;
 `
 
 const ImageContainer = styled.div`
@@ -20,6 +20,7 @@ const ImageContainer = styled.div`
   right: 0;
   width: auto;
   opacity: ${props => (props.imageBool ? "1" : "0")};
+  display: ${props => (props.imageBool ? "inline" : "none")};
 `
 
 const BackgroundShape = styled.img`

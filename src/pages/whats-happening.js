@@ -10,7 +10,7 @@ const WhatsHappening = props => {
   const whatsHappening = get(props, "data.contentfulWhatsHappeningPage")
 
   return (
-    <Layout navbarStyle="gradient">
+    <Layout navbarstyle="gradient">
       <SEO title="What's Happening" />
       <Header
         title={whatsHappening.title}

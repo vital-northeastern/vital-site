@@ -10,7 +10,7 @@ const TeamPage = props => {
   const teamPage = get(props, "data.contentfulTeamPage")
 
   return (
-    <Layout navbarStyle="gradient">
+    <Layout navbarstyle="gradient">
       <SEO title="Team Page" />
       <Header
         title={teamPage.title}

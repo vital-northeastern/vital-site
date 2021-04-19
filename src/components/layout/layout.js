@@ -3,10 +3,10 @@ import PropTypes from "prop-types"
 import NavBar from "../nav-bar/nav-bar"
 import "./layout.css"
 
-const Layout = ({ children, navbarStyle }) => {
+const Layout = ({ children, navbarstyle }) => {
   return (
     <>
-      <NavBar navbarStyle={navbarStyle} />
+      <NavBar navbarstyle={navbarstyle} />
       <div>
         <main>{children}</main>
       </div>

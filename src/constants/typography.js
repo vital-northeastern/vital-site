@@ -14,7 +14,7 @@ const fonts = {
 }
 
 const minSize = {
-  h1: 40,
+  h1: 41,
   h2: 22,
   hName: 20,
   hUpper: 34,
@@ -65,7 +65,7 @@ const H2 = styled.h2`
   font-family: ${fonts.subheader};
   font-weight: ${fontWeights.semiBold};
   text-transform: ${textStyles.capitalize};
-  line-height: 38px;
+  line-height: 30px;
   color: ${navyBlue};
   @media ${devices.mobileMax} {
     font-size: 27px;
@@ -107,6 +107,9 @@ const PCard = styled.p`
   line-height: 24px;
   @media ${devices.mobileMax} {
     line-height: 22px;
+  }
+  @media ${devices.desktop} {
+    line-height: 25px;
   }
 `
 
