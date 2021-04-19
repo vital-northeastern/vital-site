@@ -13,7 +13,7 @@ import {
   ImageContainer,
   Image,
 } from "./platforms-styles"
-import svg from "../../../images/platform.svg"
+import bg_svg from "../../../images/platform.svg"
 
 const Platforms = ({ title, platforms }) => {
   return (
@@ -22,7 +22,7 @@ const Platforms = ({ title, platforms }) => {
         <H2>{title}</H2>
       </Title>
       <ImageContainer>
-        <Image src={svg} alt="blue and white geometric shape" />
+        <Image src={bg_svg} alt="blue and white geometric shape" />
       </ImageContainer>
       {platforms.map((platform, index) => {
         return (
