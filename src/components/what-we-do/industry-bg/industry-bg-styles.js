@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 const Container = styled.div`
   @media ${devices.mobile} {
     display: block;
-    padding: 8px ${padding.mobile};
+    padding: 0px ${padding.mobile} 8px;
     margin-bottom: 50px;
   }
   @media ${devices.tablet} {
