@@ -32,8 +32,6 @@ const ImageContainer = styled.div`
   overflow: hidden;
 `
 
-const CardContent = styled.div``
-
 const CardLink = styled.a`
   display: block;
   color: ${white};
@@ -77,7 +75,6 @@ const TextContainer = styled.div`
 export {
   CardContainer,
   ImageContainer,
-  CardContent,
   CardLink,
   CardTitle,
   CardTitleContainer,
