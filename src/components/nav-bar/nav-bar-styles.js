@@ -1,16 +1,20 @@
 import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
 import { fonts } from "../../constants/typography"
-import { white, navyBlue, darkGray, periwinkle } from "../../constants/colors"
+import {
+  white,
+  navyBlue,
+  darkGray,
+  periwinkle,
+  royalBlue,
+} from "../../constants/colors"
 import { animations } from "../../constants/animations"
 import { devices, padding } from "../../constants/devices"
 
 const NavWrapper = styled.nav`
   display: flex;
   position: absolute;
-  overflow-x: hidden;
   top: 0;
-  overflow-x: hidden;
   background-color: transparent;
   @media ${devices.mobile} {
     padding: 10px ${padding.mobile};
@@ -77,13 +81,13 @@ const NavLink = styled(Link)`
   margin-right: 25px;
   :hover {
     transition: all 0.2s;
-    color: black;
+    color: ${props => (props.navbarstyle === "gradient" ? "black" : royalBlue)};
   }
   @media ${devices.tabletMax} {
     line-height: 12px;
   }
   @media ${devices.mobileMax} {
-    line-height: 14px;
+    line-height: 10px;
   }
 `
 

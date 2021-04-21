@@ -66,10 +66,18 @@ const NavBar = ({ navbarstyle }) => {
             <Cross />
           </CrossContainer>
           <SmallLinksContainer>
-            <NavLink to="/what-we-do">About</NavLink>
-            <NavLink to="/whats-happening">Events</NavLink>
-            <NavLink to="/our-team">Team</NavLink>
-            <NavLink to="/get-involved">Get Involved</NavLink>
+            <NavLink navbarstyle="gradient" to="/what-we-do">
+              About
+            </NavLink>
+            <NavLink navbarstyle="gradient" to="/whats-happening">
+              Events
+            </NavLink>
+            <NavLink navbarstyle="gradient" to="/our-team">
+              Team
+            </NavLink>
+            <NavLink navbarstyle="gradient" to="/get-involved">
+              Get Involved
+            </NavLink>
           </SmallLinksContainer>
         </SmallMenuContainer>
       )}
