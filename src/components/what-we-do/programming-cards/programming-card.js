@@ -16,7 +16,7 @@ const ProgrammingCard = ({ title, description, photo, photoAlt, link }) => {
       <ImageContainer>
         <Img fluid={photo.fluid} alt={photoAlt} />
       </ImageContainer>
-      <CardLink href="/our-team" target="_blank" rel="noreferrer">
+      <CardLink href={link} target="_blank" rel="noreferrer">
         <div>
           <CardTitleContainer>
             <CardTitle>{title}</CardTitle>

@@ -104,6 +104,7 @@ export const pageQuery = graphql`
           }
           description
         }
+        link
       }
       platforms {
         title
