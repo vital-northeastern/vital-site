@@ -42,6 +42,7 @@ const WhatWeDo = props => {
               description={card.shortDescription.shortDescription}
               photo={card.photo}
               photoAlt={card.photo.description}
+              link={card.link}
             />
           )
         })}
