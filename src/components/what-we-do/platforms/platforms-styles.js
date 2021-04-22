@@ -117,17 +117,15 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   position: absolute;
-  margin-top: -1.7rem;
-  left: 63%;
-  width: 67vw;
+  margin-top: -4.5rem;
+  right: 0;
+  width: 37vw;
   @media (max-width: 1220px) {
     margin-top: 1.2rem;
   }
   @media (max-width: 1100px) {
-    width: 60vw;
-    margin-top: 150px;
+    margin-top: 3rem;
   }
-  height: auto;
 `
 
 export {

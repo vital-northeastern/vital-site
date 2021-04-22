@@ -7,7 +7,7 @@ import {
   H2Header,
   ButtonEmail,
 } from "./application-info-styles"
-import bottom_svg from "../../../images/bottom_svg.svg"
+import bottom_svg from "../../../images/getinvolved_bottom_svg.svg"
 
 const ApplicationInfo = ({
   subheading,
