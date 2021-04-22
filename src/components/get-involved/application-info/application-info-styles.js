@@ -2,7 +2,6 @@ import styled from "styled-components"
 import { H2 } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
 import { shadowGray } from "../../../constants/colors"
-import { devices } from "../../../constants/devices"
 
 const ApplicationContainer = styled.div`
   margin: 0 auto 5rem auto;
