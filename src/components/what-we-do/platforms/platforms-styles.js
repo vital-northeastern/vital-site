@@ -108,26 +108,6 @@ const PlatformButton = styled(Button)`
   box-shadow: 1.5px 1.5px 2px ${shadowGray};
 `
 
-const ImageContainer = styled.div`
-  z-index: -10;
-  @media ${devices.tabletMax} {
-    display: none;
-  }
-`
-
-const Image = styled.img`
-  position: absolute;
-  margin-top: -4.5rem;
-  right: 0;
-  width: 37vw;
-  @media (max-width: 1220px) {
-    margin-top: 1.2rem;
-  }
-  @media (max-width: 1100px) {
-    margin-top: 3rem;
-  }
-`
-
 export {
   PlatformsContainer,
   Title,
@@ -138,6 +118,4 @@ export {
   Dot,
   PlatformTitle,
   PlatformButton,
-  ImageContainer,
-  Image,
 }

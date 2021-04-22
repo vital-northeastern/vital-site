@@ -20,17 +20,4 @@ const ButtonEmail = styled(Button)`
   padding: 18px 45px;
 `
 
-const ImageContainer = styled.div`
-  z-index: -10;
-  @media ${devices.tabletMax} {
-    display: none;
-  }
-`
-
-const Image = styled.img`
-  position: absolute;
-  margin-top: -8rem;
-  right: 0;
-`
-
-export { ApplicationContainer, H2Header, ButtonEmail, ImageContainer, Image }
+export { ApplicationContainer, H2Header, ButtonEmail }

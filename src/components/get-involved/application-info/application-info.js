@@ -1,12 +1,11 @@
 import React from "react"
 import { P } from "../../../constants/typography"
 import {
-  ImageContainer,
-  Image,
   ApplicationContainer,
   H2Header,
   ButtonEmail,
 } from "./application-info-styles"
+import { GeoshapeContainer, Geoshape } from "../../geoshape/geoshape-styles"
 import bottom_svg from "../../../images/get-involved/bottom_shape.svg"
 
 const ApplicationInfo = ({
@@ -17,9 +16,14 @@ const ApplicationInfo = ({
 }) => {
   return (
     <>
-      <ImageContainer>
-        <Image src={bottom_svg} alt="blue and white geometric shape" />
-      </ImageContainer>
+      <GeoshapeContainer>
+        <Geoshape
+          marginTop="-8rem"
+          right={true}
+          src={bottom_svg}
+          alt="blue and white geometric shape"
+        />
+      </GeoshapeContainer>
       <ApplicationContainer>
         <H2Header>{subheading}</H2Header>
         <P>{applicationEmail}</P>
