@@ -1,6 +1,13 @@
 import React from "react"
 import { P } from "../../../constants/typography"
-import { Container, H2Header, ButtonEmail } from "./application-info-styles"
+import {
+  ImageContainer,
+  Image,
+  ApplicationContainer,
+  H2Header,
+  ButtonEmail,
+} from "./application-info-styles"
+import bottom_svg from "../../../images/bottom_svg.svg"
 
 const ApplicationInfo = ({
   subheading,
@@ -9,13 +16,18 @@ const ApplicationInfo = ({
   ctaTitle,
 }) => {
   return (
-    <Container>
-      <H2Header>{subheading}</H2Header>
-      <P>{applicationEmail}</P>
-      <a href={ctaLink}>
-        <ButtonEmail primary={true}>{ctaTitle}</ButtonEmail>
-      </a>
-    </Container>
+    <>
+      <ImageContainer>
+        <Image src={bottom_svg} alt="blue and white geometric shape" />
+      </ImageContainer>
+      <ApplicationContainer>
+        <H2Header>{subheading}</H2Header>
+        <P>{applicationEmail}</P>
+        <a href={ctaLink}>
+          <ButtonEmail primary={true}>{ctaTitle}</ButtonEmail>
+        </a>
+      </ApplicationContainer>
+    </>
   )
 }
 
