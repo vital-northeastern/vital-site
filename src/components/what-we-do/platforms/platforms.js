@@ -13,7 +13,7 @@ import {
   ImageContainer,
   Image,
 } from "./platforms-styles"
-import bg_svg from "../../../images/platforms.svg"
+import bg_svg from "../../../images/what-we-do/platforms.svg"
 
 const Platforms = ({ title, platforms }) => {
   return (

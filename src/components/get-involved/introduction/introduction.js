@@ -6,7 +6,7 @@ import {
   ImageContainer,
   MobileImage,
 } from "./introduction-styles"
-import svg_shape from "../../../images/getinvolved_intro.svg"
+import svg_shape from "../../../images/get-involved/intro_shape.svg"
 
 const Introduction = ({ blurb }) => {
   return (
