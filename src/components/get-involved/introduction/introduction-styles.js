@@ -31,17 +31,16 @@ const ImageContainer = styled.div`
   position: absolute;
   right: 0;
   z-index: -10;
+  margin-top: -3.2rem;
   @media ${devices.mobile} {
     width: 45%;
     overflow-x: hidden;
   }
-  @media ${devices.tablet} {
+  @media (min-width: 500px) {
     display: none;
   }
 `
 
-const MobileImage = styled.img`
-  transform: scale(1.5, 1.5);
-`
+const MobileImage = styled.img``
 
 export { Container, TextContainer, ImageContainer, MobileImage }
