@@ -41,6 +41,4 @@ const ImageContainer = styled.div`
   }
 `
 
-const MobileImage = styled.img``
-
-export { Container, TextContainer, ImageContainer, MobileImage }
+export { Container, TextContainer, ImageContainer }
