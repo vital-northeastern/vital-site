@@ -13,9 +13,11 @@ import ApplicationInfo from "../components/get-involved/application-info/applica
 import {
   ImageContainer,
   Image,
+  Image2,
   PositionCardsContainer,
 } from "../page-styles/get-involved-styles"
 import top_svg from "../images/top_svg.svg"
+import middle_svg from "../images/middle_svg.svg"
 
 const GetInvolved = props => {
   const involvedPage = get(props, "data.contentfulGetInvolvedPage")
@@ -42,6 +44,9 @@ const GetInvolved = props => {
       />
       <ImageContainer>
         <Image src={top_svg} alt="blue and white geometric shape" />
+      </ImageContainer>
+      <ImageContainer>
+        <Image2 src={middle_svg} alt="blue and white geometric shape" />
       </ImageContainer>
       <PositionCardsContainer>
         {involvedPage.positions.map((position, index) => {

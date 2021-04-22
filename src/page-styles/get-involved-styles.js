@@ -13,6 +13,17 @@ const Image = styled.img`
   margin-top: -3rem;
 `
 
+const Image2 = styled.img`
+  position: absolute;
+  transform: scale(0.85, 0.85);
+  left: 32%;
+  margin-top: 17rem;
+  @media (max-width: 1220px) {
+    transform: scale(0.75, 0.75);
+    left: 30%;
+  }
+`
+
 const PositionCardsContainer = styled.div`
   padding-top: 22px;
   @media ${devices.mobile} {
@@ -27,4 +38,4 @@ const PositionCardsContainer = styled.div`
   }
 `
 
-export { ImageContainer, Image, PositionCardsContainer }
+export { ImageContainer, Image, Image2, PositionCardsContainer }
