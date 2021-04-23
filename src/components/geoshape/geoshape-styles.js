@@ -19,7 +19,10 @@ const Geoshape = styled.img`
   ${({ platforms }) =>
     platforms &&
     `
-  width: 37vw;
+  display: block;
+  margin-bottom: 0rem !important;
+  width: 41vw;
+  z-index: -1;
   @media (max-width: 1220px) {
     margin-top: 1.2rem;
   }

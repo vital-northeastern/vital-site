@@ -22,7 +22,7 @@ const Platforms = ({ title, platforms }) => {
       </Title>
       <GeoshapeContainer>
         <Geoshape
-          marginTop="-4.5rem"
+          marginTop="-5.5rem"
           platforms={true}
           right={true}
           src={bg_svg}

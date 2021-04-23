@@ -50,6 +50,7 @@ const WhatWeDo = props => {
         title={whatWeDo.platforms.title}
         platforms={whatWeDo.platforms.platforms}
       />
+      <div style={{ height: "200px", backgroundColor: "red", marginBottom: "0rem" }}></div>
     </Layout>
   )
 }
