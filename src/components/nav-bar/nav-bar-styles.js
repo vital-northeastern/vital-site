@@ -1,8 +1,7 @@
 import { Link } from "gatsby"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import { fonts } from "../../constants/typography"
 import { white, navyBlue, darkGray, royalBlue } from "../../constants/colors"
-import { animations } from "../../constants/animations"
 import { devices, padding } from "../../constants/devices"
 
 const NavWrapper = styled.nav`
@@ -82,7 +81,7 @@ const NavLink = styled(Link)`
     line-height: 12px;
   }
   @media ${devices.mobileMax} {
-    line-height: 10px;
+    line-height: 12px;
   }
 `
 
@@ -138,19 +137,10 @@ const SmallNavLinkContainer = styled.div`
   }
 `
 
-const fadeIn = keyframes`
-  0% { opacity: 0%; }
-  100% { opacity: 100%; }
-`
-
-const fadeOut = keyframes`
-  0% { opacity: 100%; }
-  100% { opacity: 0%; }
-`
-
 const SmallMenuContainer = styled.div`
   position: absolute;
   z-index: 2;
+  transition: all 0.25s;
   background: ${navyBlue};
   top: 1rem;
   right: 1rem;
@@ -158,9 +148,6 @@ const SmallMenuContainer = styled.div`
   padding: 0.5rem 0.5rem 0 0.5rem;
   display: flex;
   flex-direction: column;
-  animation: ${props => (props.out ? fadeOut : fadeIn)}
-    ${animations.navBarFadeLength}s 1;
-
   @media ${devices.laptop} {
     display: none;
   }
