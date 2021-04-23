@@ -37,13 +37,25 @@ const NavBar = ({ navbarstyle }) => {
         </NavBrandWrapper>
       </FlexColumn>
       <FlexColumn>
-        <NavLink navbarstyle={navbarstyle} to="/what-we-do">
+        <NavLink
+          navbarstyle={navbarstyle}
+          hoverColor={navbarstyle}
+          to="/what-we-do"
+        >
           About
         </NavLink>
-        <NavLink navbarstyle={navbarstyle} to="/whats-happening">
+        <NavLink
+          navbarstyle={navbarstyle}
+          hoverColor={navbarstyle}
+          to="/whats-happening"
+        >
           Events
         </NavLink>
-        <NavLink navbarstyle={navbarstyle} to="/our-team">
+        <NavLink
+          navbarstyle={navbarstyle}
+          hoverColor={navbarstyle}
+          to="/our-team"
+        >
           Team
         </NavLink>
       </FlexColumn>
@@ -66,16 +78,28 @@ const NavBar = ({ navbarstyle }) => {
             <Cross />
           </CrossContainer>
           <SmallLinksContainer>
-            <NavLink navbarstyle="gradient" to="/what-we-do">
+            <NavLink
+              navbarstyle="gradient"
+              hoverColor="mobile"
+              to="/what-we-do"
+            >
               About
             </NavLink>
-            <NavLink navbarstyle="gradient" to="/whats-happening">
+            <NavLink
+              navbarstyle="gradient"
+              hoverColor="mobile"
+              to="/whats-happening"
+            >
               Events
             </NavLink>
-            <NavLink navbarstyle="gradient" to="/our-team">
+            <NavLink navbarstyle="gradient" hoverColor="mobile" to="/our-team">
               Team
             </NavLink>
-            <NavLink navbarstyle="gradient" to="/get-involved">
+            <NavLink
+              navbarstyle="gradient"
+              hoverColor="mobile"
+              to="/get-involved"
+            >
               Get Involved
             </NavLink>
           </SmallLinksContainer>

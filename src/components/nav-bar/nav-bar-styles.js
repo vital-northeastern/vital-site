@@ -1,13 +1,7 @@
 import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
 import { fonts } from "../../constants/typography"
-import {
-  white,
-  navyBlue,
-  darkGray,
-  periwinkle,
-  royalBlue,
-} from "../../constants/colors"
+import { white, navyBlue, darkGray, royalBlue } from "../../constants/colors"
 import { animations } from "../../constants/animations"
 import { devices, padding } from "../../constants/devices"
 
@@ -79,9 +73,10 @@ const NavLink = styled(Link)`
   transition: all 0.2s;
   margin-left: 25px;
   margin-right: 25px;
+  z-index: 10;
   :hover {
     transition: all 0.2s;
-    color: ${props => (props.navbarstyle === "gradient" ? "black" : royalBlue)};
+    color: ${props => (props.hoverColor === "gradient" ? navyBlue : royalBlue)};
   }
   @media ${devices.tabletMax} {
     line-height: 12px;
@@ -156,13 +151,10 @@ const fadeOut = keyframes`
 const SmallMenuContainer = styled.div`
   position: absolute;
   z-index: 2;
-  background: ${periwinkle};
+  background: ${navyBlue};
   top: 1rem;
   right: 1rem;
-  border: solid;
-  border-width: 2px;
-  border-radius: 10px;
-  border-color: ${navyBlue};
+  border-radius: 9%;
   padding: 0.5rem 0.5rem 0 0.5rem;
   display: flex;
   flex-direction: column;
