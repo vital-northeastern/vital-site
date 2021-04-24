@@ -4,9 +4,12 @@ import {
   ApplicationContainer,
   H2Header,
   ButtonEmail,
+  MobileImageContainer,
+  MobileImage,
 } from "./application-info-styles"
 import { GeoshapeContainer, Geoshape } from "../../geoshape/geoshape-styles"
 import bottom_svg from "../../../images/get-involved/bottom_shape.svg"
+import bottom_mobile_svg from "../../../images/get-involved/bottom_mobile.svg"
 
 const ApplicationInfo = ({
   subheading,
@@ -31,6 +34,12 @@ const ApplicationInfo = ({
           <ButtonEmail primary={true}>{ctaTitle}</ButtonEmail>
         </a>
       </ApplicationContainer>
+      <MobileImageContainer>
+        <MobileImage
+          src={bottom_mobile_svg}
+          alt="blue and white geometric shape"
+        />
+      </MobileImageContainer>
     </>
   )
 }
