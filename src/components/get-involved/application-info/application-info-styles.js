@@ -34,12 +34,9 @@ const MobileImageContainer = styled.div`
   }
 `
 
-const MobileImage = styled.img``
-
 export {
   ApplicationContainer,
   H2Header,
   ButtonEmail,
   MobileImageContainer,
-  MobileImage,
 }

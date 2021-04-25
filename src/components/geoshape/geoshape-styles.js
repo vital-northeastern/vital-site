@@ -35,8 +35,8 @@ const Geoshape = styled.img`
   transform: scale(0.85, 0.85);
   left: 32%;
   @media (max-width: 1220px) {
-    transform: scale(0.75, 0.75);
-    left: 30%;
+    transform: scale(0.72, 0.72);
+    left: 28%;
   }
   `}
 `

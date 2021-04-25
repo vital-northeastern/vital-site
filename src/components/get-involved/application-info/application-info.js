@@ -5,7 +5,6 @@ import {
   H2Header,
   ButtonEmail,
   MobileImageContainer,
-  MobileImage,
 } from "./application-info-styles"
 import { GeoshapeContainer, Geoshape } from "../../geoshape/geoshape-styles"
 import bottom_svg from "../../../images/get-involved/bottom_shape.svg"
@@ -35,7 +34,7 @@ const ApplicationInfo = ({
         </a>
       </ApplicationContainer>
       <MobileImageContainer>
-        <MobileImage
+        <img
           src={bottom_mobile_svg}
           alt="blue and white geometric shape"
         />
