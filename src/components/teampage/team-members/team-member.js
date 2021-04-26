@@ -3,10 +3,7 @@ import {
   ContactCardContainer,
   CardPosition,
   InfoContainer,
-  MemberMajor,
-  MemberInfoSpacer,
-  ConnectLink,
-} from "../teampage/team-member-styles"
+} from "./team-member-styles"
 
 import {
   MemberName,
@@ -14,7 +11,9 @@ import {
   Overlay,
   OverlayText,
   MemberImg,
-} from "./team-shared-styles"
+  ConnectLink,
+  MemberInfo,
+} from "../team-shared-styles"
 
 export default ({
   name,
@@ -36,17 +35,12 @@ export default ({
       </MemberImg>
 
       <InfoContainer>
-        <MemberInfoSpacer></MemberInfoSpacer>
-        <div>
-          <MemberName>{name}</MemberName>
-          <MemberPosition>{position}</MemberPosition>
-          <MemberMajor></MemberMajor>
-        </div>
+        <MemberName>{name}</MemberName>
+        <MemberPosition>{position}</MemberPosition>
+        <MemberInfo>{major}</MemberInfo>
         {linkedinUrl ? (
           <ConnectLink href={linkedinUrl}>CONNECT</ConnectLink>
-        ) : (
-          <MemberInfoSpacer></MemberInfoSpacer>
-        )}
+        ) : null}
       </InfoContainer>
     </ContactCardContainer>
   </CardPosition>

@@ -4,11 +4,14 @@ import get from "lodash/get"
 import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import Team from "../components/teampage/teams"
-import Advisor from "../components/teampage/advisors"
+import Team from "../components/teampage/team-members/teams"
+import Advisor from "../components/teampage/advisors/advisors"
+import Header from "../components/header/header"
 
 const TeamPage = props => {
   const teamPage = get(props, "data.contentfulTeamPage")
+
+  console.log(teamPage)
 
   const listOfTeamsTypes = getTeamTypes(teamPage.teamMembers)
 
@@ -33,7 +36,11 @@ const TeamPage = props => {
   return (
     <Layout navbarstyle="gradient">
       <SEO title="Team Page" />
-      <h1>{teamPage.title}</h1>
+      <Header
+        title={teamPage.title}
+        subheading={teamPage.subheadingForTitle}
+        imageBool={true}
+      />
 
       {listOfTeamsTypes.map((teamType, index) => {
         const filteredByTeam = teamPage.teamMembers.filter(member => {

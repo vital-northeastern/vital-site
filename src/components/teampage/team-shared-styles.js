@@ -1,18 +1,22 @@
 import styled from "styled-components"
 import { devices } from "../../constants/devices"
 import { royalBlue, navyBlue } from "../../constants/colors"
-import { fontSizes, fontWeights } from "../../constants/typography"
+import {
+  fontWeights,
+  HName,
+  P,
+  PCard,
+  Connect,
+} from "../../constants/typography"
 
-const MemberName = styled.h2`
-  font-weight: 500;
-  color: ${navyBlue};
-  font-size: ${fontSizes.h2}
-  margin: 0;
+const MemberName = styled(HName)`
+  margin-bottom: 0;
 `
 
-const MemberPosition = styled.p`
+const MemberPosition = styled(P)`
   color: ${navyBlue};
   margin: 0;
+  font-weight: ${fontWeights.medium};
 `
 
 const Overlay = styled.div`
@@ -38,8 +42,8 @@ const OverlayText = styled.p`
 `
 
 const MemberImg = styled.div`
-  min-width: 45%;
-  padding-top: 45%;
+  min-width: 50%;
+  padding-top: 50%;
 
   background-image: url(${props => "https://" + props.photoUrl});
   background-size: cover;
@@ -52,4 +56,24 @@ const MemberImg = styled.div`
   }
 `
 
-export { MemberName, MemberPosition, Overlay, OverlayText, MemberImg }
+const ConnectLink = styled(Connect)`
+  z-index: 2;
+  display: inline-block;
+  align-self: flex-start;
+  color: ${royalBlue};
+  margin-top: 12px;
+`
+
+const MemberInfo = styled(PCard)`
+  margin: 0;
+`
+
+export {
+  MemberName,
+  MemberPosition,
+  Overlay,
+  OverlayText,
+  MemberImg,
+  ConnectLink,
+  MemberInfo,
+}

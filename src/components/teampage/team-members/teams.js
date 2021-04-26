@@ -5,11 +5,13 @@ import {
   TeamMembersContainer,
   BackgroundHex,
   TitleHolder,
-} from "../teampage/teams-styles"
-import TeamMember from "../teampage/team-member"
+  TeamPageTitle,
+} from "./teams-styles"
+import TeamMember from "./team-member"
 
 export default ({ teamName, members, index }) => (
   <TeamContainer>
+    {index === 0 ? <TeamPageTitle>EXECUTIVE BOARD</TeamPageTitle> : null}
     <TitleHolder>
       <TeamTitle index={index}>{teamName}</TeamTitle>
       <BackgroundHex index={index}></BackgroundHex>

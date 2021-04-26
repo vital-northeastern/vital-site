@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import Img from "gatsby-image"
-import { devices } from "../../constants/devices"
-import { royalBlue, navyBlue } from "../../constants/colors"
+import { size } from "../../../constants/devices"
+import { royalBlue } from "../../../constants/colors"
+import { P } from "../../../constants/typography"
 
 const CardPosition = styled.div`
   min-width: calc(50% - 30px);
@@ -10,14 +10,25 @@ const CardPosition = styled.div`
   margin-bottom: ${props =>
     props.isLast && props.index % 2 === 0 ? "0" : "160px"};
   margin-left: ${props => (props.index % 2 === 0 ? "0" : "60px")};
-
   position: relative;
+
+  @media only screen and (max-width: ${size.tablet}px) {
+    display: flex;
+    min-width: 100%;
+    margin: 0;
+    height: initial;
+  }
 `
 const ContactCardContainer = styled.div`
   display: inline-flex;
   min-width: 100%;
   position: absolute;
   top: ${props => (props.index % 2 === 0 ? "0" : "180px")};
+  @media only screen and (max-width: ${size.tablet}px) {
+    position: initial;
+    margin-bottom: 40px;
+    flex-direction: ${props => (props.index % 2 === 0 ? "row" : "row-reverse")};
+  }
 `
 
 const Overlay = styled.div`
@@ -35,61 +46,26 @@ const Overlay = styled.div`
   display: none;
 `
 
-const OverlayText = styled.p`
+const OverlayText = styled(P)`
   padding: 10%;
   color: white;
   position: absolute;
   top: 0;
 `
 
-const MemberImg = styled.div`
-  min-width: 45%;
-  padding-top: 45%;
-
-  background-image: url(${props => "https://" + props.photoUrl});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  position: relative;
-  &:hover ${Overlay} {
-    display: initial;
-  }
-`
-
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   padding: 0 4%;
   min-width: 50%;
 `
 
-const MemberInfoSpacer = styled.div`
-  min-height: 10%;
-`
-
-const MemberMajor = styled.p`
-  color: ${navyBlue};
-  margin: 0;
-`
-
-const ConnectLink = styled.a`
-  z-index: 2;
-  display: inline-block;
-  align-self: flex-start;
-  color: ${royalBlue};
-`
-
 export {
   ContactCardContainer,
   CardPosition,
-  MemberImg,
   InfoContainer,
-  MemberMajor,
-  MemberInfoSpacer,
-  ConnectLink,
   Overlay,
   OverlayText,
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import { AdvisorContainer, AdvisorsTitle } from "./advisors-styles.js"
-import AdvisorMember from "../teampage/advisor-member"
+import AdvisorMember from "./advisor-member"
 
 export default ({ advisors }) => (
   <div>
