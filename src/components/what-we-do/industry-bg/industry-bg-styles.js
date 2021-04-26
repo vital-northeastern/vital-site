@@ -1,45 +1,55 @@
 import styled from "styled-components"
-import { size, devices } from "../../../constants/devices"
+import { devices, padding } from "../../../constants/devices"
 import { darkGray } from "../../../constants/colors"
+import Img from "gatsby-image"
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 10px 80px;
-  @media (max-width: ${size.tablet}px) {
+  @media ${devices.mobile} {
     display: block;
+    padding: 8px ${padding.mobile};
+    margin-bottom: 50px;
+  }
+  @media ${devices.tablet} {
+    padding: 8px ${padding.tablet};
+  }
+  @media ${devices.laptop} {
+    padding: 8px ${padding.laptop};
+    display: flex;
+    align-items: center;
+    margin-bottom: -20px;
+  }
+  @media ${devices.desktop} {
+    padding: 8px ${padding.desktop};
   }
 `
 
 const TextContainer = styled.div`
   width: 45%;
   color: ${darkGray};
-  @media (max-width: ${size.tablet}px) {
+  @media ${devices.tabletMax} {
     width: 100%;
+    margin: 0 auto;
   }
 `
 
 const Text = styled.div`
-  @media ${devices.tablet} {
-    padding-right: 40px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-55%);
+  @media ${devices.laptop} {
+    padding-right: 50px;
   }
 `
 
-const ImageContainer = styled.div`
+const Image = styled(Img)`
+  height: 100%;
   width: 55%;
-  @media ${devices.tablet} and ${devices.tabletMax} {
-    padding-top: 50px;
-  }
-  @media (max-width: ${size.tablet}px) {
-    width: 100%;
+  @media ${devices.tabletMax} {
+    display: none;
   }
 `
 
-const Image = styled.img`
-  max-height: 100%;
+const MobileImage = styled(Img)`
+  @media ${devices.laptop} {
+    display: none;
+  }
 `
 
-export { Container, TextContainer, Text, ImageContainer, Image }
+export { Container, TextContainer, Text, Image, MobileImage }

@@ -31,7 +31,7 @@ const TeamPage = props => {
   }
 
   return (
-    <Layout>
+    <Layout navbarstyle="gradient">
       <SEO title="Team Page" />
       <h1>{teamPage.title}</h1>
 
@@ -83,6 +83,7 @@ export const pageQuery = graphql`
         position
         linkedinUrl
       }
+      subheadingForTitle
     }
   }
 `

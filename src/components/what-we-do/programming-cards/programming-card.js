@@ -7,26 +7,23 @@ import {
   CardContent,
   CardTitle,
   CardTitleContainer,
-  CardContentContainer,
   TextContainer,
 } from "./programming-card-styles"
 
-const ProgrammingCard = ({ key, title, description, photo, photoAlt }) => {
+const ProgrammingCard = ({ title, description, photo, photoAlt }) => {
   return (
     <CardContainer>
       <ImageContainer>
-        <Img className="featured" fluid={photo.fluid} alt={photoAlt} />
+        <Img fluid={photo.fluid} alt={photoAlt} />
       </ImageContainer>
-      <CardContentContainer>
-        <CardContent>
-          <CardTitleContainer>
-            <CardTitle>{title}</CardTitle>
-          </CardTitleContainer>
-          <TextContainer>
-            <PCard>{description}</PCard>
-          </TextContainer>
-        </CardContent>
-      </CardContentContainer>
+      <CardContent>
+        <CardTitleContainer>
+          <CardTitle>{title}</CardTitle>
+        </CardTitleContainer>
+        <TextContainer>
+          <PCard>{description}</PCard>
+        </TextContainer>
+      </CardContent>
     </CardContainer>
   )
 }

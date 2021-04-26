@@ -11,81 +11,63 @@ const CardContainer = styled.div`
     width: 60%;
   }
   @media ${devices.tabletMax} {
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
   }
   @media ${devices.laptop} {
     width: 30vw;
+    margin: 50px 10px 50px;
   }
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  padding: 50px 10px 50px;
 `
 
 const ImageContainer = styled.div`
   @media ${devices.mobile} {
     height: 50%;
   }
-  @media (min-width: 1000px) {
+  @media ${devices.laptop} {
     height: auto;
   }
   overflow: hidden;
 `
 
-const CardContentContainer = styled.div`
-  background-color: ${royalBlue};
-  @media ${devices.tablet} {
-    height: 330px;
-  }
-  @media ${devices.laptop} {
-    height: 450px;
-  }
-  @media (min-width: 1220px) {
-    height: 390px;
-  }
-`
-
 const CardContent = styled.div`
   color: ${white};
+  background-color: ${royalBlue};
+  flex: 1;
 `
 
 const CardTitle = styled(H2)`
   text-align: center;
-  padding-top: 30px;
+  padding-top: 24px;
   color: ${white};
-  @media ${devices.tablet} {
-    padding-bottom: 15px;
-  }
-  @media ${devices.laptop} {
-    padding-bottom: 25px;
+  margin: 0 auto;
+  @media ${devices.mobileMax} {
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
 `
 
 const CardTitleContainer = styled.div`
-  padding-top: 10px;
+  padding: 10px 25px 0px 25px;
 `
 
 const TextContainer = styled.div`
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   padding-left: 30px;
   padding-right: 30px;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-
-  @media ${devices.tablet} {
-    height: 250px;
-  }
-  @media ${devices.laptop} {
-    height: 320px;
-  }
-  @media (min-width: 1220px) {
-    height: 250px;
+  padding-top: 20px;
+  @media ${devices.mobileMax} {
+    padding-top: 0px;
+    height: auto;
+    padding-bottom: 20px;
   }
 `
 
 export {
   CardContainer,
   ImageContainer,
-  CardContentContainer,
   CardContent,
   CardTitle,
   CardTitleContainer,
