@@ -4,26 +4,28 @@ import { PCard } from "../../../constants/typography"
 import {
   CardContainer,
   ImageContainer,
-  CardContent,
+  CardLink,
   CardTitle,
   CardTitleContainer,
   TextContainer,
 } from "./programming-card-styles"
 
-const ProgrammingCard = ({ title, description, photo, photoAlt }) => {
+const ProgrammingCard = ({ title, description, photo, photoAlt, link }) => {
   return (
     <CardContainer>
       <ImageContainer>
         <Img fluid={photo.fluid} alt={photoAlt} />
       </ImageContainer>
-      <CardContent>
-        <CardTitleContainer>
-          <CardTitle>{title}</CardTitle>
-        </CardTitleContainer>
-        <TextContainer>
-          <PCard>{description}</PCard>
-        </TextContainer>
-      </CardContent>
+      <CardLink href={link} target="_blank" rel="noreferrer">
+        <div>
+          <CardTitleContainer>
+            <CardTitle>{title}</CardTitle>
+          </CardTitleContainer>
+          <TextContainer>
+            <PCard>{description}</PCard>
+          </TextContainer>
+        </div>
+      </CardLink>
     </CardContainer>
   )
 }

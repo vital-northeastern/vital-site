@@ -22,9 +22,9 @@ const ImageContainer = styled.div`
     margin-left: -130px;
   }
   @media ${devices.tablet} {
-    margin-left: -100px;
+    margin-left: -90px;
   }
-  @media ${devices.tabletMax} {
+  @media (max-width: 450px) {
     overflow: hidden;
   }
   @media ${devices.laptop} {
@@ -47,7 +47,7 @@ const MobileImage = styled.img`
   @media ${devices.mobile} {
     transform: scale(1.25, 1.25);
     padding-top: 90px;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
   @media ${devices.tablet} {
     padding-top: 150px;
