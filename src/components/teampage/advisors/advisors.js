@@ -13,6 +13,7 @@ export default ({ advisors }) => (
             photo={adv.photo}
             position={adv.position}
             linkedinUrl={adv.linkedinUrl}
+            key={adv.name + index}
           />
         )
       })}

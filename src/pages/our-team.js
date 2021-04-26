@@ -52,6 +52,7 @@ const TeamPage = props => {
             teamName={teamType}
             members={filteredByTeam}
             index={index}
+            key={teamType + index}
           ></Team>
         )
       })}

@@ -34,7 +34,7 @@ const Overlay = styled.div`
   display: none;
 `
 
-const OverlayText = styled.p`
+const OverlayText = styled(PCard)`
   padding: 10%;
   color: white;
   position: absolute;

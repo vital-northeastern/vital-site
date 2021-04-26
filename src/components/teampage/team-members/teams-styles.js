@@ -44,8 +44,7 @@ const BackgroundHex = styled.div`
   position: absolute;
 
   top: ${props => (props.index % 2 === 0 ? "-50px" : "-140px")};
-  left: ${props => (props.index % 2 === 0 ? "-140px" : "40px")};
-  right: ${props => (props.index % 2 === 0 ? "0" : "-80px")};
+  left: ${props => (props.index % 2 === 0 ? "-180px" : "180px")};
 
   background-repeat: no-repeat;
   transform: ${props =>

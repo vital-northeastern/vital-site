@@ -29,6 +29,7 @@ export default ({ teamName, members, index }) => (
             team={member.team}
             index={index}
             isLast={members.length - 1 === index}
+            key={member.name + index}
           />
         )
       })}
