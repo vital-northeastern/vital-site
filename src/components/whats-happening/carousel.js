@@ -1,31 +1,51 @@
 import React from "react"
 import Img from "gatsby-image"
-import { tns } from "../../../node_modules/tiny-slider"
+import TinySlider from "tiny-slider-react"
+import { HName } from "../../constants/typography"
+import { CarouselTitleContainer } from "./carousel-styles"
+import "./carousel.css"
 
 const Carousel = ({ title, carouselItems }) => {
-  var slider = tns({
-    container: ".my-slider",
-    items: 3,
-    slideBy: "page",
-    autoplay: true,
-  })
+  const settings = {
+    // nav: false,
+    container: "#customize",
+
+    gutter: 50,
+    // items: 1,
+    center: true,
+    edgePadding: 200,
+    controlsPosition: "bottom",
+    navPosition: "bottom",
+    navContainer: "#customize-nav",
+  }
   return (
     <>
-      <p>{title}</p>
-      {carouselItems.map((item, index) => {
-        return (
-          <div>
-            <h4>{item.title}</h4>
-            <p>{item.subTitle}</p>
-            <a href={item.link}>Learn More</a>
-            <Img
-              className="featured"
-              fluid={item.featuredImage.fluid}
-              alt={item.featuredImage.description}
-            />
-          </div>
-        )
-      })}
+      <CarouselTitleContainer>
+        <HName>{title}</HName>
+      </CarouselTitleContainer>
+
+      <TinySlider settings={settings}>
+        {carouselItems.map((item, index) => {
+          return (
+            <div>
+              <a href={item.link}>Learn More</a>
+              <Img
+                className="featured"
+                fluid={item.featuredImage.fluid}
+                alt={item.featuredImage.description}
+              />
+
+              <h4>{item.title}</h4>
+              <p>{item.subTitle}</p>
+            </div>
+          )
+        })}
+      </TinySlider>
+      <div id="customize-nav">
+        <button>hi</button>
+        <button>hi</button>
+        <button>hi</button>
+      </div>
     </>
   )
 }
