@@ -22,6 +22,9 @@ const Geoshape = styled.img`
   display: block;
   width: 43vw;
   z-index: -1;
+  @media ${devices.desktop} {
+    margin-top: -21rem;
+  }
   @media (max-width: 1220px) {
     margin-top: 1.2rem;
   }

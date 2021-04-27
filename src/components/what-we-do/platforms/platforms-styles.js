@@ -14,6 +14,9 @@ const PlatformsContainer = styled.div`
     padding-top: 14px;
     margin-bottom: 8rem;
   }
+  @media ${devices.desktop} {
+    margin-bottom: 10rem;
+  }
   width: auto;
   height: auto;
 `
@@ -27,6 +30,9 @@ const Title = styled.div`
   }
   @media ${devices.laptop} {
     padding-left: ${padding.laptop};
+  }
+  @media ${devices.laptop} {
+    padding-left: ${padding.desktop};
   }
 `
 
@@ -102,7 +108,7 @@ const PlatformTitle = styled(H2)`
 const PlatformButton = styled(Button)`
   font-size: 12px;
   @media ${devices.desktop} {
-    font-size: 13px;
+    font-size: 14px;
   }
   padding: 17px 55px;
   box-shadow: 1.5px 1.5px 2px ${shadowGray};

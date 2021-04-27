@@ -95,6 +95,9 @@ const P = styled.p`
   font-family: ${fonts.body};
   font-weight: ${fontWeights.normal};
   line-height: 24px;
+  @media ${devices.desktop} {
+    line-height: 27px;
+  }
   @media ${devices.mobileMax} {
     line-height: 22px;
   }
@@ -109,7 +112,7 @@ const PCard = styled.p`
     line-height: 22px;
   }
   @media ${devices.desktop} {
-    line-height: 25px;
+    line-height: 26px;
   }
 `
 

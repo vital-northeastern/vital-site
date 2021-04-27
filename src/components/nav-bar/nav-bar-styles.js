@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { fonts } from "../../constants/typography"
 import { white, navyBlue, darkGray } from "../../constants/colors"
+import { devices } from "../../constants/devices"
 
 const NavWrapper = styled.nav`
   display: flex;
@@ -54,6 +55,9 @@ const NavLink = styled(Link)`
     transition: all 0.2s;
     color: black;
   }
+  @media ${devices.desktop} {
+    font-size: 16px;
+  }
 `
 
 const NavBrand = styled.span`
@@ -88,6 +92,9 @@ const NavButton = styled.button`
   }
   &:focus {
     outline: 0;
+  }
+  @media ${devices.desktop} {
+    font-size: 15px;
   }
 `
 
