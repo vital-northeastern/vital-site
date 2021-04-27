@@ -28,7 +28,11 @@ export default ({
 }) => (
   <CardPosition index={index} isLast={isLast}>
     <ContactCardContainer index={index}>
-      <MemberImg photoUrl={photo.fluid.src} alt={"Photo of " + name}>
+      <MemberImg
+        fluid={photo.fluid}
+        photoUrl={photo.fluid.src}
+        alt={"Photo of " + name}
+      >
         <Overlay>
           <OverlayText>This is a placeholder. Lorem Ipsum baby.</OverlayText>
         </Overlay>

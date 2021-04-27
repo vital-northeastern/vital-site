@@ -8,8 +8,13 @@ export default ({ name, photo, position, linkedinUrl }) => (
       photoUrl={photo.fluid.src}
       alt={"Photo of " + name}
     ></AdvisorImage>
-    <MemberName>{name}</MemberName>
-    <MemberInfo>{position}</MemberInfo>
-    {linkedinUrl ? <ConnectLink href={linkedinUrl}>CONNECT</ConnectLink> : null}
+    <div>
+      <MemberName>{name}</MemberName>
+
+      <MemberInfo>{position}</MemberInfo>
+      {linkedinUrl ? (
+        <ConnectLink href={linkedinUrl}>CONNECT</ConnectLink>
+      ) : null}
+    </div>
   </AdvisorCard>
 )

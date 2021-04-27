@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { devices } from "../../constants/devices"
 import { royalBlue, navyBlue } from "../../constants/colors"
 import {
   fontWeights,

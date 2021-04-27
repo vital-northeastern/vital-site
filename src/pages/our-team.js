@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
-import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Team from "../components/teampage/team-members/teams"
@@ -10,8 +9,6 @@ import Header from "../components/header/header"
 
 const TeamPage = props => {
   const teamPage = get(props, "data.contentfulTeamPage")
-
-  console.log(teamPage)
 
   const listOfTeamsTypes = getTeamTypes(teamPage.teamMembers)
 

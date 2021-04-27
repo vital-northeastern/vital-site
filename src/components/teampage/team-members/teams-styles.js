@@ -1,5 +1,4 @@
 import styled from "styled-components"
-// import background from "./gatsby-icon.png"
 import hex from "../../../images/blue_hex.svg"
 import { HName, HUpper } from "../../../constants/typography"
 import { navyBlue, royalBlue } from "../../../constants/colors"
@@ -18,20 +17,24 @@ const TeamContainer = styled.div`
 const TeamPageTitle = styled(HUpper)`
   color: ${royalBlue};
   text-align: center;
-  margin-top: 60px;
+  margin: 60px 0 90px 0;
 `
 
 const TitleHolder = styled.div`
   position: relative;
+  overflow-x: clip;
+  padding: 0 7%;
 `
 
 const TeamTitle = styled(HName)`
   color: ${navyBlue};
   text-align: ${props => (props.index % 2 === 0 ? "left" : "right")};
   margin-bottom: 60px;
+  margin-right: ${props => (props.index % 2 === 0 ? "0" : "calc(25% - 120px)")};
 
   @media only screen and (max-width: ${size.tablet}px) {
     text-align: initial;
+    margin-right: 0;
   }
 `
 
