@@ -42,6 +42,7 @@ const WhatWeDo = props => {
               description={card.shortDescription.shortDescription}
               photo={card.photo}
               photoAlt={card.photo.description}
+              link={card.link}
             />
           )
         })}
@@ -103,6 +104,7 @@ export const pageQuery = graphql`
           }
           description
         }
+        link
       }
       platforms {
         title
