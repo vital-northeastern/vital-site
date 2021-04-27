@@ -17,6 +17,9 @@ const TextContainer = styled.div`
   @media ${devices.laptop} {
     padding: 170px 0px 40px ${padding.laptop};
   }
+  @media ${devices.desktop} {
+    padding-left: ${padding.desktop};
+  }
 `
 
 const ImageContainer = styled.div`

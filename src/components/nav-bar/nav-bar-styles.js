@@ -18,6 +18,9 @@ const NavWrapper = styled.nav`
   @media ${devices.laptop} {
     padding: 15px ${padding.laptop};
   }
+  @media ${devices.desktop} {
+    padding: 22px ${padding.desktop} 15px;
+  }
   align-items: center;
   font-family: ${fonts.nav};
   height: 90px;
@@ -40,20 +43,16 @@ const FlexColumn = styled.div`
   &:nth-child(2) {
     justify-content: center;
   }
-  @media ${devices.tabletMax} {
-    &:nth-child(2) {
-      display: none;
-    }
-  }
   &:nth-child(3) {
     justify-content: flex-end;
   }
   @media ${devices.tabletMax} {
+    &:nth-child(2) {
+      display: none;
+    }
     &:nth-child(3) {
       display: none;
     }
-  }
-  @media ${devices.tabletMax} {
     &:nth-child(4) {
       justify-content: flex-end;
     }
@@ -80,8 +79,8 @@ const NavLink = styled(Link)`
   @media ${devices.tabletMax} {
     line-height: 12px;
   }
-  @media ${devices.mobileMax} {
-    line-height: 12px;
+  @media ${devices.desktop} {
+    font-size: 16px;
   }
 `
 
@@ -117,6 +116,10 @@ const NavButton = styled.button`
   }
   &:focus {
     outline: 0;
+  }
+  @media ${devices.desktop} {
+    font-size: 14px;
+    padding: 10px 30px;
   }
 `
 
