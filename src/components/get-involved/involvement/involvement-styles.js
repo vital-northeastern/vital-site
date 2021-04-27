@@ -15,6 +15,9 @@ const Container = styled.div`
     padding: 10px ${padding.laptop};
     display: flex;
   }
+  @media ${devices.desktop} {
+    padding: 10px ${padding.desktop};
+  }
 `
 
 const TextContainer = styled.div`

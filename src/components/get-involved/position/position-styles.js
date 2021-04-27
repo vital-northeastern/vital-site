@@ -47,6 +47,9 @@ const PositionContainer = styled.div`
     margin-bottom: 1rem;
   }
   @media ${devices.desktop} {
+    width: 37vw;
+    margin-left: ${props =>
+      props.index % 2 === 0 ? `${padding.desktop}` : "0px"};
     height: auto;
   }
 `

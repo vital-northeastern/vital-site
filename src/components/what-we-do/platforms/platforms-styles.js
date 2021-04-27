@@ -4,6 +4,7 @@ import { Button } from "../../../constants/buttons"
 import { size } from "../../../constants/devices"
 import { royalBlue, shadowGray } from "../../../constants/colors"
 import { devices, padding } from "../../../constants/devices"
+import { Geoshape } from "../../geoshape/geoshape-styles"
 
 const PlatformsContainer = styled.div`
   @media ${devices.mobile} {
@@ -33,6 +34,21 @@ const Title = styled.div`
   }
   @media ${devices.laptop} {
     padding-left: ${padding.desktop};
+  }
+`
+
+const GeoshapePlatform = styled(Geoshape)`
+  display: block;
+  width: 43vw;
+  z-index: -1;
+  @media ${devices.desktop} {
+    margin-top: -21rem;
+  }
+  @media (max-width: 1220px) {
+    margin-top: 1.2rem;
+  }
+  @media (max-width: 1100px) {
+    margin-top: 3rem;
   }
 `
 
@@ -117,6 +133,7 @@ const PlatformButton = styled(Button)`
 export {
   PlatformsContainer,
   Title,
+  GeoshapePlatform,
   Platform,
   LineContainer,
   PlatformContent,
