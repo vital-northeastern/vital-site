@@ -19,7 +19,7 @@ const NavWrapper = styled.nav`
     padding: 15px ${padding.laptop};
   }
   @media ${devices.desktop} {
-    padding: 22px 120px 15px;
+    padding: 22px ${padding.desktop} 15px;
   }
   align-items: center;
   font-family: ${fonts.nav};
