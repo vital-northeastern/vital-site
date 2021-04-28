@@ -18,6 +18,9 @@ const Container = styled.div`
     align-items: center;
     margin-bottom: -20px;
   }
+  @media ${devices.desktop} {
+    padding: 8px ${padding.desktop};
+  }
 `
 
 const TextContainer = styled.div`

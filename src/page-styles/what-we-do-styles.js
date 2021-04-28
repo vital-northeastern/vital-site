@@ -20,8 +20,8 @@ const CardsContainer = styled.div`
     margin-right: 70px;
   }
   @media ${devices.desktop} {
-    margin-left: 143px;
-    margin-right: 143px;
+    margin-left: 115px;
+    margin-right: 115px;
   }
 `
 

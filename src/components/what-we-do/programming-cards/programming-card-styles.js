@@ -55,7 +55,7 @@ const CardTitle = styled(H2)`
     padding-bottom: 10px;
   }
   @media ${devices.tablet} {
-    padding-top: 0px;
+    padding-top: 24px;
     padding-bottom: 0px;
   }
 `
@@ -69,7 +69,7 @@ const TextContainer = styled.div`
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 20px;
-  @media (${devices.mobileMax}) {
+  @media ${devices.mobileMax} {
     padding-top: 0px;
     height: auto;
     padding-bottom: 20px;
