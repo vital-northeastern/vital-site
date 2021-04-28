@@ -12,7 +12,7 @@ const PlatformsContainer = styled.div`
   }
   @media ${devices.tablet} {
     padding-top: 14px;
-    margin-bottom: 0rem;
+    margin-bottom: 8rem;
   }
   width: auto;
   height: auto;
@@ -36,9 +36,9 @@ const Platform = styled.div`
     width: 100vw;
   }
   @media ${devices.tablet} {
-    width: ${props => (props.num === 0 ? "50vw" : "78vw")};
+    width: ${props => (props.num === 0 ? "48vw" : "76vw")};
   }
-  padding-top: ${props => (props.num === 0 ? "0px" : "24px")};
+  padding-top: ${props => (props.num === 0 ? "10px" : "24px")};
 `
 
 const PlatformContent = styled.div`
@@ -47,7 +47,7 @@ const PlatformContent = styled.div`
     padding-right: ${padding.mobile};
   }
   @media ${devices.tablet} {
-    width: ${props => (props.num === 0 ? "60%" : "35%")};
+    width: ${props => (props.num === 0 ? "59%" : "35%")};
     padding-right: 0px;
   }
 `
@@ -58,7 +58,7 @@ const LineContainer = styled.div`
     padding-right: 18px;
   }
   @media ${devices.tablet} {
-    width: ${props => (props.num === 0 ? "40%" : "65%")};
+    width: ${props => (props.num === 0 ? "41%" : "65%")};
     padding-right: ${props => (props.num === 0 ? "18px" : "0px")};
   }
   display: flex;
@@ -104,30 +104,8 @@ const PlatformButton = styled(Button)`
   @media ${devices.desktop} {
     font-size: 13px;
   }
-  padding: 19px 52px;
+  padding: 17px 55px;
   box-shadow: 1.5px 1.5px 2px ${shadowGray};
-`
-
-const ImageContainer = styled.div`
-  z-index: -10;
-  @media ${devices.tabletMax} {
-    display: none;
-  }
-`
-
-const Image = styled.img`
-  position: absolute;
-  margin-top: -1.7rem;
-  left: 63%;
-  width: 67vw;
-  @media (max-width: 1220px) {
-    margin-top: 1.2rem;
-  }
-  @media (max-width: 1100px) {
-    width: 60vw;
-    margin-top: 150px;
-  }
-  height: auto;
 `
 
 export {
@@ -140,6 +118,4 @@ export {
   Dot,
   PlatformTitle,
   PlatformButton,
-  ImageContainer,
-  Image,
 }

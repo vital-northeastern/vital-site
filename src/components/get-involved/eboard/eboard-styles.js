@@ -50,9 +50,6 @@ const ButtonPosition = styled.div`
     margin-bottom: 15px;
   }
   @media ${devices.laptop} {
-    margin-left: 43%;
-  }
-  @media (min-width: 1028px) {
     margin-left: 60%;
   }
   @media (min-width: 1220px) {

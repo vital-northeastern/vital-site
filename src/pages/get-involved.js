@@ -11,6 +11,12 @@ import Involvement from "../components/get-involved/involvement/involvement"
 import Position from "../components/get-involved/position/position"
 import ApplicationInfo from "../components/get-involved/application-info/application-info"
 import { PositionCardsContainer } from "../page-styles/get-involved-styles"
+import {
+  GeoshapeContainer,
+  Geoshape,
+} from "../components/geoshape/geoshape-styles"
+import top_svg from "../images/get-involved/top_shape.svg"
+import middle_svg from "../images/get-involved/middle_shape.svg"
 
 const GetInvolved = props => {
   const involvedPage = get(props, "data.contentfulGetInvolvedPage")
@@ -35,6 +41,21 @@ const GetInvolved = props => {
         blurb={involvedPage.involvementBlurb}
         disclaimer={involvedPage.disclaimer}
       />
+      <GeoshapeContainer>
+        <Geoshape
+          marginTop="-3rem"
+          src={top_svg}
+          alt="blue and white geometric shape"
+        />
+      </GeoshapeContainer>
+      <GeoshapeContainer>
+        <Geoshape
+          marginTop="17rem"
+          middle={true}
+          src={middle_svg}
+          alt="blue and white geometric shape"
+        />
+      </GeoshapeContainer>
       <PositionCardsContainer>
         {involvedPage.positions.map((position, index) => {
           return (
