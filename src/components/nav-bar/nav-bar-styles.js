@@ -84,6 +84,16 @@ const NavLink = styled(Link)`
   }
 `
 
+const NavLogo = styled.img`
+  @media ${devices.mobile} {
+    width: 18%;
+  }
+  @media ${devices.tablet} {
+    width: 20%;
+  }
+  margin-top: 3rem;
+`
+
 const NavBrand = styled.span`
   color: ${darkGray};
   font-size: 18px;
@@ -176,6 +186,7 @@ const CrossContainer = styled.div`
 export {
   NavWrapper,
   NavBrandWrapper,
+  NavLogo,
   NavLink,
   NavBrand,
   NavButton,

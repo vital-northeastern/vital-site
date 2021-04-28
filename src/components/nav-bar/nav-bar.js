@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { navigate } from "gatsby"
-import { animations } from "../../constants/animations"
 import { Hamburger, Cross } from "../../constants/icons"
 import {
   NavWrapper,
   NavBrandWrapper,
+  NavLogo,
   NavLink,
   NavBrand,
   NavButton,
@@ -16,24 +17,40 @@ import {
 } from "./nav-bar-styles.js"
 
 const NavBar = ({ navbarstyle }) => {
+  const data = useStaticQuery(graphql`
+    query logoQuery {
+      contentfulLogos {
+        smallIcon {
+          file {
+            url
+          }
+          description
+        }
+      }
+    }
+  `)
+
   const [smallLinks, setSmallLinks] = useState(false)
-  const [delay, setDelay] = useState(false)
+  const [crossClose, setCrossClose] = useState(false)
 
   useEffect(() => {
-    if (delay) {
+    if (crossClose) {
       const interval = setInterval(() => {
-        setDelay(false)
+        setCrossClose(false)
         setSmallLinks(false)
-      }, animations.navBarFadeLength * 1000)
+      })
       return () => clearInterval(interval)
     }
-  }, [delay])
+  }, [crossClose])
 
   return (
     <NavWrapper navbarstyle={navbarstyle}>
       <FlexColumn>
         <NavBrandWrapper to="/">
-          <NavBrand>ViTAL</NavBrand>
+          <NavLogo
+            src={data.contentfulLogos.smallIcon.file.url}
+            alt={data.contentfulLogos.smallIcon.description}
+          />
         </NavBrandWrapper>
       </FlexColumn>
       <FlexColumn>
@@ -73,8 +90,8 @@ const NavBar = ({ navbarstyle }) => {
         </FlexColumn>
       </SmallNavLinkContainer>
       {smallLinks && (
-        <SmallMenuContainer out={delay}>
-          <CrossContainer onClick={() => setDelay(true)}>
+        <SmallMenuContainer out={crossClose}>
+          <CrossContainer onClick={() => setCrossClose(true)}>
             <Cross />
           </CrossContainer>
           <SmallLinksContainer>
