@@ -23,8 +23,10 @@ const fontSizes = {
 
 const PositionContainer = styled.div`
   z-index: 1;
-  overflow: hidden;
-  overflow-x: hidden;
+  @media ${devices.tabletMax} {
+    overflow: hidden;
+    overflow-x: hidden;
+  }
   @media ${devices.mobile} {
     width: 100vw;
     height: auto;
@@ -105,12 +107,16 @@ const PositionName = styled(H2)`
 `
 
 const PositionDescription = styled(PCard)`
-  line-height: 21px;
   @media ${devices.mobile} {
+    line-height: 21px;
     padding-right: ${padding.mobile};
   }
   @media ${devices.tablet} {
+    line-height: 23px;
     padding-right: 0px;
+  }
+  @media ${devices.desktop} {
+    line-height: 25px;
   }
 `
 

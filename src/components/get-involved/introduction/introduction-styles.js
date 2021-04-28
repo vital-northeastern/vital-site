@@ -17,7 +17,7 @@ const Container = styled.div`
 
 const TextContainer = styled.div`
   @media ${devices.mobile} {
-    width: 65%;
+    width: 64%;
     padding-top: 40px;
   }
   @media ${devices.tablet} {
@@ -31,17 +31,11 @@ const ImageContainer = styled.div`
   position: absolute;
   right: 0;
   z-index: -10;
-  @media ${devices.mobile} {
-    width: 45%;
-    overflow-x: hidden;
-  }
+  margin-top: -3.8rem;
+  overflow-x: hidden;
   @media ${devices.tablet} {
     display: none;
   }
 `
 
-const MobileImage = styled.img`
-  transform: scale(1.5, 1.5);
-`
-
-export { Container, TextContainer, ImageContainer, MobileImage }
+export { Container, TextContainer, ImageContainer }

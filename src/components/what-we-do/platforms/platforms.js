@@ -10,10 +10,9 @@ import {
   PlatformContent,
   PlatformTitle,
   PlatformButton,
-  ImageContainer,
-  Image,
 } from "./platforms-styles"
-import bg_svg from "../../../images/platform.svg"
+import { GeoshapeContainer, Geoshape } from "../../geoshape/geoshape-styles"
+import bg_svg from "../../../images/what-we-do/platforms.svg"
 
 const Platforms = ({ title, platforms }) => {
   return (
@@ -21,9 +20,15 @@ const Platforms = ({ title, platforms }) => {
       <Title>
         <H2>{title}</H2>
       </Title>
-      <ImageContainer>
-        <Image src={bg_svg} alt="blue and white geometric shape" />
-      </ImageContainer>
+      <GeoshapeContainer>
+        <Geoshape
+          marginTop="-6.9rem"
+          platforms={true}
+          right={true}
+          src={bg_svg}
+          alt="blue and white geometric shape"
+        />
+      </GeoshapeContainer>
       {platforms.map((platform, index) => {
         return (
           <Platform num={index} key={platform.platformTitle}>
