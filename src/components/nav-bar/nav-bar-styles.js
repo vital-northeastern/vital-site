@@ -86,12 +86,13 @@ const NavLink = styled(Link)`
 
 const NavLogo = styled.img`
   @media ${devices.mobile} {
+    margin-top: 2.5rem;
     width: 18%;
   }
   @media ${devices.tablet} {
+    margin-top: 3rem;
     width: 20%;
   }
-  margin-top: 3rem;
 `
 
 const NavButton = styled.button`
