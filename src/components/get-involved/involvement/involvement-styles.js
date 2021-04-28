@@ -38,10 +38,13 @@ const Text = styled.div`
 `
 
 const H2Header = styled(H2)`
-  margin-bottom: 0.7rem;
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     line-height: 33px;
     margin-bottom: 1rem;
+  }
+  @media ${devices.tablet} {
+    line-height: 30px;
+    margin-bottom: 0.7rem;
   }
 `
 
