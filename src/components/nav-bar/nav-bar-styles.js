@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { fonts } from "../../constants/typography"
-import { white, navyBlue, darkGray, royalBlue } from "../../constants/colors"
+import { white, navyBlue, royalBlue } from "../../constants/colors"
 import { devices, padding } from "../../constants/devices"
 
 const NavWrapper = styled.nav`
@@ -19,7 +19,7 @@ const NavWrapper = styled.nav`
     padding: 15px ${padding.laptop};
   }
   @media ${devices.desktop} {
-    padding: 22px ${padding.desktop} 15px;
+    padding: 22px 120px 15px;
   }
   align-items: center;
   font-family: ${fonts.nav};
@@ -92,17 +92,6 @@ const NavLogo = styled.img`
     width: 20%;
   }
   margin-top: 3rem;
-`
-
-const NavBrand = styled.span`
-  color: ${darkGray};
-  font-size: 18px;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  text-transform: capitalize;
-  text-decoration: none
-  margin-left: 20px;
-  vertical-align: middle;
 `
 
 const NavButton = styled.button`
@@ -188,7 +177,6 @@ export {
   NavBrandWrapper,
   NavLogo,
   NavLink,
-  NavBrand,
   NavButton,
   FlexColumn,
   SmallNavLinkContainer,

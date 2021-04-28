@@ -7,7 +7,6 @@ import {
   NavBrandWrapper,
   NavLogo,
   NavLink,
-  NavBrand,
   NavButton,
   FlexColumn,
   SmallNavLinkContainer,
