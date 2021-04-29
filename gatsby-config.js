@@ -29,15 +29,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        short_name: `ViTAL`,
-        start_url: `/`,
-        background_color: `#546BDF`,
-        icon: `src/images/favicon-logo.png`,
-      },
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
