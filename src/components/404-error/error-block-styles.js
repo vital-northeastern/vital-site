@@ -19,12 +19,13 @@ const ErrorContainer = styled.div`
 `
 
 const TextContainer = styled.div`
-  width: 50%;
-  padding-right: 40px;
-  @media ${devices.tabletMax} {
+  @media ${devices.mobile} {
     width: 100%;
-    padding-right: 0px;
     margin: 0 auto;
+  }
+  @media ${devices.laptop} {
+    width: 50%;
+    padding-right: 40px;
   }
 `
 
