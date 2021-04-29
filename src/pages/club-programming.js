@@ -5,6 +5,8 @@ import get from "lodash/get"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Header from "../components/header/header"
+import SpeakerSeries from "../components/club-programming/speaker-series/speaker-series"
+import Speakers from "../components/club-programming/speakers/speakers"
 
 const ClubProgramming = props => {
   const clubProgramming = get(props, "data.contentfulClubProgramming")
@@ -21,6 +23,17 @@ const ClubProgramming = props => {
         title={clubProgramming.title}
         subheading={clubProgramming.subheadingForTitle}
         imageBool={false}
+      />
+      <SpeakerSeries
+        title={speakerSeries.title}
+        blurb={speakerSeries.blurb}
+        ctaTitle={speakerSeries.ctaTitle}
+        ctaLink={speakerSeries.ctaLink}
+        featuredImage={speakerSeries.featuredImage}
+      />
+      <Speakers
+        title={clubProgramming.pastSpeakersTitle}
+        speakers={clubProgramming.speakers}
       />
       <p>Welcome to page</p>
       <Link to="/">Go back to the homepage</Link>
