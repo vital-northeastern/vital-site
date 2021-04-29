@@ -20,6 +20,15 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        short_name: `ViTAL`,
+        start_url: `/`,
+        background_color: `#546BDF`,
+        icon: `src/images/favicon-logo.png`,
+      },
+    },
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-fonts`,
