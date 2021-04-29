@@ -11,6 +11,16 @@ import CommunityEvents from "../components/club-programming/community-events/com
 import Volunteering from "../components/club-programming/volunteering/volunteering"
 import CoffeeChats from "../components/club-programming/coffee-chats/coffee-chats"
 import Conferences from "../components/club-programming/conferences/conferences"
+import top_left_svg from "../images/club-programming/top-left.svg"
+import right_svg from "../images/club-programming/right.svg"
+import middle_left_svg from "../images/club-programming/middle_left.svg"
+import bottom_right_svg from "../images/club-programming/bottom_right.svg"
+
+import {
+  Geoshape,
+  GeoshapeContainer,
+} from "../components/geoshape/geoshape-styles"
+import { TopGeoshape } from "../page-styles/club-programming-styles"
 
 const ClubProgramming = props => {
   const clubProgramming = get(props, "data.contentfulClubProgramming")
@@ -28,6 +38,9 @@ const ClubProgramming = props => {
         subheading={clubProgramming.subheadingForTitle}
         imageBool={false}
       />
+      <GeoshapeContainer>
+        <TopGeoshape src={top_left_svg} alt="blue and white geometric shape" />
+      </GeoshapeContainer>
       <SpeakerSeries
         title={speakerSeries.title}
         blurb={speakerSeries.blurb}
@@ -35,11 +48,26 @@ const ClubProgramming = props => {
         ctaLink={speakerSeries.ctaLink}
         featuredImage={speakerSeries.featuredImage}
       />
+      <GeoshapeContainer>
+        <Geoshape
+          marginTop="-10rem"
+          right={true}
+          src={right_svg}
+          alt="blue and white geometric shape"
+        />
+      </GeoshapeContainer>
       <Speakers
         title={clubProgramming.pastSpeakersTitle}
         speakers={clubProgramming.speakers}
       />
       <EventSpotlight eventSpotlights={clubProgramming.eventSpotlights} />
+      <GeoshapeContainer>
+        <Geoshape
+          marginTop="-50rem"
+          src={middle_left_svg}
+          alt="blue and white geometric shape"
+        />
+      </GeoshapeContainer>
       <CommunityEvents
         title={communityEvents.title}
         blurb={communityEvents.blurb.blurb}
@@ -47,6 +75,14 @@ const ClubProgramming = props => {
         ctaLink={communityEvents.ctaLink}
         featuredImage={communityEvents.featuredImage}
       />
+      <GeoshapeContainer>
+        <Geoshape
+          marginTop="-15rem"
+          right={true}
+          src={bottom_right_svg}
+          alt="blue and white geometric shape"
+        />
+      </GeoshapeContainer>
       <Volunteering
         title={volunteering.title}
         blurb={volunteering.blurb.blurb}

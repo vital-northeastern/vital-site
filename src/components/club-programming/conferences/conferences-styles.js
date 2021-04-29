@@ -29,7 +29,7 @@ const TextContainer = styled.div`
     margin: 0 auto;
   }
   @media ${devices.laptop} {
-    width: 50%;
+    width: 44%;
     order: 1;
     padding-right: 100px;
   }
@@ -49,7 +49,7 @@ const ImageContainer = styled.div`
   }
   @media ${devices.laptop} {
     order: 2;
-    width: 48%;
+    width: 55%;
   }
 `
 
