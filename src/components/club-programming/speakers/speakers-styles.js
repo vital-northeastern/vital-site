@@ -26,13 +26,13 @@ const SpeakersContainer = styled.div`
 const SpeakerContainer = styled.div`
   @media ${devices.mobile} {
     width: 30%;
-    margin-right: 10px;
+    padding-right: 10px;
     display: inline-block;
     vertical-align: top;
   }
   @media ${devices.tablet} {
     width: 18.5%;
-    margin-right: 0px;
+    padding-right: 0px;
   }
 `
 
