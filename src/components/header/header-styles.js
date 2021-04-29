@@ -9,10 +9,10 @@ const HeaderContainer = styled.div`
 
 const TextContainer = styled.div`
   @media ${devices.mobile} {
-    padding: 130px 0px 15px ${padding.mobile};
+    padding: 130px ${padding.mobile} 15px;
   }
   @media ${devices.tablet} {
-    padding-left: ${padding.tablet};
+    padding: 130px 0px 15px ${padding.tablet};
   }
   @media ${devices.laptop} {
     padding: 170px 0px 40px ${padding.laptop};
