@@ -9,7 +9,7 @@ export const size = {
 
 export const devices = {
   mobile: `(min-width: ${size.mobile}px)`,
-  mobileMax: `(max-width: ${size.mobileMax}px)`,
+  mobileMax: `(max-width: ${size.tablet - 1}px)`,
   tabletMax: `(max-width: ${size.laptop - 1}px)`,
   tablet: `(min-width: ${size.tablet}px)`,
   laptop: `(min-width: ${size.laptop}px)`,
@@ -17,7 +17,7 @@ export const devices = {
 }
 
 export const padding = {
-  mobile: "28px",
+  mobile: "26px",
   tablet: "45px",
   laptop: "80px",
   desktop: "125px",
