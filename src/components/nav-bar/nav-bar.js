@@ -77,7 +77,7 @@ const NavBar = ({ navbarstyle }) => {
             <NavLink
               key={navLink.name}
               navbarstyle={navbarstyle}
-              hoverColor={navbarstyle}
+              hovercolor={navbarstyle}
               to={navLink.link}
             >
               {navLink.name}
@@ -109,7 +109,7 @@ const NavBar = ({ navbarstyle }) => {
                 <NavLink
                   key={navLink.name}
                   navbarstyle="gradient"
-                  hoverColor="mobile"
+                  hovercolor="mobile"
                   to={navLink.link}
                 >
                   {navLink.name}
