@@ -20,14 +20,6 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Work Sans\:300,400,500,600,700,900`],
-        display: "swap",
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -35,6 +27,14 @@ module.exports = {
         start_url: `/`,
         background_color: `#546BDF`,
         icon: `src/images/favicon-logo.png`,
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Work Sans\:300,400,500,600,700,900`],
+        display: "swap",
       },
     },
     {
