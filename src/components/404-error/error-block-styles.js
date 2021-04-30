@@ -21,7 +21,6 @@ const ErrorContainer = styled.div`
 const TextContainer = styled.div`
   @media ${devices.mobile} {
     width: 100%;
-    margin: 0 auto;
   }
   @media ${devices.laptop} {
     width: 50%;
@@ -34,7 +33,6 @@ const ImageContainer = styled.div`
   justify-content: center;
   @media ${devices.mobile} {
     width: 100%;
-    margin: 0 auto;
     margin-top: 2rem;
   }
   @media ${devices.tablet} {
@@ -43,6 +41,16 @@ const ImageContainer = styled.div`
   @media ${devices.laptop} {
     width: 50%;
     margin-top: 0rem;
+  }
+`
+
+const ButtonContainer = styled.div`
+  @media ${devices.mobile} {
+    display: flex;
+    justify-content: center;
+  }
+  @media ${devices.laptop} {
+    display: block;
   }
 `
 
@@ -59,9 +67,11 @@ const PMessage = styled(P)`
     14px + (18 - 14) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   );
-  line-height: 29px;
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     line-height: 26px;
+  }
+  @media ${devices.tablet} {
+    line-height: 29px;
   }
 `
 
@@ -73,6 +83,7 @@ export {
   ErrorContainer,
   TextContainer,
   ImageContainer,
+  ButtonContainer,
   H2Header,
   PMessage,
   ErrorImage,

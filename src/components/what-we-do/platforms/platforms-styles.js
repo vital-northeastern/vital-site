@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { H2 } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
 import { size } from "../../../constants/devices"
-import { royalBlue, shadowGray } from "../../../constants/colors"
+import { royalBlue } from "../../../constants/colors"
 import { devices, padding } from "../../../constants/devices"
 
 const PlatformsContainer = styled.div`
@@ -104,8 +104,6 @@ const PlatformButton = styled(Button)`
   @media ${devices.desktop} {
     font-size: 13px;
   }
-  padding: 17px 55px;
-  box-shadow: 1.5px 1.5px 2px ${shadowGray};
 `
 
 export {

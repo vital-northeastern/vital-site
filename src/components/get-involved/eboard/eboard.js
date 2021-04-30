@@ -6,8 +6,9 @@ import {
   H2Header,
   ButtonContainer,
   ButtonPosition,
-  EboardButton,
 } from "./eboard-styles"
+import { shadowGray } from "../../../constants/colors"
+import { Button } from "../../../constants/buttons"
 
 const Eboard = ({ title, description, ctaLink, ctaTitle }) => {
   return (
@@ -19,7 +20,13 @@ const Eboard = ({ title, description, ctaLink, ctaTitle }) => {
       <ButtonContainer>
         <ButtonPosition>
           <a href={ctaLink}>
-            <EboardButton primary={true}>{ctaTitle}</EboardButton>
+            <Button
+              padding="18px 51px"
+              boxshadow={`1px 1px 2px ${shadowGray}`}
+              primary={true}
+            >
+              {ctaTitle}
+            </Button>
           </a>
         </ButtonPosition>
       </ButtonContainer>

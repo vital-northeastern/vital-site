@@ -13,6 +13,7 @@ import {
 } from "./platforms-styles"
 import { GeoshapeContainer, Geoshape } from "../../geoshape/geoshape-styles"
 import bg_svg from "../../../images/what-we-do/platforms.svg"
+import { shadowGray } from "../../../constants/colors"
 
 const Platforms = ({ title, platforms }) => {
   return (
@@ -40,7 +41,12 @@ const Platforms = ({ title, platforms }) => {
               <PlatformTitle>{platform.platformTitle}</PlatformTitle>
               <P>{platform.blurb}</P>
               <a href={platform.ctaLink} target="_blank" rel="noreferrer">
-                <PlatformButton primary={true} aria-label={platform.ctaTitle}>
+                <PlatformButton
+                  padding={"17px 55px"}
+                  boxshadow={`1.5px 1.5px 2px ${shadowGray}`}
+                  primary={true}
+                  aria-label={platform.ctaTitle}
+                >
                   {platform.ctaTitle}
                 </PlatformButton>
               </a>

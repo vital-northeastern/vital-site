@@ -7,13 +7,14 @@ const Button = styled.button`
   color: ${props => (props.primary ? white : navyBlue)};
   border-radius: 50px;
   border: ${props => (props.primary ? "none" : `1px solid ${navyBlue}`)};
-  padding: 20px 38px;
+  padding: ${props => (props.padding ? props.padding : "20px 38px")};
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: ${fonts.button};
   font-size: 13px;
   font-weight: 400;
   transition: all 0.2s;
+  box-shadow: ${props => (props.boxshadow ? props.boxshadow : "none")};
   &:hover {
     background-color: ${props => (props.primary ? royalBlue : "transparent")};
     border: ${props => (props.primary ? "none" : `1px solid ${royalBlue}`)};
