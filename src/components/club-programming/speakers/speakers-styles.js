@@ -15,6 +15,9 @@ const Container = styled.div`
     padding: 90px ${padding.laptop} 8px 290px;
     margin-bottom: -20px;
   }
+  @media ${devices.desktop} {
+    padding-right: ${padding.desktop};
+  }
 `
 const SpeakersContainer = styled.div`
   display: flex;
@@ -49,6 +52,9 @@ const PCaption = styled(PCard)`
   @media ${devices.tablet} {
     margin-top: 0.4rem;
     line-height: 20px;
+  }
+  @media ${devices.desktop} {
+    font-size: 14px;
   }
 `
 

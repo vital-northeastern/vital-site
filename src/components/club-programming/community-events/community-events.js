@@ -1,7 +1,6 @@
 import React from "react"
 import { P } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
-import Img from "gatsby-image"
 import {
   Container,
   TextContainer,

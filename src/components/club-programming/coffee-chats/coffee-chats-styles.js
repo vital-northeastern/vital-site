@@ -18,6 +18,9 @@ const Container = styled.div`
     align-items: center;
     margin-bottom: -20px;
   }
+  @media ${devices.desktop} {
+    padding-right: ${padding.desktop};
+  }
 `
 
 const TextContainer = styled.div`
@@ -32,6 +35,10 @@ const TextContainer = styled.div`
     order: 1;
     padding-left: 75px;
     padding-right: 90px;
+  }
+  @media ${devices.dekstop} {
+    padding-left: 130px;
+    padding-right: 180px;
   }
 `
 
@@ -50,12 +57,10 @@ const ImageContainer = styled.div`
   @media ${devices.mobile} {
     width: 100%;
     order: 1;
-    margin: 0 auto;
   }
   @media ${devices.laptop} {
-    margin-left: 50px;
     order: 2;
-    width: 45%;
+    width: 50%;
   }
 `
 

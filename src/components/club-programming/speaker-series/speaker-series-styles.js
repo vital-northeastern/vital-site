@@ -18,6 +18,9 @@ const Container = styled.div`
     padding: 90px ${padding.laptop} 8px 290px;
     margin-bottom: -20px;
   }
+  @media ${devices.desktop} {
+    padding-right: ${padding.desktop};
+  }
 `
 
 const TextContainer = styled.div`
@@ -29,7 +32,14 @@ const TextContainer = styled.div`
   @media ${devices.laptop} {
     width: 45%;
     order: 1;
-    padding-right: 70px;
+    padding-top: 1.5rem;
+    padding-right: 80px;
+  }
+  @media ${devices.desktop} {
+    width: 45%;
+    order: 1;
+    padding-top: 3rem;
+    padding-right: 100px;
   }
 `
 
