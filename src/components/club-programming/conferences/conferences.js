@@ -3,7 +3,6 @@ import { P } from "../../../constants/typography"
 import {
   Container,
   TextContainer,
-  Text,
   H2Title,
   ImageContainer,
   Image,
@@ -13,10 +12,8 @@ const Conferences = ({ title, blurb, featuredImage }) => {
   return (
     <Container>
       <TextContainer>
-        <Text>
-          <H2Title>{title}</H2Title>
-          <P>{blurb}</P>
-        </Text>
+        <H2Title>{title}</H2Title>
+        <P>{blurb}</P>
       </TextContainer>
       <ImageContainer>
         <Image fluid={featuredImage.fluid} alt={featuredImage.description} />

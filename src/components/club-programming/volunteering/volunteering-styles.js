@@ -30,14 +30,18 @@ const TextContainer = styled.div`
   @media ${devices.laptop} {
     width: 50%;
     padding-left: 75px;
-    margin: 0 auto;
   }
 `
 
-const Text = styled.div``
-
 const H2Title = styled(H2)`
-  line-height: 40px;
+  margin-bottom: 0.9rem;
+  @media ${devices.mobile} {
+    margin-top: 1.4rem;
+  }
+  @media ${devices.laptop} {
+    margin-top: 0rem;
+    line-height: 40px;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -54,4 +58,21 @@ const Image = styled(Img)`
   height: 100%;
 `
 
-export { Container, TextContainer, Text, H2Title, ImageContainer, Image }
+const ButtonContainer = styled.div`
+  @media ${devices.mobile} {
+    display: flex;
+    justify-content: center;
+  }
+  @media ${devices.laptop} {
+    display: block;
+  }
+`
+
+export {
+  Container,
+  TextContainer,
+  H2Title,
+  ImageContainer,
+  Image,
+  ButtonContainer,
+}

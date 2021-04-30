@@ -1,6 +1,7 @@
 import React from "react"
 import { P } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
+import Img from "gatsby-image"
 import {
   Container,
   TextContainer,
@@ -31,7 +32,7 @@ const CommunityEvents = ({
         </ButtonContainer>
       </TextContainer>
       <ImageContainer>
-        <Image fluid={featuredImage.fluid} alt={featuredImage.description} />
+        <Img fluid={featuredImage.fluid} alt={featuredImage.description} />
       </ImageContainer>
     </Container>
   )

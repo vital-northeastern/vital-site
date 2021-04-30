@@ -2,7 +2,6 @@ import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
 import { navyBlue } from "../../../constants/colors"
 import { H2 } from "../../../constants/typography"
-import Img from "gatsby-image"
 
 const Container = styled.div`
   @media ${devices.mobile} {
@@ -30,16 +29,15 @@ const TextContainer = styled.div`
   }
   @media ${devices.laptop} {
     width: 45%;
-    margin: 0 auto;
     order: 1;
     padding-right: 35px;
   }
 `
 
 const H2Title = styled(H2)`
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
   @media ${devices.mobile} {
-    margin-top: 1.2rem;
+    margin-top: 1.4rem;
   }
   @media ${devices.laptop} {
     margin-top: 0rem;
@@ -60,10 +58,6 @@ const ImageContainer = styled.div`
   }
 `
 
-const Image = styled(Img)`
-  height: 100%;
-`
-
 const ButtonContainer = styled.div`
   @media ${devices.mobile} {
     display: flex;
@@ -74,11 +68,4 @@ const ButtonContainer = styled.div`
   }
 `
 
-export {
-  Container,
-  TextContainer,
-  H2Title,
-  ImageContainer,
-  Image,
-  ButtonContainer,
-}
+export { Container, TextContainer, H2Title, ImageContainer, ButtonContainer }
