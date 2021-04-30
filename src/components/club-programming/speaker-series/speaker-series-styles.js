@@ -29,7 +29,7 @@ const TextContainer = styled.div`
   @media ${devices.laptop} {
     width: 45%;
     order: 1;
-    padding-right: 90px;
+    padding-right: 70px;
   }
 `
 
@@ -58,8 +58,8 @@ const BackgroundGradient = styled.div`
 const Image = styled(Img)`
   @media ${devices.laptop} {
     position: absolute;
-    top: -30px;
-    left: -30px;
+    top: -35px;
+    left: -35px;
   }
 `
 

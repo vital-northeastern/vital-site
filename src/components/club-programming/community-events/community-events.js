@@ -1,12 +1,12 @@
 import React from "react"
 import { P } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
-import Img from "gatsby-image"
 import {
   Container,
   TextContainer,
   H2Title,
-  ImageContainer,
+  BackgroundGradient,
+  Image,
 } from "./community-events-styles"
 import { ButtonContainer } from "../section-styles"
 
@@ -30,9 +30,9 @@ const CommunityEvents = ({
           </a>
         </ButtonContainer>
       </TextContainer>
-      <ImageContainer>
-        <Img fluid={featuredImage.fluid} alt={featuredImage.description} />
-      </ImageContainer>
+      <BackgroundGradient>
+        <Image fluid={featuredImage.fluid} alt={featuredImage.description} />
+      </BackgroundGradient>
     </Container>
   )
 }
