@@ -94,7 +94,7 @@ Note that Netlify will automatically deploy to production the master branch on G
 
 ## 🖊️<a name="contentful">Contentful</a>
 
-[Contentful](https://www.contentful.com/) is a content management system that allows you to control all content from a single hub. We use Contentful to store all of the images and text copy used on the site through content models and content. In an object-oriented design sense, content models can be compared to classes while content can be compared to objects. For example, one of our content models is "Meet the Team" which has fields for all of the data that should be on the team page such as the member names and the adbisors. Meanwhile, in the "What We Do" section, there are field for each programming card (ie: ventures consulting, club programming, and case competition)
+[Contentful](https://www.contentful.com/) is a content management system that allows you to control all content from a single hub. We use Contentful to store all of the images and text copy used on the site through content models and content. In an object-oriented design sense, content models can be compared to classes while content can be compared to objects. For example, one of our content models is "Meet the Team" which has fields for all of the data that should be on the team page such as the member names and the advisors. Meanwhile, in the "What We Do" section, there are field for each programming card (ie: ventures consulting, club programming, and case competition)
 
 Pieces of information regarding Contentful:
 
@@ -130,7 +130,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 5.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
 
-6.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. We rep;aced this with an MIT license.
+6.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. We replaced this with an MIT license.
 
 7.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
 
