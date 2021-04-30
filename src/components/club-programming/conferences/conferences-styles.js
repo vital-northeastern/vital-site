@@ -8,14 +8,14 @@ const Container = styled.div`
   @media ${devices.mobile} {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px ${padding.mobile} 8px;
+    padding: 0px ${padding.mobile} 0px;
     margin-bottom: 50px;
   }
   @media ${devices.tablet} {
-    padding: 8px ${padding.tablet};
+    padding: 8px ${padding.tablet} 30px;
   }
   @media ${devices.laptop} {
-    padding: 110px ${padding.laptop} 8px 150px;
+    padding: 110px ${padding.laptop} 135px 150px;
     align-items: center;
     margin-bottom: -20px;
   }
@@ -31,7 +31,8 @@ const TextContainer = styled.div`
   @media ${devices.laptop} {
     width: 47%;
     order: 1;
-    padding-right: 100px;
+    padding-right: 110px;
+    padding-bottom: 25px;
   }
 `
 
@@ -52,7 +53,7 @@ const BackgroundGradient = styled.div`
     order: 1;
   }
   @media ${devices.laptop} {
-    width: 51%;
+    width: 49%;
     order: 2;
     background: ${imageGradient};
   }
@@ -61,8 +62,8 @@ const BackgroundGradient = styled.div`
 const Image = styled(Img)`
   @media ${devices.laptop} {
     position: absolute;
-    top: -30px;
-    left: -30px;
+    top: -35px;
+    left: -35px;
   }
 `
 
