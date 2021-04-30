@@ -4,7 +4,8 @@ import { Button } from "../../../constants/buttons"
 import {
   Container,
   TextContainer,
-  Text,
+  ButtonContainer,
+  H2Title,
   BackgroundGradient,
   Image,
 } from "./speaker-series-styles"
@@ -13,15 +14,15 @@ const SpeakerSeries = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
   return (
     <Container>
       <TextContainer>
-        <Text>
-          <H2>{title}</H2>
-          <P>{blurb.blurb}</P>
+        <H2Title>{title}</H2Title>
+        <P>{blurb.blurb}</P>
+        <ButtonContainer>
           <a href={ctaLink}>
-            <Button primary={true} aria-label={ctaTitle}>
+            <Button padding="17px 30px" primary={true} aria-label={ctaTitle}>
               {ctaTitle}
             </Button>
           </a>
-        </Text>
+        </ButtonContainer>
       </TextContainer>
       <BackgroundGradient>
         <Image fluid={featuredImage.fluid} alt={featuredImage.description} />
