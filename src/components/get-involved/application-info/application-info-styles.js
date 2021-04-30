@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { H2 } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
-import { shadowGray } from "../../../constants/colors"
 import { devices } from "../../../constants/devices"
 
 const ApplicationContainer = styled.div`
@@ -20,8 +19,6 @@ const H2Header = styled(H2)`
 
 const ButtonEmail = styled(Button)`
   margin-top: -4px;
-  box-shadow: 1px 1px 2px ${shadowGray};
-  padding: 18px 45px;
 `
 
 const MobileImageContainer = styled.div`
@@ -34,9 +31,4 @@ const MobileImageContainer = styled.div`
   }
 `
 
-export {
-  ApplicationContainer,
-  H2Header,
-  ButtonEmail,
-  MobileImageContainer,
-}
+export { ApplicationContainer, H2Header, ButtonEmail, MobileImageContainer }

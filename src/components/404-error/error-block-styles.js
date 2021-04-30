@@ -6,13 +6,13 @@ import { H2, P } from "../../constants/typography"
 const ErrorContainer = styled.div`
   @media ${devices.mobile} {
     display: block;
-    padding: 8rem ${padding.mobile} 0rem;
+    padding: 8rem ${padding.mobile} 1.5rem;
   }
   @media ${devices.tablet} {
-    padding: 10rem 120px 0.2rem;
+    padding: 10rem 120px 2rem;
   }
   @media ${devices.laptop} {
-    padding: 9rem 160px 1rem;
+    padding: 9rem 160px 3rem;
     display: flex;
     align-items: center;
   }
@@ -34,9 +34,6 @@ const ImageContainer = styled.div`
   @media ${devices.mobile} {
     width: 100%;
     margin-top: 2rem;
-  }
-  @media ${devices.tablet} {
-    margin-top: 1rem;
   }
   @media ${devices.laptop} {
     width: 50%;

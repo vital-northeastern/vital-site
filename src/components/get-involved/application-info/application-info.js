@@ -9,6 +9,7 @@ import {
 import { GeoshapeContainer, Geoshape } from "../../geoshape/geoshape-styles"
 import bottom_svg from "../../../images/get-involved/bottom_shape.svg"
 import bottom_mobile_svg from "../../../images/get-involved/bottom_mobile.svg"
+import { shadowGray } from "../../../constants/colors"
 
 const ApplicationInfo = ({
   subheading,
@@ -30,14 +31,17 @@ const ApplicationInfo = ({
         <H2Header>{subheading}</H2Header>
         <P>{applicationEmail}</P>
         <a href={ctaLink}>
-          <ButtonEmail primary={true}>{ctaTitle}</ButtonEmail>
+          <ButtonEmail
+            padding="18px 45px"
+            boxshadow={`1px 1px 2px ${shadowGray}`}
+            primary={true}
+          >
+            {ctaTitle}
+          </ButtonEmail>
         </a>
       </ApplicationContainer>
       <MobileImageContainer>
-        <img
-          src={bottom_mobile_svg}
-          alt="blue and white geometric shape"
-        />
+        <img src={bottom_mobile_svg} alt="blue and white geometric shape" />
       </MobileImageContainer>
     </>
   )
