@@ -45,7 +45,7 @@ In the project directory is a file called `.env.example`. This holds all of the 
 Copy the file twice, name the new files .env.development and .env.production, and add the Contentful API keys to the variables. You can find these API keys in your Contentful space under Settings -> API keys -> vital-site. You only need to use Space ID and Content Delivery API - access token. Do **not** commit these to the Github repo
 
 ```shell
-cp .env.example .env.development
+cp .env.production .env.development
 ```
 
 ```shell
@@ -94,7 +94,7 @@ Note that Netlify will automatically deploy to production the master branch on G
 
 ## 🖊️<a name="contentful">Contentful</a>
 
-[Contentful](https://www.contentful.com/) is a content management system that allows you to control all content from a single hub. We use Contentful to store all of the images and text copy used on the site through content models and content. In an object-oriented design sense, content models can be compared to classes while content can be compared to objects. For example, one of our content models is "Meet the Team" which has fields for all of the data that should be on the team page such as the member names and the social media links. Meanwhile, in the "What's Happening" section, there are field for each programming activity (ie: ventures consulting, coffee chats, etc)
+[Contentful](https://www.contentful.com/) is a content management system that allows you to control all content from a single hub. We use Contentful to store all of the images and text copy used on the site through content models and content. In an object-oriented design sense, content models can be compared to classes while content can be compared to objects. For example, one of our content models is "Meet the Team" which has fields for all of the data that should be on the team page such as the member names and the adbisors. Meanwhile, in the "What We Do" section, there are field for each programming card (ie: ventures consulting, club programming, and case competition)
 
 Pieces of information regarding Contentful:
 
@@ -114,10 +114,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── src
     ├── .gitignore
     ├── .prettierrc
-    ├── gatsby-browser.js
     ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
     ├── LICENSE
     ├── package-lock.json
     ├── package.json
@@ -131,21 +128,15 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+5.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
+6.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. We rep;aced this with an MIT license.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+7.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+8.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
+9.  **`README.md`**: A text file containing useful reference information about your project.
 
 ## 😄 <a name="devs">Scout Developers</a>
 
