@@ -4,11 +4,11 @@ import { Button } from "../../../constants/buttons"
 import {
   Container,
   TextContainer,
-  ButtonContainer,
   H2Title,
   BackgroundGradient,
   Image,
 } from "./speaker-series-styles"
+import { ButtonContainer } from "../section-styles"
 
 const SpeakerSeries = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
   return (

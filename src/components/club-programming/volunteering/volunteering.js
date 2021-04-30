@@ -5,16 +5,16 @@ import {
   Container,
   TextContainer,
   H2Title,
-  ButtonContainer,
   ImageContainer,
-  Image,
 } from "./volunteering-styles"
+import { ButtonContainer } from "../section-styles"
+import Img from "gatsby-image"
 
 const Volunteering = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
   return (
     <Container>
       <ImageContainer>
-        <Image fluid={featuredImage.fluid} alt={featuredImage.description} />
+        <Img fluid={featuredImage.fluid} alt={featuredImage.description} />
       </ImageContainer>
       <TextContainer>
         <H2Title>{title}</H2Title>

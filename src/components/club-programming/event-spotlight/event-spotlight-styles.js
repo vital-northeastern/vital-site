@@ -54,8 +54,9 @@ const H2EventTitle = styled(H2)`
     margin-bottom: 0.8rem;
   }
   @media ${devices.laptop} {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.9rem;
+    line-height: 38px;
   }
 `
 

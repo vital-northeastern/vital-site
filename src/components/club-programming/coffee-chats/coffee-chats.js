@@ -6,10 +6,9 @@ import {
   Container,
   TextContainer,
   H2Title,
-  ButtonContainer,
   ImageContainer,
-  Image,
 } from "./coffee-chats-styles"
+import { ButtonContainer } from "../section-styles"
 
 const CoffeeChats = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
   return (

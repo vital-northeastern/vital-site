@@ -7,9 +7,8 @@ import {
   TextContainer,
   H2Title,
   ImageContainer,
-  Image,
-  ButtonContainer,
 } from "./community-events-styles"
+import { ButtonContainer } from "../section-styles"
 
 const CommunityEvents = ({
   title,

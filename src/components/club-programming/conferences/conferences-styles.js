@@ -42,7 +42,7 @@ const H2Title = styled(H2)`
   }
   @media ${devices.laptop} {
     margin-top: 0rem;
-    line-height: 40px;
+    line-height: 38px;
   }
 `
 

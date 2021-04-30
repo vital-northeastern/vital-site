@@ -40,7 +40,7 @@ const H2Title = styled(H2)`
   }
   @media ${devices.laptop} {
     margin-top: 0rem;
-    line-height: 40px;
+    line-height: 38px;
   }
 `
 
@@ -54,25 +54,4 @@ const ImageContainer = styled.div`
   }
 `
 
-const Image = styled(Img)`
-  height: 100%;
-`
-
-const ButtonContainer = styled.div`
-  @media ${devices.mobile} {
-    display: flex;
-    justify-content: center;
-  }
-  @media ${devices.laptop} {
-    display: block;
-  }
-`
-
-export {
-  Container,
-  TextContainer,
-  H2Title,
-  ImageContainer,
-  Image,
-  ButtonContainer,
-}
+export { Container, TextContainer, H2Title, ImageContainer }
