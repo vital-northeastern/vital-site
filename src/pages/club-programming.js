@@ -20,7 +20,10 @@ import {
   Geoshape,
   GeoshapeContainer,
 } from "../components/geoshape/geoshape-styles"
-import { TopGeoshape } from "../page-styles/club-programming-styles"
+import {
+  TopGeoshape,
+  BottomGeoshape,
+} from "../page-styles/club-programming-styles"
 
 const ClubProgramming = props => {
   const clubProgramming = get(props, "data.contentfulClubProgramming")
@@ -76,7 +79,7 @@ const ClubProgramming = props => {
         featuredImage={communityEvents.featuredImage}
       />
       <GeoshapeContainer>
-        <Geoshape
+        <BottomGeoshape
           marginTop="-15rem"
           right={true}
           src={bottom_right_svg}

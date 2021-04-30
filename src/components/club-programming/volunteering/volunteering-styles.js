@@ -2,7 +2,6 @@ import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
 import { navyBlue } from "../../../constants/colors"
 import { H2 } from "../../../constants/typography"
-import Img from "gatsby-image"
 
 const Container = styled.div`
   @media ${devices.mobile} {

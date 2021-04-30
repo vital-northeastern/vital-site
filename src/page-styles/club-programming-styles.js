@@ -8,4 +8,8 @@ const TopGeoshape = styled(Geoshape)`
   left: 0;
 `
 
-export { TopGeoshape }
+const BottomGeoshape = styled(Geoshape)`
+  z-index: -11;
+`
+
+export { TopGeoshape, BottomGeoshape }

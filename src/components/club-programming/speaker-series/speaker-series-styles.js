@@ -49,7 +49,6 @@ const BackgroundGradient = styled.div`
     order: 1;
   }
   @media ${devices.laptop} {
-    padding-left: 6rem;
     width: 55%;
     order: 2;
     background: ${imageGradient};
@@ -60,7 +59,7 @@ const Image = styled(Img)`
   @media ${devices.laptop} {
     position: absolute;
     top: -30px;
-    left: -150px;
+    left: -30px;
   }
 `
 

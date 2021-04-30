@@ -31,7 +31,7 @@ const TextContainer = styled.div`
     width: 50%;
     order: 1;
     padding-left: 75px;
-    padding-right: 100px;
+    padding-right: 95px;
   }
 `
 
@@ -54,7 +54,7 @@ const ImageContainer = styled.div`
   }
   @media ${devices.laptop} {
     order: 2;
-    width: 48%;
+    width: 46%;
   }
 `
 
