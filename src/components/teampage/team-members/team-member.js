@@ -28,32 +28,29 @@ export default ({
   index,
   isLast,
 }) => (
-  console.log(position),
-  (
-    <CardPosition index={index} isLast={isLast}>
-      {position === "Executive Director" ? (
-        <GraidentSquare></GraidentSquare>
-      ) : null}
-      <ContactCardContainer index={index} position={position}>
-        <MemberImg
-          fluid={photo.fluid}
-          photoUrl={photo.fluid.src}
-          alt={"Photo of " + name}
-        >
-          <Overlay>
-            <OverlayText>{biography}</OverlayText>
-          </Overlay>
-        </MemberImg>
+  <CardPosition index={index} isLast={isLast}>
+    {position === "Executive Director" ? (
+      <GraidentSquare></GraidentSquare>
+    ) : null}
+    <ContactCardContainer index={index} position={position}>
+      <MemberImg
+        fluid={photo.fluid}
+        photoUrl={photo.fluid.src}
+        alt={"Photo of " + name}
+      >
+        <Overlay>
+          <OverlayText>{biography}</OverlayText>
+        </Overlay>
+      </MemberImg>
 
-        <InfoContainer>
-          <MemberName>{name}</MemberName>
-          <MemberPosition>{position}</MemberPosition>
-          <MemberInfo>{major}</MemberInfo>
-          {linkedinUrl ? (
-            <ConnectLink href={linkedinUrl}>CONNECT</ConnectLink>
-          ) : null}
-        </InfoContainer>
-      </ContactCardContainer>
-    </CardPosition>
-  )
+      <InfoContainer>
+        <MemberName>{name}</MemberName>
+        <MemberPosition>{position}</MemberPosition>
+        <MemberInfo>{major}</MemberInfo>
+        {linkedinUrl ? (
+          <ConnectLink href={linkedinUrl}>CONNECT</ConnectLink>
+        ) : null}
+      </InfoContainer>
+    </ContactCardContainer>
+  </CardPosition>
 )
