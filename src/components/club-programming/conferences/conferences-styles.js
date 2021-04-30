@@ -33,9 +33,12 @@ const TextContainer = styled.div`
   @media ${devices.laptop} {
     width: 50%;
     order: 1;
-    padding-right: 120px;
+    padding-right: 110px;
     padding-bottom: 25px;
     align-self: center;
+  }
+  @media (min-width: 1200px) {
+    width: 45%;
   }
 `
 
@@ -59,8 +62,11 @@ const Background = styled.div`
     order: 1;
   }
   @media ${devices.laptop} {
-    width: 49%;
+    width: 50%;
     order: 2;
+  }
+  @media (min-width: 1200px) {
+    width: 55%;
   }
 `
 
