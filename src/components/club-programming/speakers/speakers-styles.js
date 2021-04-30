@@ -5,8 +5,8 @@ import { black } from "../../../constants/colors"
 
 const Container = styled.div`
   @media ${devices.mobile} {
-    padding: 0px ${padding.mobile} 8px;
-    margin-bottom: 50px;
+    padding: 0px ${padding.mobile} 0px;
+    margin-bottom: 30px;
   }
   @media ${devices.tablet} {
     padding: 8px ${padding.tablet};
@@ -21,14 +21,9 @@ const SpeakersContainer = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  @media ${devices.mobile} {
-    ::after {
-      content: "";
-      flex: 0 0 30%;
-    }
-  }
-  @media ${devices.tablet} {
-    flex: 1;
+  ::after {
+    content: "";
+    flex: 0 0 30%;
   }
 `
 

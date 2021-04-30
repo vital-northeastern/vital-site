@@ -1,5 +1,5 @@
 import React from "react"
-import { H2, P } from "../../../constants/typography"
+import { P } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
 import {
   Container,

@@ -12,7 +12,7 @@ const Container = styled.div`
     margin-bottom: 50px;
   }
   @media ${devices.tablet} {
-    padding: 8px ${padding.tablet};
+    padding: 40px ${padding.tablet} 8px;
   }
   @media ${devices.laptop} {
     padding: 90px ${padding.laptop} 8px 150px;
@@ -32,17 +32,19 @@ const TextContainer = styled.div`
     width: 45%;
     margin: 0 auto;
     order: 1;
-  }
-`
-
-const Text = styled.div`
-  @media ${devices.laptop} {
     padding-right: 35px;
   }
 `
 
 const H2Title = styled(H2)`
-  line-height: 40px;
+  margin-bottom: 1rem;
+  @media ${devices.mobile} {
+    margin-top: 1.2rem;
+  }
+  @media ${devices.laptop} {
+    margin-top: 0rem;
+    line-height: 40px;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -62,4 +64,21 @@ const Image = styled(Img)`
   height: 100%;
 `
 
-export { Container, TextContainer, Text, H2Title, ImageContainer, Image }
+const ButtonContainer = styled.div`
+  @media ${devices.mobile} {
+    display: flex;
+    justify-content: center;
+  }
+  @media ${devices.laptop} {
+    display: block;
+  }
+`
+
+export {
+  Container,
+  TextContainer,
+  H2Title,
+  ImageContainer,
+  Image,
+  ButtonContainer,
+}

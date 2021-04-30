@@ -1,7 +1,13 @@
 import React from "react"
-import { H2, PCard } from "../../../constants/typography"
+import { PCard } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
-import { Container, Event, H2Event } from "./event-spotlight-styles"
+import {
+  Container,
+  Event,
+  H2EventType,
+  H2EventTitle,
+  ButtonContainer,
+} from "./event-spotlight-styles"
 import Img from "gatsby-image"
 
 const EventSpotlight = ({ eventSpotlights }) => {
@@ -10,17 +16,21 @@ const EventSpotlight = ({ eventSpotlights }) => {
       {eventSpotlights.map((eventSpotlight, index) => {
         return (
           <Event key={eventSpotlight.typeOfEvent} index={index}>
-            <H2>{eventSpotlight.typeOfEvent}</H2>
+            <H2EventType>{eventSpotlight.typeOfEvent}</H2EventType>
             <Img
               fluid={eventSpotlight.featuredImage.fluid}
               alt={eventSpotlight.featuredImage.description}
             />
-            <H2Event>{eventSpotlight.eventTitle}</H2Event>
+            <H2EventTitle>{eventSpotlight.eventTitle}</H2EventTitle>
             <PCard>{eventSpotlight.blurb.blurb}</PCard>
             {eventSpotlight.ctaTitle && (
-              <a href={eventSpotlight.ctaLink}>
-                <Button primary={true}>{eventSpotlight.ctaTitle}</Button>
-              </a>
+              <ButtonContainer>
+                <a href={eventSpotlight.ctaLink}>
+                  <Button padding="17px 30px" primary={true}>
+                    {eventSpotlight.ctaTitle}
+                  </Button>
+                </a>
+              </ButtonContainer>
             )}
           </Event>
         )

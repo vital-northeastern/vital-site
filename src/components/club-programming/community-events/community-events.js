@@ -4,10 +4,10 @@ import { Button } from "../../../constants/buttons"
 import {
   Container,
   TextContainer,
-  Text,
   H2Title,
   ImageContainer,
   Image,
+  ButtonContainer,
 } from "./community-events-styles"
 
 const CommunityEvents = ({
@@ -20,15 +20,15 @@ const CommunityEvents = ({
   return (
     <Container>
       <TextContainer>
-        <Text>
-          <H2Title>{title}</H2Title>
-          <P>{blurb}</P>
-        </Text>
-        <a href={ctaLink}>
-          <Button primary={true} aria-label={ctaTitle}>
-            {ctaTitle}
-          </Button>
-        </a>
+        <H2Title>{title}</H2Title>
+        <P>{blurb}</P>
+        <ButtonContainer>
+          <a href={ctaLink}>
+            <Button padding="17px 30px" primary={true} aria-label={ctaTitle}>
+              {ctaTitle}
+            </Button>
+          </a>
+        </ButtonContainer>
       </TextContainer>
       <ImageContainer>
         <Image fluid={featuredImage.fluid} alt={featuredImage.description} />
