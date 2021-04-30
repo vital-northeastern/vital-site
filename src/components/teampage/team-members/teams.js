@@ -28,6 +28,7 @@ export default ({ teamName, members, index }) => (
               position={member.position}
               linkedinUrl={member.linkedinUrl}
               team={member.team}
+              biography={member.biography?.biography || ""}
               index={index}
               isLast={members.length - 1 === index}
               key={member.name + index}

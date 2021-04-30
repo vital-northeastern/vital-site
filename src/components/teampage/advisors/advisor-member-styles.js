@@ -3,9 +3,9 @@ import { MemberImg } from "../team-shared-styles"
 import { devices } from "../../../constants/devices"
 
 const AdvisorCard = styled.div`
-  width: 28%;
+  width: 20%;
   max-width: 350px;
-  margin: 0 0 72px 0;
+  margin: 0 16px 72px 16px;
   display: flex;
   flex-direction: column;
 

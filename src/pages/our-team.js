@@ -36,7 +36,7 @@ const TeamPage = props => {
       <Header
         title={teamPage.title}
         subheading={teamPage.subheadingForTitle}
-        imageBool={true}
+        imageBool={false}
       />
 
       {listOfTeamsTypes.map((teamType, index) => {
@@ -77,6 +77,9 @@ export const pageQuery = graphql`
         position
         linkedinUrl
         team
+        biography {
+          biography
+        }
       }
       advisors {
         name
