@@ -42,6 +42,13 @@ const ImageContainer = styled.div`
     background: ${imageGradient};
 `}
   }
+  ${({ midLaptop }) =>
+    midLaptop &&
+    `
+  @media (min-width: 1200px) {
+    width: 50%;
+  }
+`}
 `
 
 export { ButtonContainer, H2Title, ImageContainer }

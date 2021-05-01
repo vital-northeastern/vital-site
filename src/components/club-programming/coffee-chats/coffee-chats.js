@@ -19,7 +19,7 @@ const CoffeeChats = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
           </a>
         </ButtonContainer>
       </TextContainer>
-      <ImageContainer right={true}>
+      <ImageContainer width="45%" right={true} midLaptop={true}>
         <Img fluid={featuredImage.fluid} alt={featuredImage.description} />
       </ImageContainer>
     </Container>

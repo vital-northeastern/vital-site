@@ -29,8 +29,13 @@ const TextContainer = styled.div`
     order: 2;
   }
   @media ${devices.laptop} {
-    width: 50%;
+    width: 55%;
     order: 1;
+    padding-left: 70px;
+    padding-right: 85px;
+  }
+  @media (min-width: 1200px) {
+    width: 50%;
     padding-left: 75px;
     padding-right: 90px;
   }
