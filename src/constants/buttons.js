@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import { white, navyBlue, royalBlue } from "./colors"
 import { fonts } from "./typography"
+import { devices } from "./devices"
+
 
 const Button = styled.button`
   background-color: ${props => (props.primary ? navyBlue : "transparent")};
@@ -22,6 +24,9 @@ const Button = styled.button`
   }
   &:focus {
     outline: 0;
+  }
+  @media ${devices.desktop} {
+    font-size: 14px;
   }
 `
 

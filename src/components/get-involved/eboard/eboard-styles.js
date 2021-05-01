@@ -18,6 +18,9 @@ const EboardContainer = styled.div`
     display: flex;
     align-items: center;
   }
+  @media ${devices.desktop} {
+    padding: 1rem ${padding.desktop};
+  }
 `
 
 const TextContainer = styled.div`

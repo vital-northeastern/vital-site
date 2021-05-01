@@ -15,6 +15,9 @@ const Title = styled.div`
   @media ${devices.laptop} {
     padding-left: ${padding.laptop};
   }
+  @media ${devices.desktop} {
+    padding-left: ${padding.desktop};
+  }
 `
 
 const ImageContainer = styled.div`
@@ -40,6 +43,9 @@ const RegularImage = styled.img`
     display: block;
     transform: scale(1.06, 1.06);
     padding-right: 10px;
+  }  
+  @media ${devices.desktop} {
+    width: 100vw;
   }
 `
 
