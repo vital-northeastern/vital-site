@@ -1,36 +1,7 @@
 import styled from "styled-components"
-import { devices, padding } from "../../constants/devices"
-import { navyBlue } from "../../constants/colors"
+import { devices } from "../../constants/devices"
+import { imageGradient } from "../../constants/colors"
 import { H2 } from "../../constants/typography"
-
-const Container = styled.div`
-  @media ${devices.mobile} {
-    display: flex;
-    flex-wrap: wrap;
-    padding: ${padding.mobile} ${padding.mobile} 0px;
-    margin-bottom: 50px;
-  }
-  @media ${devices.tablet} {
-    padding: ${padding.tablet} ${padding.tablet} 8px;
-  }
-  @media ${devices.laptop} {
-    padding: 90px ${padding.laptop} 8px 290px;
-    margin-bottom: -20px;
-  }
-`
-
-const TextContainer = styled.div`
-  color: ${navyBlue};
-  @media ${devices.mobile} {
-    width: 100%;
-    order: 2;
-  }
-  @media ${devices.laptop} {
-    width: 45%;
-    order: 1;
-    padding-right: 90px;
-  }
-`
 
 const ButtonContainer = styled.div`
   @media ${devices.mobile} {
@@ -43,23 +14,34 @@ const ButtonContainer = styled.div`
 `
 
 const H2Title = styled(H2)`
-  margin-bottom: 0.85rem;
+  margin-bottom: ${props => (props.first ? "0.85rem" : "0.9rem")};
   @media ${devices.mobile} {
-    margin-top: 0.85rem;
+    margin-top: ${props => (props.first ? "0.85rem" : "1.4rem")};
   }
   @media ${devices.laptop} {
     margin-top: 0rem;
+    ${({ lineheight }) =>
+      lineheight &&
+      `
+  line-height: 38px;
+`}
   }
 `
 
 const ImageContainer = styled.div`
   @media ${devices.mobile} {
     width: 100%;
-    margin: 0 auto;
+    order: ${props => (props.right ? "1" : "")};
   }
   @media ${devices.laptop} {
-    width: 48%;
+    width: ${props => (props.width ? props.width : "50%")};
+    order: ${props => (props.right ? "2" : "")};
+    ${({ background }) =>
+      background &&
+      `
+    background: ${imageGradient};
+`}
   }
 `
 
-export { Container, TextContainer, ButtonContainer, H2Title, ImageContainer }
+export { ButtonContainer, H2Title, ImageContainer }

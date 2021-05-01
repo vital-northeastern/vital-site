@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
-import { navyBlue, imageGradient } from "../../../constants/colors"
-import { H2 } from "../../../constants/typography"
+import { navyBlue } from "../../../constants/colors"
 import Img from "gatsby-image"
 
 const Container = styled.div`
@@ -41,28 +40,6 @@ const TextContainer = styled.div`
   }
 `
 
-const H2Title = styled(H2)`
-  margin-bottom: 0.85rem;
-  @media ${devices.mobile} {
-    margin-top: 0.85rem;
-  }
-  @media ${devices.laptop} {
-    margin-top: 0rem;
-  }
-`
-
-const BackgroundGradient = styled.div`
-  @media ${devices.mobile} {
-    width: 100%;
-    order: 1;
-  }
-  @media ${devices.laptop} {
-    width: 55%;
-    order: 2;
-    background: ${imageGradient};
-  }
-`
-
 const Image = styled(Img)`
   @media ${devices.laptop} and (max-width: 1200px) {
     position: relative;
@@ -77,4 +54,4 @@ const Image = styled(Img)`
   }
 `
 
-export { Container, TextContainer, H2Title, BackgroundGradient, Image }
+export { Container, TextContainer, Image }

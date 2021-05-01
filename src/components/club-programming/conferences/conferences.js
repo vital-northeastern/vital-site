@@ -3,17 +3,17 @@ import { P } from "../../../constants/typography"
 import {
   Container,
   TextContainer,
-  H2Title,
   Gradient,
   Image,
   Background,
 } from "./conferences-styles"
+import { H2Title } from "../section-styles"
 
 const Conferences = ({ title, blurb, featuredImage, backgroundGradient }) => {
   return (
     <Container>
       <TextContainer>
-        <H2Title>{title}</H2Title>
+        <H2Title lineheight={true}>{title}</H2Title>
         <P>{blurb}</P>
       </TextContainer>
       <Background>

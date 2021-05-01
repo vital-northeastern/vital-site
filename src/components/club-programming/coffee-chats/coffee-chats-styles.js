@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
 import { navyBlue } from "../../../constants/colors"
-import { H2 } from "../../../constants/typography"
 
 const Container = styled.div`
   @media ${devices.mobile} {
@@ -28,7 +27,6 @@ const TextContainer = styled.div`
   @media ${devices.mobile} {
     width: 100%;
     order: 2;
-    margin: 0 auto;
   }
   @media ${devices.laptop} {
     width: 50%;
@@ -42,26 +40,4 @@ const TextContainer = styled.div`
   }
 `
 
-const H2Title = styled(H2)`
-  margin-bottom: 0.9rem;
-  @media ${devices.mobile} {
-    margin-top: 1.4rem;
-  }
-  @media ${devices.laptop} {
-    margin-top: 0rem;
-    line-height: 38px;
-  }
-`
-
-const ImageContainer = styled.div`
-  @media ${devices.mobile} {
-    width: 100%;
-    order: 1;
-  }
-  @media ${devices.laptop} {
-    order: 2;
-    width: 50%;
-  }
-`
-
-export { Container, TextContainer, H2Title, ImageContainer }
+export { Container, TextContainer }

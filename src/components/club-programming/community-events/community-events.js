@@ -4,13 +4,12 @@ import { Button } from "../../../constants/buttons"
 import {
   Container,
   TextContainer,
-  H2Title,
   BackgroundGradient,
   CommunityImage,
   MobileImageContainer,
   MobileGradient,
 } from "./community-events-styles"
-import { ButtonContainer } from "../section-styles"
+import { H2Title, ButtonContainer } from "../section-styles"
 
 const CommunityEvents = ({
   title,
@@ -23,7 +22,7 @@ const CommunityEvents = ({
   return (
     <Container>
       <TextContainer>
-        <H2Title>{title}</H2Title>
+        <H2Title lineheight={true}>{title}</H2Title>
         <P>{blurb}</P>
         <ButtonContainer>
           <a href={ctaLink}>

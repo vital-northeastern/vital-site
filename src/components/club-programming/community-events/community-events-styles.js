@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
 import { navyBlue, imageGradient } from "../../../constants/colors"
-import { H2 } from "../../../constants/typography"
 import Img from "gatsby-image"
 
 const Container = styled.div`
@@ -25,7 +24,6 @@ const TextContainer = styled.div`
   color: ${navyBlue};
   @media ${devices.mobile} {
     width: 100%;
-    margin: 0 auto;
     order: 2;
   }
   @media ${devices.laptop} {
@@ -35,32 +33,6 @@ const TextContainer = styled.div`
   }
   @media ${devices.desktop} {
     padding-right: 200px;
-  }
-`
-
-const H2Title = styled(H2)`
-  margin-bottom: 0.9rem;
-  @media ${devices.mobile} {
-    margin-top: 1.4rem;
-  }
-  @media ${devices.laptop} {
-    margin-top: 0rem;
-    line-height: 38px;
-  }
-`
-
-const BackgroundGradient = styled.div`
-  @media ${devices.mobile} {
-    width: 100%;
-    order: 1;
-  }
-  @media ${devices.tabletMax} {
-    display: none;
-  }
-  @media ${devices.laptop} {
-    width: 47%;
-    order: 2;
-    background: ${imageGradient};
   }
 `
 
@@ -87,6 +59,22 @@ const MobileGradient = styled(Img)`
   }
   height: 100%;
   z-index: -10;
+`
+
+const BackgroundGradient = styled.div`
+  @media ${devices.mobile} {
+    width: 100%;
+    order: 1;
+  }
+  @media ${devices.tabletMax} {
+    display: none;
+  }
+  @media ${devices.laptop} {
+    padding-left: 21px;
+    width: 50%;
+    order: 2;
+    background: ${imageGradient};
+  }
 `
 
 const CommunityImage = styled(Img)`
@@ -119,7 +107,6 @@ width: 100%;
 export {
   Container,
   TextContainer,
-  H2Title,
   BackgroundGradient,
   CommunityImage,
   MobileImageContainer,
