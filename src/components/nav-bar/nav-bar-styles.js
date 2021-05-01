@@ -147,7 +147,7 @@ const SmallMenuContainer = styled.div`
   background: ${navyBlue};
   top: 1rem;
   right: 1rem;
-  border-radius: 9%;
+  border-radius: 6%;
   padding: 0.5rem 0.5rem 0 0.5rem;
   display: flex;
   flex-direction: column;

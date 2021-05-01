@@ -3,6 +3,7 @@ import { H2, P } from "../../../constants/typography"
 import {
   PlatformsContainer,
   Title,
+  GeoshapePlatform,
   Platform,
   LineContainer,
   Line,
@@ -11,7 +12,7 @@ import {
   PlatformTitle,
   PlatformButton,
 } from "./platforms-styles"
-import { GeoshapeContainer, Geoshape } from "../../geoshape/geoshape-styles"
+import { GeoshapeContainer } from "../../geoshape/geoshape-styles"
 import bg_svg from "../../../images/what-we-do/platforms.svg"
 
 const Platforms = ({ title, platforms }) => {
@@ -21,9 +22,8 @@ const Platforms = ({ title, platforms }) => {
         <H2>{title}</H2>
       </Title>
       <GeoshapeContainer>
-        <Geoshape
+        <GeoshapePlatform
           marginTop="-6.9rem"
-          platforms={true}
           right={true}
           src={bg_svg}
           alt="blue and white geometric shape"

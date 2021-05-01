@@ -16,7 +16,7 @@ const fonts = {
 const minSize = {
   h1: 41,
   h2: 22,
-  hName: 20,
+  hName: 18,
   hUpper: 34,
   p: 13,
   pCard: 12,
@@ -67,21 +67,25 @@ const H1 = styled.h1`
 `
 
 const H2 = styled.h2`
-  font-size: ${fontSizes.h2};
+  @media ${devices.mobile} {
+    font-size: 27px;
+  }
+  @media ${devices.tablet} {
+    font-size: ${fontSizes.h2};
+  }
   font-family: ${fonts.subheader};
   font-weight: ${fontWeights.semiBold};
   text-transform: ${textStyles.capitalize};
   line-height: 30px;
   color: ${navyBlue};
-  @media ${devices.mobileMax} {
-    font-size: 27px;
-  }
 `
 
 const HName = styled(H2)`
-  font-size: ${fontSizes.hName};
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     font-size: 22px;
+  }
+  @media ${devices.tablet} {
+    font-size: ${fontSizes.hName};
   }
 `
 
@@ -90,9 +94,11 @@ const HUpper = styled.h2`
   font-family: ${fonts.subheader};
   font-weight: ${fontWeights.semiBold};
   text-transform: ${textStyles.uppercase};
-  line-height: 26px;
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     line-height: 24px;
+  }
+  @media ${devices.tablet} {
+    line-height: 26px;
   }
 `
 
@@ -100,9 +106,14 @@ const P = styled.p`
   font-size: ${fontSizes.p};
   font-family: ${fonts.body};
   font-weight: ${fontWeights.normal};
-  line-height: 24px;
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     line-height: 22px;
+  }
+  @media ${devices.tablet} {
+    line-height: 24px;
+  }
+  @media ${devices.desktop} {
+    line-height: 27px;
   }
 `
 
@@ -110,12 +121,14 @@ const PCard = styled.p`
   font-size: ${fontSizes.pCard};
   font-family: ${fonts.body};
   font-weight: ${fontWeights.normal};
-  line-height: 24px;
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     line-height: 22px;
   }
+  @media ${devices.tablet} {
+    line-height: 24px;
+  }
   @media ${devices.desktop} {
-    line-height: 25px;
+    line-height: 26px;
   }
 `
 
@@ -127,10 +140,11 @@ const Connect = styled.a`
   border-bottom: ${borders.connect};
   letter-spacing: 0.1em;
   color: ${royalBlue};
-  line-height: 22px;
-
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     line-height: 20px;
+  }
+  @media ${devices.tablet} {
+    line-height: 22px;
   }
   &:hover {
     color: ${navyBlue};
