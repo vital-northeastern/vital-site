@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
-import { navyBlue, imageGradient } from "../../../constants/colors"
+import { navyBlue } from "../../../constants/colors"
 import { H2 } from "../../../constants/typography"
 import Img from "gatsby-image"
 
@@ -15,9 +15,11 @@ const Container = styled.div`
     padding: 8px ${padding.tablet} 30px;
   }
   @media ${devices.laptop} {
-    padding: 110px ${padding.laptop} 135px 150px;
-    align-items: center;
+    padding: 110px ${padding.laptop} 135px 180px;
     margin-bottom: -20px;
+  }
+  @media ${devices.desktop} {
+    padding-right: ${padding.desktop};
   }
 `
 
@@ -29,10 +31,14 @@ const TextContainer = styled.div`
     margin: 0 auto;
   }
   @media ${devices.laptop} {
-    width: 47%;
+    width: 50%;
     order: 1;
     padding-right: 110px;
     padding-bottom: 25px;
+    align-self: center;
+  }
+  @media (min-width: 1200px) {
+    width: 45%;
   }
 `
 
@@ -47,24 +53,32 @@ const H2Title = styled(H2)`
   }
 `
 
-const BackgroundGradient = styled.div`
+const Background = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media ${devices.mobile} {
     width: 100%;
     order: 1;
   }
   @media ${devices.laptop} {
-    width: 49%;
+    width: 50%;
     order: 2;
-    background: ${imageGradient};
   }
+  @media (min-width: 1200px) {
+    width: 55%;
+  }
+`
+
+const Gradient = styled(Img)`
+  width: 100%;
+  height: 100%;
+  z-index: -10;
 `
 
 const Image = styled(Img)`
-  @media ${devices.laptop} {
-    position: absolute;
-    top: -35px;
-    left: -35px;
-  }
+  margin-right: -200px;
+  width: 120%;
 `
 
-export { Container, TextContainer, H2Title, BackgroundGradient, Image }
+export { Container, TextContainer, H2Title, Background, Gradient, Image }

@@ -80,7 +80,7 @@ const ClubProgramming = props => {
       />
       <GeoshapeContainer>
         <BottomGeoshape
-          marginTop="-15rem"
+          marginTop="-13rem"
           right={true}
           src={bottom_right_svg}
           alt="blue and white geometric shape"
@@ -104,6 +104,7 @@ const ClubProgramming = props => {
         title={conferences.title}
         blurb={conferences.blurb.blurb}
         featuredImage={conferences.featuredImage}
+        backgroundGradient={conferences.backgroundGradient}
       />
     </Layout>
   )
@@ -124,6 +125,15 @@ export const pageQuery = graphql`
         ctaTitle
         ctaLink
         featuredImage {
+          fluid {
+            ...GatsbyContentfulFluid
+          }
+          file {
+            url
+          }
+          description
+        }
+        backgroundGradient {
           fluid {
             ...GatsbyContentfulFluid
           }

@@ -17,6 +17,9 @@ const Container = styled.div`
   @media ${devices.laptop} {
     padding: 90px ${padding.laptop} 8px 290px;
   }
+  @media ${devices.desktop} {
+    padding-right: ${padding.desktop};
+  }
 `
 
 const Event = styled.div`

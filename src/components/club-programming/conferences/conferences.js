@@ -4,20 +4,25 @@ import {
   Container,
   TextContainer,
   H2Title,
-  BackgroundGradient,
+  Gradient,
   Image,
+  Background,
 } from "./conferences-styles"
 
-const Conferences = ({ title, blurb, featuredImage }) => {
+const Conferences = ({ title, blurb, featuredImage, backgroundGradient }) => {
   return (
     <Container>
       <TextContainer>
         <H2Title>{title}</H2Title>
         <P>{blurb}</P>
       </TextContainer>
-      <BackgroundGradient>
+      <Background>
         <Image fluid={featuredImage.fluid} alt={featuredImage.description} />
-      </BackgroundGradient>
+        <Gradient
+          fluid={backgroundGradient.fluid}
+          alt={backgroundGradient.description}
+        />
+      </Background>
     </Container>
   )
 }
