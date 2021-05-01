@@ -3,7 +3,6 @@ import { H2, P } from "../../../constants/typography"
 import {
   Container,
   TextContainer,
-  Text,
   Image,
   MobileImage,
 } from "./industry-bg-styles"
