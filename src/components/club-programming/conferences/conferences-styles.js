@@ -33,12 +33,13 @@ const TextContainer = styled.div`
   @media ${devices.laptop} {
     width: 50%;
     order: 1;
-    padding-right: 110px;
+    padding-right: 70px;
     padding-bottom: 25px;
     align-self: center;
   }
   @media (min-width: 1200px) {
     width: 45%;
+    padding-right: 110px;
   }
 `
 

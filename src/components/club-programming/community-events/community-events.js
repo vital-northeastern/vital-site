@@ -6,10 +6,9 @@ import {
   TextContainer,
   H2Title,
   BackgroundGradient,
-  Image,
-  ImageContainer,
-  Gradient,
-  Image2,
+  CommunityImage,
+  MobileImageContainer,
+  MobileGradient,
 } from "./community-events-styles"
 import { ButtonContainer } from "../section-styles"
 
@@ -34,15 +33,23 @@ const CommunityEvents = ({
           </a>
         </ButtonContainer>
       </TextContainer>
-      <ImageContainer>
-        <Image2 fluid={featuredImage.fluid} alt={featuredImage.description} />
-        <Gradient
+      <MobileImageContainer>
+        <CommunityImage
+          mobile={true}
+          fluid={featuredImage.fluid}
+          alt={featuredImage.description}
+        />
+        <MobileGradient
           fluid={backgroundGradient.fluid}
           alt={backgroundGradient.description}
         />
-      </ImageContainer>
+      </MobileImageContainer>
       <BackgroundGradient>
-        <Image fluid={featuredImage.fluid} alt={featuredImage.description} />
+        <CommunityImage
+          regular={true}
+          fluid={featuredImage.fluid}
+          alt={featuredImage.description}
+        />
       </BackgroundGradient>
     </Container>
   )

@@ -8,8 +8,25 @@ const TopGeoshape = styled(Geoshape)`
   left: 0;
 `
 
-const BottomGeoshape = styled(Geoshape)`
-  z-index: -11;
+const MiddleLeftGeoshape = styled(Geoshape)`
+  @media (max-width: 1200px) {
+    transform: scale(0.8, 0.8);
+    position: absolute;
+    left: 0;
+    transform-origin: top left;
+    margin-top: -35rem;
+  }
 `
 
-export { TopGeoshape, BottomGeoshape }
+const BottomGeoshape = styled(Geoshape)`
+  z-index: -11;
+  @media (max-width: 1200px) {
+    transform: scale(0.8, 0.8);
+    position: absolute;
+    right: 0;
+    transform-origin: top right;
+    margin-top: -2rem;
+  }
+`
+
+export { TopGeoshape, MiddleLeftGeoshape, BottomGeoshape }

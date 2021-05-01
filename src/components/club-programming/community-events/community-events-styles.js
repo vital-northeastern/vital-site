@@ -64,18 +64,7 @@ const BackgroundGradient = styled.div`
   }
 `
 
-const Image = styled(Img)`
-  @media ${devices.laptop} {
-    position: absolute;
-    top: 45px;
-    left: -80px;
-  }
-  @media ${devices.desktop} {
-    left: -150px;
-  }
-`
-
-const ImageContainer = styled.div`
+const MobileImageContainer = styled.div`
   display: flex;
   justify-content: center;
   @media ${devices.mobile} {
@@ -88,7 +77,7 @@ const ImageContainer = styled.div`
   }
 `
 
-const Gradient = styled(Img)`
+const MobileGradient = styled(Img)`
   @media ${devices.mobile} {
     width: 110%;
     margin-top: -30px;
@@ -100,15 +89,31 @@ const Gradient = styled(Img)`
   z-index: -10;
 `
 
-const Image2 = styled(Img)`
-  @media ${devices.mobile} {
-    margin-right: -212px;
-  }
-  @media ${devices.tablet} {
-    margin-right: -270px;
-  }
-  align-self: flex-start;
-  width: 100%;
+const CommunityImage = styled(Img)`
+  ${({ mobile }) =>
+    mobile &&
+    `
+@media ${devices.mobile} {
+  margin-right: -212px;
+}
+@media ${devices.tablet} {
+  margin-right: -270px;
+}
+align-self: flex-start;
+width: 100%;
+`}
+  ${({ regular }) =>
+    regular &&
+    `
+@media ${devices.laptop} {
+  position: absolute;
+  top: 45px;
+  left: -80px;
+}
+@media ${devices.desktop} {
+  left: -150px;
+}
+`}
 `
 
 export {
@@ -116,8 +121,7 @@ export {
   TextContainer,
   H2Title,
   BackgroundGradient,
-  Image,
-  ImageContainer,
-  Gradient,
-  Image2,
+  CommunityImage,
+  MobileImageContainer,
+  MobileGradient,
 }

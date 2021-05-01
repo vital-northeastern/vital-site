@@ -23,6 +23,7 @@ import {
 import {
   TopGeoshape,
   BottomGeoshape,
+  MiddleLeftGeoshape,
 } from "../page-styles/club-programming-styles"
 
 const ClubProgramming = props => {
@@ -65,7 +66,7 @@ const ClubProgramming = props => {
       />
       <EventSpotlight eventSpotlights={clubProgramming.eventSpotlights} />
       <GeoshapeContainer>
-        <Geoshape
+        <MiddleLeftGeoshape
           marginTop="-50rem"
           src={middle_left_svg}
           alt="blue and white geometric shape"

@@ -25,7 +25,6 @@ const TextContainer = styled.div`
   @media ${devices.tabletMax} {
     width: 100%;
     margin: 0 auto;
-    width: 45%;
   }
   @media ${devices.laptop} {
     width: 50%;
