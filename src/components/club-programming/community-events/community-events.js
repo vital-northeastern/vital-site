@@ -7,6 +7,9 @@ import {
   H2Title,
   BackgroundGradient,
   Image,
+  ImageContainer,
+  Gradient,
+  Image2,
 } from "./community-events-styles"
 import { ButtonContainer } from "../section-styles"
 
@@ -16,6 +19,7 @@ const CommunityEvents = ({
   ctaTitle,
   ctaLink,
   featuredImage,
+  backgroundGradient,
 }) => {
   return (
     <Container>
@@ -30,6 +34,13 @@ const CommunityEvents = ({
           </a>
         </ButtonContainer>
       </TextContainer>
+      <ImageContainer>
+        <Image2 fluid={featuredImage.fluid} alt={featuredImage.description} />
+        <Gradient
+          fluid={backgroundGradient.fluid}
+          alt={backgroundGradient.description}
+        />
+      </ImageContainer>
       <BackgroundGradient>
         <Image fluid={featuredImage.fluid} alt={featuredImage.description} />
       </BackgroundGradient>

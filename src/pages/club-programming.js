@@ -77,10 +77,11 @@ const ClubProgramming = props => {
         ctaTitle={communityEvents.ctaTitle}
         ctaLink={communityEvents.ctaLink}
         featuredImage={communityEvents.featuredImage}
+        backgroundGradient={communityEvents.backgroundGradient}
       />
       <GeoshapeContainer>
         <BottomGeoshape
-          marginTop="-13rem"
+          marginTop="-15rem"
           right={true}
           src={bottom_right_svg}
           alt="blue and white geometric shape"
@@ -142,6 +143,7 @@ export const pageQuery = graphql`
       }
       pastSpeakersTitle
       speakers {
+        name
         featuredImage {
           fluid {
             ...GatsbyContentfulFluid

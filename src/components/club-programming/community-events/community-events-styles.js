@@ -8,11 +8,11 @@ const Container = styled.div`
   @media ${devices.mobile} {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px ${padding.mobile} 8px;
+    padding: 20px ${padding.mobile} 8px;
     margin-bottom: 50px;
   }
   @media ${devices.tablet} {
-    padding: 40px ${padding.tablet} 8px;
+    padding: 90px ${padding.tablet} 8px;
   }
   @media ${devices.laptop} {
     padding: 90px 0px 8px 170px;
@@ -54,10 +54,8 @@ const BackgroundGradient = styled.div`
     width: 100%;
     order: 1;
   }
-  @media ${devices.laptop} {
-    width: 48%;
-    order: 2;
-    background: ${imageGradient};
+  @media ${devices.tabletMax} {
+    display: none;
   }
   @media ${devices.laptop} {
     width: 47%;
@@ -77,4 +75,49 @@ const Image = styled(Img)`
   }
 `
 
-export { Container, TextContainer, H2Title, BackgroundGradient, Image }
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  @media ${devices.mobile} {
+    width: 100%;
+    order: 1;
+    margin-bottom: 0.5rem;
+  }
+  @media ${devices.laptop} {
+    display: none;
+  }
+`
+
+const Gradient = styled(Img)`
+  @media ${devices.mobile} {
+    width: 110%;
+    margin-top: -30px;
+  }
+  @media ${devices.tablet} {
+    margin-top: -40px;
+  }
+  height: 100%;
+  z-index: -10;
+`
+
+const Image2 = styled(Img)`
+  @media ${devices.mobile} {
+    margin-right: -212px;
+  }
+  @media ${devices.tablet} {
+    margin-right: -270px;
+  }
+  align-self: flex-start;
+  width: 100%;
+`
+
+export {
+  Container,
+  TextContainer,
+  H2Title,
+  BackgroundGradient,
+  Image,
+  ImageContainer,
+  Gradient,
+  Image2,
+}
