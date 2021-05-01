@@ -50,9 +50,13 @@ const CardTitle = styled(H2)`
   padding-top: 24px;
   color: ${white};
   margin: 0 auto;
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     padding-top: 15px;
     padding-bottom: 10px;
+  }
+  @media ${devices.tablet} {
+    padding-top: 24px;
+    padding-bottom: 0px;
   }
 `
 
