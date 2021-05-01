@@ -21,7 +21,9 @@ const EventSpotlight = ({ eventSpotlights }) => {
               fluid={eventSpotlight.featuredImage.fluid}
               alt={eventSpotlight.featuredImage.description}
             />
-            <H2EventTitle>{eventSpotlight.eventTitle}</H2EventTitle>
+            <H2EventTitle index={index}>
+              {eventSpotlight.eventTitle}
+            </H2EventTitle>
             <PCard>{eventSpotlight.blurb.blurb}</PCard>
             {eventSpotlight.ctaTitle && (
               <ButtonContainer>

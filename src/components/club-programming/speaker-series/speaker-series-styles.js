@@ -36,8 +36,6 @@ const TextContainer = styled.div`
     padding-right: 80px;
   }
   @media ${devices.desktop} {
-    width: 45%;
-    order: 1;
     padding-top: 3rem;
     padding-right: 100px;
   }
@@ -66,7 +64,13 @@ const BackgroundGradient = styled.div`
 `
 
 const Image = styled(Img)`
-  @media ${devices.laptop} {
+  @media ${devices.laptop} and (max-width: 1200px) {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 14%;
+  }
+  @media (min-width: 1200px) {
     position: absolute;
     top: -35px;
     left: -35px;

@@ -82,7 +82,7 @@ const ClubProgramming = props => {
       />
       <GeoshapeContainer>
         <BottomGeoshape
-          marginTop="-15rem"
+          marginTop="-16rem"
           right={true}
           src={bottom_right_svg}
           alt="blue and white geometric shape"

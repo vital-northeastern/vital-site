@@ -57,7 +57,7 @@ const H2EventTitle = styled(H2)`
     margin-bottom: 0.8rem;
   }
   @media ${devices.laptop} {
-    margin-top: 1.3rem;
+    margin-top: ${props => (props.index % 2 === 0 ? "3rem" : "1.3rem")};
     margin-bottom: 0.9rem;
     line-height: 38px;
   }
