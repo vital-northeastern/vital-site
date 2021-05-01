@@ -16,6 +16,7 @@ const Container = styled.div`
     margin-bottom: -20px;
   }
   @media ${devices.desktop} {
+    padding-left: 340px;
     padding-right: ${padding.desktop};
   }
 `

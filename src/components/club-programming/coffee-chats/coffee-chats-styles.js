@@ -18,6 +18,7 @@ const Container = styled.div`
     margin-bottom: -20px;
   }
   @media ${devices.desktop} {
+    padding-left: 190px;
     padding-right: ${padding.desktop};
   }
 `
@@ -35,7 +36,6 @@ const TextContainer = styled.div`
     padding-right: 85px;
   }
   @media (min-width: 1200px) {
-    width: 50%;
     padding-left: 75px;
     padding-right: 90px;
   }

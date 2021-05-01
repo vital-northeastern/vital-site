@@ -18,6 +18,7 @@ const Container = styled.div`
     padding: 90px ${padding.laptop} 8px 290px;
   }
   @media ${devices.desktop} {
+    padding-left: 340px;
     padding-right: ${padding.desktop};
   }
 `

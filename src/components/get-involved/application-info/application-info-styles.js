@@ -7,6 +7,10 @@ import { Geoshape } from "../../geoshape/geoshape-styles"
 
 const GeoshapeApplication = styled(Geoshape)`
   @media ${devices.desktop} {
+    width: 450px;
+    margin-top: -12rem;
+  }
+  @media (min-width: 1600px) {
     width: 480px;
     margin-top: -11.3rem;
   }

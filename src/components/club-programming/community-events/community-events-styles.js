@@ -18,6 +18,9 @@ const Container = styled.div`
     align-items: center;
     margin-bottom: -20px;
   }
+  @media ${devices.laptop} {
+    padding-left: 220px;
+  }
 `
 
 const TextContainer = styled.div`
@@ -75,6 +78,9 @@ const BackgroundGradient = styled.div`
     order: 2;
     background: ${imageGradient};
   }
+  @media ${devices.desktop} {
+    padding-left: 35px;
+  }
 `
 
 const CommunityImage = styled(Img)`
@@ -99,7 +105,7 @@ width: 100%;
   left: -80px;
 }
 @media ${devices.desktop} {
-  left: -150px;
+  left: -130px;
 }
 `}
 `
