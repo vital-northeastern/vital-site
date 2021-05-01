@@ -15,7 +15,6 @@ import top_left_svg from "../images/club-programming/top-left.svg"
 import right_svg from "../images/club-programming/right.svg"
 import middle_left_svg from "../images/club-programming/middle_left.svg"
 import bottom_right_svg from "../images/club-programming/bottom_right.svg"
-
 import {
   Geoshape,
   GeoshapeContainer,
@@ -129,9 +128,6 @@ export const pageQuery = graphql`
         featuredImage {
           fluid {
             ...GatsbyContentfulFluid
-          }
-          file {
-            url
           }
           description
         }

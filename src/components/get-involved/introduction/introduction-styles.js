@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { darkGray } from "../../../constants/colors"
 import { devices, padding } from "../../../constants/devices"
 
 const Container = styled.div`
@@ -24,7 +23,6 @@ const TextContainer = styled.div`
     width: 60%;
     padding-top: 0px;
   }
-  color: ${darkGray};
 `
 
 const ImageContainer = styled.div`
