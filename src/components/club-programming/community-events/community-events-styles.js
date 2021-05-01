@@ -14,11 +14,11 @@ const Container = styled.div`
     padding: 90px ${padding.tablet} 8px;
   }
   @media ${devices.laptop} {
-    padding: 90px 0px 8px 170px;
+    padding: 90px 0px 8px 175px;
     align-items: center;
     margin-bottom: -20px;
   }
-  @media ${devices.laptop} {
+  @media ${devices.desktop} {
     padding-left: 220px;
   }
 `

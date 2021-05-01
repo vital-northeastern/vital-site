@@ -32,7 +32,7 @@ const Title = styled.div`
   @media ${devices.laptop} {
     padding-left: ${padding.laptop};
   }
-  @media ${devices.laptop} {
+  @media ${devices.desktop} {
     padding-left: ${padding.desktop};
   }
 `

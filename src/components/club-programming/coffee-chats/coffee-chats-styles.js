@@ -36,8 +36,8 @@ const TextContainer = styled.div`
     padding-right: 85px;
   }
   @media (min-width: 1200px) {
-    padding-left: 75px;
-    padding-right: 90px;
+    padding-left: 80px;
+    padding-right: 95px;
   }
   @media ${devices.desktop} {
     padding-left: 130px;

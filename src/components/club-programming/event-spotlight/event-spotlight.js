@@ -1,5 +1,5 @@
 import React from "react"
-import { PCard } from "../../../constants/typography"
+import { P } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
 import {
   Container,
@@ -24,7 +24,7 @@ const EventSpotlight = ({ eventSpotlights }) => {
             <H2EventTitle index={index}>
               {eventSpotlight.eventTitle}
             </H2EventTitle>
-            <PCard>{eventSpotlight.blurb.blurb}</PCard>
+            <P>{eventSpotlight.blurb.blurb}</P>
             {eventSpotlight.ctaTitle && (
               <ButtonContainer>
                 <a href={eventSpotlight.ctaLink}>

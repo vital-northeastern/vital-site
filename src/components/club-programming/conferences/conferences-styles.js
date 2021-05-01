@@ -14,7 +14,7 @@ const Container = styled.div`
     padding: 8px ${padding.tablet} 30px;
   }
   @media ${devices.laptop} {
-    padding: 110px ${padding.laptop} 135px 180px;
+    padding: 110px ${padding.laptop} 135px 175px;
     margin-bottom: -20px;
   }
   @media ${devices.desktop} {
