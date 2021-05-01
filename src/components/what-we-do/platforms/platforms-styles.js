@@ -42,13 +42,16 @@ const GeoshapePlatform = styled(Geoshape)`
   width: 43vw;
   z-index: -1;
   @media ${devices.desktop} {
-    margin-top: -21rem;
+    margin-top: -210px;
   }
   @media (max-width: 1220px) {
     margin-top: 1.2rem;
   }
   @media (max-width: 1100px) {
     margin-top: 3rem;
+  }
+  @media (min-width: 1700px) {
+    margin-top: -300px;
   }
 `
 

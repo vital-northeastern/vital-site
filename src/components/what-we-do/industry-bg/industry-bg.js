@@ -12,10 +12,8 @@ const IndustryBG = ({ title, blurb, image, mobileImage, imageAlt }) => {
   return (
     <Container>
       <TextContainer>
-        <Text>
-          <H2>{title}</H2>
-          <P>{blurb.industryBackgroundBlurb}</P>
-        </Text>
+        <H2>{title}</H2>
+        <P>{blurb.industryBackgroundBlurb}</P>
       </TextContainer>
       <Image fluid={image.fluid} alt={imageAlt} />
       <MobileImage fluid={mobileImage.fluid} alt={imageAlt} />

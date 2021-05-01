@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
-import { darkGray } from "../../../constants/colors"
 import Img from "gatsby-image"
 
 const Container = styled.div`
@@ -25,24 +24,30 @@ const Container = styled.div`
 
 const TextContainer = styled.div`
   width: 45%;
-  color: ${darkGray};
   @media ${devices.tabletMax} {
     width: 100%;
     margin: 0 auto;
   }
-`
-
-const Text = styled.div`
   @media ${devices.laptop} {
     padding-right: 50px;
+    width: 50%;
+  }
+  @media (min-width: 1200px) {
+    width: 45%;
   }
 `
 
 const Image = styled(Img)`
   height: 100%;
-  width: 55%;
   @media ${devices.tabletMax} {
     display: none;
+  }
+  @media ${devices.laptop} {
+    padding-right: 50px;
+    width: 50%;
+  }
+  @media (min-width: 1200px) {
+    width: 55%;
   }
 `
 
@@ -52,4 +57,4 @@ const MobileImage = styled(Img)`
   }
 `
 
-export { Container, TextContainer, Text, Image, MobileImage }
+export { Container, TextContainer, Image, MobileImage }
