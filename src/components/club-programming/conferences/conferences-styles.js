@@ -7,7 +7,7 @@ const Container = styled.div`
   @media ${devices.mobile} {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px ${padding.mobile} 0px;
+    padding: 10px ${padding.mobile} 0px;
     margin-bottom: 50px;
   }
   @media ${devices.tablet} {
