@@ -21,7 +21,7 @@ const ApplicationInfo = ({
     <>
       <GeoshapeContainer>
         <GeoshapeApplication
-          marginTop="-8rem"
+          marginTop="-7rem"
           right={true}
           src={bottom_svg}
           alt="blue and white geometric shape"

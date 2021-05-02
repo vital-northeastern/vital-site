@@ -16,8 +16,8 @@ const CardsContainer = styled.div`
     display: flex;
     justify-content: center;
     padding: 50px 0px 50px 0px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 75px;
+    margin-right: 75px;
   }
   @media ${devices.desktop} {
     margin-left: 122px;
