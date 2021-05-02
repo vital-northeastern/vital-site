@@ -10,7 +10,7 @@ const Button = styled.button`
   border: ${props => (props.primary ? "none" : `1px solid ${navyBlue}`)};
   padding: ${props => (props.padding ? props.padding : "20px 38px")};
   box-shadow: ${props =>
-    props.boxshadow ? `1.5px 1.5px 2px ${shadowGray}` : ""};
+    props.boxshadow ? `1.5px 1.5px 2.5px ${shadowGray}` : ""};
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: ${fonts.button};

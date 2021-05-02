@@ -31,7 +31,9 @@ const ApplicationInfo = ({
         <H2Header>{subheading}</H2Header>
         <P>{applicationEmail}</P>
         <a href={ctaLink}>
-          <ButtonEmail primary={true}>{ctaTitle}</ButtonEmail>
+          <ButtonEmail boxshadow={true} primary={true} aria-label={ctaTitle}>
+            {ctaTitle}
+          </ButtonEmail>
         </a>
       </ApplicationContainer>
       <MobileImageContainer>
