@@ -23,7 +23,6 @@ const Container = styled.div`
 `
 
 const TextContainer = styled.div`
-  width: 45%;
   @media ${devices.tabletMax} {
     width: 100%;
     margin: 0 auto;

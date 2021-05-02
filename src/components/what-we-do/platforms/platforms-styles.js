@@ -32,7 +32,7 @@ const Title = styled.div`
   @media ${devices.laptop} {
     padding-left: ${padding.laptop};
   }
-  @media ${devices.laptop} {
+  @media ${devices.desktop} {
     padding-left: ${padding.desktop};
   }
 `
@@ -40,6 +40,7 @@ const Title = styled.div`
 const GeoshapePlatform = styled(Geoshape)`
   display: block;
   width: 43vw;
+  max-width: 700px;
   z-index: -1;
   @media ${devices.desktop} {
     margin-top: -210px;
