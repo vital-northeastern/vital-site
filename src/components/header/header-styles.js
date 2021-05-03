@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { white, headerGradient } from "../../constants/colors"
-import { size } from "../../constants/devices"
+import { devices } from "../../constants/devices"
 
 const HeaderContainer = styled.div`
   background: ${headerGradient};
@@ -29,7 +29,7 @@ const BackgroundShape = styled.img`
   @media (max-width: 1200px) {
     opacity: ${props => (props.title.length > 15 ? "0" : "1")};
   }
-  @media (max-width: ${size.laptop}px) {
+  @media ${devices.tabletMax} {
     opacity: 0;
   }
 `

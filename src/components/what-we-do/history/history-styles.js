@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { devices, padding } from "../../../constants/devices"
+import { size, devices, padding } from "../../../constants/devices"
 
 const HistoryContainer = styled.div`
   margin: 50px 0px 70px;
@@ -25,9 +25,12 @@ const ImageContainer = styled.div`
     margin-left: -130px;
   }
   @media ${devices.tablet} {
-    margin-left: -90px;
+    margin-left: -35px;
   }
   @media (max-width: 450px) {
+    overflow: hidden;
+  }
+  @media (min-width: 451px) and (max-width: ${size.laptop - 1}px) {
     overflow: hidden;
   }
   @media ${devices.laptop} {
@@ -41,9 +44,8 @@ const RegularImage = styled.img`
   }
   @media ${devices.laptop} {
     display: block;
-    transform: scale(1.06, 1.06);
     padding-right: 10px;
-  }  
+  }
   @media ${devices.desktop} {
     width: 100vw;
   }
@@ -54,6 +56,10 @@ const MobileImage = styled.img`
     transform: scale(1.25, 1.25);
     padding-top: 90px;
     padding-bottom: 100px;
+  }
+  @media (min-width: 451px) and (max-width: ${size.tablet - 1}px) {
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
   @media ${devices.tablet} {
     padding-top: 150px;
