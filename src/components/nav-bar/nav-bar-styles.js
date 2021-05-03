@@ -77,7 +77,8 @@ const NavLink = styled(Link)`
     color: ${props => (props.hovercolor === "gradient" ? navyBlue : royalBlue)};
   }
   @media ${devices.tabletMax} {
-    line-height: 12px;
+    font-size: 14.5px;
+    line-height: 13px;
   }
   @media ${devices.desktop} {
     font-size: 16px;

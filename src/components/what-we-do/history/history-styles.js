@@ -3,7 +3,7 @@ import { devices, padding } from "../../../constants/devices"
 
 const HistoryContainer = styled.div`
   @media ${devices.mobile} {
-    margin: 50px 0px 30px;
+    margin: 50px 0px 40px;
   }
   @media ${devices.laptop} {
     margin-bottom: 70px;

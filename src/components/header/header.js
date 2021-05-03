@@ -19,12 +19,8 @@ const Header = ({ title, mobileTitle, subheading, imageBool }) => {
         <P>{subheading}</P>
       </TextContainer>
       {imageBool && (
-        <ImageContainer>
-          <BackgroundShape
-            src={header_shape}
-            alt="geometric shape"
-            title={title}
-          />
+        <ImageContainer title={title}>
+          <BackgroundShape src={header_shape} alt="geometric shape" />
         </ImageContainer>
       )}
     </HeaderContainer>

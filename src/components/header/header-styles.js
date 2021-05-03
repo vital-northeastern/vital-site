@@ -44,17 +44,17 @@ const ImageContainer = styled.div`
   top: 0;
   right: 0;
   width: auto;
+  @media (max-width: 1200px) {
+    display: ${props => (props.title.length > 15 ? "none" : "inline")};
+  }
+  @media ${devices.tabletMax} {
+    display: none;
+  }
 `
 
 const BackgroundShape = styled.img`
   padding-bottom: 490px;
   transform: rotate(11deg);
-  @media (max-width: 1200px) {
-    opacity: ${props => (props.title.length > 15 ? "0" : "1")};
-  }
-  @media ${devices.tabletMax} {
-    opacity: 0;
-  }
 `
 
 export {
