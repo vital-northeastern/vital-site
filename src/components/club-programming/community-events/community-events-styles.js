@@ -105,7 +105,7 @@ width: 100%;
   left: -80px;
 }
 @media ${devices.desktop} {
-  left: -130px;
+  left: -123px;
 }
 `}
 `

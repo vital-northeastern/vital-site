@@ -15,7 +15,7 @@ const fonts = {
 
 const minSize = {
   h1: 41,
-  h2: 22,
+  h2: 23,
   hName: 18,
   hUpper: 34,
   p: 13,
@@ -24,7 +24,7 @@ const minSize = {
 
 const fontSizes = {
   h1: `calc(${minSize.h1}px + (62 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
-  h2: `calc(${minSize.h2}px + (34 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  h2: `calc(${minSize.h2}px + (35 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   hName: `calc(${minSize.hName}px + (29 - ${minSize.hName}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   hUpper: `calc(${minSize.hUpper}px + (40 - ${minSize.hUpper}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   p: `calc(${minSize.p}px + (16 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
@@ -74,12 +74,7 @@ const H1 = styled.h1`
 `
 
 const H2 = styled.h2`
-  @media ${devices.mobile} {
-    font-size: 27px;
-  }
-  @media ${devices.tablet} {
-    font-size: ${fontSizes.h2};
-  }
+  font-size: ${fontSizes.h2};
   font-family: ${fonts.subheader};
   font-weight: ${fontWeights.semiBold};
   text-transform: ${textStyles.capitalize};
@@ -88,12 +83,7 @@ const H2 = styled.h2`
 `
 
 const HName = styled(H2)`
-  @media ${devices.mobile} {
-    font-size: 22px;
-  }
-  @media ${devices.tablet} {
-    font-size: ${fontSizes.hName};
-  }
+  font-size: ${fontSizes.hName};
 `
 
 const HUpper = styled.h2`

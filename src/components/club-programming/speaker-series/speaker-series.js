@@ -1,8 +1,12 @@
 import React from "react"
 import { P } from "../../../constants/typography"
-import { Button } from "../../../constants/buttons"
 import { Container, TextContainer, Image } from "./speaker-series-styles"
-import { H2Title, ButtonContainer, ImageContainer } from "../section-styles"
+import {
+  H2Title,
+  ButtonContainer,
+  ClubProgrammingButton,
+  ImageContainer,
+} from "../section-styles"
 
 const SpeakerSeries = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
   return (
@@ -12,9 +16,9 @@ const SpeakerSeries = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
         <P>{blurb.blurb}</P>
         <ButtonContainer>
           <a href={ctaLink}>
-            <Button padding="17px 30px" primary={true} aria-label={ctaTitle}>
+            <ClubProgrammingButton primary={true} aria-label={ctaTitle}>
               {ctaTitle}
-            </Button>
+            </ClubProgrammingButton>
           </a>
         </ButtonContainer>
       </TextContainer>

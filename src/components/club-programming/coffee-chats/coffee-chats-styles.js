@@ -41,6 +41,9 @@ const TextContainer = styled.div`
   }
   @media ${devices.desktop} {
     padding-left: 130px;
+    padding-right: 150px;
+  }
+  @media (min-width: 1600px) {
     padding-right: 180px;
   }
 `

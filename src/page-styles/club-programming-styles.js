@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Geoshape } from "../components/geoshape/geoshape-styles"
+import { devices } from "../constants/devices"
 
 const TopGeoshape = styled(Geoshape)`
   position: absolute;
@@ -26,6 +27,9 @@ const BottomGeoshape = styled(Geoshape)`
     right: 0;
     transform-origin: top right;
     margin-top: -2rem;
+  }
+  @media ${devices.desktop} {
+    margin-top: -12rem;
   }
 `
 

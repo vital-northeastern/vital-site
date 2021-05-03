@@ -3,7 +3,10 @@ import { devices, padding } from "../../../constants/devices"
 
 const HistoryContainer = styled.div`
   @media ${devices.mobile} {
-    margin: 50px 0px 40px;
+    margin: 40px 0px 40px;
+  }
+  @media ${devices.tablet} {
+    margin-top: 50px;
   }
   @media ${devices.laptop} {
     margin-bottom: 70px;
@@ -58,7 +61,7 @@ const MobileImage = styled.img`
     padding-top: 90px;
     padding-bottom: 100px;
   }
-  @media (min-width: 445px) {
+  @media (min-width: 440px) {
     padding-top: 150px;
     padding-bottom: 150px;
   }

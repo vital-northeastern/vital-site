@@ -42,7 +42,7 @@ const TextContainer = styled.div`
 `
 
 const Image = styled(Img)`
-  @media ${devices.laptop} and (max-width: 1200px) {
+  @media ${devices.laptop} and (max-width: 1199px) {
     position: relative;
     top: 50%;
     transform: translateY(-50%);

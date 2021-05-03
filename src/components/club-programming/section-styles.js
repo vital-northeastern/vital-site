@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { devices } from "../../constants/devices"
 import { imageGradient } from "../../constants/colors"
 import { H2 } from "../../constants/typography"
+import { Button } from "../../constants/buttons"
 
 const ButtonContainer = styled.div`
   @media ${devices.mobile} {
@@ -13,8 +14,12 @@ const ButtonContainer = styled.div`
   }
 `
 
+const ClubProgrammingButton = styled(Button)`
+  padding: ${props => (props.morePadding ? "15px 37px" : "17px 30px")};
+`
+
 const H2Title = styled(H2)`
-  margin-bottom: ${props => (props.first ? "0.85rem" : "0.9rem")};
+  margin-bottom: 0.9rem;
   @media ${devices.mobile} {
     margin-top: ${props => (props.first ? "0.85rem" : "1.4rem")};
   }
@@ -44,4 +49,4 @@ const ImageContainer = styled.div`
   }
 `
 
-export { ButtonContainer, H2Title, ImageContainer }
+export { ButtonContainer, ClubProgrammingButton, H2Title, ImageContainer }

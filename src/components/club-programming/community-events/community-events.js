@@ -1,6 +1,5 @@
 import React from "react"
 import { P } from "../../../constants/typography"
-import { Button } from "../../../constants/buttons"
 import {
   Container,
   TextContainer,
@@ -9,7 +8,11 @@ import {
   MobileImageContainer,
   MobileGradient,
 } from "./community-events-styles"
-import { H2Title, ButtonContainer } from "../section-styles"
+import {
+  H2Title,
+  ButtonContainer,
+  ClubProgrammingButton,
+} from "../section-styles"
 
 const CommunityEvents = ({
   title,
@@ -26,9 +29,9 @@ const CommunityEvents = ({
         <P>{blurb}</P>
         <ButtonContainer>
           <a href={ctaLink}>
-            <Button padding="17px 30px" primary={true} aria-label={ctaTitle}>
+            <ClubProgrammingButton primary={true} aria-label={ctaTitle}>
               {ctaTitle}
-            </Button>
+            </ClubProgrammingButton>
           </a>
         </ButtonContainer>
       </TextContainer>

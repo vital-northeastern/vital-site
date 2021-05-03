@@ -1,8 +1,12 @@
 import React from "react"
 import { P } from "../../../constants/typography"
-import { Button } from "../../../constants/buttons"
 import { Container, TextContainer } from "./volunteering-styles"
-import { ImageContainer, H2Title, ButtonContainer } from "../section-styles"
+import {
+  ImageContainer,
+  H2Title,
+  ButtonContainer,
+  ClubProgrammingButton,
+} from "../section-styles"
 import Img from "gatsby-image"
 
 const Volunteering = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
@@ -16,9 +20,9 @@ const Volunteering = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
         <P>{blurb}</P>
         <ButtonContainer>
           <a href={ctaLink}>
-            <Button padding="17px 30px" primary={true} aria-label={ctaTitle}>
+            <ClubProgrammingButton primary={true} aria-label={ctaTitle}>
               {ctaTitle}
-            </Button>
+            </ClubProgrammingButton>
           </a>
         </ButtonContainer>
       </TextContainer>

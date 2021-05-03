@@ -55,7 +55,8 @@ const PCaption = styled(PCard)`
     line-height: 20px;
   }
   @media ${devices.desktop} {
-    font-size: 14px;
+    margin-top: 0.7rem;
+    font-size: 14.5px;
   }
 `
 

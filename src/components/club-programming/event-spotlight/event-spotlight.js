@@ -1,6 +1,5 @@
 import React from "react"
 import { P } from "../../../constants/typography"
-import { Button } from "../../../constants/buttons"
 import {
   Container,
   Event,
@@ -8,6 +7,7 @@ import {
   H2EventTitle,
   ButtonContainer,
 } from "./event-spotlight-styles"
+import { ClubProgrammingButton } from "../section-styles"
 import Img from "gatsby-image"
 
 const EventSpotlight = ({ eventSpotlights }) => {
@@ -28,9 +28,12 @@ const EventSpotlight = ({ eventSpotlights }) => {
             {eventSpotlight.ctaTitle && (
               <ButtonContainer>
                 <a href={eventSpotlight.ctaLink}>
-                  <Button padding="17px 30px" primary={true}>
+                  <ClubProgrammingButton
+                    primary={true}
+                    aria-label={eventSpotlight.ctaTitle}
+                  >
                     {eventSpotlight.ctaTitle}
-                  </Button>
+                  </ClubProgrammingButton>
                 </a>
               </ButtonContainer>
             )}

@@ -38,8 +38,10 @@ const ClubProgramming = props => {
       <SEO title="Club Programming" />
       <Header
         title={clubProgramming.title}
+        mobileTitle={clubProgramming.title}
         subheading={clubProgramming.subheadingForTitle}
         imageBool={false}
+        longTitle={true}
       />
       <GeoshapeContainer>
         <TopGeoshape src={top_left_svg} alt="blue and white geometric shape" />

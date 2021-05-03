@@ -41,7 +41,6 @@ const Platforms = ({ title, platforms }) => {
               <P>{platform.blurb}</P>
               <a href={platform.ctaLink} target="_blank" rel="noreferrer">
                 <PlatformButton
-                  boxshadow={true}
                   primary={true}
                   aria-label={platform.ctaTitle}
                 >
