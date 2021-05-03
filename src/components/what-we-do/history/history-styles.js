@@ -1,8 +1,13 @@
 import styled from "styled-components"
-import { size, devices, padding } from "../../../constants/devices"
+import { devices, padding } from "../../../constants/devices"
 
 const HistoryContainer = styled.div`
-  margin: 50px 0px 70px;
+  @media ${devices.mobile} {
+    margin: 50px 0px 30px;
+  }
+  @media ${devices.laptop} {
+    margin-bottom: 70px;
+  }
 `
 
 const Title = styled.div`
@@ -25,12 +30,9 @@ const ImageContainer = styled.div`
     margin-left: -130px;
   }
   @media ${devices.tablet} {
-    margin-left: -35px;
+    margin-left: -90px;
   }
-  @media (max-width: 450px) {
-    overflow: hidden;
-  }
-  @media (min-width: 451px) and (max-width: ${size.laptop - 1}px) {
+  @media ${devices.tabletMax} {
     overflow: hidden;
   }
   @media ${devices.laptop} {
@@ -44,7 +46,6 @@ const RegularImage = styled.img`
   }
   @media ${devices.laptop} {
     display: block;
-    padding-right: 10px;
   }
   @media ${devices.desktop} {
     width: 100vw;
@@ -57,17 +58,15 @@ const MobileImage = styled.img`
     padding-top: 90px;
     padding-bottom: 100px;
   }
-  @media (min-width: 451px) and (max-width: ${size.tablet - 1}px) {
+  @media (min-width: 445px) {
     padding-top: 150px;
     padding-bottom: 150px;
   }
   @media ${devices.tablet} {
-    padding-top: 150px;
+    padding-bottom: 170px;
   }
   @media ${devices.laptop} {
     display: none;
-    padding-top: 0px;
-    margin-bottom: 0px;
   }
 `
 
