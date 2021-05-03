@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { size, devices, padding } from "../../../constants/devices"
-import { darkGray } from "../../../constants/colors"
 import { H2, PCard } from "../../../constants/typography"
 
 const Container = styled.div`
@@ -21,8 +20,6 @@ const Container = styled.div`
 `
 
 const TextContainer = styled.div`
-  width: 60%;
-  color: ${darkGray};
   @media ${devices.mobile} {
     width: 100%;
   }

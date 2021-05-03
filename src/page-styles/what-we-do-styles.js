@@ -16,12 +16,12 @@ const CardsContainer = styled.div`
     display: flex;
     justify-content: center;
     padding: 50px 0px 50px 0px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 74px;
+    margin-right: 74px;
   }
   @media ${devices.desktop} {
-    margin-left: 115px;
-    margin-right: 115px;
+    margin-left: 122px;
+    margin-right: 122px;
   }
 `
 
