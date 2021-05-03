@@ -30,7 +30,7 @@ const WhatWeDo = props => {
       <IndustryBG
         title={whatWeDo.industryBackgroundTitle}
         blurb={whatWeDo.industryBackgroundBlurb}
-        image={whatWeDo.industryBackgroundImage}
+        image={whatWeDo.mobileIndustryBackgroundImage}
         imageAlt={whatWeDo.industryBackgroundImage.description}
       />
       <CardsContainer>

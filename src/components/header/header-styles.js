@@ -19,7 +19,7 @@ const TextContainer = styled.div`
     padding: 170px 0px 40px ${padding.laptop};
   }
   @media ${devices.desktop} {
-    padding: 190px 0px 60px ${padding.desktop};
+    padding: 190px 0px 50px ${padding.desktop};
   }
 `
 
