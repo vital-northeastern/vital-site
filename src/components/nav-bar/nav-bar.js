@@ -29,6 +29,25 @@ const NavBar = ({ navbarstyle }) => {
     }
   `)
 
+  const navLinks = [
+    {
+      name: "About",
+      link: "/what-we-do",
+    },
+    {
+      name: "Events",
+      link: "/whats-happening",
+    },
+    {
+      name: "Team",
+      link: "/our-team",
+    },
+    {
+      name: "Get Involved",
+      link: "/get-involved",
+    },
+  ]
+
   const [smallLinks, setSmallLinks] = useState(false)
   const [crossClose, setCrossClose] = useState(false)
 
@@ -53,27 +72,18 @@ const NavBar = ({ navbarstyle }) => {
         </NavBrandWrapper>
       </FlexColumn>
       <FlexColumn>
-        <NavLink
-          navbarstyle={navbarstyle}
-          hoverColor={navbarstyle}
-          to="/what-we-do"
-        >
-          About
-        </NavLink>
-        <NavLink
-          navbarstyle={navbarstyle}
-          hoverColor={navbarstyle}
-          to="/whats-happening"
-        >
-          Events
-        </NavLink>
-        <NavLink
-          navbarstyle={navbarstyle}
-          hoverColor={navbarstyle}
-          to="/our-team"
-        >
-          Team
-        </NavLink>
+        {navLinks.slice(0, -1).map((navLink, index) => {
+          return (
+            <NavLink
+              key={navLink.name}
+              navbarstyle={navbarstyle}
+              hovercolor={navbarstyle}
+              to={navLink.link}
+            >
+              {navLink.name}
+            </NavLink>
+          )
+        })}
       </FlexColumn>
       <FlexColumn>
         <NavButton
@@ -94,30 +104,18 @@ const NavBar = ({ navbarstyle }) => {
             <Cross />
           </CrossContainer>
           <SmallLinksContainer>
-            <NavLink
-              navbarstyle="gradient"
-              hoverColor="mobile"
-              to="/what-we-do"
-            >
-              About
-            </NavLink>
-            <NavLink
-              navbarstyle="gradient"
-              hoverColor="mobile"
-              to="/whats-happening"
-            >
-              Events
-            </NavLink>
-            <NavLink navbarstyle="gradient" hoverColor="mobile" to="/our-team">
-              Team
-            </NavLink>
-            <NavLink
-              navbarstyle="gradient"
-              hoverColor="mobile"
-              to="/get-involved"
-            >
-              Get Involved
-            </NavLink>
+            {navLinks.map((navLink, index) => {
+              return (
+                <NavLink
+                  key={navLink.name}
+                  navbarstyle="gradient"
+                  hovercolor="mobile"
+                  to={navLink.link}
+                >
+                  {navLink.name}
+                </NavLink>
+              )
+            })}
           </SmallLinksContainer>
         </SmallMenuContainer>
       )}

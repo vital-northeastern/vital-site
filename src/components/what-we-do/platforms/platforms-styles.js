@@ -4,6 +4,7 @@ import { Button } from "../../../constants/buttons"
 import { size } from "../../../constants/devices"
 import { royalBlue, shadowGray } from "../../../constants/colors"
 import { devices, padding } from "../../../constants/devices"
+import { Geoshape } from "../../geoshape/geoshape-styles"
 
 const PlatformsContainer = styled.div`
   @media ${devices.mobile} {
@@ -13,6 +14,9 @@ const PlatformsContainer = styled.div`
   @media ${devices.tablet} {
     padding-top: 14px;
     margin-bottom: 8rem;
+  }
+  @media ${devices.desktop} {
+    margin-bottom: 10rem;
   }
   width: auto;
   height: auto;
@@ -27,6 +31,27 @@ const Title = styled.div`
   }
   @media ${devices.laptop} {
     padding-left: ${padding.laptop};
+  }
+  @media ${devices.laptop} {
+    padding-left: ${padding.desktop};
+  }
+`
+
+const GeoshapePlatform = styled(Geoshape)`
+  display: block;
+  width: 43vw;
+  z-index: -1;
+  @media ${devices.desktop} {
+    margin-top: -210px;
+  }
+  @media (max-width: 1220px) {
+    margin-top: 1.2rem;
+  }
+  @media (max-width: 1100px) {
+    margin-top: 3rem;
+  }
+  @media (min-width: 1700px) {
+    margin-top: -300px;
   }
 `
 
@@ -102,7 +127,7 @@ const PlatformTitle = styled(H2)`
 const PlatformButton = styled(Button)`
   font-size: 12px;
   @media ${devices.desktop} {
-    font-size: 13px;
+    font-size: 14px;
   }
   padding: 17px 55px;
   box-shadow: 1.5px 1.5px 2px ${shadowGray};
@@ -111,6 +136,7 @@ const PlatformButton = styled(Button)`
 export {
   PlatformsContainer,
   Title,
+  GeoshapePlatform,
   Platform,
   LineContainer,
   PlatformContent,

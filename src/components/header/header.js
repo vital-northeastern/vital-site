@@ -1,27 +1,32 @@
 import React from "react"
-import { H1, P } from "../../constants/typography"
+import { P } from "../../constants/typography"
 import {
   HeaderContainer,
   TextContainer,
+  H1Regular,
+  H1Mobile,
   ImageContainer,
   BackgroundShape,
 } from "./header-styles"
 import header_shape from "../../images/header_svg.svg"
 
-const Header = ({ title, subheading, imageBool }) => {
+const Header = ({ title, mobileTitle, subheading, imageBool }) => {
   return (
     <HeaderContainer>
       <TextContainer>
-        <H1>{title}</H1>
+        <H1Regular>{title}</H1Regular>
+        <H1Mobile>{mobileTitle}</H1Mobile>
         <P>{subheading}</P>
       </TextContainer>
-      <ImageContainer imageBool={imageBool}>
-        <BackgroundShape
-          src={header_shape}
-          alt="geometric shape"
-          title={title}
-        />
-      </ImageContainer>
+      {imageBool && (
+        <ImageContainer>
+          <BackgroundShape
+            src={header_shape}
+            alt="geometric shape"
+            title={title}
+          />
+        </ImageContainer>
+      )}
     </HeaderContainer>
   )
 }

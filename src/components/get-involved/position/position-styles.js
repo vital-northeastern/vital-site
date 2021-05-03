@@ -47,6 +47,9 @@ const PositionContainer = styled.div`
     margin-bottom: 1rem;
   }
   @media ${devices.desktop} {
+    width: 37vw;
+    margin-left: ${props =>
+      props.index % 2 === 0 ? `${padding.desktop}` : "0px"};
     height: auto;
   }
 `
@@ -95,7 +98,7 @@ const TextContainer = styled.div`
 const PositionName = styled(H2)`
   font-size: ${fontSizes.title};
   color: #133e6c;
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     line-height: 20px;
     padding-right: ${padding.mobile};
   }

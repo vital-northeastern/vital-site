@@ -16,19 +16,6 @@ const Geoshape = styled.img`
     `
   right: 0;
   `}
-  ${({ platforms }) =>
-    platforms &&
-    `
-  display: block;
-  width: 43vw;
-  z-index: -1;
-  @media (max-width: 1220px) {
-    margin-top: 1.2rem;
-  }
-  @media (max-width: 1100px) {
-    margin-top: 3rem;
-  }
-`}
   ${({ middle }) =>
     middle &&
     `
@@ -37,6 +24,15 @@ const Geoshape = styled.img`
   @media (max-width: 1220px) {
     transform: scale(0.72, 0.72);
     left: 28%;
+  }
+  @media ${devices.desktop} {
+    transform: scale(0.92, 0.92);
+    margin-top: 16rem;
+    left: 35%;
+  }
+  @media (min-width: 1600px) {
+    transform: scale(1, 1);
+    margin-top: 21rem;
   }
   `}
 `

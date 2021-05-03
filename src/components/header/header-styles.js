@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { white, headerGradient } from "../../constants/colors"
 import { size, devices, padding } from "../../constants/devices"
+import { H1 } from "../../constants/typography"
 
 const HeaderContainer = styled.div`
   background: ${headerGradient};
@@ -22,14 +23,27 @@ const TextContainer = styled.div`
   }
 `
 
+const H1Regular = styled(H1)`
+  @media ${devices.mobile} {
+    display: none;
+  }
+  @media ${devices.tablet} {
+    display: block;
+  }
+`
+
+const H1Mobile = styled(H1)`
+  @media ${devices.tablet} {
+    display: none;
+  }
+`
+
 const ImageContainer = styled.div`
   position: absolute;
   overflow: hidden;
   top: 0;
   right: 0;
   width: auto;
-  opacity: ${props => (props.imageBool ? "1" : "0")};
-  display: ${props => (props.imageBool ? "inline" : "none")};
 `
 
 const BackgroundShape = styled.img`
@@ -43,4 +57,11 @@ const BackgroundShape = styled.img`
   }
 `
 
-export { HeaderContainer, TextContainer, ImageContainer, BackgroundShape }
+export {
+  HeaderContainer,
+  TextContainer,
+  H1Regular,
+  H1Mobile,
+  ImageContainer,
+  BackgroundShape,
+}

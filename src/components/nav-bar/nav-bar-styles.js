@@ -74,7 +74,7 @@ const NavLink = styled(Link)`
   z-index: 10;
   :hover {
     transition: all 0.2s;
-    color: ${props => (props.hoverColor === "gradient" ? navyBlue : royalBlue)};
+    color: ${props => (props.hovercolor === "gradient" ? navyBlue : royalBlue)};
   }
   @media ${devices.tabletMax} {
     line-height: 12px;
@@ -147,7 +147,7 @@ const SmallMenuContainer = styled.div`
   background: ${navyBlue};
   top: 1rem;
   right: 1rem;
-  border-radius: 9%;
+  border-radius: 6%;
   padding: 0.5rem 0.5rem 0 0.5rem;
   display: flex;
   flex-direction: column;

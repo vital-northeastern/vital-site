@@ -3,6 +3,14 @@ import { H2 } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
 import { shadowGray } from "../../../constants/colors"
 import { devices } from "../../../constants/devices"
+import { Geoshape } from "../../geoshape/geoshape-styles"
+
+const GeoshapeApplication = styled(Geoshape)`
+  @media ${devices.desktop} {
+    width: 480px;
+    margin-top: -11.3rem;
+  }
+`
 
 const ApplicationContainer = styled.div`
 @media ${devices.mobile} {
@@ -35,6 +43,7 @@ const MobileImageContainer = styled.div`
 `
 
 export {
+  GeoshapeApplication,
   ApplicationContainer,
   H2Header,
   ButtonEmail,
