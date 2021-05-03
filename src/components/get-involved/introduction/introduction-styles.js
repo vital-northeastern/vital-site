@@ -26,6 +26,9 @@ const TextContainer = styled.div`
     width: 60%;
     padding-top: 0px;
   }
+  @media ${devices.laptop} {
+    width: 58%;
+  }
 `
 
 const ImageContainer = styled.div`

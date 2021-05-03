@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { H2 } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
 import { size } from "../../../constants/devices"
-import { royalBlue, shadowGray } from "../../../constants/colors"
+import { royalBlue } from "../../../constants/colors"
 import { devices, padding } from "../../../constants/devices"
 import { Geoshape } from "../../geoshape/geoshape-styles"
 
@@ -60,11 +60,14 @@ const Platform = styled.div`
   display: flex;
   @media ${devices.mobile} {
     width: 100vw;
+    padding-top: ${props => (props.num === 0 ? "10px" : "24px")};
   }
   @media ${devices.tablet} {
     width: ${props => (props.num === 0 ? "48vw" : "76vw")};
   }
-  padding-top: ${props => (props.num === 0 ? "10px" : "24px")};
+  @media ${devices.laptop} {
+    padding-top: ${props => (props.num === 0 ? "20px" : "24px")};
+  }
 `
 
 const PlatformContent = styled.div`
@@ -131,7 +134,6 @@ const PlatformButton = styled(Button)`
     font-size: 14px;
   }
   padding: 17px 55px;
-  box-shadow: 1.5px 1.5px 2px ${shadowGray};
 `
 
 export {

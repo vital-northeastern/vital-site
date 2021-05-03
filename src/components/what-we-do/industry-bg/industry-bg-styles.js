@@ -32,35 +32,19 @@ const TextContainer = styled.div`
     width: 50%;
   }
   @media (min-width: 1200px) {
-    width: 45%;
+    width: 46%;
   }
 `
 
 const Image = styled(Img)`
   height: 100%;
-  @media ${devices.tabletMax} {
-    display: none;
-    width: 55%;
-  }
-  @media ${devices.laptop} {
-    width: 50%;
-  }
-  @media (min-width: 1200px) {
-    width: 55%;
-  }
   @media ${devices.laptop} {
     padding-right: 50px;
     width: 50%;
   }
   @media (min-width: 1200px) {
-    width: 55%;
+    width: 54%;
   }
 `
 
-const MobileImage = styled(Img)`
-  @media ${devices.laptop} {
-    display: none;
-  }
-`
-
-export { Container, TextContainer, Image, MobileImage }
+export { Container, TextContainer, Image }

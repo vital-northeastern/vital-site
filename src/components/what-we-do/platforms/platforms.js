@@ -40,7 +40,11 @@ const Platforms = ({ title, platforms }) => {
               <PlatformTitle>{platform.platformTitle}</PlatformTitle>
               <P>{platform.blurb}</P>
               <a href={platform.ctaLink} target="_blank" rel="noreferrer">
-                <PlatformButton primary={true} aria-label={platform.ctaTitle}>
+                <PlatformButton
+                  boxshadow={true}
+                  primary={true}
+                  aria-label={platform.ctaTitle}
+                >
                   {platform.ctaTitle}
                 </PlatformButton>
               </a>
