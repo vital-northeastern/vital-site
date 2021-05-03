@@ -74,12 +74,7 @@ const H1 = styled.h1`
 `
 
 const H2 = styled.h2`
-  @media ${devices.mobile} {
-    font-size: 27px;
-  }
-  @media ${devices.tablet} {
-    font-size: ${fontSizes.h2};
-  }
+  font-size: ${fontSizes.h2};
   font-family: ${fonts.subheader};
   font-weight: ${fontWeights.semiBold};
   text-transform: ${textStyles.capitalize};
@@ -88,12 +83,7 @@ const H2 = styled.h2`
 `
 
 const HName = styled(H2)`
-  @media ${devices.mobile} {
-    font-size: 22px;
-  }
-  @media ${devices.tablet} {
-    font-size: ${fontSizes.hName};
-  }
+  font-size: ${fontSizes.hName};
 `
 
 const HUpper = styled.h2`
