@@ -64,6 +64,13 @@ const H1 = styled.h1`
   @media ${devices.laptop} {
     margin-bottom: 1.5rem;
   }
+  @media ${devices.desktop} {
+    font-size: 62px;
+  }
+  @media (min-width: 1600px) {
+    font-size: 70px;
+    letter-spacing: 2px;
+  }
 `
 
 const H2 = styled.h2`

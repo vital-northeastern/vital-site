@@ -8,7 +8,7 @@ import {
   ImageContainer,
   BackgroundShape,
 } from "./header-styles"
-import header_shape from "../../images/header_svg.svg"
+import header_shape from "../../images/new_header.svg"
 
 const Header = ({ title, mobileTitle, subheading, imageBool }) => {
   return (

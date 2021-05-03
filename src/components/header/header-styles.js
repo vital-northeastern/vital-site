@@ -19,7 +19,7 @@ const TextContainer = styled.div`
     padding: 170px 0px 40px ${padding.laptop};
   }
   @media ${devices.desktop} {
-    padding-left: ${padding.desktop};
+    padding: 190px 0px 60px ${padding.desktop};
   }
 `
 
@@ -41,7 +41,7 @@ const H1Mobile = styled(H1)`
 const ImageContainer = styled.div`
   position: absolute;
   overflow: hidden;
-  top: 0;
+  top: -10px;
   right: 0;
   width: auto;
   @media (max-width: 1200px) {
@@ -50,11 +50,15 @@ const ImageContainer = styled.div`
   @media ${devices.tabletMax} {
     display: none;
   }
+  @media ${devices.desktop} {
+    top: 0;
+  }
 `
 
 const BackgroundShape = styled.img`
-  padding-bottom: 490px;
-  transform: rotate(11deg);
+  @media ${devices.desktop} {
+    transform: scale(1.07, 1.07);
+  }
 `
 
 export {
