@@ -14,6 +14,7 @@ const WhatsHappening = props => {
       <SEO title="What's Happening" />
       <Header
         title={whatsHappening.title}
+        mobileTitle={whatsHappening.title}
         subheading={whatsHappening.subheadingForTitle}
         imageBool={true}
       />

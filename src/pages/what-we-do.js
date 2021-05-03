@@ -18,6 +18,7 @@ const WhatWeDo = props => {
       <SEO title="What We Do" />
       <Header
         title={whatWeDo.title}
+        mobileTitle={whatWeDo.title}
         subheading={whatWeDo.subheadingForTitle}
         imageBool={true}
       />
@@ -29,7 +30,7 @@ const WhatWeDo = props => {
       <IndustryBG
         title={whatWeDo.industryBackgroundTitle}
         blurb={whatWeDo.industryBackgroundBlurb}
-        image={whatWeDo.industryBackgroundImage}
+        image={whatWeDo.mobileIndustryBackgroundImage}
         imageAlt={whatWeDo.industryBackgroundImage.description}
       />
       <CardsContainer>
