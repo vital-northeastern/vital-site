@@ -60,11 +60,14 @@ const Platform = styled.div`
   display: flex;
   @media ${devices.mobile} {
     width: 100vw;
+    padding-top: ${props => (props.num === 0 ? "10px" : "24px")};
   }
   @media ${devices.tablet} {
     width: ${props => (props.num === 0 ? "48vw" : "76vw")};
   }
-  padding-top: ${props => (props.num === 0 ? "10px" : "24px")};
+  @media ${devices.laptop} {
+    padding-top: ${props => (props.num === 0 ? "20px" : "24px")};
+  }
 `
 
 const PlatformContent = styled.div`
