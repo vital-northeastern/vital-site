@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { white, headerGradient } from "../../constants/colors"
-import { size, devices, padding } from "../../constants/devices"
+import { devices, padding } from "../../constants/devices"
 import { H1 } from "../../constants/typography"
 
 const HeaderContainer = styled.div`

@@ -79,6 +79,7 @@ const NavLink = styled(Link)`
   @media ${devices.tabletMax} {
     font-size: 14.5px;
     line-height: 13px;
+    letter-spacing: 1px;
   }
   @media ${devices.desktop} {
     font-size: 16px;
@@ -88,11 +89,14 @@ const NavLink = styled(Link)`
 const NavLogo = styled.img`
   @media ${devices.mobile} {
     margin-top: 2.5rem;
-    width: 18%;
+    width: 20%;
   }
   @media ${devices.tablet} {
     margin-top: 3rem;
-    width: 20%;
+  }
+  @media ${devices.desktop} {
+    margin-top: 2.5rem;
+    width: 22%;
   }
 `
 
@@ -146,12 +150,17 @@ const SmallMenuContainer = styled.div`
   z-index: 2;
   transition: all 0.25s;
   background: ${navyBlue};
-  top: 1rem;
-  right: 1rem;
+  top: 1.2rem;
+  right: 1.2rem;
   border-radius: 6%;
-  padding: 0.5rem 0.5rem 0 0.5rem;
   display: flex;
   flex-direction: column;
+  @media ${devices.mobile} {
+    padding: 0.5rem 0.5rem 0.1rem 0.5rem;
+  }
+  @media ${devices.tablet} {
+    padding: 0rem 0.5rem 0 0.5rem;
+  }
   @media ${devices.laptop} {
     display: none;
   }
