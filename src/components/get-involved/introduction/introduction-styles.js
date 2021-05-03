@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { darkGray } from "../../../constants/colors"
 import { devices, padding } from "../../../constants/devices"
 
 const Container = styled.div`
@@ -27,7 +26,9 @@ const TextContainer = styled.div`
     width: 60%;
     padding-top: 0px;
   }
-  color: ${darkGray};
+  @media ${devices.laptop} {
+    width: 58%;
+  }
 `
 
 const ImageContainer = styled.div`

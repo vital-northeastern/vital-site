@@ -18,6 +18,6 @@ export const devices = {
 export const padding = {
   mobile: "26px",
   tablet: "45px",
-  laptop: "80px",
-  desktop: "125px",
+  laptop: "83px",
+  desktop: "130px",
 }

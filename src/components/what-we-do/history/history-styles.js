@@ -2,7 +2,12 @@ import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
 
 const HistoryContainer = styled.div`
-  margin: 50px 0px 70px;
+  @media ${devices.mobile} {
+    margin: 50px 0px 30px;
+  }
+  @media ${devices.laptop} {
+    margin-bottom: 70px;
+  }
 `
 
 const Title = styled.div`
@@ -27,7 +32,7 @@ const ImageContainer = styled.div`
   @media ${devices.tablet} {
     margin-left: -90px;
   }
-  @media (max-width: 450px) {
+  @media ${devices.tabletMax} {
     overflow: hidden;
   }
   @media ${devices.laptop} {
@@ -41,9 +46,7 @@ const RegularImage = styled.img`
   }
   @media ${devices.laptop} {
     display: block;
-    transform: scale(1.06, 1.06);
-    padding-right: 10px;
-  }  
+  }
   @media ${devices.desktop} {
     width: 100vw;
   }
@@ -55,13 +58,15 @@ const MobileImage = styled.img`
     padding-top: 90px;
     padding-bottom: 100px;
   }
-  @media ${devices.tablet} {
+  @media (min-width: 445px) {
     padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  @media ${devices.tablet} {
+    padding-bottom: 170px;
   }
   @media ${devices.laptop} {
     display: none;
-    padding-top: 0px;
-    margin-bottom: 0px;
   }
 `
 

@@ -40,8 +40,8 @@ const PositionContainer = styled.div`
     padding-left: 0px;
   }
   @media ${devices.laptop} {
-    width: 40vw;
-    height: 15rem;
+    width: 41vw;
+    height: 15.5rem;
     margin-left: ${props =>
       props.index % 2 === 0 ? `${padding.laptop}` : "0px"};
     margin-bottom: 1rem;
@@ -87,7 +87,6 @@ const InfoContainer = styled.div`
     width: 70%;
     padding-left: 25px;
   }
-  justify-content: normal;
 `
 
 const TextContainer = styled.div`

@@ -1,12 +1,15 @@
 import styled from "styled-components"
 import { H2 } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
-import { shadowGray } from "../../../constants/colors"
 import { devices } from "../../../constants/devices"
 import { Geoshape } from "../../geoshape/geoshape-styles"
 
 const GeoshapeApplication = styled(Geoshape)`
   @media ${devices.desktop} {
+    width: 450px;
+    margin-top: -12rem;
+  }
+  @media (min-width: 1600px) {
     width: 480px;
     margin-top: -11.3rem;
   }
@@ -28,7 +31,6 @@ const H2Header = styled(H2)`
 
 const ButtonEmail = styled(Button)`
   margin-top: -4px;
-  box-shadow: 1px 1px 2px ${shadowGray};
   padding: 18px 45px;
 `
 
