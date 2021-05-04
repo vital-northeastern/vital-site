@@ -4,6 +4,20 @@ import { imageGradient } from "../../constants/colors"
 import { H2 } from "../../constants/typography"
 import { Button } from "../../constants/buttons"
 
+const Container = styled.div`
+  @media ${devices.mobile} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+`
+
+const TextContainer = styled.div`
+  color: ${navyBlue};
+  @media ${devices.mobile} {
+    width: 100%;
+  }
+`
+
 const ButtonContainer = styled.div`
   @media ${devices.mobile} {
     display: flex;
@@ -49,4 +63,10 @@ const ImageContainer = styled.div`
   }
 `
 
-export { ButtonContainer, ClubProgrammingButton, H2Title, ImageContainer }
+export {
+  Container,
+  ButtonContainer,
+  ClubProgrammingButton,
+  H2Title,
+  ImageContainer,
+}
