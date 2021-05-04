@@ -16,8 +16,8 @@ const fonts = {
 const minSize = {
   h1: 40,
   h2: 23,
-  hName: 18,
-  hUpper: 34,
+  hName: 17,
+  hUpper: 25,
   p: 13,
   pCard: 12,
 }
@@ -25,8 +25,8 @@ const minSize = {
 const fontSizes = {
   h1: `calc(${minSize.h1}px + (70 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   h2: `calc(${minSize.h2}px + (38 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
-  hName: `calc(${minSize.hName}px + (30 - ${minSize.hName}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
-  hUpper: `calc(${minSize.hUpper}px + (41 - ${minSize.hUpper}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  hName: `calc(${minSize.hName}px + (29 - ${minSize.hName}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  hUpper: `calc(${minSize.hUpper}px + (46 - ${minSize.hUpper}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   p: `calc(${minSize.p}px + (16.8 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   pCard: `calc(${minSize.pCard}px + (15.5 - ${minSize.pCard}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
 }

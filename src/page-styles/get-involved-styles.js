@@ -3,10 +3,10 @@ import { devices, padding } from "../constants/devices"
 
 const PaddingContainer = styled.div`
   @media ${devices.mobile} {
-    padding: 0px ${padding.mobile};
+    padding: 0px ${padding.mobile} 10px;
   }
   @media ${devices.tablet} {
-    padding: 35px ${padding.tablet} 0px;
+    padding: 35px ${padding.tablet} 10px;
   }
   @media ${devices.laptop} {
     padding: 35px ${padding.laptop} 10px;

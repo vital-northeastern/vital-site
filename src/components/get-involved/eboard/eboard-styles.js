@@ -6,6 +6,10 @@ import { H2 } from "../../../constants/typography"
 const EboardContainer = styled.div`
   @media ${devices.mobile} {
     display: block;
+    padding: 1rem 0rem 2rem;
+  }
+  @media ${devices.tablet} {
+    display: block;
     padding: 1rem 0rem;
   }
   @media ${devices.laptop} {
@@ -26,7 +30,7 @@ const TextContainer = styled.div`
 `
 
 const H2Header = styled(H2)`
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
 `
 
 const ButtonContainer = styled.div`
@@ -49,6 +53,9 @@ const ButtonPosition = styled.div`
   }
   @media (min-width: 1220px) {
     margin-left: 68%;
+  }
+  @media ${devices.desktop} {
+    margin-left: 70%;
   }
 `
 

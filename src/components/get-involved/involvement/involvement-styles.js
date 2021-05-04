@@ -34,7 +34,6 @@ const H2Header = styled(H2)`
   }
   @media ${devices.tablet} {
     line-height: 30px;
-    margin-bottom: 0.7rem;
   }
 `
 

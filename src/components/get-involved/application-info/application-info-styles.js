@@ -26,7 +26,7 @@ const ApplicationContainer = styled.div`
 `
 
 const H2Header = styled(H2)`
-  margin-bottom: 17px;
+  margin-bottom: 1rem;
 `
 
 const ButtonEmail = styled(Button)`

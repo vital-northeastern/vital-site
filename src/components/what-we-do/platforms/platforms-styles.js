@@ -75,15 +75,14 @@ const PlatformContent = styled.div`
   @media ${devices.mobile} {
     width: 80%;
     padding-right: ${padding.mobile};
+    padding-top: 5px;
   }
   @media ${devices.tablet} {
     width: ${props => (props.num === 0 ? "65%" : "45%")};
     padding-right: 0px;
-    padding-top: 5px;
   }
   @media ${devices.laptop} {
     width: ${props => (props.num === 0 ? "59%" : "35%")};
-    padding-top: 0px;
   }
 `
 
@@ -127,7 +126,7 @@ const Dot = styled.span`
 
 const PlatformTitle = styled(H2)`
   font-size: calc(
-    16px + (26 - 16) *
+    19px + (26 - 19) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   );
   @media ${devices.mobile} {
