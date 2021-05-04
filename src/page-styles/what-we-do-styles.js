@@ -20,8 +20,8 @@ const CardsContainer = styled.div`
     margin-right: 5.6%;
   }
   @media ${devices.desktop} {
-    margin-left: 8.5%;
-    margin-right: 8.5%;
+    margin-left: 8%;
+    margin-right: 8%;
   }
 `
 
