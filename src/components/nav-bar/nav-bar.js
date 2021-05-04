@@ -25,6 +25,12 @@ const NavBar = ({ navbarstyle }) => {
           }
           description
         }
+        smallIconWhite {
+          file {
+            url
+          }
+          description
+        }
       }
     }
   `)
@@ -65,10 +71,17 @@ const NavBar = ({ navbarstyle }) => {
     <NavWrapper navbarstyle={navbarstyle}>
       <FlexColumn>
         <NavBrandWrapper to="/">
-          <NavLogo
-            src={data.contentfulLogos.smallIcon.file.url}
-            alt={data.contentfulLogos.smallIcon.description}
-          />
+          {navbarstyle === "gradient" ? (
+            <NavLogo
+              src={data.contentfulLogos.smallIconWhite.file.url}
+              alt={data.contentfulLogos.smallIconWhite.description}
+            />
+          ) : (
+            <NavLogo
+              src={data.contentfulLogos.smallIcon.file.url}
+              alt={data.contentfulLogos.smallIcon.description}
+            />
+          )}
         </NavBrandWrapper>
       </FlexColumn>
       <FlexColumn>
