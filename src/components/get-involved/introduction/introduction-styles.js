@@ -1,20 +1,9 @@
 import styled from "styled-components"
-import { devices, padding } from "../../../constants/devices"
+import { devices } from "../../../constants/devices"
 
 const Container = styled.div`
   display: flex;
-  @media ${devices.mobile} {
-    padding: 0px 0px 8px ${padding.mobile};
-  }
-  @media ${devices.tablet} {
-    padding: 35px ${padding.tablet} 8px;
-  }
-  @media ${devices.laptop} {
-    padding: 35px ${padding.laptop} 8px;
-  }
-  @media ${devices.desktop} {
-    padding: 35px ${padding.desktop} 8px;
-  }
+  padding-bottom: 8px;
 `
 
 const TextContainer = styled.div`

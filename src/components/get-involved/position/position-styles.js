@@ -16,7 +16,7 @@ function backgroundColor(index) {
 
 const fontSizes = {
   title: `calc(
-    16px + (23 - 16) *
+    16px + (24 - 16) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   )`,
 }
