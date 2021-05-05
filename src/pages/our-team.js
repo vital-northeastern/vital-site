@@ -6,11 +6,13 @@ import SEO from "../components/seo"
 import Team from "../components/teampage/team-members/teams"
 import Advisor from "../components/teampage/advisors/advisors"
 import Header from "../components/header/header"
+import { TeamPageContentContainer } from "../components/teampage/team-shared-styles"
 
 const TeamPage = props => {
   const teamPage = get(props, "data.contentfulTeamPage")
 
   const listOfTeamsTypes = getTeamTypes(teamPage.teamMembers)
+  console.log(listOfTeamsTypes)
 
   /**
    * creates a list/array of all the team types
@@ -19,15 +21,11 @@ const TeamPage = props => {
    * @returns {string[]} - Array/list of string member types ie ['board', 'marketing']
    */
   function getTeamTypes(members) {
-    let listOfTeamsTypes = new Set()
+    const listOfTeamsTypes = members
+      .filter(m => m.team)
+      .map(m => m.team.toLowerCase())
 
-    members.forEach(member => {
-      if (!member.team) return
-      listOfTeamsTypes.add(member.team.toLowerCase())
-    })
-
-    listOfTeamsTypes = Array.from(listOfTeamsTypes)
-    return listOfTeamsTypes
+    return [...new Set(listOfTeamsTypes)]
   }
 
   return (
@@ -39,22 +37,24 @@ const TeamPage = props => {
         imageBool={false}
       />
 
-      {listOfTeamsTypes.map((teamType, index) => {
-        const filteredByTeam = teamPage.teamMembers.filter(member => {
-          return member.team.toLowerCase() === teamType
-        })
+      <TeamPageContentContainer>
+        {listOfTeamsTypes.map((teamType, index) => {
+          const filteredByTeam = teamPage.teamMembers.filter(member => {
+            return member.team.toLowerCase() === teamType
+          })
 
-        return (
-          <Team
-            teamName={teamType}
-            members={filteredByTeam}
-            index={index}
-            key={teamType + index}
-          ></Team>
-        )
-      })}
+          return (
+            <Team
+              teamName={teamType}
+              members={filteredByTeam}
+              index={index}
+              key={teamType + index}
+            ></Team>
+          )
+        })}
 
-      <Advisor advisors={teamPage.advisors}></Advisor>
+        <Advisor advisors={teamPage.advisors}></Advisor>
+      </TeamPageContentContainer>
     </Layout>
   )
 }

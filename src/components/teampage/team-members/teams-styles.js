@@ -40,24 +40,13 @@ const TeamTitle = styled(HName)`
   }
 `
 
-const BackgroundHex = styled.div`
-  background-image: url(${hex});
-  background-size: 50%;
-  background-position: center right;
-  height: 600px;
-  width: 100%;
+const BgHexImg = styled.img`
   position: absolute;
-
-  left: ${props => (props.index % 2 === 0 ? "45%" : "55%")};
-  top: 50%;
-  transform: translate(-50%, -50%)
-    ${props => (props.index % 2 === 0 ? "rotate(180deg)" : "rotate(0deg)")};
-
-  background-repeat: no-repeat;
-
-  @media only screen and (max-width: ${size.tablet}px) {
-    display: none;
-  }
+  z-index: -1;
+  top: -350px;
+  transform: ${props =>
+    props.index % 2 === 0 ? "rotate(30deg)" : "rotate(0deg)"};
+  left: ${props => (props.index % 2 === 0 ? "-10%" : "60%")};
 `
 
 const TeamMembersContainer = styled.div``
@@ -66,7 +55,7 @@ export {
   TeamContainer,
   TeamTitle,
   TeamMembersContainer,
-  BackgroundHex,
   TitleHolder,
   TeamPageTitle,
+  BgHexImg,
 }

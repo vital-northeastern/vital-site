@@ -52,7 +52,9 @@ export default ({
         <MemberPosition>{position}</MemberPosition>
         <MemberInfo>{major}</MemberInfo>
         {linkedinUrl ? (
-          <ConnectLink href={linkedinUrl}>CONNECT</ConnectLink>
+          <ConnectLink href={linkedinUrl} target="_blank">
+            CONNECT
+          </ConnectLink>
         ) : null}
       </InfoContainer>
     </ContactCardContainer>

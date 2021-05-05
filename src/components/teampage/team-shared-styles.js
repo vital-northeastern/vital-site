@@ -8,6 +8,10 @@ import {
   Connect,
 } from "../../constants/typography"
 
+const TeamPageContentContainer = styled.div`
+  overflow: hidden;
+`
+
 const MemberName = styled(HName)`
   margin-bottom: 0;
 `
@@ -62,6 +66,7 @@ const MemberInfo = styled(PCard)`
 `
 
 export {
+  TeamPageContentContainer,
   MemberName,
   MemberPosition,
   Overlay,

@@ -17,7 +17,9 @@ export default ({ name, photo, position, linkedinUrl }) => (
 
         <MemberInfo>{position}</MemberInfo>
         {linkedinUrl ? (
-          <ConnectLink href={linkedinUrl}>CONNECT</ConnectLink>
+          <ConnectLink href={linkedinUrl} target="_blank">
+            CONNECT
+          </ConnectLink>
         ) : null}
       </div>
     </AdvisorCard>

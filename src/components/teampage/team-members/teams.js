@@ -3,18 +3,24 @@ import {
   TeamContainer,
   TeamTitle,
   TeamMembersContainer,
-  BackgroundHex,
   TitleHolder,
   TeamPageTitle,
+  BgHexImg,
 } from "./teams-styles"
 import TeamMember from "./team-member"
+import blue_hex from "../../../images/blue_hex.svg"
 
 export default ({ teamName, members, index }) => (
   <>
     {index === 0 ? <TeamPageTitle>EXECUTIVE BOARD</TeamPageTitle> : null}
     <TitleHolder>
       <TeamTitle index={index}>{teamName}</TeamTitle>
-      <BackgroundHex index={index}></BackgroundHex>
+
+      <BgHexImg
+        src={blue_hex}
+        index={index}
+        alt={"Blue geometric hexagon shape"}
+      ></BgHexImg>
     </TitleHolder>
     <TeamContainer>
       <TeamMembersContainer>
