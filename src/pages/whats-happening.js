@@ -7,6 +7,7 @@ import Carousel from "../components/whats-happening/carousel"
 import Calendar from "../components/whats-happening/calendar"
 import Slack from "../components/whats-happening/slack"
 import Header from "../components/header/header"
+import MailingList from "../components/whats-happening/mailing-list"
 
 const WhatsHappening = props => {
   const whatsHappening = get(props, "data.contentfulWhatsHappeningPage")
@@ -32,9 +33,11 @@ const WhatsHappening = props => {
         logo={whatsHappening.slackLogo}
         blurb={whatsHappening.joinSlackBlurb.joinSlackBlurb}
       />
-      <a href={whatsHappening.newsletterCtaLink}>
+      <MailingList title={whatsHappening.newsletterCtaTitle} />
+
+      {/* <a href={whatsHappening.newsletterCtaLink}>
         <button type="button">{whatsHappening.newsletterCtaTitle}</button>
-      </a>
+      </a> */}
     </Layout>
   )
 }
