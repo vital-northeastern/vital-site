@@ -5,7 +5,6 @@ import { Hamburger, Cross } from "../../constants/icons"
 import {
   NavWrapper,
   NavBrandWrapper,
-  NavLogo,
   NavLink,
   NavButton,
   FlexColumn,
@@ -72,12 +71,12 @@ const NavBar = ({ navbarstyle }) => {
       <FlexColumn>
         <NavBrandWrapper to="/">
           {navbarstyle === "gradient" ? (
-            <NavLogo
+            <img
               src={data.contentfulLogos.smallIconWhite.file.url}
               alt={data.contentfulLogos.smallIconWhite.description}
             />
           ) : (
-            <NavLogo
+            <img
               src={data.contentfulLogos.smallIcon.file.url}
               alt={data.contentfulLogos.smallIcon.description}
             />
