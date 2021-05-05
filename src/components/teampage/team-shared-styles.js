@@ -7,6 +7,7 @@ import {
   PCard,
   Connect,
 } from "../../constants/typography"
+import { devices } from "../../constants/devices"
 
 const TeamPageContentContainer = styled.div`
   overflow: hidden;
@@ -35,6 +36,12 @@ const Overlay = styled.div`
 
   overflow-y: auto;
   display: none;
+
+  @media only screen and ${devices.mobileMax} {
+    ${props => (props.index % 2 === 0 ? "left: 100%;" : "")}
+    ${props => (props.index % 2 === 0 ? "" : "right:100%;")}
+    opacity: 0.95;
+  }
 `
 
 const OverlayText = styled(PCard)`
@@ -46,6 +53,7 @@ const OverlayText = styled(PCard)`
 
 const MemberImg = styled.div`
   min-width: 50%;
+  align-self: flex-start;
 
   position: relative;
   &:hover ${Overlay} {

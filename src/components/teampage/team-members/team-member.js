@@ -37,7 +37,7 @@ export default ({
       <MemberImg>
         <Img fluid={photo.fluid} alt={photo.description} />
 
-        <Overlay>
+        <Overlay index={index}>
           <OverlayText>{biography}</OverlayText>
         </Overlay>
       </MemberImg>
