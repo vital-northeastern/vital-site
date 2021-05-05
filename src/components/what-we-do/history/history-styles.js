@@ -8,6 +8,9 @@ const HistoryContainer = styled.div`
   @media ${devices.laptop} {
     margin-bottom: 70px;
   }
+  @media ${devices.desktop} {
+    margin-top: 55px;
+  }
 `
 
 const Title = styled.div`
@@ -37,6 +40,7 @@ const ImageContainer = styled.div`
   }
   @media ${devices.laptop} {
     margin-left: 0px;
+    margin-top: -25px;
   }
 `
 
