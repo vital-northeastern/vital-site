@@ -1,7 +1,7 @@
 import styled from "styled-components"
+import { devices } from "../../constants/devices"
 
 export const SlackContainer = styled.div`
-  height: 400px;
   width: 75%;
   background: linear-gradient(
       180deg,
@@ -12,7 +12,12 @@ export const SlackContainer = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  padding: 8%;
+  box-sizing: border-box;
+`
+
+export const SlackImgHolder = styled.div`
+  width: 20%;
 `
 
 export const SlackImg = styled.img`
@@ -21,4 +26,8 @@ export const SlackImg = styled.img`
 
 export const SlackContent = styled.div`
   width: 55%;
+  margin-left: 16px;
+  @media only screen and ${devices.tabletMax} {
+    width: 65%;
+  }
 `

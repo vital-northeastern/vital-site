@@ -29,7 +29,6 @@ const Carousel = ({ title, carouselItems }) => {
   const settings = {
     // nav: false,
     container: "#customize",
-
     gutter: 50,
     // items: 1,
     center: true,
