@@ -36,8 +36,8 @@ const TextContainer = styled.div`
     padding-right: 11%;
   }
   @media ${devices.desktop} {
-    padding-left: 11%;
-    padding-right: 14%;
+    padding-left: 10.8%;
+    padding-right: 12.8%;
   }
 `
 
