@@ -18,8 +18,8 @@ const CardsContainer = styled.div`
     padding: 50px 5.7%;
   }
   @media ${devices.desktop} {
-    margin-left: 8%;
-    margin-right: 8%;
+    padding-left: 8%;
+    padding-right: 8%;
   }
 `
 
