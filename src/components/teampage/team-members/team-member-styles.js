@@ -22,7 +22,7 @@ const ContactCardContainer = styled.div`
   min-width: 100%;
   position: absolute;
   top: ${props => (props.index % 2 === 0 ? "0" : "180px")};
-  left: ${props => (props.position === "Executive Director" ? "25%" : 0)};
+  left: ${props => (props.teamIndex === 0 ? "25%" : 0)};
   @media only screen and (max-width: ${size.tablet}px) {
     position: initial;
     margin-bottom: 40px;
@@ -48,6 +48,10 @@ const InfoContainer = styled.div`
 
   padding: 0 4%;
   min-width: 50%;
+
+  @media only screen and (max-width: ${size.tablet}px) {
+    padding-left: ${props => (props.index % 2 === 0 ? "4%" : "0")};
+  }
 `
 
 export { ContactCardContainer, CardPosition, InfoContainer, GraidentSquare }

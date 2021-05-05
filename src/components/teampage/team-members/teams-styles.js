@@ -1,6 +1,5 @@
 import styled from "styled-components"
-import hex from "../../../images/blue_hex.svg"
-import { HName, HUpper } from "../../../constants/typography"
+import { H2, HUpper } from "../../../constants/typography"
 import { navyBlue, royalBlue } from "../../../constants/colors"
 import { size } from "../../../constants/devices"
 
@@ -11,6 +10,9 @@ const TeamContainer = styled.div`
 
   @media only screen and (max-width: ${size.tablet}px) {
     padding-bottom: 30vw;
+  }
+  @media only screen and (max-width: ${size.mobileMax}px) {
+    padding-bottom: 10vw;
   }
 `
 
@@ -26,15 +28,16 @@ const TitleHolder = styled.div`
   padding: 0 7%;
 `
 
-const TeamTitle = styled(HName)`
+const TeamTitle = styled(H2)`
   color: ${navyBlue};
   text-align: ${props => (props.index % 2 === 0 ? "left" : "right")};
-  margin-bottom: 60px;
+  margin-bottom: 2em;
   margin-right: ${props => (props.index % 2 === 0 ? "0" : "calc(25% - 120px)")};
   margin-left: ${props => (props.index === 0 ? "7%" : 0)};
 
   @media only screen and (max-width: ${size.tablet}px) {
     text-align: initial;
+    margin-bottom: 1.5em;
     margin-right: 0;
     margin-left: 0;
   }
@@ -46,7 +49,18 @@ const BgHexImg = styled.img`
   top: -350px;
   transform: ${props =>
     props.index % 2 === 0 ? "rotate(30deg)" : "rotate(0deg)"};
-  left: ${props => (props.index % 2 === 0 ? "-10%" : "60%")};
+  ${props => (props.index % 2 === 0 ? "left: -10%;" : "")}
+  ${props => (props.index % 2 === 0 ? "" : "right: -10%;")}
+  @media only screen and (max-width: ${size.laptop}px) {
+    ${props => (props.index % 2 === 0 ? "left: -20%;" : "")}
+    ${props => (props.index % 2 === 0 ? "" : "right: -20%;")}
+    transform: ${props =>
+      props.index % 2 === 0 ? "rotate(30deg)" : "rotate(0deg)"}
+      scale(0.7, 0.7);
+  }
+  @media only screen and (max-width: ${size.tablet}px) {
+    display: none;
+  }
 `
 
 const TeamMembersContainer = styled.div``

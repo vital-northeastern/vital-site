@@ -10,15 +10,15 @@ import {
 import TeamMember from "./team-member"
 import blue_hex from "../../../images/blue_hex.svg"
 
-export default ({ teamName, members, index }) => (
+export default ({ teamName, members, index: teamIndex }) => (
   <>
-    {index === 0 ? <TeamPageTitle>EXECUTIVE BOARD</TeamPageTitle> : null}
+    {teamIndex === 0 ? <TeamPageTitle>EXECUTIVE BOARD</TeamPageTitle> : null}
     <TitleHolder>
-      <TeamTitle index={index}>{teamName}</TeamTitle>
+      <TeamTitle index={teamIndex}>{teamName}</TeamTitle>
 
       <BgHexImg
         src={blue_hex}
-        index={index}
+        index={teamIndex}
         alt={"Blue geometric hexagon shape"}
       ></BgHexImg>
     </TitleHolder>
@@ -38,6 +38,7 @@ export default ({ teamName, members, index }) => (
               index={index}
               isLast={members.length - 1 === index}
               key={member.name + index}
+              teamIndex={teamIndex}
             />
           )
         })}

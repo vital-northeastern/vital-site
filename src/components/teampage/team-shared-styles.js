@@ -13,7 +13,7 @@ const TeamPageContentContainer = styled.div`
 `
 
 const MemberName = styled(HName)`
-  margin-bottom: 0;
+  margin-bottom: 0.5em;
 `
 
 const MemberPosition = styled(P)`

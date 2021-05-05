@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { MemberImg } from "../team-shared-styles"
 import { devices } from "../../../constants/devices"
+import Img from "gatsby-image"
 
 const AdvisorCard = styled.div`
   width: 20%;
@@ -10,21 +10,19 @@ const AdvisorCard = styled.div`
   flex-direction: column;
 
   @media only screen and ${devices.mobileMax} {
-    width: 95%;
-    flex-direction: row;
+    width: 98%;
     margin: 0 0 36px 0;
+    flex-direction: row;
   }
 `
 
-const AdvisorImage = styled(MemberImg)`
-  padding-top: 100% !important;
-  margin-bottom: 18px;
+const AdvisorImg = styled(Img)`
+  width: 100%;
+  margin-bottom: 8%;
   @media only screen and ${devices.mobileMax} {
-    padding-top: 50% !important;
-    margin-right: 16px;
+    margin-right: 4%;
+    margin-bottom: 0;
   }
 `
 
-const AdvisorInfoContainer = styled.div``
-
-export { AdvisorCard, AdvisorImage }
+export { AdvisorCard, AdvisorImg }

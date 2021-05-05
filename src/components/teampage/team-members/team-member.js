@@ -28,18 +28,13 @@ export default ({
   biography,
   team,
   index,
+  teamIndex,
   isLast,
 }) => (
   <CardPosition index={index} isLast={isLast}>
-    {position === "Executive Director" ? (
-      <GraidentSquare></GraidentSquare>
-    ) : null}
-    <ContactCardContainer index={index} position={position}>
-      <MemberImg
-        fluid={photo.fluid}
-        photoUrl={photo.fluid.src}
-        alt={"Photo of " + name}
-      >
+    {teamIndex === 0 ? <GraidentSquare></GraidentSquare> : null}
+    <ContactCardContainer index={index} teamIndex={teamIndex}>
+      <MemberImg>
         <Img fluid={photo.fluid} alt={photo.description} />
 
         <Overlay>
@@ -47,7 +42,7 @@ export default ({
         </Overlay>
       </MemberImg>
 
-      <InfoContainer>
+      <InfoContainer index={index}>
         <MemberName>{name}</MemberName>
         <MemberPosition>{position}</MemberPosition>
         <MemberInfo>{major}</MemberInfo>
