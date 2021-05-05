@@ -28,7 +28,7 @@ const fontSizes = {
   hName: `calc(${minSize.hName}px + (29 - ${minSize.hName}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   hUpper: `calc(${minSize.hUpper}px + (46 - ${minSize.hUpper}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   p: `calc(${minSize.p}px + (16.8 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
-  pCard: `calc(${minSize.pCard}px + (15.5 - ${minSize.pCard}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  pCard: `calc(${minSize.pCard}px + (15.7 - ${minSize.pCard}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
 }
 
 const textStyles = {
