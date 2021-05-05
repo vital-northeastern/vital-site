@@ -107,6 +107,9 @@ const P = styled.p`
     line-height: 24px;
   }
   @media ${devices.desktop} {
+    line-height: 26px;
+  }
+  @media (min-width: 1600px) {
     line-height: 27px;
   }
 `
