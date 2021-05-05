@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { H2, HUpper } from "../../../constants/typography"
 import { navyBlue, royalBlue } from "../../../constants/colors"
-import { size } from "../../../constants/devices"
+import { devices, size } from "../../../constants/devices"
 
 const TeamContainer = styled.div`
   width: 86%;
@@ -11,7 +11,7 @@ const TeamContainer = styled.div`
   @media only screen and (max-width: ${size.tablet}px) {
     padding-bottom: 30vw;
   }
-  @media only screen and (max-width: ${size.mobileMax}px) {
+  @media only screen and ${devices.mobileMax} {
     padding-bottom: 10vw;
   }
 `
