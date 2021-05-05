@@ -12,7 +12,7 @@ const WhatsHappening = props => {
   const whatsHappening = get(props, "data.contentfulWhatsHappeningPage")
 
   return (
-    <Layout navbarstyle="gradient">
+    <Layout navbarStyle="gradient">
       <SEO title="What's Happening" />
       <Header
         title={whatsHappening.title}
@@ -43,6 +43,7 @@ export const pageQuery = graphql`
   query whatsHappeningQuery {
     contentfulWhatsHappeningPage {
       title
+      subheadingForTitle
       carouselTitle
       carouselItems {
         title
@@ -69,7 +70,6 @@ export const pageQuery = graphql`
       }
       newsletterCtaTitle
       newsletterCtaLink
-      subheadingForTitle
     }
   }
 `
