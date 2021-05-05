@@ -43,8 +43,7 @@ const DisclaimerContainer = styled.div`
   }
   @media ${devices.laptop} {
     width: 40%;
-    padding-left: 75px;
-    padding-right: 10px;
+    padding-left: 7%;
   }
 `
 

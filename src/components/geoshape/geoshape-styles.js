@@ -27,8 +27,8 @@ const Geoshape = styled.img`
   }
   @media ${devices.desktop} {
     transform: scale(0.92, 0.92);
-    margin-top: 16rem;
-    left: 35%;
+    margin-top: 17.5rem;
+    left: 34%;
   }
   @media (min-width: 1600px) {
     transform: scale(1, 1);

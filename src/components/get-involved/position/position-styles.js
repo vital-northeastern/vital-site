@@ -40,16 +40,14 @@ const PositionContainer = styled.div`
     padding-left: 0px;
   }
   @media ${devices.laptop} {
-    width: 41vw;
+    margin: 0 0 1rem;
+    width: 42vw;
+    margin-right: ${props => (props.index % 2 === 0 ? "20px" : "0px")};
     height: 15.5rem;
-    margin-left: ${props =>
-      props.index % 2 === 0 ? `${padding.laptop}` : "0px"};
-    margin-bottom: 1rem;
   }
   @media ${devices.desktop} {
-    width: 37vw;
-    margin-left: ${props =>
-      props.index % 2 === 0 ? `${padding.desktop}` : "0px"};
+    width: 39.5vw;
+    max-width: 725px;
     height: auto;
   }
 `
@@ -86,6 +84,12 @@ const InfoContainer = styled.div`
   @media ${devices.tablet} {
     width: 70%;
     padding-left: 25px;
+  }
+  @media ${devices.laptop} {
+    padding-left: 30px;
+  }
+  @media ${devices.desktop} {
+    padding-left: 35px;
   }
 `
 

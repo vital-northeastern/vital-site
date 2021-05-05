@@ -25,8 +25,15 @@ const PositionCardsContainer = styled.div`
     padding-bottom: 50px;
   }
   @media ${devices.laptop} {
+    padding-left: ${padding.laptop};
+    padding-right: ${padding.laptop};
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  @media ${devices.desktop} {
+    padding-left: ${padding.desktop};
+    padding-right: ${padding.desktop};
   }
 `
 
