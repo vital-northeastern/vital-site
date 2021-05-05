@@ -31,7 +31,7 @@ const ApplicationInfo = ({
         <H2Header>{subheading}</H2Header>
         <P>{applicationEmail}</P>
         <a href={ctaLink}>
-          <ButtonEmail boxshadow={true} primary={true} aria-label={ctaTitle}>
+          <ButtonEmail primary={true} aria-label={ctaTitle}>
             {ctaTitle}
           </ButtonEmail>
         </a>

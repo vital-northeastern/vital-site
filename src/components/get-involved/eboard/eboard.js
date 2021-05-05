@@ -19,7 +19,7 @@ const Eboard = ({ title, description, ctaLink, ctaTitle }) => {
       <ButtonContainer>
         <ButtonPosition>
           <a href={ctaLink}>
-            <EboardButton boxshadow={true} primary={true} aria-label={ctaTitle}>
+            <EboardButton primary={true} aria-label={ctaTitle}>
               {ctaTitle}
             </EboardButton>
           </a>

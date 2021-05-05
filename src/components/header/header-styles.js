@@ -33,6 +33,18 @@ const H1Regular = styled(H1)`
 `
 
 const H1Mobile = styled(H1)`
+  @media (max-width: 400px) {
+  }
+  ${({ longTitle }) =>
+    longTitle &&
+    `
+@media (max-width: 400px) {
+  font-size: 38px;
+}
+@media (max-width: 360px) {
+  font-size: 33px;
+}
+`}
   @media ${devices.tablet} {
     display: none;
   }
