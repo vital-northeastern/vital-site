@@ -16,7 +16,6 @@ const Button = styled.button`
   font-size: 13px;
   font-weight: 400;
   transition: all 0.2s;
-  box-shadow: ${props => (props.boxshadow ? props.boxshadow : "none")};
   &:hover {
     background-color: ${props => (props.primary ? royalBlue : "transparent")};
     border: ${props => (props.primary ? "none" : `1px solid ${royalBlue}`)};
