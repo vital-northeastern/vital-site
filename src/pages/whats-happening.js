@@ -30,6 +30,7 @@ const WhatsHappening = props => {
         title={whatsHappening.joinSlackTitle}
         link={whatsHappening.joinSlackLink}
         logo={whatsHappening.slackLogo}
+        blurb={whatsHappening.joinSlackBlurb.joinSlackBlurb}
       />
       <a href={whatsHappening.newsletterCtaLink}>
         <button type="button">{whatsHappening.newsletterCtaTitle}</button>
@@ -63,6 +64,9 @@ export const pageQuery = graphql`
       facebookUrl
       joinSlackTitle
       joinSlackLink
+      joinSlackBlurb {
+        joinSlackBlurb
+      }
       slackLogo {
         fluid(maxWidth: 750) {
           ...GatsbyContentfulFluid
