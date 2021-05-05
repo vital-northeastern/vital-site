@@ -6,6 +6,8 @@ import {
   GraidentSquare,
 } from "./team-member-styles"
 
+import Img from "gatsby-image"
+
 import {
   MemberName,
   MemberPosition,
@@ -38,6 +40,8 @@ export default ({
         photoUrl={photo.fluid.src}
         alt={"Photo of " + name}
       >
+        <Img fluid={photo.fluid} alt={photo.description} />
+
         <Overlay>
           <OverlayText>{biography}</OverlayText>
         </Overlay>

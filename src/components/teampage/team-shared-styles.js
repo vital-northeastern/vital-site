@@ -21,7 +21,7 @@ const MemberPosition = styled(P)`
 const Overlay = styled.div`
   width: 100%;
 
-  padding-top: 100%;
+  height: 100%;
   background-color: ${royalBlue};
   opacity: 0.8;
   z-index: 4;
@@ -42,12 +42,6 @@ const OverlayText = styled(PCard)`
 
 const MemberImg = styled.div`
   min-width: 50%;
-  padding-top: 50%;
-
-  background-image: url(${props => "https://" + props.photoUrl});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 
   position: relative;
   &:hover ${Overlay} {

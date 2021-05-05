@@ -71,6 +71,7 @@ export const pageQuery = graphql`
           fluid(maxWidth: 750) {
             ...GatsbyContentfulFluid
           }
+          description
         }
         email
         major
@@ -87,6 +88,7 @@ export const pageQuery = graphql`
           fluid(maxWidth: 750) {
             ...GatsbyContentfulFluid
           }
+          description
         }
         position
         linkedinUrl

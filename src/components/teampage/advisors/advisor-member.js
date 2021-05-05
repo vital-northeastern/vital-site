@@ -1,20 +1,25 @@
 import React from "react"
 import { AdvisorCard, AdvisorImage } from "./advisor-member-styles"
 import { MemberName, ConnectLink, MemberInfo } from "../team-shared-styles"
+import Img from "gatsby-image"
 
 export default ({ name, photo, position, linkedinUrl }) => (
-  <AdvisorCard>
-    <AdvisorImage
+  console.log(photo),
+  (
+    <AdvisorCard>
+      {/* <AdvisorImage
       photoUrl={photo.fluid.src}
-      alt={"Photo of " + name}
-    ></AdvisorImage>
-    <div>
-      <MemberName>{name}</MemberName>
+      alt={photo.description}
+    ></AdvisorImage> */}
+      <Img fluid={photo.fluid} alt={photo.description} />
+      <div>
+        <MemberName>{name}</MemberName>
 
-      <MemberInfo>{position}</MemberInfo>
-      {linkedinUrl ? (
-        <ConnectLink href={linkedinUrl}>CONNECT</ConnectLink>
-      ) : null}
-    </div>
-  </AdvisorCard>
+        <MemberInfo>{position}</MemberInfo>
+        {linkedinUrl ? (
+          <ConnectLink href={linkedinUrl}>CONNECT</ConnectLink>
+        ) : null}
+      </div>
+    </AdvisorCard>
+  )
 )

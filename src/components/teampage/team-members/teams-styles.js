@@ -22,7 +22,7 @@ const TeamPageTitle = styled(HUpper)`
 
 const TitleHolder = styled.div`
   position: relative;
-  overflow-x: clip;
+
   padding: 0 7%;
 `
 
