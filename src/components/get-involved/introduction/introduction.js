@@ -1,12 +1,7 @@
 import React from "react"
 import { P } from "../../../constants/typography"
-import {
-  Container,
-  TextContainer,
-  ImageContainer,
-  MobileImage,
-} from "./introduction-styles"
-import svg_shape from "../../../images/getinvolved_intro.svg"
+import { Container, TextContainer, ImageContainer } from "./introduction-styles"
+import svg_shape from "../../../images/get-involved/intro_shape.svg"
 
 const Introduction = ({ blurb }) => {
   return (
@@ -15,7 +10,7 @@ const Introduction = ({ blurb }) => {
         <P>{blurb}</P>
       </TextContainer>
       <ImageContainer>
-        <MobileImage src={svg_shape} alt="geometric black and white shape" />
+        <img src={svg_shape} alt="geometric black and white shape" />
       </ImageContainer>
     </Container>
   )

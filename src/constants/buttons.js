@@ -1,6 +1,7 @@
 import styled from "styled-components"
-import { white, navyBlue, royalBlue } from "./colors"
+import { white, navyBlue, royalBlue, shadowGray } from "./colors"
 import { fonts } from "./typography"
+import { devices } from "./devices"
 
 const Button = styled.button`
   background-color: ${props => (props.primary ? navyBlue : "transparent")};
@@ -8,6 +9,7 @@ const Button = styled.button`
   border-radius: 50px;
   border: ${props => (props.primary ? "none" : `1px solid ${navyBlue}`)};
   padding: 20px 38px;
+  box-shadow: 1.5px 1.5px 2.5px ${shadowGray};
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: ${fonts.button};
@@ -22,6 +24,9 @@ const Button = styled.button`
   }
   &:focus {
     outline: 0;
+  }
+  @media ${devices.desktop} {
+    font-size: 14px;
   }
 `
 
