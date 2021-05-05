@@ -23,7 +23,7 @@ const minSize = {
 }
 
 const fontSizes = {
-  h1: `calc(${minSize.h1}px + (70 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  h1: `calc(${minSize.h1}px + (71 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   h2: `calc(${minSize.h2}px + (38 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   hName: `calc(${minSize.hName}px + (29 - ${minSize.hName}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   hUpper: `calc(${minSize.hUpper}px + (46 - ${minSize.hUpper}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
