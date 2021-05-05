@@ -32,6 +32,7 @@ const TeamPage = props => {
       <SEO title="Team Page" />
       <Header
         title={teamPage.title}
+        mobileTitle={teamPage.mobileTitle}
         subheading={teamPage.subheadingForTitle}
         imageBool={false}
       />
@@ -92,6 +93,7 @@ export const pageQuery = graphql`
         position
         linkedinUrl
       }
+      mobileTitle
       subheadingForTitle
     }
   }

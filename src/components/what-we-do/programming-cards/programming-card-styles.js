@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { H2 } from "../../../constants/typography"
 import { devices } from "../../../constants/devices"
-import { white, royalBlue } from "../../../constants/colors"
+import { white, royalBlue, navyBlue } from "../../../constants/colors"
 
 const CardContainer = styled.div`
   @media ${devices.mobile} {
@@ -15,6 +15,9 @@ const CardContainer = styled.div`
   }
   @media ${devices.laptop} {
     width: 30vw;
+    margin: 50px 7.5px 50px;
+  }
+  @media (min-width: 1100px) {
     margin: 50px 10px 50px;
   }
   display: flex;
@@ -32,10 +35,17 @@ const ImageContainer = styled.div`
   overflow: hidden;
 `
 
-const CardContent = styled.div`
+const CardLink = styled.a`
+  display: block;
   color: ${white};
   background-color: ${royalBlue};
+  text-decoration: none;
+  transition: all 0.2s;
   flex: 1;
+  &:hover {
+    background-color: ${navyBlue};
+    cursor: pointer;
+  }
 `
 
 const CardTitle = styled(H2)`
@@ -43,9 +53,13 @@ const CardTitle = styled(H2)`
   padding-top: 24px;
   color: ${white};
   margin: 0 auto;
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     padding-top: 15px;
     padding-bottom: 10px;
+  }
+  @media ${devices.tablet} {
+    padding-top: 24px;
+    padding-bottom: 0px;
   }
 `
 
@@ -68,7 +82,7 @@ const TextContainer = styled.div`
 export {
   CardContainer,
   ImageContainer,
-  CardContent,
+  CardLink,
   CardTitle,
   CardTitleContainer,
   TextContainer,

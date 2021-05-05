@@ -1,20 +1,19 @@
 import styled from "styled-components"
 import { Button } from "../../../constants/buttons"
-import { devices, padding } from "../../../constants/devices"
+import { devices } from "../../../constants/devices"
 import { H2 } from "../../../constants/typography"
-import { shadowGray } from "../../../constants/colors"
 
 const EboardContainer = styled.div`
   @media ${devices.mobile} {
     display: block;
-    padding: 1rem ${padding.mobile};
+    padding: 1rem 0rem 2rem;
   }
   @media ${devices.tablet} {
-    padding: 1rem ${padding.tablet};
+    display: block;
+    padding: 1rem 0rem;
   }
   @media ${devices.laptop} {
     margin-top: 12px;
-    padding: 1rem ${padding.laptop};
     display: flex;
     align-items: center;
   }
@@ -31,7 +30,7 @@ const TextContainer = styled.div`
 `
 
 const H2Header = styled(H2)`
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
 `
 
 const ButtonContainer = styled.div`
@@ -50,19 +49,18 @@ const ButtonPosition = styled.div`
     margin-bottom: 15px;
   }
   @media ${devices.laptop} {
-    margin-left: 43%;
-  }
-  @media (min-width: 1028px) {
     margin-left: 60%;
   }
   @media (min-width: 1220px) {
     margin-left: 68%;
   }
+  @media ${devices.desktop} {
+    margin-left: 70%;
+  }
 `
 
 const EboardButton = styled(Button)`
   padding: 18px 51px;
-  box-shadow: 1px 1px 2px ${shadowGray};
 `
 
 export {
