@@ -14,11 +14,11 @@ const Container = styled.div`
     padding: 8px ${padding.tablet} 30px;
   }
   @media ${devices.laptop} {
-    padding: 110px ${padding.laptop} 135px 175px;
+    padding: 110px ${padding.laptop} 135px 13%;
     margin-bottom: -20px;
   }
   @media ${devices.desktop} {
-    padding-left: 220px;
+    padding-left: 15%;
     padding-right: ${padding.desktop};
   }
 `
@@ -33,13 +33,13 @@ const TextContainer = styled.div`
   @media ${devices.laptop} {
     width: 50%;
     order: 1;
-    padding-right: 70px;
+    padding-right: 8%;
     padding-bottom: 25px;
     align-self: center;
   }
   @media (min-width: 1200px) {
     width: 45%;
-    padding-right: 100px;
+    padding-right: 9%;
   }
 `
 

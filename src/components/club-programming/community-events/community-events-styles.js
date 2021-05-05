@@ -14,12 +14,12 @@ const Container = styled.div`
     padding: 90px ${padding.tablet} 8px;
   }
   @media ${devices.laptop} {
-    padding: 90px 0px 8px 175px;
+    padding: 90px 0px 8px 13%;
     align-items: center;
     margin-bottom: -20px;
   }
   @media ${devices.desktop} {
-    padding-left: 220px;
+    padding-left: 15%;
   }
 `
 
@@ -32,10 +32,10 @@ const TextContainer = styled.div`
   @media ${devices.laptop} {
     width: 50%;
     order: 1;
-    padding-right: 110px;
+    padding-right: 11%;
   }
   @media ${devices.desktop} {
-    padding-right: 200px;
+    padding-right: 16%;
   }
 `
 
@@ -73,13 +73,13 @@ const BackgroundGradient = styled.div`
     display: none;
   }
   @media ${devices.laptop} {
-    padding-left: 21px;
+    padding-left: 2%;
     width: 50%;
     order: 2;
     background: ${imageGradient};
   }
   @media ${devices.desktop} {
-    padding-left: 35px;
+    padding-left: 3%;
   }
 `
 
@@ -91,7 +91,7 @@ const CommunityImage = styled(Img)`
   margin-right: -212px;
 }
 @media ${devices.tablet} {
-  margin-right: -270px;
+  margin-right: -40%;
 }
 align-self: flex-start;
 width: 100%;
@@ -102,10 +102,10 @@ width: 100%;
 @media ${devices.laptop} {
   position: absolute;
   top: 45px;
-  left: -80px;
+  left: -15%;
 }
 @media ${devices.desktop} {
-  left: -123px;
+  left: -21%;
 }
 `}
 `

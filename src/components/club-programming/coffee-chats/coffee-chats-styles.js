@@ -13,12 +13,12 @@ const Container = styled.div`
     padding: 8px ${padding.tablet};
   }
   @media ${devices.laptop} {
-    padding: 110px ${padding.laptop} 8px 150px;
+    padding: 110px ${padding.laptop} 8px 11%;
     align-items: center;
     margin-bottom: -20px;
   }
   @media ${devices.desktop} {
-    padding-left: 190px;
+    padding-left: 13%;
     padding-right: ${padding.desktop};
   }
 `
@@ -32,19 +32,12 @@ const TextContainer = styled.div`
   @media ${devices.laptop} {
     width: 55%;
     order: 1;
-    padding-left: 70px;
-    padding-right: 85px;
-  }
-  @media (min-width: 1200px) {
-    padding-left: 80px;
-    padding-right: 95px;
+    padding-left: 9%;
+    padding-right: 11%;
   }
   @media ${devices.desktop} {
-    padding-left: 130px;
-    padding-right: 150px;
-  }
-  @media (min-width: 1600px) {
-    padding-right: 180px;
+    padding-left: 11%;
+    padding-right: 14%;
   }
 `
 

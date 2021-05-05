@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { devices } from "../../constants/devices"
-import { imageGradient } from "../../constants/colors"
+import { imageGradient, navyBlue } from "../../constants/colors"
 import { H2 } from "../../constants/typography"
 import { Button } from "../../constants/buttons"
 
@@ -66,6 +66,7 @@ const ImageContainer = styled.div`
 export {
   Container,
   ButtonContainer,
+  TextContainer,
   ClubProgrammingButton,
   H2Title,
   ImageContainer,

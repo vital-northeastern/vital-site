@@ -42,7 +42,6 @@ const PositionContainer = styled.div`
   @media ${devices.laptop} {
     margin: 0 0 1rem;
     width: 42vw;
-    margin-right: ${props => (props.index % 2 === 0 ? "20px" : "0px")};
     height: 15.5rem;
   }
   @media ${devices.desktop} {

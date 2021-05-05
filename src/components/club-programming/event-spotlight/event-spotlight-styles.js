@@ -15,10 +15,10 @@ const Container = styled.div`
     margin-bottom: -20px;
   }
   @media ${devices.laptop} {
-    padding: 90px ${padding.laptop} 8px 290px;
+    padding: 90px ${padding.laptop} 8px 21%;
   }
   @media ${devices.desktop} {
-    padding-left: 340px;
+    padding-left: 22%;
     padding-right: ${padding.desktop};
   }
 `

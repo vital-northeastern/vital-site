@@ -12,11 +12,11 @@ const Container = styled.div`
     padding: 8px ${padding.tablet};
   }
   @media ${devices.laptop} {
-    padding: 90px ${padding.laptop} 8px 290px;
+    padding: 90px ${padding.laptop} 8px 21%;
     margin-bottom: -20px;
   }
   @media ${devices.desktop} {
-    padding-left: 340px;
+    padding-left: 22%;
     padding-right: ${padding.desktop};
   }
 `
@@ -56,6 +56,8 @@ const PCaption = styled(PCard)`
   }
   @media ${devices.desktop} {
     margin-top: 0.7rem;
+  }
+  @media (min-width: 1600px) {
     font-size: 14.5px;
   }
 `

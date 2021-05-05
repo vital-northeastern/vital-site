@@ -15,7 +15,7 @@ const Speakers = ({ title, speakers }) => {
       <SpeakersContainer>
         {speakers.map((speaker, index) => {
           return (
-            <SpeakerContainer key={speaker.name}>
+            <SpeakerContainer key={index}>
               <Img
                 fluid={speaker.featuredImage.fluid}
                 alt={speaker.featuredImage.description}

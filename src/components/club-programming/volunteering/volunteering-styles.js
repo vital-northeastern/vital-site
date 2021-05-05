@@ -13,12 +13,12 @@ const Container = styled.div`
     padding: 8px ${padding.tablet};
   }
   @media ${devices.laptop} {
-    padding: 170px ${padding.laptop} 8px 175px;
+    padding: 170px ${padding.laptop} 8px 13%;
     align-items: center;
     margin-bottom: -20px;
   }
   @media ${devices.desktop} {
-    padding-left: 220px;
+    padding-left: 15%;
     padding-right: ${padding.desktop};
   }
 `
@@ -30,7 +30,10 @@ const TextContainer = styled.div`
   }
   @media ${devices.laptop} {
     width: 50%;
-    padding-left: 75px;
+    padding-left: 6.3%;
+  }
+  @media ${devices.desktop} {
+    padding-left: 7%;
   }
 `
 
