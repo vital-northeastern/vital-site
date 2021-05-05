@@ -15,6 +15,9 @@ const CardContainer = styled.div`
   }
   @media ${devices.laptop} {
     width: 30vw;
+    margin: 50px 7.5px 50px;
+  }
+  @media (min-width: 1100px) {
     margin: 50px 10px 50px;
   }
   display: flex;
@@ -50,9 +53,13 @@ const CardTitle = styled(H2)`
   padding-top: 24px;
   color: ${white};
   margin: 0 auto;
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     padding-top: 15px;
     padding-bottom: 10px;
+  }
+  @media ${devices.tablet} {
+    padding-top: 24px;
+    padding-bottom: 0px;
   }
 `
 

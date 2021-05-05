@@ -1,10 +1,11 @@
 import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
-import Img from "gatsby-image"
+import { navyBlue } from "../../../constants/colors"
 
 const Container = styled.div`
   @media ${devices.mobile} {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     padding: 0px ${padding.mobile} 8px;
     margin-bottom: 50px;
   }
@@ -12,39 +13,32 @@ const Container = styled.div`
     padding: 8px ${padding.tablet};
   }
   @media ${devices.laptop} {
-    padding: 8px ${padding.laptop};
-    display: flex;
+    padding: 110px ${padding.laptop} 8px 11%;
     align-items: center;
     margin-bottom: -20px;
   }
   @media ${devices.desktop} {
-    padding: 8px ${padding.desktop};
+    padding-left: 13%;
+    padding-right: ${padding.desktop};
   }
 `
 
 const TextContainer = styled.div`
-  @media ${devices.tabletMax} {
+  color: ${navyBlue};
+  @media ${devices.mobile} {
     width: 100%;
-    margin: 0 auto;
+    order: 2;
   }
   @media ${devices.laptop} {
-    padding-right: 50px;
-    width: 50%;
+    width: 55%;
+    order: 1;
+    padding-left: 9%;
+    padding-right: 11%;
   }
-  @media (min-width: 1200px) {
-    width: 46%;
+  @media ${devices.desktop} {
+    padding-left: 10.8%;
+    padding-right: 12.8%;
   }
 `
 
-const Image = styled(Img)`
-  height: 100%;
-  @media ${devices.laptop} {
-    padding-right: 50px;
-    width: 50%;
-  }
-  @media (min-width: 1200px) {
-    width: 54%;
-  }
-`
-
-export { Container, TextContainer, Image }
+export { Container, TextContainer }

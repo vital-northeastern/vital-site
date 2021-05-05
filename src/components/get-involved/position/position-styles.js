@@ -16,7 +16,7 @@ function backgroundColor(index) {
 
 const fontSizes = {
   title: `calc(
-    16px + (23 - 16) *
+    16px + (24 - 16) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   )`,
 }
@@ -40,13 +40,13 @@ const PositionContainer = styled.div`
     padding-left: 0px;
   }
   @media ${devices.laptop} {
-    width: 40vw;
-    height: 15rem;
-    margin-left: ${props =>
-      props.index % 2 === 0 ? `${padding.laptop}` : "0px"};
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
+    width: 42vw;
+    height: 15.5rem;
   }
   @media ${devices.desktop} {
+    width: 39.5vw;
+    max-width: 725px;
     height: auto;
   }
 `
@@ -84,7 +84,12 @@ const InfoContainer = styled.div`
     width: 70%;
     padding-left: 25px;
   }
-  justify-content: normal;
+  @media ${devices.laptop} {
+    padding-left: 30px;
+  }
+  @media ${devices.desktop} {
+    padding-left: 35px;
+  }
 `
 
 const TextContainer = styled.div`
@@ -95,7 +100,7 @@ const TextContainer = styled.div`
 const PositionName = styled(H2)`
   font-size: ${fontSizes.title};
   color: #133e6c;
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     line-height: 20px;
     padding-right: ${padding.mobile};
   }

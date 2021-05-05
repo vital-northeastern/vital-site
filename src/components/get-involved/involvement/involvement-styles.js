@@ -1,25 +1,18 @@
 import styled from "styled-components"
-import { size, devices, padding } from "../../../constants/devices"
-import { darkGray } from "../../../constants/colors"
+import { size, devices } from "../../../constants/devices"
 import { H2, PCard } from "../../../constants/typography"
 
 const Container = styled.div`
   @media ${devices.mobile} {
     display: block;
-    padding: 10px ${padding.mobile};
-  }
-  @media ${devices.tablet} {
-    padding: 10px ${padding.tablet};
+    padding: 10px 0px;
   }
   @media ${devices.laptop} {
-    padding: 10px ${padding.laptop};
     display: flex;
   }
 `
 
 const TextContainer = styled.div`
-  width: 60%;
-  color: ${darkGray};
   @media ${devices.mobile} {
     width: 100%;
   }
@@ -35,10 +28,12 @@ const Text = styled.div`
 `
 
 const H2Header = styled(H2)`
-  margin-bottom: 0.7rem;
-  @media ${devices.mobileMax} {
+  @media ${devices.mobile} {
     line-height: 33px;
     margin-bottom: 1rem;
+  }
+  @media ${devices.tablet} {
+    line-height: 30px;
   }
 `
 
@@ -48,8 +43,7 @@ const DisclaimerContainer = styled.div`
   }
   @media ${devices.laptop} {
     width: 40%;
-    padding-left: 75px;
-    padding-right: 10px;
+    padding-left: 7%;
   }
 `
 

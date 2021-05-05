@@ -2,6 +2,18 @@ import styled from "styled-components"
 import { H2 } from "../../../constants/typography"
 import { Button } from "../../../constants/buttons"
 import { devices } from "../../../constants/devices"
+import { Geoshape } from "../../geoshape/geoshape-styles"
+
+const GeoshapeApplication = styled(Geoshape)`
+  @media ${devices.desktop} {
+    width: 430px;
+    margin-top: -9.5rem;
+  }
+  @media (min-width: 1600px) {
+    width: 480px;
+    margin-top: -11.3rem;
+  }
+`
 
 const ApplicationContainer = styled.div`
 @media ${devices.mobile} {
@@ -14,11 +26,12 @@ const ApplicationContainer = styled.div`
 `
 
 const H2Header = styled(H2)`
-  margin-bottom: 17px;
+  margin-bottom: 1rem;
 `
 
 const ButtonEmail = styled(Button)`
   margin-top: -4px;
+  padding: 18px 45px;
 `
 
 const MobileImageContainer = styled.div`
@@ -31,4 +44,10 @@ const MobileImageContainer = styled.div`
   }
 `
 
-export { ApplicationContainer, H2Header, ButtonEmail, MobileImageContainer }
+export {
+  GeoshapeApplication,
+  ApplicationContainer,
+  H2Header,
+  ButtonEmail,
+  MobileImageContainer,
+}
