@@ -4,12 +4,11 @@ import {
   CalendarFrameLarge,
   CalendarFrameSmall,
 } from "./calendar-styles"
-import { HName } from "../../constants/typography"
-
+import { H2 } from "../../constants/typography"
 const Calendar = ({ title, embedCode }) => {
   return (
     <CalendarSection>
-      <HName>{title}</HName>
+      <H2>{title}</H2>
       <CalendarFrameLarge
         src="https://calendar.google.com/calendar/embed?showTitle=0&showPrint=0&showTabs=0&showCalendars=0&src=so2vs35e6ch68vl4map499fsm0@group.calendar.google.com&ctz=America%2FNew_York"
         width="100%"

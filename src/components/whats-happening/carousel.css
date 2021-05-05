@@ -1,10 +1,12 @@
+/* This file writes over css provided in the carousel package */
+
 .tns-nav {
   display: flex;
   justify-content: center;
   z-index: 2;
 }
 
-.tns-nav > button {
+/* .tns-nav > button {
   height: 15px;
   width: 15px;
   margin: 0 4px;
@@ -12,7 +14,7 @@
   border-radius: 50%;
 
   background-color: #001049;
-}
+} */
 
 .tns-nav-active {
   background-color: #546bdf !important;

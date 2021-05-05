@@ -5,6 +5,7 @@ const CalendarSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
 `
 
 const CalendarFrameLarge = styled.iframe`
