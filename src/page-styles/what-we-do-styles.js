@@ -15,13 +15,11 @@ const CardsContainer = styled.div`
   @media ${devices.laptop} {
     display: flex;
     justify-content: center;
-    padding: 50px 0px 50px 0px;
-    margin-left: 74px;
-    margin-right: 74px;
+    padding: 50px 5.7%;
   }
   @media ${devices.desktop} {
-    margin-left: 122px;
-    margin-right: 122px;
+    padding-left: 8%;
+    padding-right: 8%;
   }
 `
 

@@ -13,13 +13,13 @@ const TextContainer = styled.div`
     padding: 130px ${padding.mobile} 15px;
   }
   @media ${devices.tablet} {
-    padding: 130px 0px 15px ${padding.tablet};
+    padding: 130px ${padding.tablet} 15px;
   }
   @media ${devices.laptop} {
-    padding: 170px 0px 40px ${padding.laptop};
+    padding: 170px ${padding.laptop} 40px;
   }
   @media ${devices.desktop} {
-    padding: 190px 0px 50px ${padding.desktop};
+    padding: 190px ${padding.desktop} 50px;
   }
 `
 

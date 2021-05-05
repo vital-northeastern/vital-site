@@ -63,9 +63,10 @@ const Platform = styled.div`
     padding-top: ${props => (props.num === 0 ? "10px" : "24px")};
   }
   @media ${devices.tablet} {
-    width: ${props => (props.num === 0 ? "48vw" : "76vw")};
+    width: ${props => (props.num === 0 ? "55vw" : "80vw")};
   }
   @media ${devices.laptop} {
+    width: ${props => (props.num === 0 ? "48vw" : "76vw")};
     padding-top: ${props => (props.num === 0 ? "20px" : "24px")};
   }
 `
@@ -74,10 +75,14 @@ const PlatformContent = styled.div`
   @media ${devices.mobile} {
     width: 80%;
     padding-right: ${padding.mobile};
+    padding-top: 5px;
   }
   @media ${devices.tablet} {
-    width: ${props => (props.num === 0 ? "59%" : "35%")};
+    width: ${props => (props.num === 0 ? "65%" : "45%")};
     padding-right: 0px;
+  }
+  @media ${devices.laptop} {
+    width: ${props => (props.num === 0 ? "59%" : "35%")};
   }
 `
 
@@ -87,6 +92,10 @@ const LineContainer = styled.div`
     padding-right: 18px;
   }
   @media ${devices.tablet} {
+    width: ${props => (props.num === 0 ? "35%" : "55%")};
+    padding-right: 18px;
+  }
+  @media ${devices.laptop} {
     width: ${props => (props.num === 0 ? "41%" : "65%")};
     padding-right: ${props => (props.num === 0 ? "18px" : "0px")};
   }
@@ -117,7 +126,7 @@ const Dot = styled.span`
 
 const PlatformTitle = styled(H2)`
   font-size: calc(
-    16px + (26 - 16) *
+    19px + (26 - 19) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   );
   @media ${devices.mobile} {

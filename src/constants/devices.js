@@ -3,7 +3,7 @@ export const size = {
   tablet: "768",
   laptop: "1024",
   desktop: "1440",
-  desktopMax: "1600",
+  desktopMax: "1920",
 }
 
 export const devices = {
@@ -17,7 +17,7 @@ export const devices = {
 
 export const padding = {
   mobile: "26px",
-  tablet: "45px",
-  laptop: "83px",
-  desktop: "130px",
+  tablet: "5.9%",
+  laptop: "6.3%",
+  desktop: "8.5%",
 }

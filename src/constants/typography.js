@@ -14,21 +14,33 @@ const fonts = {
 }
 
 const minSize = {
+<<<<<<< HEAD
   h1: 41,
   h2: 23,
   hName: 18,
   hUpper: 34,
+=======
+  h1: 40,
+  h2: 23,
+  hName: 17,
+  hUpper: 25,
+>>>>>>> 1a54ff7f6bc6c1541f47fa6a4b7c83fea54d1c5d
   p: 13,
   pCard: 12,
 }
 
 const fontSizes = {
+<<<<<<< HEAD
   h1: `calc(${minSize.h1}px + (62 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   h2: `calc(${minSize.h2}px + (35 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+=======
+  h1: `calc(${minSize.h1}px + (71 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  h2: `calc(${minSize.h2}px + (38 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+>>>>>>> 1a54ff7f6bc6c1541f47fa6a4b7c83fea54d1c5d
   hName: `calc(${minSize.hName}px + (29 - ${minSize.hName}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
-  hUpper: `calc(${minSize.hUpper}px + (40 - ${minSize.hUpper}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
-  p: `calc(${minSize.p}px + (16 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
-  pCard: `calc(${minSize.pCard}px + (15 - ${minSize.pCard}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  hUpper: `calc(${minSize.hUpper}px + (46 - ${minSize.hUpper}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  p: `calc(${minSize.p}px + (16.8 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  pCard: `calc(${minSize.pCard}px + (15.7 - ${minSize.pCard}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
 }
 
 const textStyles = {
@@ -63,9 +75,6 @@ const H1 = styled.h1`
   }
   @media ${devices.laptop} {
     margin-bottom: 1.5rem;
-  }
-  @media ${devices.desktop} {
-    font-size: 62px;
   }
   @media (min-width: 1600px) {
     font-size: 70px;

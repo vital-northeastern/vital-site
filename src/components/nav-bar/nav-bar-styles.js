@@ -32,6 +32,17 @@ const NavBrandWrapper = styled(Link)`
   :hover {
     text-decoration: none;
   }
+  width: 36px;
+  @media ${devices.mobile} {
+    margin-top: 2.5rem;
+  }
+  @media ${devices.tablet} {
+    margin-top: 3rem;
+  }
+  @media ${devices.desktop} {
+    width: 40px;
+    margin-top: 2.5rem;
+  }
 `
 
 const FlexColumn = styled.div`
@@ -83,20 +94,6 @@ const NavLink = styled(Link)`
   }
   @media ${devices.desktop} {
     font-size: 16px;
-  }
-`
-
-const NavLogo = styled.img`
-  @media ${devices.mobile} {
-    margin-top: 2.5rem;
-    width: 20%;
-  }
-  @media ${devices.tablet} {
-    margin-top: 3rem;
-  }
-  @media ${devices.desktop} {
-    margin-top: 2.5rem;
-    width: 22%;
   }
 `
 
@@ -186,7 +183,6 @@ const CrossContainer = styled.div`
 export {
   NavWrapper,
   NavBrandWrapper,
-  NavLogo,
   NavLink,
   NavButton,
   FlexColumn,

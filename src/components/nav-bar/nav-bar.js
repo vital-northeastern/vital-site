@@ -5,7 +5,6 @@ import { Hamburger, Cross } from "../../constants/icons"
 import {
   NavWrapper,
   NavBrandWrapper,
-  NavLogo,
   NavLink,
   NavButton,
   FlexColumn,
@@ -20,6 +19,12 @@ const NavBar = ({ navbarstyle }) => {
     query logoQuery {
       contentfulLogos {
         smallIcon {
+          file {
+            url
+          }
+          description
+        }
+        smallIconWhite {
           file {
             url
           }
@@ -65,10 +70,17 @@ const NavBar = ({ navbarstyle }) => {
     <NavWrapper navbarstyle={navbarstyle}>
       <FlexColumn>
         <NavBrandWrapper to="/">
-          <NavLogo
-            src={data.contentfulLogos.smallIcon.file.url}
-            alt={data.contentfulLogos.smallIcon.description}
-          />
+          {navbarstyle === "gradient" ? (
+            <img
+              src={data.contentfulLogos.smallIconWhite.file.url}
+              alt={data.contentfulLogos.smallIconWhite.description}
+            />
+          ) : (
+            <img
+              src={data.contentfulLogos.smallIcon.file.url}
+              alt={data.contentfulLogos.smallIcon.description}
+            />
+          )}
         </NavBrandWrapper>
       </FlexColumn>
       <FlexColumn>
