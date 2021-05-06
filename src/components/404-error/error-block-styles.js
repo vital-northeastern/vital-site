@@ -9,10 +9,10 @@ const ErrorContainer = styled.div`
     padding: 8rem ${padding.mobile} 1.5rem;
   }
   @media ${devices.tablet} {
-    padding: 10rem 120px 2rem;
+    padding: 10rem 16% 2rem;
   }
   @media ${devices.laptop} {
-    padding: 9rem 160px 3rem;
+    padding: 9rem 12% 3rem;
     display: flex;
     align-items: center;
   }
@@ -54,14 +54,14 @@ const ButtonContainer = styled.div`
 const H2Header = styled(H2)`
   margin-bottom: 2rem;
   font-size: calc(
-    35px + (50 - 35) *
+    35px + (52 - 35) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   );
 `
 
 const PMessage = styled(P)`
   font-size: calc(
-    14px + (18 - 14) *
+    14px + (19 - 14) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   );
   @media ${devices.mobile} {

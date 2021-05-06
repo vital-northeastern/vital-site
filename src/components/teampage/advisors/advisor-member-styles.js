@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { devices } from "../../../constants/devices"
-import Img from "gatsby-image"
 
 const AdvisorCard = styled.div`
   width: 20%;
