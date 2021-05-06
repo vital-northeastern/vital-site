@@ -107,6 +107,9 @@ const P = styled.p`
     line-height: 24px;
   }
   @media ${devices.desktop} {
+    line-height: 26px;
+  }
+  @media (min-width: 1600px) {
     line-height: 27px;
   }
 `
@@ -146,4 +149,15 @@ const Connect = styled.a`
   }
 `
 
-export { fonts, H1, H2, HName, HUpper, P, PCard, Connect }
+export {
+  fonts,
+  H1,
+  H2,
+  HName,
+  HUpper,
+  P,
+  PCard,
+  Connect,
+  fontSizes,
+  fontWeights,
+}
