@@ -12,6 +12,8 @@ import MailingList from "../components/whats-happening/mailing-list"
 const WhatsHappening = props => {
   const whatsHappening = get(props, "data.contentfulWhatsHappeningPage")
 
+  console.log(whatsHappening)
+
   return (
     <Layout navbarStyle="gradient">
       <SEO title="What's Happening" />
@@ -61,6 +63,8 @@ export const pageQuery = graphql`
           description
         }
       }
+      defaultCarouselItemTitle
+      defaultCarouselItemDescription
       calendarTitle
       socialMediaTitle
       instagramHandle
