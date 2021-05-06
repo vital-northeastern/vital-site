@@ -4,7 +4,7 @@ import { MemberName, ConnectLink, MemberInfo } from "../team-shared-styles"
 
 export default ({ name, photo, position, linkedinUrl }) => (
   <AdvisorCard>
-    <AdvisorImg fluid={photo.fluid} alt={photo.description} />
+    <AdvisorImg src={photo.fluid.src} alt={photo.description} />
     <div>
       <MemberName>{name}</MemberName>
 
