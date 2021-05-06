@@ -162,6 +162,9 @@ export const MailingListBlock = styled.form`
 
 export const MailingListSmall = styled.div`
   display: flex;
+  @media only screen and ${devices.mobileMax} {
+    width: 100%;
+  }
 `
 
 export const MailingListInput = styled.input`
