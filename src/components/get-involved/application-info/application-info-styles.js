@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { H2 } from "../../../constants/typography"
-import { Button } from "../../../constants/buttons"
 import { devices } from "../../../constants/devices"
 import { Geoshape } from "../../geoshape/geoshape-styles"
 
@@ -29,11 +28,6 @@ const H2Header = styled(H2)`
   margin-bottom: 1rem;
 `
 
-const ButtonEmail = styled(Button)`
-  margin-top: -4px;
-  padding: 18px 45px;
-`
-
 const MobileImageContainer = styled.div`
   position: absolute;
   right: 0;
@@ -48,6 +42,5 @@ export {
   GeoshapeApplication,
   ApplicationContainer,
   H2Header,
-  ButtonEmail,
   MobileImageContainer,
 }

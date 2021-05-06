@@ -1,12 +1,12 @@
 import React from "react"
 import { P } from "../../../constants/typography"
+import { GetInvolvedButton } from "../section-styles"
 import {
   EboardContainer,
   TextContainer,
   H2Header,
   ButtonContainer,
   ButtonPosition,
-  EboardButton,
 } from "./eboard-styles"
 
 const Eboard = ({ title, description, ctaLink, ctaTitle }) => {
@@ -19,9 +19,9 @@ const Eboard = ({ title, description, ctaLink, ctaTitle }) => {
       <ButtonContainer>
         <ButtonPosition>
           <a href={ctaLink}>
-            <EboardButton primary={true} aria-label={ctaTitle}>
+            <GetInvolvedButton primary={true} aria-label={ctaTitle}>
               {ctaTitle}
-            </EboardButton>
+            </GetInvolvedButton>
           </a>
         </ButtonPosition>
       </ButtonContainer>

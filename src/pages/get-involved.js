@@ -1,7 +1,6 @@
 import React from "react"
 import get from "lodash/get"
 import { graphql } from "gatsby"
-
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Header from "../components/header/header"
