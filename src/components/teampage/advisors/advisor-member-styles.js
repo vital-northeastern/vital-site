@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { devices } from "../../../constants/devices"
-import Img from "gatsby-image"
 
 const AdvisorCard = styled.div`
   width: 20%;
@@ -10,7 +9,7 @@ const AdvisorCard = styled.div`
   flex-direction: column;
 
   @media only screen and ${devices.mobileMax} {
-    width: 98%;
+    width: 91%;
     margin: 0 0 36px 0;
     flex-direction: row;
   }

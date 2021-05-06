@@ -20,7 +20,7 @@ const MemberName = styled(HName)`
 const MemberPosition = styled(P)`
   color: ${navyBlue};
   margin: 0;
-  font-weight: ${fontWeights.medium};
+  font-weight: ${fontWeights.semiBold};
 `
 
 const Overlay = styled.div`
@@ -40,7 +40,7 @@ const Overlay = styled.div`
   @media only screen and ${devices.mobileMax} {
     ${props => (props.index % 2 === 0 ? "left: 100%;" : "")}
     ${props => (props.index % 2 === 0 ? "" : "right:100%;")}
-    opacity: 0.95;
+    opacity: 0.98;
   }
 `
 
