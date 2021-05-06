@@ -149,6 +149,26 @@ const Connect = styled.a`
   }
 `
 
+const Link = styled.a`
+  font-size: ${fontSizes.p};
+  font-family: ${fonts.nav};
+  font-weight: ${fontWeights.medium};
+  text-decoration: none;
+
+  @media ${devices.mobile} {
+    line-height: 22px;
+  }
+  @media ${devices.tablet} {
+    line-height: 24px;
+  }
+  @media ${devices.desktop} {
+    line-height: 26px;
+  }
+  @media (min-width: 1600px) {
+    line-height: 27px;
+  }
+`
+
 export {
   fonts,
   H1,
@@ -160,4 +180,5 @@ export {
   Connect,
   fontSizes,
   fontWeights,
+  Link,
 }

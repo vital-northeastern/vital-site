@@ -1,13 +1,12 @@
 import styled from "styled-components"
 import { white, navyBlue, royalBlue } from "../../constants/colors"
 import footerHex from "../../images/footer-hex.svg"
-import { fonts, fontWeights } from "../../constants/typography"
+import { fonts, fontWeights, Link } from "../../constants/typography"
 import { size } from "../../constants/devices"
 
 export const FooterContainer = styled.div`
   background-color: ${navyBlue};
   padding: 40px 100px 40px 100px;
-  font-family: "Work Sans", sans-serif;
   color: white;
   background-image: url("${footerHex}");
   background-size: cover;
@@ -31,11 +30,8 @@ export const FooterLinks = styled.div`
   }
 `
 
-export const FooterLink = styled.a`
-  font-family: "Work Sans", sans-serif;
-  font-weight: ${fontWeights.medium};
+export const FooterLink = styled(Link)`
   font-size: 16px;
-  text-decoration: none;
   color: ${white};
   display: block;
   margin-bottom: 4px;
