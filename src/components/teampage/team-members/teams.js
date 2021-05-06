@@ -12,7 +12,7 @@ import blue_hex from "../../../images/blue_hex.svg"
 
 export default ({ teamName, members, index: teamIndex }) => (
   <>
-    {teamIndex === 0 ? <TeamPageTitle>EXECUTIVE BOARD</TeamPageTitle> : null}
+    {teamIndex === 0 && <TeamPageTitle>EXECUTIVE BOARD</TeamPageTitle>}
     <TitleHolder>
       <TeamTitle index={teamIndex}>{teamName}</TeamTitle>
 

@@ -16,12 +16,14 @@ const AdvisorCard = styled.div`
   }
 `
 
-const AdvisorImg = styled(Img)`
+const AdvisorImg = styled.img`
   width: 100%;
   margin-bottom: 8%;
   @media only screen and ${devices.mobileMax} {
+    width: 48%;
     margin-right: 4%;
     margin-bottom: 0;
+    align-self: flex-start;
   }
 `
 
