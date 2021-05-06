@@ -128,6 +128,6 @@ export const PlaceholderText = styled(H2)`
   @media ${devices.mobileMax} {
     font-size: 16px;
     line-height: 22px;
-    margin-left: 0;
+    padding: 8%;
   }
 `

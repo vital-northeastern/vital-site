@@ -1,5 +1,4 @@
 import React from "react"
-import Img from "gatsby-image"
 import TinySlider from "tiny-slider-react"
 import { H2, P, PCard } from "../../constants/typography"
 import {
@@ -22,8 +21,6 @@ import "./carousel.css"
 import union from "../../images/union-right.svg"
 import longRightArrow from "../../images/long-right-arrow.svg"
 import carouselPlaceholder from "../../images/carousel-placeholder.png"
-
-const placeHolderCarouselItem = {}
 
 const Carousel = ({
   title,

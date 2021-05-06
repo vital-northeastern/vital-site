@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { navyBlue } from "../../constants/colors"
+import { devices } from "../../constants/devices"
 
 export const MailingTitleHolder = styled.div`
   text-align: center;
@@ -10,6 +11,12 @@ export const MailingContent = styled.form`
   display: flex;
   justify-content: center;
   margin: 40px 0 80px 0;
+  @media ${devices.mobileMax} {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 90%;
+    margin: 30px auto 80px auto;
+  }
 `
 
 export const MailingInput = styled.input`
@@ -21,5 +28,9 @@ export const MailingInput = styled.input`
   padding: 16px;
   &::placeholder {
     color: ${navyBlue};
+  }
+  @media ${devices.mobileMax} {
+    width: 100%;
+    margin: 0 0 16px 0;
   }
 `
