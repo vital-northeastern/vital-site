@@ -24,6 +24,8 @@ import {
   MailingListLabel,
   MailingListInput,
   MailingListButton,
+  ScoutSignature,
+  ScoutLink,
 } from "./footer-styles"
 
 const Footer = props => {
@@ -125,6 +127,12 @@ const Footer = props => {
           <MailingListButton type="submit">SUBMIT</MailingListButton>
         </MailingListSmall>
       </MailingListBlock>
+      <ScoutSignature>
+        MADE WITH ♥ BY{" "}
+        <ScoutLink href="https://scout.camd.northeastern.edu/" target="_blank">
+          SCOUT
+        </ScoutLink>
+      </ScoutSignature>
     </FooterContainer>
   )
 }

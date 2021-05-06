@@ -212,3 +212,12 @@ export const MailingListButton = styled.button`
     padding: 0 12px;
   }
 `
+
+export const ScoutSignature = styled(P)`
+  margin: 0;
+  padding-top: 16px;
+`
+export const ScoutLink = styled(FooterLink)`
+  color: white;
+  font-weight: ${fontWeights.bold};
+`
