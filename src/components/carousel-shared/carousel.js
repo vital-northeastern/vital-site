@@ -14,27 +14,38 @@ import {
   MoreLink,
   LongRightArrow,
   CarouselImage,
-  BackgroundImage,
+  PlaceholderBox,
+  PlaceholderText,
 } from "./carousel-styles"
 import "./carousel.css"
 
 import union from "../../images/union-right.svg"
 import longRightArrow from "../../images/long-right-arrow.svg"
+import carouselPlaceholder from "../../images/carousel-placeholder.png"
 
 const placeHolderCarouselItem = {}
 
-const Carousel = ({ title, carouselItems, minItems }) => {
+const Carousel = ({
+  title,
+  carouselItems,
+  minItems,
+  placeholderText,
+  placeholderTitle,
+  placeholderDescription,
+}) => {
   console.log(carouselItems)
 
-  // if carousel items under 3 fill it with placeholders
+  while (carouselItems.length < minItems) {
+    carouselItems.push({
+      featuredImage: { fluid: { src: carouselPlaceholder } },
+      title: placeholderTitle,
+      subTitle: placeholderDescription,
+      placeholder: true,
+    })
+  }
 
   const settings = {
-    // nav: false,
-    // container: "#customize",
-    // gutter: 50,
-    // items: 1,
     center: true,
-    // edgePadding: 200,
     controlsPosition: "bottom",
     navPosition: "bottom",
     navContainer: "#customize-nav",
@@ -42,18 +53,11 @@ const Carousel = ({ title, carouselItems, minItems }) => {
     mouseDrag: true,
     responsive: {
       0: {
-        // fixedWidth: 216,
-        // gutter: 15,
         edgePadding: 50,
-        // items: 3,
       },
       768: {
         fixedWidth: 800,
-        // items: 1,
         edgePadding: 200,
-
-        // gutter: 200,
-        // center: true,
       },
     },
   }
@@ -72,7 +76,13 @@ const Carousel = ({ title, carouselItems, minItems }) => {
                 aria-label={item.featuredImage.description}
                 alt={item.featuredImage.description}
                 src={item.featuredImage.fluid.src}
-              ></CarouselImage>
+              >
+                {item.placeholder && (
+                  <PlaceholderBox>
+                    <PlaceholderText>{placeholderText}</PlaceholderText>
+                  </PlaceholderBox>
+                )}
+              </CarouselImage>
 
               <CarouselTextContainer>
                 <div>
@@ -80,12 +90,14 @@ const Carousel = ({ title, carouselItems, minItems }) => {
                   <PCard>{item.subTitle}</PCard>
                 </div>
 
-                <MoreLink href={item.link}>
-                  <P> Learn More</P>
-                  <div>
-                    <LongRightArrow src={longRightArrow}></LongRightArrow>
-                  </div>
-                </MoreLink>
+                {item.link && (
+                  <MoreLink href={item.link}>
+                    <P> Learn More</P>
+                    <div>
+                      <LongRightArrow src={longRightArrow}></LongRightArrow>
+                    </div>
+                  </MoreLink>
+                )}
               </CarouselTextContainer>
             </div>
           )

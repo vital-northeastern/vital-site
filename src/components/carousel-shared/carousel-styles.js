@@ -5,6 +5,7 @@ import {
   fonts,
   fontSizes,
   fontWeights,
+  H2,
 } from "../../constants/typography"
 import { devices } from "../../constants/devices"
 
@@ -18,6 +19,7 @@ export const CarouselTitleContainer = styled.div`
 
 export const CarouselButtonsContainer = styled.div`
   position: relative;
+  margin-top: 16px;
   @media ${devices.mobileMax} {
     display: none;
   }
@@ -103,5 +105,29 @@ export const CarouselImage = styled.div`
   background-image: url("${props => props.src}");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeast;
+  background-repeat: no-repeat;
+  position: relative;
+`
+export const PlaceholderBox = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const PlaceholderText = styled(H2)`
+  color: white;
+  padding: 10%;
+  background-color: ${navyBlue};
+  max-width: 76%;
+  text-align: center;
+  margin: 0;
+  @media ${devices.mobileMax} {
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 0;
+  }
 `
