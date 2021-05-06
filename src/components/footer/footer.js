@@ -16,7 +16,7 @@ import {
   MailtoLink,
   ConnectContactText,
   FooterLinks,
-  FooterLink,
+  FooterLinkCustom,
   FooterScroll,
   FooterSocialIcon,
   MailingListBlock,
@@ -46,18 +46,22 @@ const Footer = props => {
   `)
 
   return (
-    <FooterContainer>
+    <FooterContainer role="img" aria-label="blue geometric polygon shape">
       <FooterRowContainer>
         <FooterSubsectionContainer>
           <FooterDescription>
             {data.contentfulFooter.headline}
           </FooterDescription>
           <FooterLinks>
-            <FooterLink href="/">Home</FooterLink>
-            <FooterLink href="/what-we-do">What We Do</FooterLink>
-            <FooterLink href="/whats-happening">What's Happening</FooterLink>
-            <FooterLink href="/get-involved">Get Involved</FooterLink>
-            <FooterLink href="/our-team">Meet the Team</FooterLink>
+            <FooterLinkCustom href="/">Home</FooterLinkCustom>
+            <FooterLinkCustom href="/what-we-do">What We Do</FooterLinkCustom>
+            <FooterLinkCustom href="/whats-happening">
+              What's Happening
+            </FooterLinkCustom>
+            <FooterLinkCustom href="/get-involved">
+              Get Involved
+            </FooterLinkCustom>
+            <FooterLinkCustom href="/our-team">Meet the Team</FooterLinkCustom>
           </FooterLinks>
         </FooterSubsectionContainer>
         <FooterSubsectionContainer>
@@ -68,7 +72,7 @@ const Footer = props => {
             <FooterSocialBlock>
               {data.contentfulFooter.socialMedia.map(social => {
                 return (
-                  <a href={social.link}>
+                  <a href={social.link} target="_blank" key={social.link}>
                     <FooterSocialIcon>
                       <Img
                         className="featured"

@@ -149,12 +149,30 @@ const Connect = styled.a`
   }
 `
 
-const Link = styled.a`
+const FooterLink = styled.a`
   font-size: ${fontSizes.p};
-  font-family: ${fonts.nav};
+  font-family: ${fonts.navButton};
   font-weight: ${fontWeights.medium};
   text-decoration: none;
 
+  @media ${devices.mobile} {
+    line-height: 22px;
+  }
+  @media ${devices.tablet} {
+    line-height: 24px;
+  }
+  @media ${devices.desktop} {
+    line-height: 26px;
+  }
+  @media (min-width: 1600px) {
+    line-height: 27px;
+  }
+`
+
+const Label = styled.label`
+  font-size: ${fontSizes.p};
+  font-family: ${fonts.body};
+  font-weight: ${fontWeights.normal};
   @media ${devices.mobile} {
     line-height: 22px;
   }
@@ -180,5 +198,6 @@ export {
   Connect,
   fontSizes,
   fontWeights,
-  Link,
+  FooterLink,
+  Label,
 }

@@ -1,18 +1,27 @@
 import styled from "styled-components"
 import { white, navyBlue, royalBlue } from "../../constants/colors"
 import footerHex from "../../images/footer-hex.svg"
-import { fonts, fontWeights, Link } from "../../constants/typography"
-import { size } from "../../constants/devices"
+import {
+  fonts,
+  fontWeights,
+  FooterLink,
+  P,
+  Label,
+} from "../../constants/typography"
+import { size, padding, devices } from "../../constants/devices"
 
 export const FooterContainer = styled.div`
   background-color: ${navyBlue};
-  padding: 40px 100px 40px 100px;
+  padding: 40px ${padding.laptop};
   color: white;
   background-image: url("${footerHex}");
   background-size: cover;
   background-repeat: no-repeat;
-  @media only screen and (max-width: ${size.tablet}px) {
-    padding: 40px;
+  @media only screen and ${devices.tabletMax} {
+    padding: 40px ${padding.tablet};
+  }
+  @media only screen and ${devices.mobileMax} {
+    padding: 40px ${padding.mobile};
   }
 `
 export const FooterRowContainer = styled.div`
@@ -30,7 +39,7 @@ export const FooterLinks = styled.div`
   }
 `
 
-export const FooterLink = styled(Link)`
+export const FooterLinkCustom = styled(FooterLink)`
   font-size: 16px;
   color: ${white};
   display: block;
@@ -51,8 +60,9 @@ export const FooterSubsectionContainer = styled.div`
 `
 
 export const FooterDescription = styled.h3`
-  font-family: "Work Sans", sans-serif;
-  font-size: 72px;
+  font-family: ${fonts.navButton};
+  font-size: 80px;
+  letter-spacing: 2px;
   @media only screen and (max-width: ${size.tablet}px) {
     font-size: 36px;
   }
@@ -111,8 +121,7 @@ export const FooterSocialIcon = styled.div`
   }
 `
 
-export const ConnectContactText = styled.p`
-  font-family: "Work Sans", sans-serif;
+export const ConnectContactText = styled(P)`
   color: white;
   font-weight: ${fontWeights.medium};
   @media only screen and (max-width: ${size.tablet}px) {
@@ -120,11 +129,9 @@ export const ConnectContactText = styled.p`
   }
 `
 
-export const MailtoLink = styled.a`
+export const MailtoLink = styled(FooterLink)`
   line-height: 20px;
   margin-left: 16px;
-  text-decoration: none;
-  font-family: "Work Sans", sans-serif;
   color: white;
   border-bottom: 2px solid white;
   @media only screen and (max-width: ${size.tablet}px) {
@@ -132,7 +139,7 @@ export const MailtoLink = styled.a`
   }
 `
 
-export const MailingListLabel = styled.label`
+export const MailingListLabel = styled(Label)`
   font-weight: ${fontWeights.medium};
   @media only screen and (max-width: ${size.tablet}px) {
     margin-bottom: 12px;
