@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { navyBlue, royalBlue } from "../../constants/colors"
 import {
-  H2,
   HName,
   fonts,
   fontSizes,
@@ -19,6 +18,9 @@ export const CarouselTitleContainer = styled.div`
 
 export const CarouselButtonsContainer = styled.div`
   position: relative;
+  @media ${devices.mobileMax} {
+    display: none;
+  }
 `
 
 export const CarouselNav = styled.div`
@@ -64,6 +66,9 @@ export const CarouselTextContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
+  @media ${devices.mobileMax} {
+    flex-direction: column;
+  }
 `
 export const EventTitle = styled(HName)`
   margin-bottom: 0.5em;
@@ -71,6 +76,9 @@ export const EventTitle = styled(HName)`
 
 export const MoreLink = styled.a`
   display: flex;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-left: 36px;
   font-size: ${fontSizes.p};
   font-family: ${fonts.body};
   font-weight: ${fontWeights.normal};
@@ -80,10 +88,20 @@ export const MoreLink = styled.a`
   white-space: nowrap;
   @media ${devices.mobileMax} {
     line-height: 22px;
+    margin-left: 0;
   }
 `
 
 export const LongRightArrow = styled.img`
   margin-left: 16px;
   margin-top: 4px;
+`
+
+export const CarouselImage = styled.div`
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  background-image: url("${props => props.src}");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeast;
 `

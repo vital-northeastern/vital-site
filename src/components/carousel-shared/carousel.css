@@ -19,3 +19,13 @@
 .tns-nav-active {
   background-color: #546bdf !important;
 }
+
+.tns-item {
+  padding: 0 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .tns-item {
+    padding: 0 16px;
+  }
+}
