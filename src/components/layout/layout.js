@@ -2,16 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import NavBar from "../nav-bar/nav-bar"
 import "./layout.css"
-
-// import Footer from "./footer/footer"
 import Footer from "../footer/footer"
 
-const Layout = ({ children, navbarStyle }) => {
+const Layout = ({ children, navbarstyle }) => {
   return (
     <>
-      {/* The div scrollTop is for the smooth scroll plugin, which required an element ID */}
       <div id="scrollTop"></div>
-      <NavBar navbarStyle={navbarStyle} />
+      <NavBar navbarstyle={navbarstyle} />
       <div>
         <main>{children}</main>
       </div>

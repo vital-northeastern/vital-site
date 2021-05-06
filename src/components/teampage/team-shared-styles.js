@@ -1,24 +1,32 @@
 import styled from "styled-components"
-import { devices } from "../../constants/devices"
 import { royalBlue, navyBlue } from "../../constants/colors"
-import { fontSizes, fontWeights } from "../../constants/typography"
+import {
+  fontWeights,
+  HName,
+  P,
+  PCard,
+  Connect,
+} from "../../constants/typography"
+import { devices } from "../../constants/devices"
 
-const MemberName = styled.h2`
-  font-weight: 500;
-  color: ${navyBlue};
-  font-size: ${fontSizes.h2}
-  margin: 0;
+const TeamPageContentContainer = styled.div`
+  overflow: hidden;
 `
 
-const MemberPosition = styled.p`
+const MemberName = styled(HName)`
+  margin-bottom: 0.5em;
+`
+
+const MemberPosition = styled(P)`
   color: ${navyBlue};
   margin: 0;
+  font-weight: ${fontWeights.medium};
 `
 
 const Overlay = styled.div`
   width: 100%;
 
-  padding-top: 100%;
+  height: 100%;
   background-color: ${royalBlue};
   opacity: 0.8;
   z-index: 4;
@@ -28,9 +36,15 @@ const Overlay = styled.div`
 
   overflow-y: auto;
   display: none;
+
+  @media only screen and ${devices.mobileMax} {
+    ${props => (props.index % 2 === 0 ? "left: 100%;" : "")}
+    ${props => (props.index % 2 === 0 ? "" : "right:100%;")}
+    opacity: 0.95;
+  }
 `
 
-const OverlayText = styled.p`
+const OverlayText = styled(PCard)`
   padding: 10%;
   color: white;
   position: absolute;
@@ -38,13 +52,8 @@ const OverlayText = styled.p`
 `
 
 const MemberImg = styled.div`
-  min-width: 45%;
-  padding-top: 45%;
-
-  background-image: url(${props => "https://" + props.photoUrl});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  min-width: 50%;
+  align-self: flex-start;
 
   position: relative;
   &:hover ${Overlay} {
@@ -52,4 +61,25 @@ const MemberImg = styled.div`
   }
 `
 
-export { MemberName, MemberPosition, Overlay, OverlayText, MemberImg }
+const ConnectLink = styled(Connect)`
+  z-index: 2;
+  display: inline-block;
+  align-self: flex-start;
+  color: ${royalBlue};
+  margin-top: 12px;
+`
+
+const MemberInfo = styled(PCard)`
+  margin: 0;
+`
+
+export {
+  TeamPageContentContainer,
+  MemberName,
+  MemberPosition,
+  Overlay,
+  OverlayText,
+  MemberImg,
+  ConnectLink,
+  MemberInfo,
+}

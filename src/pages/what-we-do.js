@@ -7,40 +7,50 @@ import Header from "../components/header/header"
 import History from "../components/what-we-do/history/history"
 import IndustryBG from "../components/what-we-do/industry-bg/industry-bg"
 import ProgrammingCard from "../components/what-we-do/programming-cards/programming-card"
+import Platforms from "../components/what-we-do/platforms/platforms"
 import { CardsContainer } from "../page-styles/what-we-do-styles"
 
 const WhatWeDo = props => {
   const whatWeDo = get(props, "data.contentfulWhatWeDo")
 
   return (
-    <Layout navbarStyle="gradient">
+    <Layout navbarstyle="gradient">
       <SEO title="What We Do" />
       <Header
         title={whatWeDo.title}
+        mobileTitle={whatWeDo.title}
         subheading={whatWeDo.subheadingForTitle}
         imageBool={true}
       />
-      <History title={whatWeDo.history.title} timeline={whatWeDo.timeline} />
+      <History
+        title={whatWeDo.history.title}
+        timeline={whatWeDo.timelineSvg}
+        mobileTimeline={whatWeDo.mobileTimelineSvg}
+      />
       <IndustryBG
         title={whatWeDo.industryBackgroundTitle}
         blurb={whatWeDo.industryBackgroundBlurb}
-        image={whatWeDo.industryBackgroundImage}
-        mobileImage={whatWeDo.mobileIndustryBackgroundImage}
+        image={whatWeDo.mobileIndustryBackgroundImage}
         imageAlt={whatWeDo.industryBackgroundImage.description}
       />
       <CardsContainer>
         {whatWeDo.programmingCards.map((card, index) => {
           return (
             <ProgrammingCard
-              key={index}
+              key={card.title}
               title={card.title}
               description={card.shortDescription.shortDescription}
               photo={card.photo}
               photoAlt={card.photo.description}
+              link={card.link}
             />
           )
         })}
       </CardsContainer>
+      <Platforms
+        title={whatWeDo.platforms.title}
+        platforms={whatWeDo.platforms.platforms}
+      />
     </Layout>
   )
 }
@@ -54,16 +64,16 @@ export const pageQuery = graphql`
       subheadingForTitle
       history {
         title
-        historyMilestones {
-          title
-          milestoneDescription {
-            milestoneDescription
-          }
-        }
       }
-      timeline {
-        fluid(maxWidth: 750) {
-          ...GatsbyContentfulFluid
+      timelineSvg {
+        file {
+          url
+        }
+        description
+      }
+      mobileTimelineSvg {
+        file {
+          url
         }
         description
       }
@@ -93,6 +103,16 @@ export const pageQuery = graphql`
             ...GatsbyContentfulFluid
           }
           description
+        }
+        link
+      }
+      platforms {
+        title
+        platforms {
+          platformTitle
+          blurb
+          ctaTitle
+          ctaLink
         }
       }
     }
