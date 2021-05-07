@@ -6,7 +6,7 @@ import { H2, P } from "../../constants/typography"
 const ErrorContainer = styled.div`
   @media ${devices.mobile} {
     display: block;
-    padding: 8rem ${padding.mobile} 2rem;
+    padding: 8rem ${padding.mobile} 2.3rem;
   }
   @media ${devices.tablet} {
     padding: 10rem 16% 2rem;

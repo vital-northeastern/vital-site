@@ -151,7 +151,7 @@ const Connect = styled.a`
 
 const FooterLink = styled.a`
   font-size: calc(
-    14px + (16.8 - 14) *
+    14px + (17 - 14) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   );
   font-family: ${fonts.button};
@@ -172,14 +172,14 @@ const FooterLink = styled.a`
 
 const Label = styled.label`
   font-size: calc(
-    14px + (18 - 14) *
+    14px + (18.7 - 14) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   );
   font-family: ${fonts.button};
   font-weight: ${fontWeights.medium};
   letter-spacing: 0.5px;
   @media ${devices.mobile} {
-    line-height: 24px;
+    line-height: 23px;
   }
   @media ${devices.tablet} {
     line-height: 24px;

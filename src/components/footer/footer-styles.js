@@ -40,16 +40,12 @@ export const FooterLinks = styled.div`
 `
 
 export const FooterLinkCustom = styled(FooterLink)`
-  font-size: 16px;
   color: ${white};
   display: block;
   margin-bottom: 4px;
   margin-right: 30px;
   &:hover {
     color: ${white};
-  }
-  @media only screen and (max-width: ${size.tablet}px) {
-    font-size: 14px;
   }
 `
 
@@ -128,7 +124,7 @@ export const ConnectContactText = styled(P)`
   font-family: ${fonts.button};
   font-weight: ${fontWeights.medium};
   font-size: calc(
-    14px + (18 - 14) *
+    14px + (18.7 - 14) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   );
   letter-spacing: 0.5px;
@@ -142,7 +138,7 @@ export const MailtoLink = styled(FooterLink)`
   margin-left: 16px;
   color: ${white};
   font-size: calc(
-    14px + (18 - 14) *
+    14px + (18.7 - 14) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   );
   border-bottom: 2px solid white;

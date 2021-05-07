@@ -11,6 +11,9 @@ import { devices } from "../../constants/devices"
 
 const TeamPageContentContainer = styled.div`
   overflow: hidden;
+  @media only screen and ${devices.mobileMax} {
+    margin-bottom: 1rem;
+  }
 `
 
 const MemberName = styled(HName)`
