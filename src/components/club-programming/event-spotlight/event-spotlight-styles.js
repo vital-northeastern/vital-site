@@ -24,6 +24,7 @@ const Container = styled.div`
 `
 
 const Event = styled.div`
+  z-index: 10;
   @media ${devices.mobile} {
     width: 100%;
     padding-top: ${props => (props.index === 0 ? "0px" : "40px")};

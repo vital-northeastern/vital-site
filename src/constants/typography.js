@@ -159,9 +159,6 @@ const FooterLink = styled.a`
   @media ${devices.mobile} {
     line-height: 24px;
   }
-  @media ${devices.tablet} {
-    line-height: 24px;
-  }
   @media ${devices.desktop} {
     line-height: 26px;
   }
@@ -171,11 +168,15 @@ const FooterLink = styled.a`
 `
 
 const Label = styled.label`
-  font-size: ${fontSizes.p};
-  font-family: ${fonts.body};
-  font-weight: ${fontWeights.normal};
+  font-size: calc(
+    14px + (18 - 14) *
+      ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
+  );
+  font-family: ${fonts.button};
+  font-weight: ${fontWeights.medium};
+  letter-spacing: 0.5px;
   @media ${devices.mobile} {
-    line-height: 22px;
+    line-height: 24px;
   }
   @media ${devices.tablet} {
     line-height: 24px;

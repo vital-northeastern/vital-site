@@ -74,7 +74,12 @@ const Footer = props => {
             <FooterSocialBlock>
               {data.contentfulFooter.socialMedia.map(social => {
                 return (
-                  <a href={social.link} target="_blank" key={social.link}>
+                  <a
+                    href={social.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={social.link}
+                  >
                     <FooterSocialIcon>
                       <Img
                         className="featured"

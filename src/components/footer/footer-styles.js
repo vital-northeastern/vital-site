@@ -77,7 +77,9 @@ export const FooterScroll = styled.div`
   margin-bottom: auto;
   cursor: pointer;
   align-self: flex-end;
+  font-family: ${fonts.button};
   font-weight: ${fontWeights.medium};
+  letter-spacing: 0.5px;
 `
 
 export const FooterContactContainerEmail = styled(FooterContactContainer)`
@@ -122,8 +124,14 @@ export const FooterSocialIcon = styled.div`
 `
 
 export const ConnectContactText = styled(P)`
-  color: white;
+  color: ${white};
+  font-family: ${fonts.button};
   font-weight: ${fontWeights.medium};
+  font-size: calc(
+    14px + (18 - 14) *
+      ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
+  );
+  letter-spacing: 0.5px;
   @media only screen and (max-width: ${size.tablet}px) {
     margin: 0;
   }
@@ -132,7 +140,11 @@ export const ConnectContactText = styled(P)`
 export const MailtoLink = styled(FooterLink)`
   line-height: 20px;
   margin-left: 16px;
-  color: white;
+  color: ${white};
+  font-size: calc(
+    14px + (18 - 14) *
+      ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
+  );
   border-bottom: 2px solid white;
   @media only screen and (max-width: ${size.tablet}px) {
     margin: 0;
@@ -219,5 +231,5 @@ export const ScoutSignature = styled(P)`
 `
 export const ScoutLink = styled(FooterLink)`
   color: white;
-  font-weight: ${fontWeights.bold};
+  font-weight: ${fontWeights.semiBold};
 `
