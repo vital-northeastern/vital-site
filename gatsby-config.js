@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `ViTAL`,
-    description: `Northeastern University's Healthcare Innovation Core`,
+    description: `ViTAL is Northeastern University's healthcare innovation organization that provides unique experiential opportunities and an empowering community`,
     author: `@neuscout`,
   },
   plugins: [
