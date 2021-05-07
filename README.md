@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  ViTal Website
+  ViTAL Website
 </h1>
 
 This site was created using [Gatsby](https://www.gatsbyjs.org/docs/), a React-based static-site generator and the [Contentful CMS](https://www.contentful.com/developers/docs/). To see other project dependencies, check out the project's `package.json` file.
@@ -29,7 +29,7 @@ This site was created using [Gatsby](https://www.gatsbyjs.org/docs/), a React-ba
 1.  **<a name="clone">Clone the repository</a>**
 
 ```shell
-git clone git@github.com:Scout-NU/vital-site.git
+git clone https://github.com/Scout-NU/vital-site.git
 ```
 
 2.  **Change directories**
