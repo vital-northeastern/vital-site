@@ -150,7 +150,10 @@ const Connect = styled.a`
 `
 
 const FooterLink = styled.a`
-  font-size: ${fontSizes.p};
+  font-size: calc(
+    14px + (16.8 - 14) *
+      ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
+  );
   font-family: ${fonts.button};
   font-weight: ${fontWeights.medium};
   text-decoration: none;
