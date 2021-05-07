@@ -151,12 +151,13 @@ const Connect = styled.a`
 
 const FooterLink = styled.a`
   font-size: ${fontSizes.p};
-  font-family: ${fonts.navButton};
+  font-family: ${fonts.button};
   font-weight: ${fontWeights.medium};
   text-decoration: none;
+  letter-spacing: 0.5px;
 
   @media ${devices.mobile} {
-    line-height: 22px;
+    line-height: 24px;
   }
   @media ${devices.tablet} {
     line-height: 24px;
