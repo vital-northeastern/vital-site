@@ -1,10 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import get from "lodash/get"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Header from "../components/header/header"
+import SocialMedia from "../components/whats-happening/social-media/social-media"
 
 const WhatsHappening = props => {
   const whatsHappening = get(props, "data.contentfulWhatsHappeningPage")
@@ -18,8 +18,10 @@ const WhatsHappening = props => {
         subheading={whatsHappening.subheadingForTitle}
         imageBool={true}
       />
-      <p>Welcome to page 2</p>
-      <Link to="/">Go back to the homepage</Link>
+      <SocialMedia
+        instaLink={whatsHappening.instagramPostToDisplay}
+        facebookPage={whatsHappening.facebookUrl}
+      />
     </Layout>
   )
 }
@@ -31,6 +33,9 @@ export const pageQuery = graphql`
     contentfulWhatsHappeningPage {
       title
       subheadingForTitle
+      socialMediaTitle
+      instagramPostToDisplay
+      facebookUrl
     }
   }
 `
