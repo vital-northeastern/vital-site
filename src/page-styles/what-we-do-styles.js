@@ -1,6 +1,25 @@
 import styled from "styled-components"
 import { devices, padding } from "../constants/devices"
 
+const ProgrammingCardsIntro = styled.div`
+  text-align: center;
+  @media ${devices.mobile} {
+    padding-left: ${padding.mobile};
+    padding-right: ${padding.mobile};
+  }
+  @media ${devices.tablet} {
+    padding-left: ${padding.tablet};
+    padding-right: ${padding.tablet};
+    margin: 5rem 0 0 0;
+  }
+  @media ${devices.laptop} {
+    margin-top: 6.5rem;
+  }
+  @media ${devices.desktop} {
+    margin-top: 7rem;
+  }
+`
+
 const CardsContainer = styled.div`
   @media ${devices.mobile} {
     padding-left: ${padding.mobile};
@@ -15,12 +34,11 @@ const CardsContainer = styled.div`
   @media ${devices.laptop} {
     display: flex;
     justify-content: center;
-    padding: 50px 5.7%;
+    padding: 0 5.7% 50px;
   }
   @media ${devices.desktop} {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding: 20px 8% 50px;
   }
 `
 
-export { CardsContainer }
+export { ProgrammingCardsIntro, CardsContainer }

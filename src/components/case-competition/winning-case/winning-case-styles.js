@@ -27,7 +27,6 @@ const Image = styled(Img)`
     left: -13%;
   }
   @media ${devices.desktop} {
-    position: absolute;
     top: -18%;
     left: -13%;
   }
@@ -40,7 +39,7 @@ const PCaption = styled(P)`
   padding: 0 8%;
   margin-top: -10%;
   @media ${devices.desktop} {
-    padding: 0 10%;
+    padding: 0 11%;
     margin-top: -8%;
   }
 `

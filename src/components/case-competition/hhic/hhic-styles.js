@@ -51,8 +51,11 @@ const HNameCustom = styled(HName)`
   @media ${devices.laptop} {
     margin-top: 0rem;
     display: block;
+    line-height: 19px;
   }
-  line-height: 19px;
+  @media (min-width: 1600px) {
+    line-height: 21px;
+  }
 `
 
 const Space = styled.span`

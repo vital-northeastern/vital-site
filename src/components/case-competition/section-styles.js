@@ -16,7 +16,7 @@ const CaseCompContainer = styled.div`
     margin-bottom: 10px;
   }
   @media ${devices.tablet} {
-    padding: 3rem ${padding.tablet} 2rem;
+    padding: 2rem ${padding.tablet} 2rem;
   }
   @media ${devices.laptop} {
     padding: 5rem ${padding.laptop} 5rem 0px;
@@ -51,6 +51,7 @@ const CaseCompButton = styled(Button)`
 
 const H2Title = styled(H2)`
   margin-bottom: 0.9rem;
+  padding-right: 25%;
   @media ${devices.mobile} {
     margin-top: 0.85rem;
   }
@@ -58,9 +59,14 @@ const H2Title = styled(H2)`
     margin-top: 0rem;
     line-height: 38px;
   }
-  padding-right: 25%;
+  @media (min-width: 1600px) {
+    line-height: 45px;
+  }
   @media ${devices.laptop} and (max-width: 1210px) {
     padding-right: 15%;
+  }
+  @media (max-width: 374px) {
+    padding-right: 0;
   }
 `
 

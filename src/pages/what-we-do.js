@@ -8,7 +8,11 @@ import History from "../components/what-we-do/history/history"
 import IndustryBG from "../components/what-we-do/industry-bg/industry-bg"
 import ProgrammingCard from "../components/what-we-do/programming-cards/programming-card"
 import Platforms from "../components/what-we-do/platforms/platforms"
-import { CardsContainer } from "../page-styles/what-we-do-styles"
+import { H2, P } from "../constants/typography"
+import {
+  ProgrammingCardsIntro,
+  CardsContainer,
+} from "../page-styles/what-we-do-styles"
 
 const WhatWeDo = props => {
   const whatWeDo = get(props, "data.contentfulWhatWeDo")
@@ -33,6 +37,10 @@ const WhatWeDo = props => {
         image={whatWeDo.industryBackgroundImage}
         imageAlt={whatWeDo.industryBackgroundImage.description}
       />
+      <ProgrammingCardsIntro>
+        <H2>{whatWeDo.programmingCardsIntro}</H2>
+        <P>{whatWeDo.programmingCardsCaption}</P>
+      </ProgrammingCardsIntro>
       <CardsContainer>
         {whatWeDo.programmingCards.map((card, index) => {
           return (
@@ -85,6 +93,8 @@ export const pageQuery = graphql`
         }
         description
       }
+      programmingCardsIntro
+      programmingCardsCaption
       programmingCards {
         title
         shortDescription {
