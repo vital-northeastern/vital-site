@@ -64,6 +64,9 @@ const Footer = props => {
               Get Involved
             </FooterLinkCustom>
             <FooterLinkCustom href="/our-team">Meet The Team</FooterLinkCustom>
+            <FooterLinkCustom href="/club-programming">
+              Club Programming
+            </FooterLinkCustom>
           </FooterLinks>
         </FooterSubsectionContainer>
         <FooterSubsectionContainer>
