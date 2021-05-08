@@ -1,12 +1,13 @@
 import styled from "styled-components"
 import { devices, padding } from "../../constants/devices"
-import {
-  caseCompGradientV1,
-  caseCompGradientV2,
-  navyBlue,
-} from "../../constants/colors"
+import { navyBlue } from "../../constants/colors"
 import { H2 } from "../../constants/typography"
 import { Button } from "../../constants/buttons"
+
+const caseCompGradientV1 =
+  "linear-gradient(81.34deg, rgba(255, 255, 255, 0.2) 23.63%, rgba(255, 255, 255, 0) 63.08%), linear-gradient(36.48deg, #A8D2FF 24.89%, #5269E1 56.16%, #5269E1 111.91%)"
+const caseCompGradientV2 =
+  "linear-gradient(282.69deg, #A8D2FF 41.54%, #5269E1 133.71%)"
 
 const CaseCompContainer = styled.div`
   @media ${devices.mobile} {
