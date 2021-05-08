@@ -18,6 +18,7 @@ const CaseCompeition = props => {
         mobileTitle={caseComp.title}
         subheading={caseComp.subheadingForTitle}
         imageBool={false}
+        longTitle={true}
       />
       <HHIC
         title={caseComp.hhic.title}

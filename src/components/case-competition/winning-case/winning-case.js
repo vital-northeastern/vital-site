@@ -1,16 +1,18 @@
 import React from "react"
 import { P } from "../../../constants/typography"
 import {
-  Container,
-  TextContainer,
+  WinningCaseContainer,
   Image,
-  H2Title,
-  ButtonContainer,
-  ClubProgrammingButton,
-  ImageContainer,
   PCaption,
   PCaptionMobile,
 } from "./winning-case-styles"
+import {
+  CaseCompTextContainer,
+  H2Title,
+  ButtonContainer,
+  CaseCompButton,
+  CaseCompImageContainer,
+} from "../section-styles"
 
 const WinningCase = ({
   title,
@@ -21,24 +23,24 @@ const WinningCase = ({
   imageCaption,
 }) => {
   return (
-    <Container>
-      <TextContainer>
+    <WinningCaseContainer>
+      <CaseCompTextContainer>
         <H2Title>{title}</H2Title>
         <P>{blurb}</P>
         <ButtonContainer>
           <a href={ctaLink} target="_blank" rel="noreferrer">
-            <ClubProgrammingButton primary={false} aria-label={ctaTitle}>
+            <CaseCompButton primary={false} aria-label={ctaTitle}>
               {ctaTitle}
-            </ClubProgrammingButton>
+            </CaseCompButton>
           </a>
         </ButtonContainer>
-      </TextContainer>
-      <ImageContainer background={true}>
+      </CaseCompTextContainer>
+      <CaseCompImageContainer>
         <Image fluid={featuredImage.fluid} alt={featuredImage.description} />
         <PCaption>{imageCaption}</PCaption>
-      </ImageContainer>
+      </CaseCompImageContainer>
       <PCaptionMobile>{imageCaption}</PCaptionMobile>
-    </Container>
+    </WinningCaseContainer>
   )
 }
 

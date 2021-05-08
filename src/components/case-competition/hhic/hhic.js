@@ -1,16 +1,18 @@
 import React from "react"
 import { P } from "../../../constants/typography"
 import {
-  Container,
   TextContainer,
   Image,
-  H2Title,
   HNameCustom,
   Space,
-  ButtonContainer,
-  ClubProgrammingButton,
-  ImageContainer,
+  HHICImageContainer,
 } from "./hhic-styles"
+import {
+  CaseCompContainer,
+  H2Title,
+  ButtonContainer,
+  CaseCompButton,
+} from "../section-styles"
 
 const HHIC = ({
   title,
@@ -22,10 +24,10 @@ const HHIC = ({
   featuredImage,
 }) => {
   return (
-    <Container>
-      <ImageContainer background={true}>
+    <CaseCompContainer>
+      <HHICImageContainer gradientV1={true}>
         <Image fluid={featuredImage.fluid} alt={featuredImage.description} />
-      </ImageContainer>
+      </HHICImageContainer>
       <TextContainer>
         <H2Title>{title}</H2Title>
         <P>{blurb}</P>
@@ -34,13 +36,13 @@ const HHIC = ({
         <HNameCustom>{nextDate}</HNameCustom>
         <ButtonContainer>
           <a href={ctaLink} target="_blank" rel="noreferrer">
-            <ClubProgrammingButton primary={true} aria-label={ctaTitle}>
+            <CaseCompButton primary={true} aria-label={ctaTitle}>
               {ctaTitle}
-            </ClubProgrammingButton>
+            </CaseCompButton>
           </a>
         </ButtonContainer>
       </TextContainer>
-    </Container>
+    </CaseCompContainer>
   )
 }
 
