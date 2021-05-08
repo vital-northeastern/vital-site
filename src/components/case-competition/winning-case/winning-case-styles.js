@@ -6,7 +6,7 @@ import { CaseCompContainer } from "../section-styles"
 
 const WinningCaseContainer = styled(CaseCompContainer)`
   @media ${devices.mobile} {
-    margin-bottom: 50px;
+    margin-bottom: 55px;
   }
   @media ${devices.tablet} {
     padding: 0rem ${padding.tablet} 2rem;

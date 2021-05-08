@@ -6,11 +6,12 @@ const ProgrammingCardsIntro = styled.div`
   @media ${devices.mobile} {
     padding-left: ${padding.mobile};
     padding-right: ${padding.mobile};
+    margin: 4rem 0 0 0;
   }
   @media ${devices.tablet} {
     padding-left: ${padding.tablet};
     padding-right: ${padding.tablet};
-    margin: 5rem 0 0 0;
+    margin-top: 5rem;
   }
   @media ${devices.laptop} {
     margin-top: 6.5rem;
@@ -37,7 +38,7 @@ const CardsContainer = styled.div`
     padding: 0 5.7% 50px;
   }
   @media ${devices.desktop} {
-    padding: 20px 8% 50px;
+    padding: 10px 8% 50px;
   }
 `
 
