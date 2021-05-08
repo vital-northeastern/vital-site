@@ -119,7 +119,7 @@ const Footer = props => {
       >
         <input type="hidden" name="u" value="c45ced259329ec3d3e89ebe55" />
         <input type="hidden" name="id" value="8afc898548" />
-        <MailingListLabel for="MERGE0">Join mailing list:</MailingListLabel>
+        <MailingListLabel htmlFor="MERGE0">Join mailing list:</MailingListLabel>
         <MailingListSmall>
           <MailingListInput
             type="email"
