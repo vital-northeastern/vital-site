@@ -4,10 +4,9 @@ import { Container, TextContainer, Image } from "./speaker-series-styles"
 import {
   H2Title,
   ButtonContainer,
-  ClubProgrammingButton,
   ImageContainer,
+  returnAppropriateLink,
 } from "../section-styles"
-import { Link } from "gatsby"
 
 const SpeakerSeries = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
   return (
@@ -16,11 +15,7 @@ const SpeakerSeries = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
         <H2Title first={true}>{title}</H2Title>
         <P>{blurb.blurb}</P>
         <ButtonContainer>
-          <Link to={ctaLink}>
-            <ClubProgrammingButton primary={true} aria-label={ctaTitle}>
-              {ctaTitle}
-            </ClubProgrammingButton>
-          </Link>
+          {returnAppropriateLink(ctaLink, ctaTitle)}
         </ButtonContainer>
       </TextContainer>
       <ImageContainer right={true} background={true} width="55%">

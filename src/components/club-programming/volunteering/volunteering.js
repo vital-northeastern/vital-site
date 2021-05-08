@@ -5,10 +5,9 @@ import {
   ImageContainer,
   H2Title,
   ButtonContainer,
-  ClubProgrammingButton,
+  returnAppropriateLink,
 } from "../section-styles"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 
 const Volunteering = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
   return (
@@ -20,11 +19,7 @@ const Volunteering = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
         <H2Title lineheight={true}>{title}</H2Title>
         <P>{blurb}</P>
         <ButtonContainer>
-          <Link to={ctaLink}>
-            <ClubProgrammingButton primary={true} aria-label={ctaTitle}>
-              {ctaTitle}
-            </ClubProgrammingButton>
-          </Link>
+          {returnAppropriateLink(ctaLink, ctaTitle)}
         </ButtonContainer>
       </TextContainer>
     </Container>
