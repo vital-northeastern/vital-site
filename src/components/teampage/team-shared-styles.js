@@ -18,6 +18,12 @@ const TeamPageContentContainer = styled.div`
 
 const MemberName = styled(HName)`
   margin-bottom: 0.5em;
+  @media ${devices.mobile} {
+    line-height: 24px;
+  }
+  @media ${devices.laptop} {
+    line-height: 30px;
+  }
 `
 
 const MemberPosition = styled(P)`
