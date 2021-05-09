@@ -151,7 +151,7 @@ const Connect = styled.a`
 
 const FooterLink = styled.a`
   font-size: calc(
-    14px + (17 - 14) *
+    14.5px + (17.5 - 14.5) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   );
   font-family: ${fonts.button};
@@ -172,7 +172,7 @@ const FooterLink = styled.a`
 
 const Label = styled.label`
   font-size: calc(
-    14px + (18.7 - 14) *
+    14.5px + (18.7 - 14.5) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
   );
   font-family: ${fonts.button};

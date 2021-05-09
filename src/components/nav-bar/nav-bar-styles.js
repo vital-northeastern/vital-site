@@ -76,7 +76,7 @@ const NavLink = styled(Link)`
   letter-spacing: 0.1em;
   line-height: 16px;
   font-family: ${fonts.nav};
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.2s;
