@@ -12,7 +12,11 @@ import { H2, P } from "../constants/typography"
 import {
   ProgrammingCardsIntro,
   CardsContainer,
+  GeoshapeContainerMobile,
 } from "../page-styles/what-we-do-styles"
+import { Geoshape } from "../components/geoshape/geoshape-styles"
+import left_svg from "../images/what-we-do/mobile_left.svg"
+import right_svg from "../images/what-we-do/mobile_right.svg"
 
 const WhatWeDo = props => {
   const whatWeDo = get(props, "data.contentfulWhatWeDo")
@@ -41,6 +45,21 @@ const WhatWeDo = props => {
         <H2>{whatWeDo.programmingCardsIntro}</H2>
         <P>{whatWeDo.programmingCardsCaption}</P>
       </ProgrammingCardsIntro>
+      <GeoshapeContainerMobile>
+        <Geoshape
+          marginTop="10rem"
+          src={left_svg}
+          alt="blue and white geometric shape"
+        />
+      </GeoshapeContainerMobile>
+      <GeoshapeContainerMobile>
+        <Geoshape
+          marginTop="55rem"
+          right={true}
+          src={right_svg}
+          alt="blue and white geometric shape"
+        />
+      </GeoshapeContainerMobile>
       <CardsContainer>
         {whatWeDo.programmingCards.map((card, index) => {
           return (

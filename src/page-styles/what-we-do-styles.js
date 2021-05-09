@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { GeoshapeContainer } from "../components/geoshape/geoshape-styles"
 import { devices, padding } from "../constants/devices"
 
 const ProgrammingCardsIntro = styled.div`
@@ -42,4 +43,13 @@ const CardsContainer = styled.div`
   }
 `
 
-export { ProgrammingCardsIntro, CardsContainer }
+const GeoshapeContainerMobile = styled(GeoshapeContainer)`
+  @media ${devices.mobile} {
+    display: block;
+  }
+  @media ${devices.tablet} {
+    display: none;
+  }
+`
+
+export { ProgrammingCardsIntro, CardsContainer, GeoshapeContainerMobile }
