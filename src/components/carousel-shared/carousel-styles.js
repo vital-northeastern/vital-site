@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { navyBlue, royalBlue } from "../../constants/colors"
+import { navyBlue } from "../../constants/colors"
 import {
   HName,
   fonts,

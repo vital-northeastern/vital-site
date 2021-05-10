@@ -25,7 +25,7 @@ const WhatsHappening = props => {
       <Carousel
         title={whatsHappening.carouselTitle}
         carouselItems={whatsHappening.carouselItems}
-        minItems={5}
+        minItems={3}
         placeholderText={whatsHappening.defaultCarouselPlaceholder}
         placeholderTitle={whatsHappening.defaultCarouselItemTitle}
         placeholderDescription={whatsHappening.defaultCarouselItemDescription}
