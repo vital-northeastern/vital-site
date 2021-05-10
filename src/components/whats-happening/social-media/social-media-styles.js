@@ -1,6 +1,18 @@
 import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
 import { imageGradient } from "../../../constants/colors"
+import { H2 } from "../../../constants/typography"
+
+const SocialMediaSectionContainer = styled.div`
+  padding: 100px 0;
+  @media ${devices.mobileMax} {
+    padding-bottom: 50px;
+  }
+`
+
+const SocialTitle = styled(H2)`
+  text-align: center;
+`
 
 const SocialMediaContainer = styled.div`
   background: ${imageGradient};
@@ -40,4 +52,9 @@ const Social = styled.div`
   }
 `
 
-export { SocialMediaContainer, Social }
+export {
+  SocialMediaSectionContainer,
+  SocialMediaContainer,
+  Social,
+  SocialTitle,
+}

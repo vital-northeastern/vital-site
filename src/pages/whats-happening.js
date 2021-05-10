@@ -13,10 +13,8 @@ import SocialMedia from "../components/whats-happening/social-media/social-media
 const WhatsHappening = props => {
   const whatsHappening = get(props, "data.contentfulWhatsHappeningPage")
 
-  console.log(whatsHappening)
-
   return (
-    <Layout navbarStyle="gradient">
+    <Layout navbarstyle="gradient">
       <SEO title="What's Happening" />
       <Header
         title={whatsHappening.title}
@@ -31,10 +29,11 @@ const WhatsHappening = props => {
         placeholderText={whatsHappening.defaultCarouselPlaceholder}
         placeholderTitle={whatsHappening.defaultCarouselItemTitle}
         placeholderDescription={whatsHappening.defaultCarouselItemDescription}
+        openInNewTab={true}
       />
       <Calendar title={whatsHappening.calendarTitle} />
-      <h3>{whatsHappening.socialMediaTitle}</h3>
       <SocialMedia
+        title={whatsHappening.socialMediaTitle}
         instaLink={whatsHappening.instagramPostToDisplay}
         facebookPage={whatsHappening.facebookUrl}
       />
@@ -45,10 +44,6 @@ const WhatsHappening = props => {
         blurb={whatsHappening.joinSlackBlurb.joinSlackBlurb}
       />
       <MailingList title={whatsHappening.newsletterCtaTitle} />
-
-      {/* <a href={whatsHappening.newsletterCtaLink}>
-        <button type="button">{whatsHappening.newsletterCtaTitle}</button>
-      </a> */}
     </Layout>
   )
 }

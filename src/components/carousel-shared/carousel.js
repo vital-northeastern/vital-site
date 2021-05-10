@@ -29,9 +29,8 @@ const Carousel = ({
   placeholderText,
   placeholderTitle,
   placeholderDescription,
+  openInNewTab,
 }) => {
-  console.log(carouselItems)
-
   while (carouselItems.length < minItems) {
     carouselItems.push({
       featuredImage: { fluid: { src: carouselPlaceholder } },
@@ -88,7 +87,7 @@ const Carousel = ({
                 </div>
 
                 {item.link && (
-                  <MoreLink href={item.link}>
+                  <MoreLink href={item.link} target={openInNewTab && "_blank"}>
                     <P> Learn More</P>
                     <div>
                       <LongRightArrow src={longRightArrow}></LongRightArrow>
