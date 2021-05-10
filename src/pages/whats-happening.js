@@ -34,6 +34,10 @@ const WhatsHappening = props => {
       />
       <Calendar title={whatsHappening.calendarTitle} />
       <h3>{whatsHappening.socialMediaTitle}</h3>
+      <SocialMedia
+        instaLink={whatsHappening.instagramPostToDisplay}
+        facebookPage={whatsHappening.facebookUrl}
+      />
       <Slack
         title={whatsHappening.joinSlackTitle}
         link={whatsHappening.joinSlackLink}
@@ -45,10 +49,6 @@ const WhatsHappening = props => {
       {/* <a href={whatsHappening.newsletterCtaLink}>
         <button type="button">{whatsHappening.newsletterCtaTitle}</button>
       </a> */}
-      <SocialMedia
-        instaLink={whatsHappening.instagramPostToDisplay}
-        facebookPage={whatsHappening.facebookUrl}
-      />
     </Layout>
   )
 }
@@ -60,7 +60,6 @@ export const pageQuery = graphql`
     contentfulWhatsHappeningPage {
       title
       subheadingForTitle
-<<<<<<< HEAD
       carouselTitle
       carouselItems {
         title
@@ -93,11 +92,9 @@ export const pageQuery = graphql`
       }
       newsletterCtaTitle
       newsletterCtaLink
-=======
       socialMediaTitle
       instagramPostToDisplay
       facebookUrl
->>>>>>> origin/social-media
     }
   }
 `
