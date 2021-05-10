@@ -17,7 +17,7 @@ const Slack = ({ title, link, logo, blurb }) => {
       </SlackImgHolder>
       <SlackContent>
         <P>{blurb}</P>
-        <a href={link}>
+        <a href={link} target="_blank">
           <Button type="button" primary={true}>
             {title}
           </Button>
