@@ -8,6 +8,7 @@ import Calendar from "../components/whats-happening/calendar"
 import Slack from "../components/whats-happening/slack"
 import Header from "../components/header/header"
 import MailingList from "../components/whats-happening/mailing-list"
+import SocialMedia from "../components/whats-happening/social-media/social-media"
 
 const WhatsHappening = props => {
   const whatsHappening = get(props, "data.contentfulWhatsHappeningPage")
@@ -44,6 +45,10 @@ const WhatsHappening = props => {
       {/* <a href={whatsHappening.newsletterCtaLink}>
         <button type="button">{whatsHappening.newsletterCtaTitle}</button>
       </a> */}
+      <SocialMedia
+        instaLink={whatsHappening.instagramPostToDisplay}
+        facebookPage={whatsHappening.facebookUrl}
+      />
     </Layout>
   )
 }
@@ -55,6 +60,7 @@ export const pageQuery = graphql`
     contentfulWhatsHappeningPage {
       title
       subheadingForTitle
+<<<<<<< HEAD
       carouselTitle
       carouselItems {
         title
@@ -87,6 +93,11 @@ export const pageQuery = graphql`
       }
       newsletterCtaTitle
       newsletterCtaLink
+=======
+      socialMediaTitle
+      instagramPostToDisplay
+      facebookUrl
+>>>>>>> origin/social-media
     }
   }
 `

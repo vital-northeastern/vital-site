@@ -23,14 +23,14 @@ const WhatWeDo = props => {
         imageBool={true}
       />
       <History
-        title={whatWeDo.history.title}
+        title={whatWeDo.timelineTitle}
         timeline={whatWeDo.timelineSvg}
         mobileTimeline={whatWeDo.mobileTimelineSvg}
       />
       <IndustryBG
         title={whatWeDo.industryBackgroundTitle}
         blurb={whatWeDo.industryBackgroundBlurb}
-        image={whatWeDo.mobileIndustryBackgroundImage}
+        image={whatWeDo.industryBackgroundImage}
         imageAlt={whatWeDo.industryBackgroundImage.description}
       />
       <CardsContainer>
@@ -62,9 +62,7 @@ export const pageQuery = graphql`
     contentfulWhatWeDo {
       title
       subheadingForTitle
-      history {
-        title
-      }
+      timelineTitle
       timelineSvg {
         file {
           url
@@ -82,12 +80,6 @@ export const pageQuery = graphql`
         industryBackgroundBlurb
       }
       industryBackgroundImage {
-        fluid {
-          ...GatsbyContentfulFluid
-        }
-        description
-      }
-      mobileIndustryBackgroundImage {
         fluid {
           ...GatsbyContentfulFluid
         }

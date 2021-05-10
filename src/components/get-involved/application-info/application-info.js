@@ -4,12 +4,12 @@ import {
   GeoshapeApplication,
   ApplicationContainer,
   H2Header,
-  ButtonEmail,
   MobileImageContainer,
 } from "./application-info-styles"
 import { GeoshapeContainer } from "../../geoshape/geoshape-styles"
 import bottom_svg from "../../../images/get-involved/bottom_shape.svg"
 import bottom_mobile_svg from "../../../images/get-involved/bottom_mobile.svg"
+import { GetInvolvedButton } from "../section-styles"
 
 const ApplicationInfo = ({
   subheading,
@@ -31,9 +31,13 @@ const ApplicationInfo = ({
         <H2Header>{subheading}</H2Header>
         <P>{applicationEmail}</P>
         <a href={ctaLink}>
-          <ButtonEmail primary={true} aria-label={ctaTitle}>
+          <GetInvolvedButton
+            margintop={true}
+            primary={true}
+            aria-label={ctaTitle}
+          >
             {ctaTitle}
-          </ButtonEmail>
+          </GetInvolvedButton>
         </a>
       </ApplicationContainer>
       <MobileImageContainer>

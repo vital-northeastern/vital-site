@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Button } from "../../../constants/buttons"
 import { devices } from "../../../constants/devices"
 import { H2 } from "../../../constants/typography"
 
@@ -49,18 +48,11 @@ const ButtonPosition = styled.div`
     margin-bottom: 15px;
   }
   @media ${devices.laptop} {
-    margin-left: 60%;
+    margin-left: 62%;
   }
   @media (min-width: 1220px) {
-    margin-left: 68%;
-  }
-  @media ${devices.desktop} {
     margin-left: 70%;
   }
-`
-
-const EboardButton = styled(Button)`
-  padding: 18px 51px;
 `
 
 export {
@@ -69,5 +61,4 @@ export {
   H2Header,
   ButtonContainer,
   ButtonPosition,
-  EboardButton,
 }
