@@ -11,10 +11,19 @@ import { devices } from "../../constants/devices"
 
 const TeamPageContentContainer = styled.div`
   overflow: hidden;
+  @media only screen and ${devices.mobileMax} {
+    margin-bottom: 1rem;
+  }
 `
 
 const MemberName = styled(HName)`
   margin-bottom: 0.5em;
+  @media ${devices.mobile} {
+    line-height: 24px;
+  }
+  @media ${devices.laptop} {
+    line-height: 30px;
+  }
 `
 
 const MemberPosition = styled(P)`

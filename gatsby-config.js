@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `ViTAL`,
-    description: `Northeastern University's Healthcare Innovation Core`,
+    description: `ViTAL is Northeastern University's healthcare innovation organization that provides unique experiential opportunities and an empowering community`,
     author: `@neuscout`,
   },
   plugins: [
@@ -45,5 +45,9 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-smoothscroll`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }

@@ -18,7 +18,7 @@ const ApplicationContainer = styled.div`
 @media ${devices.mobile} {
   margin: 0.7rem auto 7rem auto;
 @media ${devices.laptop} {
-  margin: 2rem auto 8rem auto;
+  margin: 2rem auto 9.5rem auto;
 }
   text-align: center;
   width: 100%;

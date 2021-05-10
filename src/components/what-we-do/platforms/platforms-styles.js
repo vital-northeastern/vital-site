@@ -9,7 +9,7 @@ import { Geoshape } from "../../geoshape/geoshape-styles"
 const PlatformsContainer = styled.div`
   @media ${devices.mobile} {
     padding-top: 30px;
-    margin-bottom: 2rem;
+    margin-bottom: 3.2rem;
   }
   @media ${devices.tablet} {
     padding-top: 14px;

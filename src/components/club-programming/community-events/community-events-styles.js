@@ -24,6 +24,7 @@ const Container = styled.div`
 `
 
 const TextContainer = styled.div`
+  z-index: 10;
   color: ${navyBlue};
   @media ${devices.mobile} {
     width: 100%;

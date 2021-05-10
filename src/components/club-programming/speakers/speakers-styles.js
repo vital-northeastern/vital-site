@@ -32,6 +32,7 @@ const SpeakersContainer = styled.div`
 `
 
 const SpeakerContainer = styled.div`
+  z-index: 10;
   @media ${devices.mobile} {
     width: 30.5%;
   }

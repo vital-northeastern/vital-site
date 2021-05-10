@@ -149,6 +149,49 @@ const Connect = styled.a`
   }
 `
 
+const FooterLink = styled.a`
+  font-size: calc(
+    14.5px + (17.5 - 14.5) *
+      ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
+  );
+  font-family: ${fonts.button};
+  font-weight: ${fontWeights.medium};
+  text-decoration: none;
+  letter-spacing: 0.5px;
+
+  @media ${devices.mobile} {
+    line-height: 24px;
+  }
+  @media ${devices.desktop} {
+    line-height: 26px;
+  }
+  @media (min-width: 1600px) {
+    line-height: 27px;
+  }
+`
+
+const Label = styled.label`
+  font-size: calc(
+    14.5px + (18.7 - 14.5) *
+      ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
+  );
+  font-family: ${fonts.button};
+  font-weight: ${fontWeights.medium};
+  letter-spacing: 0.5px;
+  @media ${devices.mobile} {
+    line-height: 23px;
+  }
+  @media ${devices.tablet} {
+    line-height: 24px;
+  }
+  @media ${devices.desktop} {
+    line-height: 26px;
+  }
+  @media (min-width: 1600px) {
+    line-height: 27px;
+  }
+`
+
 export {
   fonts,
   H1,
@@ -160,4 +203,6 @@ export {
   Connect,
   fontSizes,
   fontWeights,
+  FooterLink,
+  Label,
 }
