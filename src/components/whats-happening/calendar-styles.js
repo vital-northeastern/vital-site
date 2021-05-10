@@ -6,6 +6,19 @@ const CalendarSection = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
+  position: relative;
+`
+
+const HexShape = styled.img`
+  position: absolute;
+  z-index: -1;
+  transform: scale(0.9, 0.9)
+    ${props => (props.side === "left" ? "rotate(-15deg)" : "rotate(40deg)")};
+  ${props => (props.side === "left" ? "left: -10%; top: -35%;" : "")}
+  ${props => (props.side === "left" ? "" : "right: -10%; bottom: -30%;")}
+  @media only screen and ${devices.mobileMax} {
+    display: none;
+  }
 `
 
 const CalendarFrameLarge = styled.iframe`
@@ -26,4 +39,4 @@ const CalendarFrameSmall = styled.iframe`
   }
 `
 
-export { CalendarSection, CalendarFrameLarge, CalendarFrameSmall }
+export { CalendarSection, CalendarFrameLarge, CalendarFrameSmall, HexShape }

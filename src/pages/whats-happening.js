@@ -31,7 +31,10 @@ const WhatsHappening = props => {
         placeholderDescription={whatsHappening.defaultCarouselItemDescription}
         openInNewTab={true}
       />
-      <Calendar title={whatsHappening.calendarTitle} />
+      <Calendar
+        title={whatsHappening.calendarTitle}
+        calendarEmbedCode={whatsHappening.calendarEmbedCode}
+      />
       <SocialMedia
         title={whatsHappening.socialMediaTitle}
         instaLink={whatsHappening.instagramPostToDisplay}
@@ -71,6 +74,7 @@ export const pageQuery = graphql`
       defaultCarouselItemDescription
       defaultCarouselPlaceholder
       calendarTitle
+      calendarEmbedCode
       socialMediaTitle
       instagramHandle
       facebookUrl
