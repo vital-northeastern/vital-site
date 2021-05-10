@@ -9,6 +9,7 @@ import Slack from "../components/whats-happening/slack"
 import Header from "../components/header/header"
 import MailingList from "../components/whats-happening/mailing-list"
 import SocialMedia from "../components/whats-happening/social-media/social-media"
+import { WhatsHappeningHolder } from "../components/whats-happening/whats-happening-styles"
 
 const WhatsHappening = props => {
   const whatsHappening = get(props, "data.contentfulWhatsHappeningPage")
@@ -22,31 +23,33 @@ const WhatsHappening = props => {
         subheading={whatsHappening.subheadingForTitle}
         imageBool={true}
       />
-      <Carousel
-        title={whatsHappening.carouselTitle}
-        carouselItems={whatsHappening.carouselItems}
-        minItems={3}
-        placeholderText={whatsHappening.defaultCarouselPlaceholder}
-        placeholderTitle={whatsHappening.defaultCarouselItemTitle}
-        placeholderDescription={whatsHappening.defaultCarouselItemDescription}
-        openInNewTab={true}
-      />
-      <Calendar
-        title={whatsHappening.calendarTitle}
-        calendarEmbedCode={whatsHappening.calendarEmbedCode}
-      />
-      <SocialMedia
-        title={whatsHappening.socialMediaTitle}
-        instaLink={whatsHappening.instagramPostToDisplay}
-        facebookPage={whatsHappening.facebookUrl}
-      />
-      <Slack
-        title={whatsHappening.joinSlackTitle}
-        link={whatsHappening.joinSlackLink}
-        logo={whatsHappening.slackLogo}
-        blurb={whatsHappening.joinSlackBlurb.joinSlackBlurb}
-      />
-      <MailingList title={whatsHappening.newsletterCtaTitle} />
+      <WhatsHappeningHolder>
+        <Carousel
+          title={whatsHappening.carouselTitle}
+          carouselItems={whatsHappening.carouselItems}
+          minItems={3}
+          placeholderText={whatsHappening.defaultCarouselPlaceholder}
+          placeholderTitle={whatsHappening.defaultCarouselItemTitle}
+          placeholderDescription={whatsHappening.defaultCarouselItemDescription}
+          openInNewTab={true}
+        />
+        <Calendar
+          title={whatsHappening.calendarTitle}
+          calendarEmbedCode={whatsHappening.calendarEmbedCode}
+        />
+        <SocialMedia
+          title={whatsHappening.socialMediaTitle}
+          instaLink={whatsHappening.instagramPostToDisplay}
+          facebookPage={whatsHappening.facebookUrl}
+        />
+        <Slack
+          title={whatsHappening.joinSlackTitle}
+          link={whatsHappening.joinSlackLink}
+          logo={whatsHappening.slackLogo}
+          blurb={whatsHappening.joinSlackBlurb.joinSlackBlurb}
+        />
+        <MailingList title={whatsHappening.newsletterCtaTitle} />{" "}
+      </WhatsHappeningHolder>
     </Layout>
   )
 }
