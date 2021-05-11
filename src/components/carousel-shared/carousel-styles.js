@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { navyBlue } from "../../constants/colors"
+import { navyBlue, royalBlue } from "../../constants/colors"
 import {
   HName,
   fonts,
@@ -15,6 +15,13 @@ const carouselNavButtonSideMargin = 4
 export const CarouselTitleContainer = styled.div`
   text-align: center;
   margin-top: 100px;
+`
+
+export const CarItemHolder = styled.div`
+  padding: 0 50px;
+  @media ${devices.mobileMax} {
+    padding: 0 20px;
+  }
 `
 
 export const CarouselButtonsContainer = styled.div`
@@ -33,7 +40,7 @@ export const CarouselNav = styled.div`
 export const NavButtons = styled.button`
   width: ${carouselNavButtonSize}px;
   height: ${carouselNavButtonSize}px;
-  background-color: ${navyBlue};
+  background-color: ${props => (props.active ? royalBlue : navyBlue)};
   border: none;
   border-radius: 50%;
   margin: 0 ${carouselNavButtonSideMargin}px;
@@ -129,5 +136,18 @@ export const PlaceholderText = styled(H2)`
     font-size: 16px;
     line-height: 22px;
     padding: 8%;
+  }
+`
+
+export const CarouselBig = styled.div`
+  @media ${devices.tabletMax} {
+    display: none;
+  }
+`
+
+export const CarouselSmall = styled.div`
+  display: none;
+  @media ${devices.tabletMax} {
+    display: initial;
   }
 `

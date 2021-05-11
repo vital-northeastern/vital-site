@@ -1,28 +1,19 @@
 import React from "react"
-import TinySlider from "tiny-slider-react"
-import { H2, P, PCard } from "../../constants/typography"
+import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
+import { H2 } from "../../constants/typography"
 import {
   CarouselTitleContainer,
-  CarouselButtonsContainer,
-  CarouselNav,
-  NavButtons,
-  CarouselControls,
-  Control,
-  CarouselTextContainer,
-  EventTitle,
-  MoreLink,
-  LongRightArrow,
-  CarouselImage,
-  PlaceholderBox,
-  PlaceholderText,
+  CarouselBig,
+  CarouselSmall,
 } from "./carousel-styles"
-import "./carousel.css"
-
-import union from "../../images/union-right.svg"
-import longRightArrow from "../../images/long-right-arrow.svg"
 import carouselPlaceholder from "../../images/carousel-placeholder.png"
+import { ButtonGroup } from "./button-group"
+import { CarItem } from "./carousel-item"
 
-const Carousel = ({
+import "./test.css"
+
+const CarouselHolder = ({
   title,
   carouselItems,
   minItems,
@@ -40,89 +31,82 @@ const Carousel = ({
     })
   }
 
-  const settings = {
-    center: true,
-    controlsPosition: "bottom",
-    navPosition: "bottom",
-    navContainer: "#customize-nav",
-    controlsContainer: "#customize-controls",
-    mouseDrag: true,
-    responsive: {
-      0: {
-        edgePadding: 50,
-      },
-      768: {
-        fixedWidth: 800,
-        edgePadding: 200,
-      },
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      partialVisibilityGutter: 100,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      partialVisibilityGutter: 50,
     },
   }
+
   return (
     <>
       <CarouselTitleContainer>
         <H2>{title}</H2>
       </CarouselTitleContainer>
 
-      <TinySlider settings={settings}>
-        {carouselItems.map((item, index) => {
-          return (
-            <div key={item.title + index}>
-              <CarouselImage
-                role="img"
-                aria-label={item.featuredImage.description}
-                alt={item.featuredImage.description}
-                src={item.featuredImage.fluid.src}
-              >
-                {item.placeholder && (
-                  <PlaceholderBox>
-                    <PlaceholderText>{placeholderText}</PlaceholderText>
-                  </PlaceholderBox>
-                )}
-              </CarouselImage>
-
-              <CarouselTextContainer>
-                <div>
-                  <EventTitle>{item.title}</EventTitle>
-                  <PCard>{item.subTitle}</PCard>
-                </div>
-
-                {item.link && (
-                  <MoreLink href={item.link} target={openInNewTab && "_blank"}>
-                    <P> Learn More</P>
-                    <div>
-                      <LongRightArrow src={longRightArrow}></LongRightArrow>
-                    </div>
-                  </MoreLink>
-                )}
-              </CarouselTextContainer>
-            </div>
-          )
-        })}
-      </TinySlider>
-
-      <CarouselButtonsContainer>
-        <CarouselNav id="customize-nav">
+      <CarouselBig>
+        <Carousel
+          ssr
+          centerMode={true}
+          responsive={responsive}
+          showDots={false}
+          arrows={false}
+          infinite={true}
+          renderButtonGroupOutside
+          customButtonGroup={<ButtonGroup carouselItems={carouselItems} />}
+        >
           {carouselItems.map((item, index) => {
-            return <NavButtons key={item.title + index + "btn"}></NavButtons>
+            return (
+              <CarItem
+                key={item.title + index}
+                item={item}
+                placeholderText={placeholderText}
+                openInNewTab={openInNewTab}
+              ></CarItem>
+            )
           })}
-        </CarouselNav>
-        <CarouselControls id="customize-controls">
-          <Control
-            src={union}
-            direction={"left"}
-            alt={"left (previous) arrow control"}
-            numberOfItems={carouselItems.length}
-          ></Control>
-          <Control
-            src={union}
-            alt={"right (next) arrow control"}
-            direction={"right"}
-            numberOfItems={carouselItems.length}
-          ></Control>
-        </CarouselControls>
-      </CarouselButtonsContainer>
+        </Carousel>
+      </CarouselBig>
+      <CarouselSmall>
+        <Carousel
+          ssr
+          centerMode={false}
+          responsive={responsive}
+          showDots={false}
+          arrows={false}
+          infinite={true}
+          renderButtonGroupOutside
+          customButtonGroup={<ButtonGroup carouselItems={carouselItems} />}
+          partialVisible={true}
+        >
+          {carouselItems.map((item, index) => {
+            return (
+              <CarItem
+                key={item.title + index}
+                item={item}
+                placeholderText={placeholderText}
+                openInNewTab={openInNewTab}
+              ></CarItem>
+            )
+          })}
+        </Carousel>
+      </CarouselSmall>
     </>
   )
 }
 
-export default Carousel
+export default CarouselHolder
