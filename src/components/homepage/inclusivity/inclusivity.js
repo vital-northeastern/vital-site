@@ -52,9 +52,13 @@ const Inclusivity = ({ title, blurbText, ctaTitle, ctaLink, carousel }) => {
       <ImageSection>
         <ImageHeader>{carouselItem.title}</ImageHeader>
 
-        <RotatingImage>
-          <Img fluid={carouselItem.fluid} alt={carouselItem.alt} />
-        </RotatingImage>
+        <RotatingImage
+          src={carouselItem.fluid.src}
+          alt={carouselItem.alt}
+          aria-label={carouselItem.alt}
+        />
+        {/* <Img fluid={carouselItem.fluid} alt={carouselItem.alt} /> */}
+        {/* </RotatingImage> */}
 
         <Selectors>
           {carouselItems.map((item, index) => {

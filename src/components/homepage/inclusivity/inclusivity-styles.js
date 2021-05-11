@@ -1,12 +1,7 @@
 import styled from "styled-components"
 import { devices } from "../../../constants/devices"
-import { royalBlue } from "../../../constants/colors"
-import { Button } from "../../../constants/buttons"
-
-const colors = {
-  primary: "#001049", // dark blue
-  secondary: "#607AE6", // light blue
-}
+import { navyBlue, royalBlue } from "../../../constants/colors"
+import { HUpper } from "../../../constants/typography"
 
 const IncContainer = styled.div`
   display: flex;
@@ -36,54 +31,54 @@ const ImageSection = styled.div`
       rgba(255, 255, 255, 0) 63.08%
     ),
     linear-gradient(36.48deg, #a8d2ff 24.89%, #5269e1 111.91%);
-  padding: 60px 0 20px 0;
+  padding-top: 40%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   position: relative;
-  @media ${devices.tablet} {
-    height: 500px;
-  }
-  @media ${devices.laptop} {
-    height: 600px;
-  }
-  @media ${devices.desktop} {
-    height: 700px;
-  }
 `
 
-const ImageHeader = styled.h2`
-  text-transform: uppercase;
-  color: ${colors.primary};
+const ImageHeader = styled(HUpper)`
+  position: absolute;
+  top: 8%;
   padding: 15px;
-  width: 60%;
+  width: 70%;
   text-align: center;
   background-color: white;
   z-index: 1;
+  @media ${devices.tablet} {
+    width: 90%;
+  }
+  @media ${devices.laptop} {
+    width: 80%;
+  }
 `
 
 const Selectors = styled.div`
   width: 100px;
-  height: 40px;
   z-index: 1;
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 8%;
 `
 
 const Selector = styled.div`
   width: 14px;
   height: 14px;
-  border: 1px solid white;
+  border: 1px solid ${navyBlue};
   margin: 0 4px;
   border-radius: 50%;
   cursor: pointer;
   background-color: ${props =>
-    props.index === props.currentDisplayedIndex ? "white" : "transparent"};
+    props.index === props.currentDisplayedIndex ? navyBlue : "transparent"};
 `
 
 const RotatingImage = styled.div`
+  background-image: url(${props => props.src});
+  background-size: cover;
   width: 75%;
+  padding-top: 56.25%; // 4:3 aspect ratio
   z-index: 0;
   position: absolute;
   top: 50%;
