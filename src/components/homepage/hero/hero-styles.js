@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { navyBlue } from "../../../constants/colors"
+import { devices } from "../../../constants/devices"
 import { fontWeights, HName, PCard } from "../../../constants/typography"
 
 const HeroContainer = styled.div`
@@ -7,20 +8,39 @@ const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+  @media ${devices.tabletMax} {
+    padding-top: 150px;
+  }
+  @media ${devices.mobileMax} {
+    padding-top: 200px;
+  }
 `
 
 const HeroHex = styled.img`
   position: absolute;
   z-index: -1;
-  transform: scale(1, 1)
-    ${props => (props.side === "left" ? "rotate(0deg)" : "rotate(110deg)")};
-  ${props => (props.side === "left" ? "left: 0%; top: 20%;" : "")}
+  transform: ${props =>
+    props.side === "left" ? "rotate(0deg)" : "rotate(110deg)"};
+  ${props => (props.side === "left" ? "left: 0%; top: 15%;" : "")}
   ${props => (props.side === "left" ? "" : "right: -9%; top: 28%;")}
+  @media ${devices.laptopMax} {
+    max-width: 40%;
+    ${props => (props.side === "left" ? " top: 24%;" : "")}
+    ${props => (props.side === "left" ? "" : " top: 28%;")}
+  }
+  @media ${devices.tabletMax} {
+    ${props => (props.side === "left" ? " top: 40%;" : "")}
+    ${props => (props.side === "left" ? "" : " top: 48%;")}
+  }
+  @media ${devices.mobileMax} {
+    max-width: 60%;
+
+    ${props => (props.side === "left" ? " top: 60%;" : "")}
+    ${props => (props.side === "left" ? "" : " top: 12%;")}
+  }
 `
 
-const InnerHeroContainer = styled.div`
-  position: relative;
-`
+const InnerHeroContainer = styled.div``
 
 const SmallTitle = styled(HName)`
   font-weight: ${fontWeights.medium};
@@ -28,20 +48,27 @@ const SmallTitle = styled(HName)`
 `
 const BigTitle = styled.h1`
   color: ${navyBlue};
-  font-size: 200px;
+  font-size: 210px;
   margin: 0;
   line-height: 1;
+  @media ${devices.mobileMax} {
+    font-size: 5rem;
+  }
 `
 
 const SubHeadingHolder = styled.div`
   width: fit-content;
   margin-left: auto;
+  @media ${devices.mobileMax} {
+    margin-left: 0;
+  }
 `
 
-const SubHeading = styled.h3`
+const SubHeading = styled(HName)`
   font-weight: ${fontWeights.medium};
   margin: 0;
   width: fit-content;
+  line-height: 1.2;
 `
 
 const ScrollCont = styled.div`
@@ -50,6 +77,9 @@ const ScrollCont = styled.div`
   align-items: center;
   margin: 150px 0 0 0;
   cursor: pointer;
+  @media ${devices.mobileMax} {
+    margin-top: 80px;
+  }
 `
 
 const ScrollText = styled(PCard)`

@@ -14,6 +14,7 @@ import { Button } from "../../../constants/buttons"
 import { H2, P } from "../../../constants/typography"
 
 import homepageMidHex from "../../../images/homepage-mid-hex.svg"
+import { ButtonHolder } from "../shared-styles/homepage-shared-styles"
 
 const Inclusivity = ({ title, blurbText, ctaTitle, ctaLink, carousel }) => {
   const [carouselItem, setCarouselItem] = useState({
@@ -42,11 +43,13 @@ const Inclusivity = ({ title, blurbText, ctaTitle, ctaLink, carousel }) => {
         <H2>{title}</H2>
         <P>{blurbText.blurbText}</P>
         <div>
-          <a href={ctaLink} target="_blank" rel="noreferrer">
-            <Button type="button" aria-label={ctaTitle} primary>
-              {ctaTitle}
-            </Button>
-          </a>
+          <ButtonHolder>
+            <a href={ctaLink} target="_blank" rel="noreferrer">
+              <Button type="button" aria-label={ctaTitle} primary>
+                {ctaTitle}
+              </Button>
+            </a>
+          </ButtonHolder>
         </div>
       </InfoContainer>
 

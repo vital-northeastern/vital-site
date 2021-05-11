@@ -1,14 +1,12 @@
 import React from "react"
-import Img from "gatsby-image"
 import { H2, P } from "../../../constants/typography"
-import { SmallerHeading } from "../shared-styles/homepage-shared-styles"
+import { ButtonHolder } from "../shared-styles/homepage-shared-styles"
 
 import {
   KnowContainer,
   KnowInfoCont,
   KnowInfo,
   KnowImageSection,
-  KnowHeader,
   KnowImageHolder,
   KnowImageHeader,
 } from "../stay-in-the-know/stay-in-the-know-styles"
@@ -30,17 +28,17 @@ const StayInTheKnow = ({
           photoUrl={upcomingEvent.featuredImage.fluid.src}
         ></KnowImageHolder>
       </KnowImageSection>
-
       <KnowInfoCont>
         <KnowInfo>
           <H2>{title}</H2>
-
           <P>{blurbText.blurbText}</P>
-          <a href={ctaLink} target="_blank" rel="noreferrer">
-            <Button primary type="button" aria-label={ctaTitle}>
-              {ctaTitle}
-            </Button>
-          </a>
+          <ButtonHolder>
+            <a href={ctaLink} target="_blank" rel="noreferrer">
+              <Button primary type="button" aria-label={ctaTitle}>
+                {ctaTitle}
+              </Button>
+            </a>
+          </ButtonHolder>
         </KnowInfo>
       </KnowInfoCont>
     </KnowContainer>

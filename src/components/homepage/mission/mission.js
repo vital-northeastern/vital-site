@@ -2,6 +2,7 @@ import React from "react"
 import { Button } from "../../../constants/buttons"
 import { H2 } from "../../../constants/typography"
 import { MissionContainer, MissionText } from "./mission-styles"
+import { ButtonHolder } from "../shared-styles/homepage-shared-styles"
 
 const Mission = ({ title, blurbText, ctaTitle, ctaLink }) => {
   return (
@@ -9,11 +10,13 @@ const Mission = ({ title, blurbText, ctaTitle, ctaLink }) => {
       <div>
         <H2>{title}</H2>
         <MissionText>{blurbText.blurbText}</MissionText>
-        <a href={ctaLink} target="_blank" rel="noreferrer">
-          <Button type="button" aria-label={ctaTitle} primary>
-            {ctaTitle}
-          </Button>
-        </a>
+        <ButtonHolder>
+          <a href={ctaLink} target="_blank" rel="noreferrer">
+            <Button type="button" aria-label={ctaTitle} primary>
+              {ctaTitle}
+            </Button>
+          </a>
+        </ButtonHolder>
       </div>
     </MissionContainer>
   )

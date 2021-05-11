@@ -1,20 +1,34 @@
 import styled from "styled-components"
+import { devices, padding } from "../../../constants/devices"
 import { H2 } from "../../../constants/typography"
 
 const KnowContainer = styled.div`
   display: flex;
   padding: 100px 0 180px 0;
   justify-content: space-between;
+  @media ${devices.mobileMax} {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
 `
 
 const KnowInfoCont = styled.div`
   width: 50%;
+  @media ${devices.mobileMax} {
+    width: 100%;
+  }
 `
 
 const KnowInfo = styled.div`
   width: 60%;
   max-width: 350px;
   margin: 0 auto;
+  @media ${devices.mobileMax} {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 ${padding.mobile};
+    margin: 0;
+  }
 `
 
 const KnowImageSection = styled.div`
@@ -26,7 +40,12 @@ const KnowImageSection = styled.div`
     ),
     linear-gradient(147.64deg, #c8dcee 19.39%, #546bdf 94.2%);
   position: relative;
-  height: 450px;
+  padding-top: 36%;
+  @media ${devices.mobileMax} {
+    width: calc(100% - ${padding.mobile});
+    margin-top: 30%;
+    padding-top: 70%;
+  }
 `
 
 const KnowImageHolder = styled.img`
@@ -40,6 +59,9 @@ const KnowImageHeader = styled(H2)`
   position: absolute;
   top: -20px;
   left: -40px;
+  @media ${devices.mobileMax} {
+    display: none;
+  }
 `
 
 export {

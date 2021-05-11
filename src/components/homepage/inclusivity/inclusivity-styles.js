@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { devices } from "../../../constants/devices"
+import { devices, padding } from "../../../constants/devices"
 import { navyBlue, royalBlue } from "../../../constants/colors"
 import { HUpper } from "../../../constants/typography"
 
@@ -9,6 +9,7 @@ const IncContainer = styled.div`
   margin-bottom: 200px;
   @media ${devices.mobileMax} {
     flex-direction: column;
+    margin-bottom: 120px;
   }
 `
 const HexShape = styled.img`
@@ -18,7 +19,7 @@ const HexShape = styled.img`
   left: -40px;
   top: -730px;
   @media only screen and ${devices.mobileMax} {
-    display: none;
+    top: -500px;
   }
 `
 
@@ -31,6 +32,7 @@ const InfoContainer = styled.div`
   justify-content: center;
   @media ${devices.mobileMax} {
     width: 100%;
+    padding: 0 ${padding.mobile};
   }
 `
 
@@ -47,6 +49,13 @@ const ImageSection = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+  @media ${devices.mobileMax} {
+    width: calc(100% - ${padding.mobile} - ${padding.mobile});
+    padding-top: 80%;
+    margin-top: 80px;
+    margin-left: ${padding.mobile};
+    margin-right: ${padding.mobile};
+  }
 `
 
 const ImageHeader = styled(HUpper)`
@@ -54,6 +63,7 @@ const ImageHeader = styled(HUpper)`
   top: 8%;
   padding: 15px;
   width: 70%;
+  min-width: fit-content;
   text-align: center;
   background-color: white;
   z-index: 1;
@@ -95,6 +105,12 @@ const RotatingImage = styled.div`
   top: 50%;
   transform: translateY(-50%);
   left: -40px;
+  @media ${devices.mobileMax} {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
 `
 
 export {
