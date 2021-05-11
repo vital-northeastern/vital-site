@@ -11,8 +11,6 @@ import carouselPlaceholder from "../../images/carousel-placeholder.png"
 import { ButtonGroup } from "./button-group"
 import { CarItem } from "./carousel-item"
 
-import "./test.css"
-
 const CarouselHolder = ({
   title,
   carouselItems,
