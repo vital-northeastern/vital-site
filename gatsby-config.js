@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `ViTAL`,
-    description: `Northeastern University's Healthcare Innovation Core`,
+    description: `ViTAL is Northeastern University's healthcare innovation organization that provides unique experiential opportunities and an empowering community`,
     author: `@neuscout`,
   },
   plugins: [
@@ -20,14 +20,20 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        short_name: `ViTAL`,
+        start_url: `/`,
+        background_color: `#546BDF`,
+        icon: `src/images/favicon-logo.png`,
+      },
+    },
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `source sans pro\:300,400,400i,700`,
-          `Work Sans\:300, 400i, 500, 700`,
-        ],
+        fonts: [`Work Sans\:300,400,500,600,700,900`],
         display: "swap",
       },
     },
@@ -39,6 +45,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-smoothscroll`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

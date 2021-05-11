@@ -1,14 +1,40 @@
 import React from "react"
 import Img from "gatsby-image"
-import { P } from "../../../constants/typography"
+import { PCard } from "../../../constants/typography"
+import {
+  CardContainer,
+  ImageContainer,
+  CardLink,
+  CardTitle,
+  CardTitleContainer,
+  TextContainer,
+} from "./programming-card-styles"
 
-const ProgrammingCard = ({ key, title, description, photo, photoAlt }) => {
+const ProgrammingCard = ({ title, description, photo, photoAlt, link }) => {
+  function checkExternalLink(link) {
+    return link.charAt(0) !== "/"
+  }
+
   return (
-    <>
-      <h4>{title}</h4>
-      <P>{description.shortDescription}</P>
-      <Img className="featured" fluid={photo.fluid} alt={photoAlt} />
-    </>
+    <CardContainer>
+      <ImageContainer>
+        <Img fluid={photo.fluid} alt={photoAlt} />
+      </ImageContainer>
+      <CardLink
+        href={link}
+        target={checkExternalLink(link) ? "_blank" : "_self"}
+        rel={checkExternalLink(link) ? "noreferrer" : ""}
+      >
+        <div>
+          <CardTitleContainer>
+            <CardTitle>{title}</CardTitle>
+          </CardTitleContainer>
+          <TextContainer>
+            <PCard>{description}</PCard>
+          </TextContainer>
+        </div>
+      </CardLink>
+    </CardContainer>
   )
 }
 

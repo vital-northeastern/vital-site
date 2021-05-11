@@ -3,35 +3,81 @@ import { graphql } from "gatsby"
 import get from "lodash/get"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
+import Header from "../components/header/header"
 import History from "../components/what-we-do/history/history"
 import IndustryBG from "../components/what-we-do/industry-bg/industry-bg"
 import ProgrammingCard from "../components/what-we-do/programming-cards/programming-card"
+import Platforms from "../components/what-we-do/platforms/platforms"
+import { H2, P } from "../constants/typography"
+import {
+  ProgrammingCardsIntro,
+  CardsContainer,
+  GeoshapeMobile,
+  GeoshapeContainerMobile,
+} from "../page-styles/what-we-do-styles"
+import left_svg from "../images/what-we-do/mobile_left.svg"
+import right_svg from "../images/what-we-do/mobile_right.svg"
 
 const WhatWeDo = props => {
   const whatWeDo = get(props, "data.contentfulWhatWeDo")
 
   return (
-    <Layout>
+    <Layout navbarstyle="gradient">
       <SEO title="What We Do" />
-      <h1>{whatWeDo.title}</h1>
-      <History title={whatWeDo.history.title} timeline={whatWeDo.timeline} />
+      <Header
+        title={whatWeDo.title}
+        mobileTitle={whatWeDo.title}
+        subheading={whatWeDo.subheadingForTitle}
+        imageBool={true}
+      />
+      <History
+        title={whatWeDo.timelineTitle}
+        timeline={whatWeDo.timelineSvg}
+        mobileTimeline={whatWeDo.mobileTimelineSvg}
+      />
       <IndustryBG
         title={whatWeDo.industryBackgroundTitle}
         blurb={whatWeDo.industryBackgroundBlurb}
         image={whatWeDo.industryBackgroundImage}
         imageAlt={whatWeDo.industryBackgroundImage.description}
       />
-      {whatWeDo.programmingCards.map((card, index) => {
-        return (
-          <ProgrammingCard
-            key={index}
-            title={card.title}
-            description={card.shortDescription}
-            photo={card.photo}
-            photoAlt={card.photo.description}
-          />
-        )
-      })}
+      <ProgrammingCardsIntro>
+        <H2>{whatWeDo.programmingCardsIntro}</H2>
+        <P>{whatWeDo.programmingCardsCaption}</P>
+      </ProgrammingCardsIntro>
+      <GeoshapeContainerMobile>
+        <GeoshapeMobile
+          marginTop="10rem"
+          src={left_svg}
+          alt="blue and white geometric shape"
+        />
+      </GeoshapeContainerMobile>
+      <GeoshapeContainerMobile>
+        <GeoshapeMobile
+          marginTop="55rem"
+          right={true}
+          src={right_svg}
+          alt="blue and white geometric shape"
+        />
+      </GeoshapeContainerMobile>
+      <CardsContainer>
+        {whatWeDo.programmingCards.map((card, index) => {
+          return (
+            <ProgrammingCard
+              key={card.title}
+              title={card.title}
+              description={card.shortDescription.shortDescription}
+              photo={card.photo}
+              photoAlt={card.photo.description}
+              link={card.link}
+            />
+          )
+        })}
+      </CardsContainer>
+      <Platforms
+        title={whatWeDo.platforms.title}
+        platforms={whatWeDo.platforms.platforms}
+      />
     </Layout>
   )
 }
@@ -43,18 +89,16 @@ export const pageQuery = graphql`
     contentfulWhatWeDo {
       title
       subheadingForTitle
-      history {
-        title
-        historyMilestones {
-          title
-          milestoneDescription {
-            milestoneDescription
-          }
+      timelineTitle
+      timelineSvg {
+        file {
+          url
         }
+        description
       }
-      timeline {
-        fluid(maxWidth: 750) {
-          ...GatsbyContentfulFluid
+      mobileTimelineSvg {
+        file {
+          url
         }
         description
       }
@@ -63,11 +107,13 @@ export const pageQuery = graphql`
         industryBackgroundBlurb
       }
       industryBackgroundImage {
-        fluid(maxWidth: 750) {
+        fluid {
           ...GatsbyContentfulFluid
         }
         description
       }
+      programmingCardsIntro
+      programmingCardsCaption
       programmingCards {
         title
         shortDescription {
@@ -79,12 +125,16 @@ export const pageQuery = graphql`
           }
           description
         }
+        link
       }
       platforms {
-        platformTitle
-        blurb
-        ctaTitle
-        ctaLink
+        title
+        platforms {
+          platformTitle
+          blurb
+          ctaTitle
+          ctaLink
+        }
       }
     }
   }
