@@ -11,7 +11,7 @@ import {
 import {
   H2Title,
   ButtonContainer,
-  ClubProgrammingButton,
+  returnAppropriateLink,
 } from "../section-styles"
 
 const CommunityEvents = ({
@@ -28,11 +28,7 @@ const CommunityEvents = ({
         <H2Title lineheight={true}>{title}</H2Title>
         <P>{blurb}</P>
         <ButtonContainer>
-          <a href={ctaLink}>
-            <ClubProgrammingButton primary={true} aria-label={ctaTitle}>
-              {ctaTitle}
-            </ClubProgrammingButton>
-          </a>
+          {returnAppropriateLink(ctaLink, ctaTitle)}
         </ButtonContainer>
       </TextContainer>
       <MobileImageContainer>

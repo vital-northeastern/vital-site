@@ -1,8 +1,10 @@
 import styled from "styled-components"
+import React from "react"
 import { devices } from "../../constants/devices"
 import { imageGradient, navyBlue } from "../../constants/colors"
 import { H2 } from "../../constants/typography"
 import { Button } from "../../constants/buttons"
+import { Link } from "gatsby"
 
 const Container = styled.div`
   @media ${devices.mobile} {
@@ -63,6 +65,27 @@ const ImageContainer = styled.div`
   }
 `
 
+function returnAppropriateLink(link, title, morePadding) {
+  const button = (
+    <ClubProgrammingButton
+      primary={true}
+      aria-label={title}
+      morePadding={morePadding}
+    >
+      {title}
+    </ClubProgrammingButton>
+  )
+  if (link.charAt(0) === "/") {
+    return <Link to={link}>{button}</Link>
+  } else {
+    return (
+      <a href={link} target="_blank" rel="noreferrer">
+        {button}
+      </a>
+    )
+  }
+}
+
 export {
   Container,
   ButtonContainer,
@@ -70,4 +93,5 @@ export {
   ClubProgrammingButton,
   H2Title,
   ImageContainer,
+  returnAppropriateLink,
 }

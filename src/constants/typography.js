@@ -158,7 +158,6 @@ const FooterLink = styled.a`
   font-weight: ${fontWeights.medium};
   text-decoration: none;
   letter-spacing: 0.5px;
-
   @media ${devices.mobile} {
     line-height: 24px;
   }

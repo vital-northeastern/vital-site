@@ -106,6 +106,8 @@ const ClubProgramming = props => {
       <Conferences
         title={conferences.title}
         blurb={conferences.blurb.blurb}
+        ctaTitle={conferences.ctaTitle}
+        ctaLink={conferences.ctaLink}
         featuredImage={conferences.featuredImage}
         backgroundGradient={conferences.backgroundGradient}
       />

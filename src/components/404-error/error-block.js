@@ -9,6 +9,7 @@ import {
   ErrorImage,
 } from "./error-block-styles"
 import { Button } from "../../constants/buttons"
+import { Link } from "gatsby"
 
 const ErrorBlock = ({ title, blurb, featuredImage, ctaLink, ctaTitle }) => {
   return (
@@ -17,11 +18,11 @@ const ErrorBlock = ({ title, blurb, featuredImage, ctaLink, ctaTitle }) => {
         <H2Header>{title}</H2Header>
         <PMessage>{blurb}</PMessage>
         <ButtonContainer>
-          <a href={ctaLink}>
+          <Link to={ctaLink}>
             <Button primary={true} aria-label={ctaTitle}>
               {ctaTitle}
             </Button>
-          </a>
+          </Link>
         </ButtonContainer>
       </TextContainer>
       <ImageContainer>
