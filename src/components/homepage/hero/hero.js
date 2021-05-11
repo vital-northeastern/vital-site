@@ -1,5 +1,6 @@
 import React from "react"
 import union from "../../../images/Union.svg"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 import {
   HeroContainer,
@@ -18,10 +19,11 @@ const Hero = ({ smallTitle, bigTitle, subheading }) => {
         <SmallTitle>{smallTitle}</SmallTitle>
         <BigTitle>{bigTitle}</BigTitle>
         <SubHeading>{subheading}</SubHeading>
-        <ScrollCont>
+        <ScrollCont onClick={() => scrollTo("#scrollDownHero")}>
           <ScrollText>scroll for more</ScrollText>
           <img src={union} alt="Down Arrow" />
         </ScrollCont>
+        <div id="scrollDownHero"></div>
       </InnerHeroContainer>
     </HeroContainer>
   )
