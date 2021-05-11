@@ -32,7 +32,7 @@ const SocialMediaContainer = styled.div`
   }
   @media ${devices.tablet} {
     padding: 20px ${padding.tablet};
-    justify-content: space-between;
+    justify-content: space-center;
     align-items: center;
   }
   @media (min-width: 830px) {

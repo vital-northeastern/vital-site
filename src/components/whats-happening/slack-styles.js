@@ -14,6 +14,9 @@ export const SlackContainer = styled.div`
   justify-content: space-evenly;
   padding: 8%;
   box-sizing: border-box;
+  @media ${devices.mobileMax} {
+    width: 90%;
+  }
 `
 
 export const SlackImgHolder = styled.div`
