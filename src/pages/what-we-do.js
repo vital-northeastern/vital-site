@@ -12,9 +12,9 @@ import { H2, P } from "../constants/typography"
 import {
   ProgrammingCardsIntro,
   CardsContainer,
+  GeoshapeMobile,
   GeoshapeContainerMobile,
 } from "../page-styles/what-we-do-styles"
-import { Geoshape } from "../components/geoshape/geoshape-styles"
 import left_svg from "../images/what-we-do/mobile_left.svg"
 import right_svg from "../images/what-we-do/mobile_right.svg"
 
@@ -46,14 +46,14 @@ const WhatWeDo = props => {
         <P>{whatWeDo.programmingCardsCaption}</P>
       </ProgrammingCardsIntro>
       <GeoshapeContainerMobile>
-        <Geoshape
+        <GeoshapeMobile
           marginTop="10rem"
           src={left_svg}
           alt="blue and white geometric shape"
         />
       </GeoshapeContainerMobile>
       <GeoshapeContainerMobile>
-        <Geoshape
+        <GeoshapeMobile
           marginTop="55rem"
           right={true}
           src={right_svg}

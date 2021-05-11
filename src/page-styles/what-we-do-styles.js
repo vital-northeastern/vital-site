@@ -43,6 +43,17 @@ const CardsContainer = styled.div`
   }
 `
 
+const GeoshapeMobile = styled.img`
+  position: absolute;
+  z-index: -20;
+  margin-top: ${props => props.marginTop};
+  ${({ right }) =>
+    right &&
+    `
+  right: 0;
+  `}
+`
+
 const GeoshapeContainerMobile = styled(GeoshapeContainer)`
   @media ${devices.mobile} {
     display: block;
@@ -52,4 +63,9 @@ const GeoshapeContainerMobile = styled(GeoshapeContainer)`
   }
 `
 
-export { ProgrammingCardsIntro, CardsContainer, GeoshapeContainerMobile }
+export {
+  ProgrammingCardsIntro,
+  CardsContainer,
+  GeoshapeMobile,
+  GeoshapeContainerMobile,
+}
