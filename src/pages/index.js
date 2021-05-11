@@ -19,12 +19,14 @@ const IndexPage = props => {
   return (
     <Layout navbarstyle="home">
       <SEO title="Home" />
-      <Hero
-        smallTitle={homePage.smallTitle}
-        bigTitle={homePage.bigTitle}
-        subheading={homePage.subheadingForTitle}
-      />
       <HomepageContentContainer>
+        <Hero
+          smallTitle={homePage.smallTitle}
+          bigTitle={homePage.bigTitle}
+          subheadingPartOne={homePage.subheadingForTitlePartOne}
+          subheadingPartTwo={homePage.subheadingForTitlePartTwo}
+        />
+
         <Mission
           title={mission.title}
           blurbText={mission.blurbText}
@@ -63,7 +65,9 @@ export const pageQuery = graphql`
     contentfulHome {
       smallTitle
       bigTitle
-      subheadingForTitle
+
+      subheadingForTitlePartOne
+      subheadingForTitlePartTwo
       homepageSections {
         title
         blurbText {

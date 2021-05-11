@@ -4,21 +4,46 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 
 import {
   HeroContainer,
+  HeroHex,
   InnerHeroContainer,
   SmallTitle,
   BigTitle,
   SubHeading,
   ScrollCont,
   ScrollText,
+  SubHeadingHolder,
 } from "../hero/hero-styles"
 
-const Hero = ({ smallTitle, bigTitle, subheading }) => {
+import threeDHeroHex from "../../../images/3d-hero-hex.svg"
+
+const Hero = ({
+  smallTitle,
+  bigTitle,
+  subheadingPartOne,
+  subheadingPartTwo,
+}) => {
   return (
     <HeroContainer>
+      <HeroHex
+        src={threeDHeroHex}
+        alt={"Three dimentional geometric blue shape"}
+        side={"left"}
+      ></HeroHex>
+      <HeroHex
+        src={threeDHeroHex}
+        alt={"Three dimentional geometric blue shape"}
+        side={"right"}
+      ></HeroHex>
       <InnerHeroContainer>
         <SmallTitle>{smallTitle}</SmallTitle>
-        <BigTitle>{bigTitle}</BigTitle>
-        <SubHeading>{subheading}</SubHeading>
+        <BigTitle>
+          {bigTitle}
+          <SubHeadingHolder>
+            <SubHeading>{subheadingPartOne}</SubHeading>
+            <SubHeading>{subheadingPartTwo}</SubHeading>
+          </SubHeadingHolder>
+        </BigTitle>
+
         <ScrollCont onClick={() => scrollTo("#scrollDownHero")}>
           <ScrollText>scroll for more</ScrollText>
           <img src={union} alt="Down Arrow" />

@@ -1,11 +1,6 @@
 import styled from "styled-components"
 import { P } from "../../../constants/typography"
 
-const colors = {
-  primary: "#001049", // dark blue
-  secondary: "#607AE6", // light blue
-}
-
 const MissionContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -13,7 +8,7 @@ const MissionContainer = styled.div`
 `
 
 const MissionText = styled(P)`
-  width: 450px;
+  max-width: 380px;
 `
 
 export { MissionContainer, MissionText }

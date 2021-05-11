@@ -4,10 +4,21 @@ import { navyBlue, royalBlue } from "../../../constants/colors"
 import { HUpper } from "../../../constants/typography"
 
 const IncContainer = styled.div`
+  position: relative;
   display: flex;
   margin-bottom: 200px;
   @media ${devices.mobileMax} {
     flex-direction: column;
+  }
+`
+const HexShape = styled.img`
+  position: absolute;
+  z-index: -1;
+  transform: scale(0.9, 0.9) rotate(0deg);
+  left: -40px;
+  top: -730px;
+  @media only screen and ${devices.mobileMax} {
+    display: none;
   }
 `
 
@@ -88,6 +99,7 @@ const RotatingImage = styled.div`
 
 export {
   IncContainer,
+  HexShape,
   InfoContainer,
   ImageSection,
   Selectors,

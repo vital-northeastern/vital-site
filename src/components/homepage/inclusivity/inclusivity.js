@@ -1,10 +1,8 @@
 import React, { useState } from "react"
-import Img from "gatsby-image"
-
-import { SmallerHeading } from "../shared-styles/homepage-shared-styles"
 
 import {
   IncContainer,
+  HexShape,
   InfoContainer,
   ImageSection,
   Selectors,
@@ -14,6 +12,8 @@ import {
 } from "../inclusivity/inclusivity-styles"
 import { Button } from "../../../constants/buttons"
 import { H2, P } from "../../../constants/typography"
+
+import homepageMidHex from "../../../images/homepage-mid-hex.svg"
 
 const Inclusivity = ({ title, blurbText, ctaTitle, ctaLink, carousel }) => {
   const [carouselItem, setCarouselItem] = useState({
@@ -37,6 +37,7 @@ const Inclusivity = ({ title, blurbText, ctaTitle, ctaLink, carousel }) => {
 
   return (
     <IncContainer>
+      <HexShape src={homepageMidHex}></HexShape>
       <InfoContainer>
         <H2>{title}</H2>
         <P>{blurbText.blurbText}</P>
@@ -57,13 +58,12 @@ const Inclusivity = ({ title, blurbText, ctaTitle, ctaLink, carousel }) => {
           alt={carouselItem.alt}
           aria-label={carouselItem.alt}
         />
-        {/* <Img fluid={carouselItem.fluid} alt={carouselItem.alt} /> */}
-        {/* </RotatingImage> */}
 
         <Selectors>
           {carouselItems.map((item, index) => {
             return (
               <Selector
+                key={"key" + index}
                 index={index}
                 currentDisplayedIndex={carouselItem.index}
                 onClick={() => {
