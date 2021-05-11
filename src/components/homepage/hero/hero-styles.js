@@ -7,7 +7,7 @@ const colors = {
 }
 
 const HeroContainer = styled.div`
-  padding: 100px 0 200px 0;
+  padding: 180px 0 200px 0;
   display: flex;
   justify-content: center;
 

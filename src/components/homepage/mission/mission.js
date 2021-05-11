@@ -1,26 +1,19 @@
 import React from "react"
-import {
-  MissionContainer,
-  MissionHeader,
-  MissionText,
-  MissionButton,
-  MissionLowerHalf,
-} from "./mission-styles"
+import { Button } from "../../../constants/buttons"
+import { H2 } from "../../../constants/typography"
+import { MissionContainer, MissionText } from "./mission-styles"
 
 const Mission = ({ title, blurbText, ctaTitle, ctaLink }) => {
   return (
     <MissionContainer>
       <div>
-        <MissionHeader>{title}</MissionHeader>
-        <MissionLowerHalf>
-          <MissionText>{blurbText.blurbText}</MissionText>
-          <a href={ctaLink} target="_blank" rel="noreferrer">
-            <MissionButton type="button" aria-label={ctaTitle}>
-              {" "}
-              {ctaTitle}
-            </MissionButton>
-          </a>
-        </MissionLowerHalf>
+        <H2>{title}</H2>
+        <MissionText>{blurbText.blurbText}</MissionText>
+        <a href={ctaLink} target="_blank" rel="noreferrer">
+          <Button type="button" aria-label={ctaTitle} primary>
+            {ctaTitle}
+          </Button>
+        </a>
       </div>
     </MissionContainer>
   )

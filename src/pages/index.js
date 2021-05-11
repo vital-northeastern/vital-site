@@ -5,9 +5,10 @@ import Hero from "../components/homepage/hero/hero"
 import Mission from "../components/homepage/mission/mission"
 import Inclusivity from "../components/homepage/inclusivity/inclusivity"
 import StayInTheKnow from "../components/homepage/stay-in-the-know/stay-in-the-know"
-import Carousel from "../components/homepage/carousel/carousel"
+import Carousel from "../components/carousel-shared/carousel"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
+import { HomepageContentContainer } from "../components/homepage/shared-styles/homepage-shared-styles"
 
 const IndexPage = props => {
   const homePage = get(props, "data.contentfulHome")
@@ -23,30 +24,34 @@ const IndexPage = props => {
         bigTitle={homePage.bigTitle}
         subheading={homePage.subheadingForTitle}
       />
-      <Mission
-        title={mission.title}
-        blurbText={mission.blurbText}
-        ctaTitle={mission.ctaTitle}
-        ctaLink={mission.ctaLink}
-      />
-      <Inclusivity
-        title={inclusivity.title}
-        blurbText={inclusivity.blurbText}
-        ctaTitle={inclusivity.ctaTitle}
-        ctaLink={inclusivity.ctaLink}
-        carousel={homePage.everyoneWelcomeCarousel}
-      />
-      <StayInTheKnow
-        title={stayInTheKnow.title}
-        blurbText={stayInTheKnow.blurbText}
-        ctaTitle={stayInTheKnow.ctaTitle}
-        ctaLink={stayInTheKnow.ctaLink}
-        upcomingEvent={homePage.upcomingEvent}
-      />
-      <Carousel
-        title={homePage.carouselTitle}
-        carouselItems={homePage.carouselItems}
-      />
+      <HomepageContentContainer>
+        <Mission
+          title={mission.title}
+          blurbText={mission.blurbText}
+          ctaTitle={mission.ctaTitle}
+          ctaLink={mission.ctaLink}
+        />
+        <Inclusivity
+          title={inclusivity.title}
+          blurbText={inclusivity.blurbText}
+          ctaTitle={inclusivity.ctaTitle}
+          ctaLink={inclusivity.ctaLink}
+          carousel={homePage.everyoneWelcomeCarousel}
+        />
+        <StayInTheKnow
+          title={stayInTheKnow.title}
+          blurbText={stayInTheKnow.blurbText}
+          ctaTitle={stayInTheKnow.ctaTitle}
+          ctaLink={stayInTheKnow.ctaLink}
+          upcomingEvent={homePage.upcomingEvent}
+        />
+        <Carousel
+          title={homePage.carouselTitle}
+          carouselItems={homePage.carouselItems}
+          minItems={0}
+          openInNewTab={false}
+        />
+      </HomepageContentContainer>
     </Layout>
   )
 }

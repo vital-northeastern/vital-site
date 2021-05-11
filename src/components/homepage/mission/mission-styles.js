@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { P } from "../../../constants/typography"
 
 const colors = {
   primary: "#001049", // dark blue
@@ -11,32 +12,8 @@ const MissionContainer = styled.div`
   margin-bottom: 200px;
 `
 
-const MissionInnerCont = styled.div``
-
-const MissionHeader = styled.h2`
-  color: ${colors.primary};
-`
-
-const MissionText = styled.p`
+const MissionText = styled(P)`
   width: 450px;
 `
 
-const MissionLowerHalf = styled.div`
-margin-left 90px;
-`
-
-const MissionButton = styled.button`
-  padding: 10px 20px;
-  border-radius: 35px;
-  background-color: ${colors.primary};
-  border: none;
-  color: white;
-`
-
-export {
-  MissionContainer,
-  MissionHeader,
-  MissionText,
-  MissionButton,
-  MissionLowerHalf,
-}
+export { MissionContainer, MissionText }

@@ -1,8 +1,11 @@
 import styled from "styled-components"
-import { HLower } from "../../../constants/typography"
+import { H2 } from "../../../constants/typography"
 
-const SmallerHeading = styled(HLower)`
-  letter-spacing: 2px;
+const SmallerHeading = styled(H2)``
+
+const HomepageContentContainer = styled.div`
+  padding: 0 0 100px 0;
+  overflow-x: hidden;
 `
 
-export { SmallerHeading }
+export { SmallerHeading, HomepageContentContainer }

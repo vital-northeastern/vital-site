@@ -7,12 +7,13 @@ import {
   IncContainer,
   InfoContainer,
   ImageSection,
-  IncButton,
   Selectors,
   ImageHeader,
   RotatingImage,
   Selector,
 } from "../inclusivity/inclusivity-styles"
+import { Button } from "../../../constants/buttons"
+import { H2, P } from "../../../constants/typography"
 
 const Inclusivity = ({ title, blurbText, ctaTitle, ctaLink, carousel }) => {
   const [carouselItem, setCarouselItem] = useState({
@@ -37,13 +38,13 @@ const Inclusivity = ({ title, blurbText, ctaTitle, ctaLink, carousel }) => {
   return (
     <IncContainer>
       <InfoContainer>
-        <SmallerHeading>{title}</SmallerHeading>
-        <p>{blurbText.blurbText}</p>
+        <H2>{title}</H2>
+        <P>{blurbText.blurbText}</P>
         <div>
           <a href={ctaLink} target="_blank" rel="noreferrer">
-            <IncButton type="button" aria-label={ctaTitle}>
+            <Button type="button" aria-label={ctaTitle} primary>
               {ctaTitle}
-            </IncButton>
+            </Button>
           </a>
         </div>
       </InfoContainer>

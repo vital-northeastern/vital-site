@@ -1,4 +1,7 @@
 import styled from "styled-components"
+import { devices } from "../../../constants/devices"
+import { royalBlue } from "../../../constants/colors"
+import { Button } from "../../../constants/buttons"
 
 const colors = {
   primary: "#001049", // dark blue
@@ -8,6 +11,9 @@ const colors = {
 const IncContainer = styled.div`
   display: flex;
   margin-bottom: 200px;
+  @media ${devices.mobileMax} {
+    flex-direction: column;
+  }
 `
 
 const InfoContainer = styled.div`
@@ -17,18 +23,12 @@ const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`
-
-const IncButton = styled.button`
-  padding: 10px 20px;
-  border-radius: 35px;
-  background-color: ${colors.primary};
-  border: none;
-  color: white;
+  @media ${devices.mobileMax} {
+    width: 100%;
+  }
 `
 
 const ImageSection = styled.div`
-  height: 600px;
   width: 50%;
   background: linear-gradient(
       81.34deg,
@@ -36,13 +36,21 @@ const ImageSection = styled.div`
       rgba(255, 255, 255, 0) 63.08%
     ),
     linear-gradient(36.48deg, #a8d2ff 24.89%, #5269e1 111.91%);
-
   padding: 60px 0 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  @media ${devices.tablet} {
+    height: 500px;
+  }
+  @media ${devices.laptop} {
+    height: 600px;
+  }
+  @media ${devices.desktop} {
+    height: 700px;
+  }
 `
 
 const ImageHeader = styled.h2`
@@ -87,7 +95,6 @@ export {
   IncContainer,
   InfoContainer,
   ImageSection,
-  IncButton,
   Selectors,
   ImageHeader,
   RotatingImage,
