@@ -14,8 +14,10 @@ const Header = ({ title, mobileTitle, subheading, imageBool, longTitle }) => {
   return (
     <HeaderContainer>
       <TextContainer>
-        <H1Regular>{title}</H1Regular>
-        <H1Mobile longTitle={longTitle}>{mobileTitle}</H1Mobile>
+        <H1Regular mobileTitle={mobileTitle}>{title}</H1Regular>
+        {mobileTitle && (
+          <H1Mobile longTitle={longTitle}>{mobileTitle}</H1Mobile>
+        )}
         <P>{subheading}</P>
       </TextContainer>
       {imageBool && (

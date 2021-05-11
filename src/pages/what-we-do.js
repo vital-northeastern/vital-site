@@ -26,7 +26,6 @@ const WhatWeDo = props => {
       <SEO title="What We Do" />
       <Header
         title={whatWeDo.title}
-        mobileTitle={whatWeDo.title}
         subheading={whatWeDo.subheadingForTitle}
         imageBool={true}
       />

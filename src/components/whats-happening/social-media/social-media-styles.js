@@ -21,8 +21,7 @@ const SocialMediaContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10px ${padding.mobile};
-    margin-bottom: 50px;
+    padding: 50px ${padding.mobile};
   }
   @media (max-width: 374px) {
     padding: 10px 0px;

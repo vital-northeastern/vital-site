@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { devices } from "../../constants/devices"
+import { navyBlue } from "../../constants/colors"
 
 export const SlackContainer = styled.div`
   width: 75%;
@@ -15,7 +16,7 @@ export const SlackContainer = styled.div`
   padding: 8%;
   box-sizing: border-box;
   @media ${devices.mobileMax} {
-    width: 90%;
+    width: 88%;
   }
 `
 
@@ -28,6 +29,7 @@ export const SlackImg = styled.img`
 `
 
 export const SlackContent = styled.div`
+  color: ${navyBlue};
   width: 55%;
   margin-left: 16px;
   @media only screen and ${devices.tabletMax} {
