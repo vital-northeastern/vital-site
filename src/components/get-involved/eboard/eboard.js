@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import { P } from "../../../constants/typography"
 import { GetInvolvedButton } from "../section-styles"
@@ -18,11 +19,11 @@ const Eboard = ({ title, description, ctaLink, ctaTitle }) => {
       </TextContainer>
       <ButtonContainer>
         <ButtonPosition>
-          <a href={ctaLink}>
+          <Link to={ctaLink}>
             <GetInvolvedButton primary={true} aria-label={ctaTitle}>
               {ctaTitle}
             </GetInvolvedButton>
-          </a>
+          </Link>
         </ButtonPosition>
       </ButtonContainer>
     </EboardContainer>

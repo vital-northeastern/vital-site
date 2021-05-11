@@ -10,6 +10,13 @@ import {
 } from "../../constants/typography"
 import { size, padding, devices } from "../../constants/devices"
 
+const footerFontSizes = {
+  link: `calc(
+    14.5px + (18.7 - 14.5) *
+      ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
+  )`,
+}
+
 export const FooterContainer = styled.div`
   background-color: ${navyBlue};
   padding: 40px ${padding.laptop};
@@ -123,10 +130,7 @@ export const ConnectContactText = styled(P)`
   color: ${white};
   font-family: ${fonts.button};
   font-weight: ${fontWeights.medium};
-  font-size: calc(
-    14px + (18.7 - 14) *
-      ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
-  );
+  font-size: ${footerFontSizes.link};
   letter-spacing: 0.5px;
   @media only screen and (max-width: ${size.tablet}px) {
     margin: 0;
@@ -137,10 +141,7 @@ export const MailtoLink = styled(FooterLink)`
   line-height: 20px;
   margin-left: 16px;
   color: ${white};
-  font-size: calc(
-    14px + (18.7 - 14) *
-      ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
-  );
+  font-size: ${footerFontSizes.link};
   border-bottom: 2px solid white;
   @media only screen and (max-width: ${size.tablet}px) {
     margin: 0;

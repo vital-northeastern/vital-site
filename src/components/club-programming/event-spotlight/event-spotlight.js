@@ -7,7 +7,7 @@ import {
   H2EventTitle,
   ButtonContainer,
 } from "./event-spotlight-styles"
-import { ClubProgrammingButton } from "../section-styles"
+import { returnAppropriateLink } from "../section-styles"
 import Img from "gatsby-image"
 
 const EventSpotlight = ({ eventSpotlights }) => {
@@ -27,14 +27,10 @@ const EventSpotlight = ({ eventSpotlights }) => {
             <P>{eventSpotlight.blurb.blurb}</P>
             {eventSpotlight.ctaTitle && (
               <ButtonContainer>
-                <a href={eventSpotlight.ctaLink}>
-                  <ClubProgrammingButton
-                    primary={true}
-                    aria-label={eventSpotlight.ctaTitle}
-                  >
-                    {eventSpotlight.ctaTitle}
-                  </ClubProgrammingButton>
-                </a>
+                {returnAppropriateLink(
+                  eventSpotlight.ctaLink,
+                  eventSpotlight.ctaTitle
+                )}
               </ButtonContainer>
             )}
           </Event>

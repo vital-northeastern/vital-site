@@ -4,8 +4,8 @@ import { Container, TextContainer, Image } from "./speaker-series-styles"
 import {
   H2Title,
   ButtonContainer,
-  ClubProgrammingButton,
   ImageContainer,
+  returnAppropriateLink,
 } from "../section-styles"
 
 const SpeakerSeries = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
@@ -15,11 +15,7 @@ const SpeakerSeries = ({ title, blurb, ctaTitle, ctaLink, featuredImage }) => {
         <H2Title first={true}>{title}</H2Title>
         <P>{blurb.blurb}</P>
         <ButtonContainer>
-          <a href={ctaLink}>
-            <ClubProgrammingButton primary={true} aria-label={ctaTitle}>
-              {ctaTitle}
-            </ClubProgrammingButton>
-          </a>
+          {returnAppropriateLink(ctaLink, ctaTitle)}
         </ButtonContainer>
       </TextContainer>
       <ImageContainer right={true} background={true} width="55%">
