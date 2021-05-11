@@ -1,28 +1,20 @@
 import styled from "styled-components"
-
-const colors = {
-  primary: "#001049", // dark blue
-  secondary: "#607AE6", // light blue
-}
+import { H2 } from "../../../constants/typography"
 
 const KnowContainer = styled.div`
   display: flex;
-  padding: 100px 0 0 0;
+  padding: 100px 0 180px 0;
+  justify-content: space-between;
+`
+
+const KnowInfoCont = styled.div`
+  width: 50%;
 `
 
 const KnowInfo = styled.div`
-  width: 50%;
-  padding-right: 6%;
-  // 40px for overlap from image
-  padding-left: calc(6% + 40px);
-`
-
-const KnowButton = styled.button`
-  padding: 10px 20px;
-  border-radius: 35px;
-  background-color: ${colors.primary};
-  border: none;
-  color: white;
+  width: 60%;
+  max-width: 350px;
+  margin: 0 auto;
 `
 
 const KnowImageSection = styled.div`
@@ -37,22 +29,13 @@ const KnowImageSection = styled.div`
   height: 450px;
 `
 
-const KnowImageHolder = styled.div`
-  min-width: 85%;
-  height: 360px;
+const KnowImageHolder = styled.img`
   position: absolute;
   top: -40px;
   right: -40px;
-  // background-color: red;
-
-  background-image: url(${props => "https://" + props.photoUrl});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 `
 
-const KnowImageHeader = styled.h3`
-  letter-spacing: 2px;
+const KnowImageHeader = styled(H2)`
   transform: rotate(90deg);
   position: absolute;
   top: -20px;
@@ -61,9 +44,9 @@ const KnowImageHeader = styled.h3`
 
 export {
   KnowContainer,
+  KnowInfoCont,
   KnowInfo,
   KnowImageSection,
-  KnowButton,
   KnowImageHolder,
   KnowImageHeader,
 }
