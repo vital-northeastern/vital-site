@@ -46,15 +46,4 @@ const SocialMediaContainer = styled.div`
   }
 `
 
-const Social = styled.div`
-  @media ${devices.mobileMax} {
-    margin: 50px 0px;
-  }
-`
-
-export {
-  SocialMediaSectionContainer,
-  SocialMediaContainer,
-  Social,
-  SocialTitle,
-}
+export { SocialMediaSectionContainer, SocialMediaContainer, SocialTitle }

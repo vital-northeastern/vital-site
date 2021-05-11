@@ -39,8 +39,8 @@ const WhatsHappening = props => {
         />
         <SocialMedia
           title={whatsHappening.socialMediaTitle}
-          instaLink={whatsHappening.instagramPostToDisplay}
-          facebookPage={whatsHappening.facebookUrl}
+          instaPostId={whatsHappening.instagramPostToDisplay}
+          facebookPageName={whatsHappening.facebookPageName}
         />
         <Slack
           title={whatsHappening.joinSlackTitle}
@@ -97,6 +97,7 @@ export const pageQuery = graphql`
       socialMediaTitle
       instagramPostToDisplay
       facebookUrl
+      facebookPageName
     }
   }
 `
