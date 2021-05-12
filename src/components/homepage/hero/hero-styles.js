@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { navyBlue } from "../../../constants/colors"
-import { devices } from "../../../constants/devices"
+import { devices, padding } from "../../../constants/devices"
 import { fontWeights, HName, PCard } from "../../../constants/typography"
 
 const HeroContainer = styled.div`
@@ -8,11 +8,15 @@ const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+  flex-direction: column;
   @media ${devices.tabletMax} {
     padding-top: 150px;
   }
   @media ${devices.mobileMax} {
     padding-top: 200px;
+    justify-content: flex-start;
+    padding-left: ${padding.mobile};
+    padding-right: ${padding.mobile};
   }
 `
 
@@ -40,7 +44,12 @@ const HeroHex = styled.img`
   }
 `
 
-const InnerHeroContainer = styled.div``
+const InnerHeroContainer = styled.div`
+  align-self: center;
+  @media ${devices.mobileMax} {
+    align-self: flex-start;
+  }
+`
 
 const SmallTitle = styled(HName)`
   font-weight: ${fontWeights.medium};

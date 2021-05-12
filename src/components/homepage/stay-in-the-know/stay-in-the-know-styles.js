@@ -45,7 +45,7 @@ const KnowImageSection = styled.div`
   @media ${devices.mobileMax} {
     width: calc(100% - ${padding.mobile});
     margin-top: 30%;
-    padding-top: 70%;
+    padding-top: 58%;
   }
 `
 
@@ -54,6 +54,13 @@ const KnowImageHolder = styled.img`
   top: -40px;
   right: -40px;
   max-width: 80%;
+  @media ${devices.mobileMax} {
+    margin-left: auto;
+    margin-right: auto;
+    left: 26px;
+    right: 0;
+    max-width: 96%;
+  }
 `
 
 const KnowImageHeader = styled(H2)`

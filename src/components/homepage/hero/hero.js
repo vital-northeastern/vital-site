@@ -43,13 +43,12 @@ const Hero = ({
             <SubHeading>{subheadingPartTwo}</SubHeading>
           </SubHeadingHolder>
         </BigTitle>
-
-        <ScrollCont onClick={() => scrollTo("#scrollDownHero")}>
-          <ScrollText>scroll for more</ScrollText>
-          <img src={union} alt="Down Arrow" />
-        </ScrollCont>
-        <div id="scrollDownHero"></div>
       </InnerHeroContainer>
+      <ScrollCont onClick={() => scrollTo("#scrollDownHero")}>
+        <ScrollText>scroll for more</ScrollText>
+        <img src={union} alt="Down Arrow" />
+      </ScrollCont>
+      <div id="scrollDownHero"></div>
     </HeroContainer>
   )
 }
