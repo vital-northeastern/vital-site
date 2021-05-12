@@ -63,6 +63,7 @@ const BigTitle = styled.h1`
   margin: 0;
   line-height: 1;
   @media ${devices.mobileMax} {
+    letter-spacing: 2.8px;
     font-size: 5rem;
   }
   @media (min-width: 1700px) {
