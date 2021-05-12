@@ -40,8 +40,17 @@ export const CarouselNav = styled.div`
 export const NavButtons = styled.button`
   width: ${carouselNavButtonSize}px;
   height: ${carouselNavButtonSize}px;
-  background-color: ${props => (props.active ? royalBlue : navyBlue)};
-  border: none;
+  background-color: ${props =>
+    props.active && !props.primary
+      ? royalBlue
+      : props.active && props.primary
+      ? navyBlue
+      : !props.active && props.primary
+      ? "transparent"
+      : navyBlue};
+  border: 1px solid
+    ${props => (!props.primary && props.active ? royalBlue : navyBlue)};
+  box-sizing: border-box;
   border-radius: 50%;
   margin: 0 ${carouselNavButtonSideMargin}px;
   z-index: 2;

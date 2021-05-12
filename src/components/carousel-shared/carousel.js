@@ -19,6 +19,7 @@ const CarouselHolder = ({
   placeholderTitle,
   placeholderDescription,
   openInNewTab,
+  primary,
 }) => {
   while (carouselItems.length < minItems) {
     carouselItems.push({
@@ -65,7 +66,9 @@ const CarouselHolder = ({
           arrows={false}
           infinite={true}
           renderButtonGroupOutside
-          customButtonGroup={<ButtonGroup carouselItems={carouselItems} />}
+          customButtonGroup={
+            <ButtonGroup carouselItems={carouselItems} primary={primary} />
+          }
         >
           {carouselItems.map((item, index) => {
             return (
@@ -88,7 +91,9 @@ const CarouselHolder = ({
           arrows={false}
           infinite={true}
           renderButtonGroupOutside
-          customButtonGroup={<ButtonGroup carouselItems={carouselItems} />}
+          customButtonGroup={
+            <ButtonGroup carouselItems={carouselItems} primary={primary} />
+          }
           partialVisible={true}
         >
           {carouselItems.map((item, index) => {

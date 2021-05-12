@@ -1,23 +1,24 @@
 import React from "react"
 import { Button } from "../../../constants/buttons"
-import { H2, HName, P, Connect } from "../../../constants/typography"
+import { H2 } from "../../../constants/typography"
+import { MissionContainer, MissionText } from "./mission-styles"
+import { ButtonHolder } from "../shared-styles/homepage-shared-styles"
 
 const Mission = ({ title, blurbText, ctaTitle, ctaLink }) => {
   return (
-    <>
-      <H2>Our Mission</H2>
-      <Connect href="https://scout.camd.northeastern.edu/">CONNECT</Connect>
-      <HName>Heenal Marfatia</HName>
-      <P>{blurbText.blurbText}</P>
-      <a href={ctaLink} target="_blank" rel="noreferrer">
-        <Button primary={true} aria-label={ctaTitle}>
-          {ctaTitle}
-        </Button>
-        <Button primary={false} aria-label={ctaTitle}>
-          {ctaTitle}
-        </Button>
-      </a>
-    </>
+    <MissionContainer>
+      <div>
+        <H2>{title}</H2>
+        <MissionText>{blurbText.blurbText}</MissionText>
+        <ButtonHolder>
+          <a href={ctaLink} target="_blank" rel="noreferrer">
+            <Button type="button" aria-label={ctaTitle} primary>
+              {ctaTitle}
+            </Button>
+          </a>
+        </ButtonHolder>
+      </div>
+    </MissionContainer>
   )
 }
 

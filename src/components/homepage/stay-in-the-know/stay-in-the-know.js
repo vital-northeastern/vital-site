@@ -1,5 +1,16 @@
 import React from "react"
-import Img from "gatsby-image"
+import { H2, P } from "../../../constants/typography"
+import { ButtonHolder } from "../shared-styles/homepage-shared-styles"
+
+import {
+  KnowContainer,
+  KnowInfoCont,
+  KnowInfo,
+  KnowImageSection,
+  KnowImageHolder,
+  KnowImageHeader,
+} from "../stay-in-the-know/stay-in-the-know-styles"
+import { Button } from "../../../constants/buttons"
 
 const StayInTheKnow = ({
   title,
@@ -9,21 +20,29 @@ const StayInTheKnow = ({
   upcomingEvent,
 }) => {
   return (
-    <>
-      <h2>{title}</h2>
-      <p>{blurbText.blurbText}</p>
-      <a href={ctaLink} target="_blank" rel="noreferrer">
-        <button type="button" aria-label={ctaTitle}>
-          {ctaTitle}
-        </button>
-      </a>
-      <h2>{upcomingEvent.title}</h2>
-      <Img
-        className="featured"
-        fluid={upcomingEvent.featuredImage.fluid}
-        alt={upcomingEvent.featuredImage.description}
-      />
-    </>
+    <KnowContainer>
+      <KnowImageSection>
+        <KnowImageHeader>{upcomingEvent.title}</KnowImageHeader>
+        <KnowImageHolder
+          src={upcomingEvent.featuredImage.fluid.src}
+          photoUrl={upcomingEvent.featuredImage.fluid.src}
+          alt={upcomingEvent.featuredImage.description}
+        ></KnowImageHolder>
+      </KnowImageSection>
+      <KnowInfoCont>
+        <KnowInfo>
+          <H2>{title}</H2>
+          <P>{blurbText.blurbText}</P>
+          <ButtonHolder>
+            <a href={ctaLink} target="_blank" rel="noreferrer">
+              <Button primary type="button" aria-label={ctaTitle}>
+                {ctaTitle}
+              </Button>
+            </a>
+          </ButtonHolder>
+        </KnowInfo>
+      </KnowInfoCont>
+    </KnowContainer>
   )
 }
 

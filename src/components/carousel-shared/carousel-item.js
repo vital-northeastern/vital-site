@@ -37,7 +37,7 @@ export const CarItem = ({ item, openInNewTab, placeholderText }) => {
         </div>
 
         {item.link && (
-          <MoreLink href={item.link} target={openInNewTab && "_blank"}>
+          <MoreLink href={item.link} target={openInNewTab ? "_blank" : ""}>
             <P> Learn More</P>
             <div>
               <LongRightArrow src={longRightArrow}></LongRightArrow>

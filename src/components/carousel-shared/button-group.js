@@ -10,6 +10,7 @@ import union from "../../images/union-right.svg"
 
 export const ButtonGroup = ({
   carouselItems,
+  primary,
   next,
   previous,
   goToSlide,
@@ -33,6 +34,7 @@ export const ButtonGroup = ({
                 (currentSlide === 1 && index + 1 === carouselItems.length) ||
                 (currentSlide === 0 && index + 1 === carouselItems.length - 1)
               }
+              primary={primary}
               key={item.title + index + "btn"}
             ></NavButtons>
           )
