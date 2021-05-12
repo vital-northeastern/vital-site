@@ -20,7 +20,9 @@ const HexShape = styled.img`
   left: -40px;
   top: -730px;
   @media only screen and ${devices.mobileMax} {
-    top: -500px;
+    transform: scale(0.7, 0.7) rotate(-10deg);
+    left: -80px;
+    top: -380px;
   }
 `
 
