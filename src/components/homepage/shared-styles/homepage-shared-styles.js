@@ -2,8 +2,11 @@ import styled from "styled-components"
 import { devices } from "../../../constants/devices"
 
 const HomepageContentContainer = styled.div`
-  padding: 0 0 100px 0;
+  padding: 0 0 60px 0;
   overflow-x: hidden;
+  @media ${devices.tablet} {
+    padding-bottom: 100px;
+  }
 `
 
 const ButtonHolder = styled.div`

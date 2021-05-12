@@ -1,10 +1,12 @@
 import styled from "styled-components"
+import { navyBlue } from "../../../constants/colors"
 import { devices, padding } from "../../../constants/devices"
 import { H2 } from "../../../constants/typography"
 
 const KnowContainer = styled.div`
+  color: ${navyBlue};
   display: flex;
-  padding: 100px 0 180px 0;
+  padding: 100px 0 135px 0;
   justify-content: space-between;
   @media ${devices.mobileMax} {
     flex-direction: column-reverse;
@@ -47,6 +49,9 @@ const KnowImageSection = styled.div`
     margin-top: 30%;
     padding-top: 58%;
   }
+  @media (min-width: 1700px) {
+    padding-top: 26%;
+  }
 `
 
 const KnowImageHolder = styled.img`
@@ -70,6 +75,9 @@ const KnowImageHeader = styled(H2)`
   left: -40px;
   @media ${devices.mobileMax} {
     display: none;
+  }
+  @media (min-width: 1700px) {
+    left: ${padding.desktop};
   }
 `
 

@@ -1,8 +1,10 @@
 import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
 import { P } from "../../../constants/typography"
+import { navyBlue } from "../../../constants/colors"
 
 const MissionContainer = styled.div`
+  color: ${navyBlue};
   display: flex;
   justify-content: center;
   margin-bottom: 200px;

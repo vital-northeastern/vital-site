@@ -1,10 +1,10 @@
 import styled from "styled-components"
 import { navyBlue } from "../../../constants/colors"
 import { devices, padding } from "../../../constants/devices"
-import { fontWeights, HName, PCard } from "../../../constants/typography"
+import { fonts, fontWeights, HName, PCard } from "../../../constants/typography"
 
 const HeroContainer = styled.div`
-  padding: 180px 0 200px 0;
+  padding: 180px 0;
   display: flex;
   justify-content: center;
   position: relative;
@@ -57,11 +57,16 @@ const SmallTitle = styled(HName)`
 `
 const BigTitle = styled.h1`
   color: ${navyBlue};
+  font-family: ${fonts.nav};
+  letter-spacing: 4px;
   font-size: 210px;
   margin: 0;
   line-height: 1;
   @media ${devices.mobileMax} {
     font-size: 5rem;
+  }
+  @media (min-width: 1700px) {
+    font-size: 250px;
   }
 `
 
@@ -77,17 +82,18 @@ const SubHeading = styled(HName)`
   font-weight: ${fontWeights.medium};
   margin: 0;
   width: fit-content;
-  line-height: 1.2;
+  letter-spacing: 0px;
+  line-height: 1.3;
 `
 
 const ScrollCont = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 150px 0 0 0;
+  margin: 130px 0 0 0;
   cursor: pointer;
   @media ${devices.mobileMax} {
-    margin-top: 80px;
+    margin-top: 55px;
   }
 `
 

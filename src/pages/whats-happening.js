@@ -78,8 +78,6 @@ export const pageQuery = graphql`
       calendarTitle
       calendarEmbedCode
       socialMediaTitle
-      instagramHandle
-      facebookUrl
       joinSlackTitle
       joinSlackLink
       joinSlackBlurb {
@@ -92,10 +90,8 @@ export const pageQuery = graphql`
         description
       }
       newsletterCtaTitle
-      newsletterCtaLink
       socialMediaTitle
       instagramPostToDisplay
-      facebookUrl
       facebookPageName
     }
   }

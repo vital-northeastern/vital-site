@@ -4,12 +4,13 @@ import { navyBlue } from "../../../constants/colors"
 import { HUpper } from "../../../constants/typography"
 
 const IncContainer = styled.div`
+  color: ${navyBlue};
   position: relative;
   display: flex;
   margin-bottom: 200px;
   @media ${devices.mobileMax} {
     flex-direction: column;
-    margin-bottom: 120px;
+    margin-bottom: 90px;
   }
 `
 const HexShape = styled.img`
@@ -33,6 +34,15 @@ const InfoContainer = styled.div`
   @media ${devices.mobileMax} {
     width: 100%;
     padding: 0 ${padding.mobile};
+  }
+  @media ${devices.tablet} {
+    padding-left: ${padding.tablet};
+  }
+  @media ${devices.laptop} {
+    padding-left: ${padding.laptop};
+  }
+  @media ${devices.desktop} {
+    padding-left: ${padding.desktop};
   }
 `
 
@@ -61,7 +71,7 @@ const ImageSection = styled.div`
 const ImageHeader = styled(HUpper)`
   position: absolute;
   top: 8%;
-  padding: 15px;
+  padding: 15px 25px;
   width: 70%;
   min-width: fit-content;
   text-align: center;
@@ -69,6 +79,7 @@ const ImageHeader = styled(HUpper)`
   z-index: 1;
   @media ${devices.tablet} {
     width: 90%;
+    padding: 23px 16px;
   }
   @media ${devices.laptop} {
     width: 80%;
