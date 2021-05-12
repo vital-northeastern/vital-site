@@ -15,6 +15,7 @@ import { H2, P } from "../../../constants/typography"
 
 import homepageMidHex from "../../../images/homepage-mid-hex.svg"
 import { ButtonHolder } from "../shared-styles/homepage-shared-styles"
+import { Link } from "gatsby"
 
 const Inclusivity = ({ title, blurbText, ctaTitle, ctaLink, carousel }) => {
   const [carouselItem, setCarouselItem] = useState({
@@ -47,11 +48,11 @@ const Inclusivity = ({ title, blurbText, ctaTitle, ctaLink, carousel }) => {
         <P>{blurbText.blurbText}</P>
         <div>
           <ButtonHolder>
-            <a href={ctaLink} target="_blank" rel="noreferrer">
+            <Link to={ctaLink}>
               <Button type="button" aria-label={ctaTitle} primary>
                 {ctaTitle}
               </Button>
-            </a>
+            </Link>
           </ButtonHolder>
         </div>
       </InfoContainer>

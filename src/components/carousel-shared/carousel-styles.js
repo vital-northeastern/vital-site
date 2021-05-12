@@ -54,6 +54,9 @@ export const NavButtons = styled.button`
   border-radius: 50%;
   margin: 0 ${carouselNavButtonSideMargin}px;
   z-index: 2;
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 export const CarouselControls = styled.div`

@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 import get from "lodash/get"
+import Carousel from "../components/carousel-shared/carousel"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import Carousel from "../components/carousel-shared/carousel"
 import Calendar from "../components/whats-happening/calendar"
 import Slack from "../components/whats-happening/slack"
 import Header from "../components/header/header"
@@ -78,8 +78,6 @@ export const pageQuery = graphql`
       calendarTitle
       calendarEmbedCode
       socialMediaTitle
-      instagramHandle
-      facebookUrl
       joinSlackTitle
       joinSlackLink
       joinSlackBlurb {
@@ -92,10 +90,8 @@ export const pageQuery = graphql`
         description
       }
       newsletterCtaTitle
-      newsletterCtaLink
       socialMediaTitle
       instagramPostToDisplay
-      facebookUrl
       facebookPageName
     }
   }
