@@ -52,6 +52,7 @@ const IndexPage = props => {
           carouselItems={homePage.carouselItems}
           minItems={0}
           openInNewTab={false}
+          primary={true}
         />
       </HomepageContentContainer>
     </Layout>
