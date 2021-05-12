@@ -6,7 +6,7 @@ import Hero from "../components/homepage/hero/hero"
 import Mission from "../components/homepage/mission/mission"
 import Inclusivity from "../components/homepage/inclusivity/inclusivity"
 import StayInTheKnow from "../components/homepage/stay-in-the-know/stay-in-the-know"
-import Carousel from "../components/carousel-shared/carousel"
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import { HomepageContentContainer } from "../components/homepage/shared-styles/homepage-shared-styles"
 
