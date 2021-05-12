@@ -28,7 +28,6 @@ const GetInvolved = props => {
       <SEO title="Get Involved" />
       <Header
         title={involvedPage.title}
-        mobileTitle={involvedPage.title}
         subheading={involvedPage.subheadingForTitle}
         imageBool={false}
       />

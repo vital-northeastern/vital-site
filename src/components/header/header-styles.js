@@ -24,12 +24,13 @@ const TextContainer = styled.div`
 `
 
 const H1Regular = styled(H1)`
-  @media ${devices.mobile} {
+  ${({ mobileTitle }) =>
+    mobileTitle &&
+    `
+  @media ${devices.mobileMax} {
     display: none;
   }
-  @media ${devices.tablet} {
-    display: block;
-  }
+`}
 `
 
 const H1Mobile = styled(H1)`

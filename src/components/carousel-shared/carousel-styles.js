@@ -70,6 +70,9 @@ export const CarouselControls = styled.div`
 
 export const Control = styled.img`
   height: 100%;
+  &:hover {
+    cursor: pointer;
+  }
   ${props => (props.direction === "left" ? "transform: rotate(180deg);" : "")}
   ${props =>
     props.direction === "left"
