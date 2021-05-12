@@ -26,6 +26,7 @@ const StayInTheKnow = ({
         <KnowImageHolder
           src={upcomingEvent.featuredImage.fluid.src}
           photoUrl={upcomingEvent.featuredImage.fluid.src}
+          alt={upcomingEvent.featuredImage.description}
         ></KnowImageHolder>
       </KnowImageSection>
       <KnowInfoCont>

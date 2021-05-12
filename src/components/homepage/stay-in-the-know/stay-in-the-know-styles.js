@@ -28,6 +28,7 @@ const KnowInfo = styled.div`
     box-sizing: border-box;
     padding: 0 ${padding.mobile};
     margin: 0;
+    max-width: initial;
   }
 `
 
@@ -52,6 +53,7 @@ const KnowImageHolder = styled.img`
   position: absolute;
   top: -40px;
   right: -40px;
+  max-width: 80%;
 `
 
 const KnowImageHeader = styled(H2)`

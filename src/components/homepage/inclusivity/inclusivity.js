@@ -38,7 +38,10 @@ const Inclusivity = ({ title, blurbText, ctaTitle, ctaLink, carousel }) => {
 
   return (
     <IncContainer>
-      <HexShape src={homepageMidHex}></HexShape>
+      <HexShape
+        src={homepageMidHex}
+        alt="Blue geometric hexagon shape on left side"
+      ></HexShape>
       <InfoContainer>
         <H2>{title}</H2>
         <P>{blurbText.blurbText}</P>

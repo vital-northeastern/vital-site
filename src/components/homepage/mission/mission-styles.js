@@ -14,6 +14,9 @@ const MissionContainer = styled.div`
 
 const MissionText = styled(P)`
   max-width: 380px;
+  @media ${devices.mobileMax} {
+    max-width: initial;
+  }
 `
 
 export { MissionContainer, MissionText }

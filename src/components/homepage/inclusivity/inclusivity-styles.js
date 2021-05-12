@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { devices, padding } from "../../../constants/devices"
-import { navyBlue, royalBlue } from "../../../constants/colors"
+import { navyBlue } from "../../../constants/colors"
 import { HUpper } from "../../../constants/typography"
 
 const IncContainer = styled.div`
@@ -72,6 +72,9 @@ const ImageHeader = styled(HUpper)`
   }
   @media ${devices.laptop} {
     width: 80%;
+  }
+  @media ${devices.mobileMax} {
+    width: initial;
   }
 `
 
