@@ -57,6 +57,7 @@ const SmallTitle = styled(HName)`
 `
 const BigTitle = styled.h1`
   color: ${navyBlue};
+  font-weight: ${fontWeights.normal};
   font-family: ${fonts.nav};
   letter-spacing: 5px;
   font-size: 210px;
