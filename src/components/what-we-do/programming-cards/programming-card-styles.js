@@ -15,7 +15,7 @@ const CardContainer = styled.div`
   }
   @media ${devices.laptop} {
     width: 30vw;
-    margin: 40px 7.5px 50px;
+    margin: 40px 0px 50px;
   }
   @media (min-width: 1100px) {
     margin: 40px 10px 50px;
