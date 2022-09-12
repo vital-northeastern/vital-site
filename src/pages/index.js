@@ -53,6 +53,7 @@ const IndexPage = props => {
           minItems={0}
           openInNewTab={false}
           primary={true}
+          version2={false}
         />
       </HomepageContentContainer>
     </Layout>

@@ -15,3 +15,5 @@ export const imageGradient =
 export const blueGradient =
   "linear-gradient(256.95deg, #5468DF 33.81%, #001049 132.95%);"
 export const boxShadow = "0px 4px 4px rgba(0, 0, 0, 0.25)"
+export const lightGradient =
+  "linear-gradient(209.62deg, #99C0FA 20.22%, rgba(255, 255, 255, 0) 85.09%), #C8DCEE;"

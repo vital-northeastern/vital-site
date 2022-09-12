@@ -5,11 +5,10 @@ import Img from "gatsby-image"
 const Container = styled.div`
   @media ${devices.mobile} {
     display: block;
-    padding: 0px ${padding.mobile} 8px;
-    margin-bottom: 50px;
+    padding: 2rem ${padding.mobile} 1rem;
   }
   @media ${devices.tablet} {
-    padding: 8px ${padding.tablet};
+    padding: 2rem ${padding.tablet} 1rem;
   }
   @media ${devices.laptop} {
     padding: 4rem ${padding.laptop};
@@ -33,12 +32,21 @@ const TextContainer = styled.div`
 
 const Image = styled(Img)`
   height: 100%;
+  margin-top: 2.5rem;
+
+  @media ${devices.mobile} {
+    width: 70%;
+    z-index: -1;
+    left: 30%;
+    margin-top: -0.1rem;
+  }
+
   @media ${devices.laptop} {
     width: 40%;
+    z-index: -1;
+    left: 60%;
+    margin-top: -7rem;
   }
-  z-index: -1;
-  left: 60%;
-  margin-top: -7rem;
 `
 
 export { Container, TextContainer, Image }

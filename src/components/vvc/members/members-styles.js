@@ -6,7 +6,6 @@ import { black } from "../../../constants/colors"
 const Container = styled.div`
   @media ${devices.mobile} {
     padding: 0px ${padding.mobile} 0px;
-    margin-bottom: 30px;
   }
   @media ${devices.tablet} {
     padding: 8px ${padding.tablet};
@@ -20,8 +19,7 @@ const Container = styled.div`
   }
 `
 const MembersContainer = styled.div`
-  margin-top: 3.5rem;
-  padding-left: 6%;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -29,6 +27,14 @@ const MembersContainer = styled.div`
   ::after {
     content: "";
     flex: 0 0 30%;
+  }
+
+  @media ${devices.laptop} {
+    margin-top: 3.5rem;
+  }
+
+  @media ${devices.laptop} {
+    padding-left: 6%;
   }
 `
 
@@ -58,6 +64,7 @@ const PCaption = styled(PCard)`
   @media (min-width: 1600px) {
     font-size: 14.5px;
   }
+  margin-bottom: 0 !important;
 `
 
 export { Container, MembersContainer, MemberContainer, PCaption }

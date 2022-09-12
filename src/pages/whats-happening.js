@@ -31,6 +31,7 @@ const WhatsHappening = props => {
           placeholderTitle={whatsHappening.defaultCarouselItemTitle}
           placeholderDescription={whatsHappening.defaultCarouselItemDescription}
           openInNewTab={true}
+          version={false}
         />
         <Calendar
           title={whatsHappening.calendarTitle}

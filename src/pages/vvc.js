@@ -6,11 +6,12 @@ import SEO from "../components/seo"
 import Header from "../components/header/header"
 import AboutUs from "../components/vvc/about-us/about-us"
 import { H2, P } from "../constants/typography"
-import left_svg from "../images/what-we-do/mobile_left.svg"
-import right_svg from "../images/what-we-do/mobile_right.svg"
+import Carousel from "../components/carousel-shared/carousel"
 import ServiceCard from "../components/vvc/services/services"
 import { OurServices, CardsContainer } from "../page-styles/vvc-styles"
 import Members from "../components/vvc/members/members"
+import CTACard from "../components/vvc/cta/cta"
+import Testimonials from "../components/vvc/testimonials/testimonials"
 
 const VVC = props => {
   const vvc = get(props, "data.contentfulVvcPage")
@@ -47,6 +48,31 @@ const VVC = props => {
         })}
       </CardsContainer>
       <Members title={vvc.meetTheTeamTitle} members={vvc.members} />
+      <Testimonials
+        title={vvc.clientTestimonialsTitle}
+        testimonials={vvc.clientTestimonials}
+      />
+      <Carousel
+        title={vvc.carouselTitle}
+        carouselItems={vvc.carouselItems}
+        minItems={0}
+        openInNewTab={false}
+        primary={true}
+        version2={true}
+      />
+      <CardsContainer>
+        {vvc.ctaCard.map((card, index) => {
+          return (
+            <CTACard
+              key={card.ctaTitle}
+              title={card.ctaTitle}
+              blurb={card.ctaBlurb.ctaBlurb}
+              buttonText={card.ctaButtonText}
+              buttonLink={card.ctaButtonLink}
+            />
+          )
+        })}
+      </CardsContainer>
     </Layout>
   )
 }
@@ -92,6 +118,40 @@ export const pageQuery = graphql`
           }
           description
         }
+      }
+      clientTestimonialsTitle
+      clientTestimonials {
+        companyTitle
+        testimonial {
+          testimonial
+        }
+        logo {
+          fluid(maxWidth: 750) {
+            ...GatsbyContentfulFluid
+          }
+          description
+        }
+      }
+      carouselTitle
+      carouselItems {
+        title
+        blurb {
+          blurb
+        }
+        featuredImage {
+          fluid(maxWidth: 999) {
+            ...GatsbyContentfulFluid
+          }
+          description
+        }
+      }
+      ctaCard {
+        ctaTitle
+        ctaBlurb {
+          ctaBlurb
+        }
+        ctaButtonText
+        ctaButtonLink
       }
     }
   }

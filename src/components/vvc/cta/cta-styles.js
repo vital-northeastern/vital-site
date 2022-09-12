@@ -1,13 +1,14 @@
 import styled from "styled-components"
 import { devices, size } from "../../../constants/devices"
-import { blueGradient, boxShadow, white } from "../../../constants/colors"
-import { H2, P } from "../../../constants/typography"
+import { boxShadow, imageGradient } from "../../../constants/colors"
+import { H2 } from "../../../constants/typography"
 
-const ServiceCardContainer = styled.div`
-  background: ${blueGradient};
+const CTACardContainer = styled.div`
+  background: ${imageGradient};
   width: 100%;
+  margin-top: 4rem;
+  padding: 3em 2em;
   margin-bottom: 1.5rem;
-  padding: 2em;
   text-align: center;
   transition: box-shadow 0.7s ease;
 
@@ -15,13 +16,13 @@ const ServiceCardContainer = styled.div`
     box-shadow: ${boxShadow};
   }
 
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     width: 42.1vw;
+    padding: 10em 2em;
   }
 `
 
-const ServiceTitle = styled(H2)`
-  color: ${white};
+const CTATitle = styled(H2)`
   font-size: calc(
     19px + (26 - 19) *
       ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile}))
@@ -34,9 +35,4 @@ const ServiceTitle = styled(H2)`
   }
 `
 
-const ServiceBlurb = styled(P)`
-  color: ${white};
-  margin-bottom: 0 !important;
-`
-
-export { ServiceCardContainer, ServiceTitle, ServiceBlurb }
+export { CTACardContainer, CTATitle }

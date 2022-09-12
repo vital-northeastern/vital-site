@@ -2,13 +2,13 @@ import styled from "styled-components"
 import { devices, padding } from "../constants/devices"
 
 const OurServices = styled.div`
-  width: 85%;
   @media ${devices.mobile} {
     padding-left: ${padding.mobile};
     padding-right: ${padding.mobile};
     margin: 4rem 0 0 0;
   }
   @media ${devices.tablet} {
+    width: 85%;
     padding-left: ${padding.tablet};
     padding-right: ${padding.tablet};
   }
@@ -24,13 +24,13 @@ const CardsContainer = styled.div`
     justify-content: center;
   }
   @media ${devices.tablet} {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding-left: ${padding.tablet};
     padding-right: ${padding.tablet};
   }
   @media ${devices.laptop} {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding-left: ${padding.laptop};
     padding-right: ${padding.laptop};
   }
