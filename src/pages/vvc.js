@@ -12,6 +12,12 @@ import { OurServices, CardsContainer } from "../page-styles/vvc-styles"
 import Members from "../components/vvc/members/members"
 import CTACard from "../components/vvc/cta/cta"
 import Testimonials from "../components/vvc/testimonials/testimonials"
+import {
+  GeoshapeContainer,
+  Geoshape,
+} from "../components/geoshape/geoshape-styles"
+import top_svg from "../images/vvc/top_svg.svg"
+import middle_svg from "../images/vvc/middle_svg.svg"
 
 const VVC = props => {
   const vvc = get(props, "data.contentfulVvcPage")
@@ -24,6 +30,14 @@ const VVC = props => {
         subheading={vvc.subheadingForTitle.subheadingForTitle}
         imageBool={false}
       />
+      <GeoshapeContainer>
+        <Geoshape
+          marginTop="-17rem"
+          src={top_svg}
+          alt="blue and white geometric shape"
+          style={{ zIndex: "-20" }}
+        />
+      </GeoshapeContainer>
       <AboutUs
         title={vvc.aboutUsTitle}
         blurb={vvc.aboutUsBlurb}
@@ -47,6 +61,14 @@ const VVC = props => {
           )
         })}
       </CardsContainer>
+      <GeoshapeContainer>
+        <Geoshape
+          marginTop="-16rem"
+          src={middle_svg}
+          alt="blue and white geometric shape"
+          style={{ zIndex: "-20" }}
+        />
+      </GeoshapeContainer>
       <Members title={vvc.meetTheTeamTitle} members={vvc.members} />
       <Testimonials
         title={vvc.clientTestimonialsTitle}

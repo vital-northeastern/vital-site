@@ -48,6 +48,10 @@ const NavBar = ({ navbarstyle }) => {
       link: "/our-team",
     },
     {
+      name: "VVC",
+      link: "/vvc",
+    },
+    {
       name: "Get Involved",
       link: "/get-involved",
     },
