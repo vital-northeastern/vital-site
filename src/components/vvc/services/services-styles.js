@@ -18,6 +18,10 @@ const ServiceCardContainer = styled.div`
   @media ${devices.tablet} {
     width: 42.1vw;
   }
+
+  @media ${devices.desktop} {
+    width: 40vw;
+  }
 `
 
 const ServiceTitle = styled(H2)`

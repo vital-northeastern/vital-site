@@ -12,6 +12,14 @@ const OurServices = styled.div`
     padding-left: ${padding.tablet};
     padding-right: ${padding.tablet};
   }
+  @media ${devices.laptop} {
+    padding-left: ${padding.laptop};
+    padding-right: ${padding.laptop};
+  }
+  @media ${devices.desktop} {
+    padding-left: ${padding.desktop};
+    padding-right: ${padding.desktop};
+  }
 `
 
 const CardsContainer = styled.div`

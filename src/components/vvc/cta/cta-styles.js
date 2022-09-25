@@ -20,6 +20,10 @@ const CTACardContainer = styled.div`
     width: 42.1vw;
     padding: 10em 2em;
   }
+
+  @media ${devices.desktop} {
+    width: 40vw;
+  }
 `
 
 const CTATitle = styled(H2)`
