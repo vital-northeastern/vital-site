@@ -18,6 +18,7 @@ import {
 } from "../components/geoshape/geoshape-styles"
 import top_svg from "../images/vvc/top_svg.svg"
 import middle_svg from "../images/vvc/middle_svg.svg"
+import ClientTestimonial from "../components/vvc/client-testimonial/client-testimonial"
 
 const VVC = props => {
   const vvc = get(props, "data.contentfulVvcPage")
@@ -70,9 +71,9 @@ const VVC = props => {
         />
       </GeoshapeContainer>
       <Members title={vvc.meetTheTeamTitle} members={vvc.members} />
-      <Testimonials
-        title={vvc.clientTestimonialsTitle}
-        testimonials={vvc.clientTestimonials}
+      <ClientTestimonial
+        testimonial={vvc.clientTestimonialSvg}
+        mobileTestimonial={vvc.clientTestimonialMobileSvg}
       />
       <Carousel
         title={vvc.carouselTitle}
@@ -140,6 +141,18 @@ export const pageQuery = graphql`
           }
           description
         }
+      }
+      clientTestimonialSvg {
+        file {
+          url
+        }
+        description
+      }
+      clientTestimonialMobileSvg {
+        file {
+          url
+        }
+        description
       }
       clientTestimonialsTitle
       clientTestimonials {
