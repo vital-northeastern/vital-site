@@ -10,6 +10,7 @@ import {
 import carouselPlaceholder from "../../images/carousel-placeholder.png"
 import { ButtonGroup } from "./button-group"
 import { CarItem } from "./carousel-item"
+import { CarItemV2 } from "./carousel-item-v2"
 
 const CarouselHolder = ({
   title,
@@ -20,6 +21,7 @@ const CarouselHolder = ({
   placeholderDescription,
   openInNewTab,
   primary,
+  version2,
 }) => {
   while (carouselItems.length < minItems) {
     carouselItems.push({
@@ -38,6 +40,7 @@ const CarouselHolder = ({
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 1,
+      partialVisibilityGutter: 40,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -72,12 +75,18 @@ const CarouselHolder = ({
         >
           {carouselItems.map((item, index) => {
             return (
-              <CarItem
-                key={item.title + index}
-                item={item}
-                placeholderText={placeholderText}
-                openInNewTab={openInNewTab}
-              ></CarItem>
+              <>
+                {version2 ? (
+                  <CarItemV2 key={item.title + index} item={item}></CarItemV2>
+                ) : (
+                  <CarItem
+                    key={item.title + index}
+                    item={item}
+                    placeholderText={placeholderText}
+                    openInNewTab={openInNewTab}
+                  ></CarItem>
+                )}
+              </>
             )
           })}
         </Carousel>
@@ -98,12 +107,18 @@ const CarouselHolder = ({
         >
           {carouselItems.map((item, index) => {
             return (
-              <CarItem
-                key={item.title + index}
-                item={item}
-                placeholderText={placeholderText}
-                openInNewTab={openInNewTab}
-              ></CarItem>
+              <>
+                {version2 ? (
+                  <CarItemV2 key={item.title + index} item={item}></CarItemV2>
+                ) : (
+                  <CarItem
+                    key={item.title + index}
+                    item={item}
+                    placeholderText={placeholderText}
+                    openInNewTab={openInNewTab}
+                  ></CarItem>
+                )}
+              </>
             )
           })}
         </Carousel>

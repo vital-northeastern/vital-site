@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { navyBlue, royalBlue } from "../../constants/colors"
+import { lightGradient, navyBlue, royalBlue } from "../../constants/colors"
 import {
   HName,
   fonts,
@@ -22,6 +22,14 @@ export const CarItemHolder = styled.div`
   @media ${devices.mobileMax} {
     padding: 0 20px;
   }
+`
+
+export const CarItem = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background: ${lightGradient};
+  padding: 2em;
 `
 
 export const CarouselButtonsContainer = styled.div`
@@ -86,6 +94,23 @@ export const Control = styled.img`
         }px;`
       : ""}
 `
+
+export const CarImageContainer = styled.div`
+  padding-right: 0.8rem;
+
+  @media ${devices.laptop} {
+    width: 40%;
+  }
+`
+
+export const CarTextContainer = styled.div`
+  padding-left: 0.8rem;
+
+  @media ${devices.laptop} {
+    width: 60%;
+  }
+`
+
 export const CarouselTextContainer = styled.div`
   display: flex;
   justify-content: space-between;
