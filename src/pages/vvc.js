@@ -11,7 +11,6 @@ import ServiceCard from "../components/vvc/services/services"
 import { OurServices, CardsContainer } from "../page-styles/vvc-styles"
 import Members from "../components/vvc/members/members"
 import CTACard from "../components/vvc/cta/cta"
-import Testimonials from "../components/vvc/testimonials/testimonials"
 import {
   GeoshapeContainer,
   Geoshape,
