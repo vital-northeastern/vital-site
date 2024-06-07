@@ -30,16 +30,6 @@ const ContactCardContainer = styled.div`
   }
 `
 
-const GraidentSquare = styled.div`
-  width: 50%;
-  padding-top: 50%;
-  position: absolute;
-  top: 40px;
-  background: linear-gradient(147.64deg, #c8dcee 19.39%, #546bdf 94.2%);
-  @media only screen and (max-width: ${size.tablet}px) {
-    display: none;
-  }
-`
 
 const InfoContainer = styled.div`
   display: flex;
