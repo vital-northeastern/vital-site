@@ -48,6 +48,10 @@ const NavBar = ({ navbarstyle }) => {
       link: "/our-team",
     },
     {
+      name: "HHIC",
+      link: "https://www.vitalhhic.org/",
+    },
+    {
       name: "VVC",
       link: "/vvc",
     },
