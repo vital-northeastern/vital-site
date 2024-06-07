@@ -3,7 +3,6 @@ import {
   ContactCardContainer,
   CardPosition,
   InfoContainer,
-  GraidentSquare,
 } from "./team-member-styles"
 
 import Img from "gatsby-image"
@@ -32,7 +31,6 @@ export default ({
   isLast,
 }) => (
   <CardPosition index={index} isLast={isLast}>
-    {teamIndex === 0 ? <GraidentSquare></GraidentSquare> : null}
     <ContactCardContainer index={index} teamIndex={teamIndex}>
       <MemberImg>
         <Img fluid={photo.fluid} alt={photo.description} />
