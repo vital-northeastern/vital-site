@@ -7,7 +7,7 @@ const CardPosition = styled.div`
   display: inline-flex;
   margin-bottom: ${props =>
     props.isLast && props.index % 2 === 0 ? "0" : "8%"};
-  margin-left: ${props => (props.index % 2 === 0 ? "0" : "60px")};
+  margin-left: ${props => (props.index % 2 === 0 ? "0" : "40px")};
   position: relative;
 
   @media only screen and (max-width: ${size.tablet}px) {
