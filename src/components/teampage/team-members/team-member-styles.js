@@ -44,4 +44,4 @@ const InfoContainer = styled.div`
   }
 `
 
-export { ContactCardContainer, CardPosition, InfoContainer, GraidentSquare }
+export { ContactCardContainer, CardPosition, InfoContainer }
